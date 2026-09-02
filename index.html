@@ -1,0 +1,2421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JBVNL</title>
+  <meta name="description" content="Jharkhand Bijli Vitran Nigam Limited - Smart Consumer Portal">
+  <link rel="icon" type="image/png" href="assets/images/jbvnl_logo.png" rel="preconnect" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+
+
+
+  <div class="top-strip">
+
+    <div class="container top-strip-inner">
+
+      <!-- =====================================================
+             FIRST LINE : CONSUMER SUPPORT
+        ====================================================== -->
+
+      <div class="top-support">
+
+        <i class="fa-solid fa-headset"></i>
+
+        <span><small>24X7 </small> Consumer Support :</span>
+
+        <i class="fa fa-phone"></i>
+
+        <a href="tel:1912">
+          1912
+        </a>
+
+        <span>/</span>
+
+        <a href="tel:+9118003456570">
+          1800-345-6570
+        </a>
+
+        <span>|</span>
+
+        <i class="fa fa-envelope"></i>
+
+        <a href="mailto:contactus@jbvnl.co.in">
+          contactus@jbvnl.co.in
+        </a>
+
+      </div>
+
+
+      <!-- =====================================================
+             SECOND LINE : ACCESSIBILITY
+        ====================================================== -->
+
+      <div class="top-accessibility">
+
+        <!-- Skip To Main Content -->
+
+        <a href="#main">
+          Skip to Main Content
+        </a>
+
+        <span>|</span>
+
+
+        <!-- Language -->
+
+        <div class="language-switch">
+
+          <i class="fa-solid fa-language"></i>
+
+          <select onchange="changeLanguage(this.value)">
+
+            <option value="en">
+              English
+            </option>
+
+            <option value="hi">
+              हिन्दी
+            </option>
+
+          </select>
+
+        </div>
+
+        <span>|</span>
+
+
+        <!-- Font Size -->
+
+        <a href="#" id="increaseFont">
+          A+
+        </a>
+
+        <a href="#" id="resetFont">
+          A
+        </a>
+
+        <a href="#" id="decreaseFont">
+          A-
+        </a>
+
+        <span>|</span>
+
+
+        <!-- Screen Reader -->
+
+        <a href="{{ route('screen-reader') }}">
+
+          <i class="fa fa-volume-up"></i>
+
+          Screen Reader
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <header class="main-header">
+    <div class="container header-inner">
+
+      <!-- ================= LOGO ================= -->
+      <a class="brand" href="{{ route('index') }}">
+        <div class="brand-mark"></div>
+      </a>
+
+
+      <!-- ================= RIGHT SIDE ================= -->
+      <div class="header-tools">
+
+
+
+
+        <!-- ================= TOP UTILITY ================= -->
+        <div class="header-utility">
+
+
+          <!-- Search -->
+          <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <form id="liveSearchForm" autocomplete="off" action="{{ route('live.search') }}" method="GET">
+
+              <input type="search" id="liveSearch" name="q" placeholder="Search Services Here...">
+
+              <button type="submit">
+                Search
+              </button>
+
+              <div id="searchResults"></div>
+
+            </form>
+
+          </div>
+
+          <!-- Language -->
+          <!-- <div class="language-switch">
+            <i class="fa fa-language"></i>
+
+            <select onchange="changeLanguage(this.value)">
+              <option value="en">English</option>
+              <option value="hi">हिन्दी</option>
+            </select>
+          </div> -->
+
+          <!-- <span>|</span> -->
+
+          <!-- Font Size -->
+          <!-- <a href="#" id="increaseFont">A+</a>
+          <a href="#" id="resetFont">A</a>
+          <a href="#" id="decreaseFont">A-</a> -->
+
+          <!-- <span>|</span> -->
+
+          <!-- Screen Reader -->
+          <!-- <a href="{{ route('screen-reader') }}">
+            <i class="fa fa-volume-up"></i>
+            Screen Reader
+          </a> -->
+
+        </div>
+
+
+        <!-- ================= CONTACT BAR ================= -->
+        <div class="header-contact">
+
+          <div class="contact-right">
+
+            <!-- Contact Us -->
+            <a href="{{ route('contact-us') }}" class="top-btn contact-btn">
+              <i class="fa fa-envelope-o"></i>
+              Contact Us
+            </a>
+
+
+            <!-- C Portal -->
+            <a href="https://cportal.jbvnl.co.in/cportal/#/user/login" target="_blank" class="top-btn cms-btn">
+              <i class="fa fa-user"></i>
+              Consumer Login
+            </a>
+
+
+            <!-- EMPLOYEE LOGIN -->
+            <a href="{{ route('employee.login') }}" class="contact-btn top-btn">
+
+              <i class="fa-solid fa-id-badge"></i>
+
+              <span>Employee Login</span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Mobile Menu -->
+      <button type="button" class="menu-toggle" id="mobileMenuToggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+    </div>
+  </header>
+
+  <nav class="jbvnl-navbar">
+    <div class="jbvnl-nav-container">
+
+      <ul class="jbvnl-nav-list">
+
+        <!-- HOME -->
+        <li class="jbvnl-nav-item">
+          <a href="{{ route('index') }}" class="jbvnl-nav-link active">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+          </a>
+        </li>
+
+
+        <!-- ================= ABOUT US ================= -->
+        <li class="jbvnl-nav-item has-mega">
+
+          <a href="#" class="jbvnl-nav-link mega-trigger">
+            <i class="fa-solid fa-building"></i>
+            <span>About Us</span>
+            <i class="fa-solid fa-chevron-down nav-arrow"></i>
+          </a>
+
+
+          <div class="jbvnl-mega-menu about-mega">
+
+            <div class="mega-column mega-intro">
+
+              <span class="mega-kicker">
+                ABOUT JBVNL
+              </span>
+
+              <h3>
+                Jharkhand Bijli Vitran Nigam Limited
+              </h3>
+
+              <p>
+                Know more about JBVNL, its departments,
+                leadership, organization and initiatives.
+              </p>
+
+              <a href="{{ route('compprofile') }}" class="mega-main-link">
+                Company Profile
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+
+
+            <div class="mega-column">
+
+              <h4>
+                <i class="fa-solid fa-building"></i>
+                Company
+              </h4>
+
+              <a href="{{ route('compprofile') }}">
+                <i class="fa-solid fa-angle-right"></i>
+                Company Profile
+              </a>
+
+              <a href="{{ route('boardofdirector') }}">
+                <i class="fa-solid fa-users"></i>
+                Board of Directors
+              </a>
+
+              <a href="{{ route('orgstructure') }}">
+                <i class="fa-solid fa-sitemap"></i>
+                Organization Chart
+              </a>
+
+            </div>
+
+
+            <div class="mega-column">
+
+              <h4>
+                <i class="fa-solid fa-sitemap"></i>
+                Departments
+              </h4>
+
+              <a href="{{ route('commercial') }}">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Commercial
+              </a>
+
+              <a href="{{ route('revenue.department') }}">
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+                Revenue
+              </a>
+
+              <a href="{{ route('projectdep') }}">
+                <i class="fa-solid fa-diagram-project"></i>
+                Projects
+              </a>
+
+              <a href="{{ route('finance') }}">
+                <i class="fa-solid fa-coins"></i>
+                Finance
+              </a>
+
+            </div>
+
+
+            <div class="mega-column">
+
+              <h4>
+                <i class="fa-solid fa-users"></i>
+                People & Initiatives
+              </h4>
+
+              <a href="{{ route('hradmin') }}">
+                <i class="fa-solid fa-user-group"></i>
+                HR / Admin
+              </a>
+
+              <a href="{{ route('oandm') }}">
+                <i class="fa-solid fa-gears"></i>
+                O&M
+              </a>
+
+              <a href="{{ route('initiatives') }}">
+                <i class="fa-solid fa-lightbulb"></i>
+                Initiatives
+              </a>
+
+              <a href="{{ route('achivements') }}">
+                <i class="fa-solid fa-trophy"></i>
+                Achievements & Milestones
+              </a>
+
+            </div>
+
+          </div>
+
+        </li>
+
+
+        <!-- ================= CONSUMER CORNER ================= -->
+        <li class="jbvnl-nav-item has-mega">
+
+          <a href="#" class="jbvnl-nav-link mega-trigger">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <span>Consumer Corner</span>
+
+            <i class="fa-solid fa-chevron-down nav-arrow"></i>
+
+          </a>
+
+
+          <div class="jbvnl-mega-menu consumer-mega">
+
+            <div class="mega-column mega-intro">
+
+              <span class="mega-kicker">
+                CONSUMER SERVICES
+              </span>
+
+              <h3>
+                Consumer Corner
+              </h3>
+
+              <p>
+                Access consumer services, calculators,
+                connection services and safety information.
+              </p>
+
+            </div>
+
+
+            <div class="mega-column">
+
+              <h4>
+                <i class="fa-solid fa-plug"></i>
+                New Connection
+              </h4>
+
+              <a href="https://suvidha.jbvnl.co.in/login.aspx" target="_blank">
+                <i class="fa-solid fa-solar-panel"></i>
+                Suvidha Portal
+              </a>
+
+              <a href="https://advantage.jharkhand.gov.in/SingleWindow/users/login" target="_blank">
+                <i class="fa-solid fa-industry"></i>
+                New Connection LTIS / HT
+              </a>
+
+              <a href="{{ route('consumer.tracking') }}">
+                <i class="fa-solid fa-list-check"></i>
+                Consumer Services
+              </a>
+
+            </div>
+
+
+            <div class="mega-column">
+
+              <h4>
+                <i class="fa-solid fa-calculator"></i>
+                Calculators
+              </h4>
+
+              <a href="{{ route('fixcalculator') }}">
+                <i class="fa-solid fa-calculator"></i>
+                Fix Calculator
+              </a>
+
+              <a href="{{ route('load-calculator') }}">
+                <i class="fa-solid fa-bolt"></i>
+                Load Calculator
+              </a>
+
+              <a href="{{ route('effective.tariff.calculator') }}">
+                <i class="fa-solid fa-chart-line"></i>
+                Effective Tariff Calculator
+              </a>
+
+            </div>
+
+
+            <div class="mega-column">
+
+              <h4>
+                <i class="fa-solid fa-shield-halved"></i>
+                Consumer Support
+              </h4>
+
+              <a href="{{ route('stips') }}">
+                <i class="fa-solid fa-shield"></i>
+                Safety Tips
+              </a>
+
+              <a href="{{ asset('front/img/Energy Conservation.pdf') }}" target="_blank">
+                <i class="fa-solid fa-leaf"></i>
+                Save Energy Campaign
+              </a>
+
+            </div>
+
+          </div>
+
+        </li>
+
+
+        <!-- FAQ -->
+        <li class="jbvnl-nav-item">
+
+          <a href="{{ route('faqs') }}" class="jbvnl-nav-link">
+
+            <i class="fa-solid fa-circle-question"></i>
+
+            <span>FAQs</span>
+
+          </a>
+
+        </li>
+
+
+        <!-- TARIFF -->
+        <li class="jbvnl-nav-item">
+
+          <a href="/tariff" class="jbvnl-nav-link">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            <span>Tariff Orders</span>
+
+          </a>
+
+        </li>
+
+
+        <!-- ACTS -->
+        <li class="jbvnl-nav-item">
+
+          <a href="{{ route('acts.regulations') }}" class="jbvnl-nav-link">
+
+            <i class="fa-solid fa-gavel"></i>
+
+            <span>Acts & Regulations</span>
+
+          </a>
+
+        </li>
+
+
+        <!-- ================= DOWNLOADS ================= -->
+        <li class="jbvnl-nav-item has-mega">
+
+          <a href="#" class="jbvnl-nav-link mega-trigger">
+
+            <i class="fa-solid fa-download"></i>
+
+            <span>Downloads</span>
+
+            <i class="fa-solid fa-chevron-down nav-arrow"></i>
+
+          </a>
+
+
+          <div class="jbvnl-mega-menu downloads-mega">
+
+            <div class="mega-column mega-intro">
+
+              <span class="mega-kicker">
+                DOWNLOAD CENTRE
+              </span>
+
+              <h3>
+                Forms & Documents
+              </h3>
+
+              <p>
+                Download consumer forms, employee forms
+                and important JBVNL documents.
+              </p>
+
+              <a href="{{ asset('document') }}" class="mega-main-link">
+
+                View Documents
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+              </a>
+
+            </div>
+
+
+            <div class="mega-column">
+
+              <h4>
+                <i class="fa-solid fa-user"></i>
+                Consumer Forms
+              </h4>
+
+              <a href="/upload/Form%20A%20-%20Power%20Supply%20Connection%20(Low%20Tension%20Domestic).pdf"
+                target="_blank">
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+                Form A - NCS
+              </a>
+
+              <a href="/upload/Form%20B%20-%20(LT%20Service%20(Non-Domestic)%20-%20HT%20Service%20-%20EHT%20Service).pdf"
+                target="_blank">
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+                Form B - NCS
+              </a>
+
+              <a href="#">
+                <i class="fa-solid fa-file-pdf"></i>
+                Bill Revision Request
+              </a>
+
+            </div>
+
+
+            <div class="mega-column">
+
+              <h4>
+                <i class="fa-solid fa-users"></i>
+                Employee Forms
+              </h4>
+
+              <a href="#">
+                <i class="fa-solid fa-file-pdf"></i>
+                LPC Form
+              </a>
+
+              <a href="#">
+                <i class="fa-solid fa-file-pdf"></i>
+                ACR Form
+              </a>
+
+              <a href="#">
+                <i class="fa-solid fa-file-pdf"></i>
+                Leave Form
+              </a>
+
+              <a href="#">
+                <i class="fa-solid fa-file-pdf"></i>
+                Medical Reimbursement
+              </a>
+
+            </div>
+
+
+            <div class="mega-column">
+
+              <h4>
+                <i class="fa-solid fa-folder-open"></i>
+                Documents
+              </h4>
+
+              <a href="{{ asset('document') }}">
+                <i class="fa-solid fa-folder"></i>
+                Documents
+              </a>
+
+              <a href="#">
+                <i class="fa-solid fa-chart-column"></i>
+                Annual Reports
+              </a>
+
+              <a href="#">
+                <i class="fa-solid fa-graduation-cap"></i>
+                Training / Pathshala
+              </a>
+
+            </div>
+
+          </div>
+
+        </li>
+
+
+        <!-- ================= NOTICE ================= -->
+        <li class="jbvnl-nav-item has-mega">
+
+          <a href="#" class="jbvnl-nav-link mega-trigger">
+
+            <i class="fa-solid fa-bullhorn"></i>
+
+            <span>Notice & Circular</span>
+
+            <i class="fa-solid fa-chevron-down nav-arrow"></i>
+
+          </a>
+
+
+          <div class="jbvnl-mega-menu notice-mega">
+
+            <div class="mega-column mega-intro">
+
+              <span class="mega-kicker">
+                LATEST UPDATES
+              </span>
+
+              <h3>
+                Notice & Circular
+              </h3>
+
+              <p>
+                View latest official notifications,
+                circulars and annual accounts.
+              </p>
+
+            </div>
+
+
+            <div class="mega-column">
+
+              <h4>
+                <i class="fa-solid fa-bullhorn"></i>
+                Notifications
+              </h4>
+
+              <a href="{{ route('commercialNotice') }}">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Commercial
+              </a>
+
+              <a href="{{ route('administrative') }}">
+                <i class="fa-solid fa-building-columns"></i>
+                Administrative
+              </a>
+
+              <a href="{{ route('annual-accounts') }}">
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+                Annual Accounts
+              </a>
+
+            </div>
+
+
+            <div class="mega-column mega-highlight">
+
+              <span>
+                OFFICIAL INFORMATION
+              </span>
+
+              <strong>
+                Stay updated with
+                JBVNL announcements.
+              </strong>
+
+              <a href="#notices">
+                View Latest Notices
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+        </li>
+
+
+        <!-- ================= TENDERS ================= -->
+        <li class="jbvnl-nav-item has-mega">
+
+          <a href="#" class="jbvnl-nav-link mega-trigger">
+
+            <i class="fa-solid fa-folder-open"></i>
+
+            <span>Tenders</span>
+
+            <i class="fa-solid fa-chevron-down nav-arrow"></i>
+
+          </a>
+
+
+          <div class="jbvnl-mega-menu tender-mega">
+
+            <div class="mega-column mega-intro">
+
+              <span class="mega-kicker">
+                PROCUREMENT
+              </span>
+
+              <h3>
+                Tenders
+              </h3>
+
+              <p>
+                Access e-Tender portal and JBVNL
+                tender notifications.
+              </p>
+
+            </div>
+
+
+            <div class="mega-column">
+
+              <h4>
+                <i class="fa-solid fa-gavel"></i>
+                Tender Services
+              </h4>
+
+              <a href="https://jharkhandtenders.gov.in/nicgep/app" target="_blank">
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                e-Tender Portal
+
+              </a>
+
+              <a href="{{ route('tender') }}">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                Tender Notification
+
+              </a>
+
+            </div>
+
+
+            <div class="mega-column mega-highlight">
+
+              <span>
+                JBVNL PROCUREMENT
+              </span>
+
+              <strong>
+                Find latest tender
+                opportunities.
+              </strong>
+
+              <a href="{{ route('tender') }}">
+                View Tenders
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+        </li>
+
+
+        <!-- CAREER -->
+        <li class="jbvnl-nav-item">
+
+          <a href="{{ asset('/careers') }}" class="jbvnl-nav-link">
+
+            <i class="fa-solid fa-briefcase"></i>
+
+            <span>Career</span>
+
+          </a>
+
+        </li>
+
+
+        <!-- EMPLOYEE LOGIN -->
+        <!-- <li class="jbvnl-nav-item">
+
+          <a href="{{ route('employee.login') }}" class="jbvnl-nav-link employee-link">
+
+            <i class="fa-solid fa-id-badge"></i>
+
+            <span>Employee Login</span>
+
+          </a>
+
+        </li> -->
+
+      </ul>
+
+    </div>
+  </nav>
+
+  <!-- ==========SLIDER=========== -->
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-slider owl-carousel">
+        <div class="hero-slide" style="background-image:url('assets/images/hightension_tower.png')">
+          <div class="container hero-content" data-aos="fade-up">
+            <span class="eyebrow">POWERING JHARKHAND</span>
+            <h1>Smart Electricity Services<br><span>For Every Consumer</span></h1>
+            <p>Pay your bill, manage your connection, register complaints and access JBVNL services from one place.
+            </p>
+            <div class="hero-actions">
+              <a href="#services" class="btn btn-primary-custom"><i class="fa-solid fa-bolt me-2"></i>Explore
+                Services</a>
+              <a href="#solar" class="btn btn-outline-light-custom">Rooftop Solar <i
+                  class="fa-solid fa-arrow-right ms-2"></i></a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="hero-slide" style="background-image:url('assets/images/green_tree.png')">
+          <div class="container hero-content">
+            <span class="eyebrow">GREEN & RELIABLE POWER</span>
+
+            <h1>Powering a<br><span>Greener Future.</span></h1>
+
+            <p>
+              Reliable electricity transmission with a commitment to
+              clean energy, sustainable development and a greener Jharkhand.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#solar" class="btn btn-primary-custom">Explore Green Energy</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="hero-slide" style="background-image:url('assets/images/jbvnl_cover.png')">
+        </div>
+
+        <div class="hero-slide" style="background-image:url('assets/images/notice.png')">
+          <!-- <div class="container hero-content" data-aos="fade-up">
+            <span class="eyebrow">POWERING JHARKHAND</span>
+            <h1>Smart Electricity Services<br><span>For Every Consumer</span></h1>
+            <p>Pay your bill, manage your connection, register complaints and access JBVNL services from one place.
+            </p>
+            <div class="hero-actions">
+              <a href="#services" class="btn btn-primary-custom"><i class="fa-solid fa-bolt me-2"></i>Explore
+                Services</a>
+              <a href="#solar" class="btn btn-outline-light-custom">Rooftop Solar <i
+                  class="fa-solid fa-arrow-right ms-2"></i></a>
+            </div>
+          </div> -->
+        </div>
+
+        <div class="hero-slide" style="background-image:url('assets/images/smart_prepaid_meter.png')">
+          <!-- <div class="container hero-content" data-aos="fade-up">
+            <span class="eyebrow">POWERING JHARKHAND</span>
+            <h1>Smart Electricity Services<br><span>For Every Consumer</span></h1>
+            <p>Pay your bill, manage your connection, register complaints and access JBVNL services from one place.
+            </p>
+            <div class="hero-actions">
+              <a href="#services" class="btn btn-primary-custom"><i class="fa-solid fa-bolt me-2"></i>Explore
+                Services</a>
+              <a href="#solar" class="btn btn-outline-light-custom">Rooftop Solar <i
+                  class="fa-solid fa-arrow-right ms-2"></i></a>
+            </div>
+          </div> -->
+        </div>
+
+        <div class="hero-slide" style="background-image:url('assets/images/pm_suryaghar.png')">
+        </div>
+
+        <div class="hero-slide" style="background-image:url('assets/images/cyber_frad.png')">
+        </div>
+
+        <div class="hero-slide" style="background-image:url('assets/images/apply_smartmeter.png')">
+        </div>
+
+        <div class="hero-slide" style="background-image:url('assets/images/consumer_services.png')">
+        </div>
+
+        <div class="hero-slide" style="background-image:url('assets/images/easy_toapply.png')">
+        </div>
+
+        <div class="hero-slide" style="background-image:url('assets/images/electricified.png')">
+        </div>
+
+        <div class="hero-slide" style="background-image:url('assets/images/pm_surya.png')">
+        </div>
+
+        <!-- <div class="hero-slide"
+          style="background-image:url('assets/images/green_tree.png')">
+        </div> -->
+
+
+
+      </div>
+    </section>
+
+    <section class="service-dock">
+      <div class="container">
+        <div class="service-dock-grid">
+          <a href="#" class="dock-card"><span class="dock-icon blue"><i
+                class="fa-solid fa-indian-rupee-sign"></i></span><span><b>Pay Bill</b><small>Quick bill
+                payment</small></span><i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#" class="dock-card"><span class="dock-icon green"><i
+                class="fa-solid fa-plug-circle-plus"></i></span><span><b>New Connection</b><small>Apply
+                online</small></span><i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#" class="dock-card"><span class="dock-icon orange"><i
+                class="fa-solid fa-headset"></i></span><span><b>Complaint</b><small>Register / track</small></span><i
+              class="fa-solid fa-arrow-right"></i></a>
+          <a href="#" class="dock-card"><span class="dock-icon purple"><i
+                class="fa-solid fa-user"></i></span><span><b>Consumer Login</b><small>Manage account</small></span><i
+              class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- QUICK LINKS BUTTON -->
+    <button type="button" class="quick-links-btn" id="quickLinksBtn">
+      <i class="bi bi-lightning-charge-fill"></i>
+      <span>Quick Links</span>
+    </button>
+
+
+    <!-- OVERLAY -->
+    <div class="quick-links-overlay" id="quickLinksOverlay"></div>
+
+
+    <!-- QUICK LINKS SIDE PANEL -->
+    <div class="quick-links-panel" id="quickLinksPanel">
+
+      <div class="quick-links-header">
+        <h3>
+          <i class="bi bi-lightning-charge-fill"></i>
+          Quick Links
+        </h3>
+
+        <button type="button" class="quick-links-close" id="quickLinksClose">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+
+      <div class="quick-links-body">
+
+        <!-- 1 -->
+        <a href="https://cportal.jbvnl.co.in/" class="quick-link-item" target="_blank">
+          <span class="quick-link-icon">
+            <i class="bi bi-receipt-cutoff"></i>
+          </span>
+          <span class="quick-link-text">
+            <strong>Quick Pay Bill</strong>
+            <small>Pay your electricity bill online</small>
+          </span>
+          <i class="bi bi-chevron-right quick-link-arrow"></i>
+        </a>
+
+        <!-- 2 -->
+        <a href="https://cportal.jbvnl.co.in/" class="quick-link-item" target="_blank">
+          <span class="quick-link-icon">
+            <i class="bi bi-person-circle"></i>
+          </span>
+          <span class="quick-link-text">
+            <strong>Consumer Login</strong>
+            <small>View bill history and consumer services</small>
+          </span>
+          <i class="bi bi-chevron-right quick-link-arrow"></i>
+        </a>
+
+        <!-- 3 -->
+        <a href="https://suvidha.jbvnl.co.in/" class="quick-link-item" target="_blank">
+          <span class="quick-link-icon">
+            <i class="bi bi-plug-fill"></i>
+          </span>
+          <span class="quick-link-text">
+            <strong>New Service Connection</strong>
+            <small>Apply for a new electricity connection</small>
+          </span>
+          <i class="bi bi-chevron-right quick-link-arrow"></i>
+        </a>
+
+        <!-- 4 -->
+        <a href="https://cportal.jbvnl.co.in/" class="quick-link-item" target="_blank">
+          <span class="quick-link-icon">
+            <i class="bi bi-headset"></i>
+          </span>
+          <span class="quick-link-text">
+            <strong>Complaint Status</strong>
+            <small>Check your complaint or service request</small>
+          </span>
+          <i class="bi bi-chevron-right quick-link-arrow"></i>
+        </a>
+
+        <!-- 5 -->
+        <a href="{{ url('/fix-calculator') }}" class="quick-link-item">
+          <span class="quick-link-icon">
+            <i class="bi bi-calculator"></i>
+          </span>
+          <span class="quick-link-text">
+            <strong>Fix Calculator</strong>
+            <small>Calculate fixed charges</small>
+          </span>
+          <i class="bi bi-chevron-right quick-link-arrow"></i>
+        </a>
+
+        <!-- 6 -->
+        <a href="{{ url('/load-calculator') }}" class="quick-link-item">
+          <span class="quick-link-icon">
+            <i class="bi bi-lightning-charge-fill"></i>
+          </span>
+          <span class="quick-link-text">
+            <strong>Load Calculator</strong>
+            <small>Calculate your connected load</small>
+          </span>
+          <i class="bi bi-chevron-right quick-link-arrow"></i>
+        </a>
+
+        <!-- 7 -->
+        <a href="https://www.pmsuryaghar.gov.in/" class="quick-link-item" target="_blank">
+          <span class="quick-link-icon">
+            <i class="bi bi-sun-fill"></i>
+          </span>
+          <span class="quick-link-text">
+            <strong>Rooftop Solar</strong>
+            <small>Apply for PM Surya Ghar</small>
+          </span>
+          <i class="bi bi-chevron-right quick-link-arrow"></i>
+        </a>
+
+        <!-- 8 -->
+        <a href="https://cportal.jbvnl.co.in/" class="quick-link-item" target="_blank">
+          <span class="quick-link-icon">
+            <i class="bi bi-search"></i>
+          </span>
+          <span class="quick-link-text">
+            <strong>Know Your Account Number</strong>
+            <small>Find your consumer account number</small>
+          </span>
+          <i class="bi bi-chevron-right quick-link-arrow"></i>
+        </a>
+
+        <!-- 9 -->
+        <a href="https://suvidha.jbvnl.co.in/" class="quick-link-item" target="_blank">
+          <span class="quick-link-icon">
+            <i class="bi bi-pencil-square"></i>
+          </span>
+          <span class="quick-link-text">
+            <strong>Modify Consumer Details</strong>
+            <small>Name, load and other modifications</small>
+          </span>
+          <i class="bi bi-chevron-right quick-link-arrow"></i>
+        </a>
+
+        <!-- 10 -->
+        <a href="https://suvidha.jbvnl.co.in/" class="quick-link-item" target="_blank">
+          <span class="quick-link-icon">
+            <i class="bi bi-broadcast-pin"></i>
+          </span>
+          <span class="quick-link-text">
+            <strong>Live Feeder Status</strong>
+            <small>Check electricity feeder status</small>
+          </span>
+          <i class="bi bi-chevron-right quick-link-arrow"></i>
+        </a>
+
+        <!-- 11 -->
+        <a href="https://suvidha.jbvnl.co.in/" class="quick-link-item" target="_blank">
+          <span class="quick-link-icon">
+            <i class="bi bi-power"></i>
+          </span>
+          <span class="quick-link-text">
+            <strong>Power Outage</strong>
+            <small>View power interruption information</small>
+          </span>
+          <i class="bi bi-chevron-right quick-link-arrow"></i>
+        </a>
+
+        <!-- 12 -->
+        <a href="{{ url('/contact-us') }}" class="quick-link-item">
+          <span class="quick-link-icon">
+            <i class="bi bi-telephone-fill"></i>
+          </span>
+          <span class="quick-link-text">
+            <strong>Contact Us</strong>
+            <small>Get in touch with JBVNL</small>
+          </span>
+          <i class="bi bi-chevron-right quick-link-arrow"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+
+
+    <!--========= right-stickey-nav quick Links ================-->
+    <div class="right-stickey-nav">
+      <ul>
+
+        <li>
+          <a href="#">
+            <span><i class="fa-solid fa-credit-card"></i></span>
+            <h5>Quick Bill Payment</h5>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <span><i class="fa-solid fa-building-user"></i></span>
+            <h5>New Service Connection</h5>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <span><i class="fa-solid fa-handshake"></i></span>
+            <h5>Service Request</h5>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <span><i class="fa-solid fa-building-circle-check"></i></span>
+            <h5>Pay Point Bill Payment Centers</h5>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+
+    <!-- Board Of Directors -->
+
+    <section class="jbvnl-officers">
+      <div class="container-fluid ">
+
+        <div class="officers-carousel owl-carousel owl-theme">
+
+          <!-- Director 1 -->
+          <div class="officer-item">
+            <a href="{{ route('board-of-directors') }}" class="officer-card">
+
+              <div class="officer-photo">
+                <img src="https://escapi.cspdcl.co.in/api/api/about/photo/28" alt="Director">
+              </div>
+
+              <div class="officer-info">
+                <h4>Shri K. Srinivasan [IAS]</h4>
+                <p>Chairman & Managing Director</p>
+              </div>
+
+            </a>
+          </div>
+
+
+          <!-- Director 2 -->
+          <div class="officer-item">
+            <a href="{{ route('board-of-directors') }}" class="officer-card">
+
+              <div class="officer-photo">
+                <img src="https://escapi.cspdcl.co.in/api/api/about/photo/29" alt="Director">
+              </div>
+
+              <div class="officer-info">
+                <h4>Shri Anant Kumar [JAS]</h4>
+                <p>Director (Commercial & Energy Accounting)</p>
+              </div>
+
+            </a>
+          </div>
+
+
+          <!-- Director 3 -->
+          <div class="officer-item">
+            <a href="{{ route('board-of-directors') }}" class="officer-card">
+
+              <div class="officer-photo">
+                <img src="https://escapi.cspdcl.co.in/api/api/about/photo/28" alt="Director">
+              </div>
+
+              <div class="officer-info">
+                <h4>Shri K. K. Verma</h4>
+                <p>Managing Director - JUSNL</p>
+              </div>
+
+            </a>
+          </div>
+
+
+          <!-- Director 4 -->
+          <div class="officer-item">
+            <a href="{{ route('board-of-directors') }}" class="officer-card">
+
+              <div class="officer-photo">
+                <img src="https://escapi.cspdcl.co.in/api/api/about/photo/29" alt="Director">
+              </div>
+
+              <div class="officer-info">
+                <h4>Smt. Sandhya Gupta [JAS]</h4>
+                <p>Director (Non Functional)</p>
+              </div>
+
+            </a>
+          </div>
+
+
+          <!-- Director 5 -->
+          <div class="officer-item">
+            <a href="{{ route('board-of-directors') }}" class="officer-card">
+
+              <div class="officer-photo">
+                <img src="https://escapi.cspdcl.co.in/api/api/about/photo/29" alt="Director">
+              </div>
+
+              <div class="officer-info">
+                <h4>Shri Theophil Kullu</h4>
+                <p>Director (Finance)</p>
+              </div>
+
+            </a>
+          </div>
+
+
+          <!-- Director 6 -->
+          <div class="officer-item">
+            <a href="{{ route('board-of-directors') }}" class="officer-card">
+
+              <div class="officer-photo">
+                <img src="https://escapi.cspdcl.co.in/api/api/about/photo/28" alt="Director">
+              </div>
+
+              <div class="officer-info">
+                <h4>Shri Prabhat Kr. Srivastava</h4>
+                <p>Director (D&P)</p>
+              </div>
+
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- ABOUT US -->
+    <section class="about-jbvnl-section">
+      <div class="container">
+
+        <div class="row align-items-center">
+
+          <!-- ================= LEFT : ABOUT JBVNL ================= -->
+          <div class="col-lg-7">
+
+            <div class="about-content">
+
+              <span class="about-kicker">
+                ABOUT JBVNL
+              </span>
+
+              <h2 class="about-title">
+                Jharkhand Bijli Vitran Nigam Limited
+              </h2>
+
+              <p>
+                JBVNL is the largest Distribution Company of Jharkhand State, incorporated primarily to carry
+                out distribution of electricity to retail and bulk consumers in the state of Jharkhand. The company
+                started operations on 6th Jan, 2014, after the unbundling of the erstwhile Jharkhand State
+                Electricity Board (JSEB) in the year 2013.
+              </p>
+              <p>
+                The company has a registered consumer base of around 3.2 million and a peak load of around 2,150 MW
+                (FY 17-18).The company is involved in distribution of
+                electricity to different categories of consumers like HT, LTIS, DS, NDS, IAS, etc.
+              </p>
+
+              <a href="{{ route('about-us') }}" class="about-more-btn">
+                KNOW MORE
+                <i class="fa fa-arrow-right"></i>
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- ================= RIGHT : CM + CMD ================= -->
+          <div class="col-lg-5">
+
+            <div class="leadership-box">
+
+              <!-- ================= CM ================= -->
+              <div class="leadership-card">
+
+                <div class="leader-image">
+                  <img src="assets/images/CM_IMAGE.png" alt="Hon'ble Chief Minister">
+                </div>
+
+                <div class="leader-content">
+
+                  <span class="leader-label">
+                    HON'BLE CHIEF MINISTER
+                  </span>
+
+                  <h3>
+                    Shri Hemant Soren
+                  </h3>
+
+                  <p class="leader-message-title">
+                    Message
+                  </p>
+
+                  <p class="leader-message">
+                    Message from the Hon'ble Chief Minister
+                    of Jharkhand.
+                  </p>
+
+                  <a href="#" class="message-link">
+                    Read Message
+                    <i class="fa fa-arrow-right"></i>
+                  </a>
+
+                </div>
+
+              </div>
+
+
+              <!-- ================= CMD ================= -->
+              <div class="leadership-card">
+
+                <div class="leader-image">
+                  <img src="assets/images/CMD-IAS.png" alt="Chairman and Managing Director">
+
+                </div>
+
+                <div class="leader-content">
+
+                  <span class="leader-label">
+                    CHAIRMAN &amp; MANAGING DIRECTOR
+                  </span>
+
+                  <h3>
+                    Shri K. Srinivasan
+                  </h3>
+
+                  <p class="leader-message-title">
+                    Message
+                  </p>
+
+                  <p class="leader-message">
+                    Message from the Chairman &amp;
+                    Managing Director, JBVNL.
+                  </p>
+
+                  <a href="#" class="message-link">
+                    Read Message
+                    <i class="fa fa-arrow-right"></i>
+                  </a>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <div><span class="section-kicker">CONSUMER FIRST</span>
+            <h2>Popular Online Services</h2>
+            <p>Everything you need to manage your electricity connection.</p>
+          </div>
+          <a href="#" class="view-all">View all services <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6" data-aos="fade-up">
+            <div class="service-card">
+              <div class="service-icon blue"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+              <h4>Energy Bill Payment</h4>
+              <p>Pay postpaid bill or recharge prepaid account securely.</p><a href="#">Pay Now <i
+                  class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="80">
+            <div class="service-card">
+              <div class="service-icon green"><i class="fa-solid fa-plug-circle-plus"></i></div>
+              <h4>New Connection</h4>
+              <p>Apply for LT, LTIS and HT electricity connections.</p><a href="#">Apply Now <i
+                  class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="160">
+            <div class="service-card">
+              <div class="service-icon orange"><i class="fa-solid fa-ticket"></i></div>
+              <h4>Complaint Status</h4>
+              <p>Register a service complaint and track its progress.</p><a href="#">Track Complaint <i
+                  class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="240">
+            <div class="service-card">
+              <div class="service-icon purple"><i class="fa-solid fa-gauge-high"></i></div>
+              <h4>Consumer Login</h4>
+              <p>Access bill history, requests and consumer services.</p><a href="#">Login <i
+                  class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="quick-panel">
+      <div class="container">
+        <div class="quick-grid">
+          <a href="#"><i class="fa-solid fa-receipt"></i><span>Bill History</span></a>
+          <a href="#"><i class="fa-solid fa-id-card"></i><span>Know Account Number</span></a>
+          <a href="#"><i class="fa-solid fa-location-dot"></i><span>Electric Supply Area</span></a>
+          <a href="#"><i class="fa-solid fa-triangle-exclamation"></i><span>Power Outage</span></a>
+          <a href="#"><i class="fa-solid fa-person-circle-check"></i><span>Know Your Urja Mitra</span></a>
+          <a href="#"><i class="fa-solid fa-comments"></i><span>Grievance Status</span></a>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Notice, Circulars & Tenders SECTION -->
+    <!-- 
+      <section class="section" id="notices">
+        <div class="container">
+          <div class="section-head">
+            <div><span class="section-kicker">LATEST UPDATES</span>
+              <h2>Notice, Circulars & Tenders</h2>
+              <p>Stay updated with official JBVNL announcements.</p>
+            </div><a class="view-all" href="#">All notices <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="notice-layout">
+            <div class="notice-tabs">
+              <button class="notice-tab active" onclick="filterNotice('all',this)">All</button>
+              <button class="notice-tab" onclick="filterNotice('commercial',this)">Commercial</button>
+              <button class="notice-tab" onclick="filterNotice('admin',this)">Administrative</button>
+              <button class="notice-tab" onclick="filterNotice('tender',this)">Tenders</button>
+            </div>
+            <div id="noticeList">
+              <div class="notice-item" data-type="commercial"><span class="notice-date">21<span>JUL</span></span>
+                <div><small>COMMERCIAL</small>
+                  <h5>EOI No. 62 PR JBVNL 2025-26</h5>
+                  <p>Official commercial notice and related document.</p>
+                </div><i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </div>
+              <div class="notice-item" data-type="admin"><span class="notice-date">21<span>JUL</span></span>
+                <div><small>ADMINISTRATIVE</small>
+                  <h5>Notification No. 1334 To 1337</h5>
+                  <p>Administrative notification dated 21.07.2026.</p>
+                </div><i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </div>
+              <div class="notice-item" data-type="tender"><span class="notice-date">10<span>JUL</span></span>
+                <div><small>TENDER</small>
+                  <h5>GM(IT) 76.CS(BV).2026</h5>
+                  <p>Empanelment of PCS firm and tender-related update.</p>
+                </div><i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+    <section class="section" id="notices">
+      <div class="container">
+
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">LATEST UPDATES</span>
+
+            <h2>Notice, Circulars & Tenders</h2>
+
+            <p>
+              Stay updated with official JBVNL announcements.
+            </p>
+          </div>
+
+          <a class="view-all" href="#">
+            All notices
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+
+        <div class="notice-layout">
+
+          <!-- ================= TABS ================= -->
+          <div class="notice-tabs">
+
+            <button class="notice-tab active" onclick="filterNotice('all',this)">
+              All
+            </button>
+
+            <button class="notice-tab" onclick="filterNotice('commercial',this)">
+              Commercial
+            </button>
+
+            <button class="notice-tab" onclick="filterNotice('admin',this)">
+              Administrative
+            </button>
+
+            <button class="notice-tab" onclick="filterNotice('tender',this)">
+              Tenders
+            </button>
+
+            <button class="notice-tab" onclick="filterNotice('account',this)">
+              Account
+            </button>
+
+          </div>
+
+
+          <!-- ================= SCROLL AREA ================= -->
+          <div class="notice-scroll">
+
+            <div id="noticeList">
+
+
+              <!-- NOTICE 1 -->
+              <a href="#" class="notice-item" data-type="commercial">
+
+                <span class="notice-date">
+                  21
+                  <span>JUL</span>
+                </span>
+
+                <div class="notice-content">
+
+                  <small>COMMERCIAL</small>
+
+                  <h5 class="notice-title">
+                    <span>EOI No. 62 PR JBVNL 2025-26</span>
+                    <span class="new-tag">New</span>
+                  </h5>
+
+                  <p>
+                    Official commercial notice and related document.
+                  </p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+              </a>
+
+
+
+              <!-- NOTICE 3 -->
+              <a href="#" class="notice-item" data-type="tender">
+
+                <span class="notice-date">
+                  10
+                  <span>JUL</span>
+                </span>
+
+                <div class="notice-content">
+
+                  <small>TENDER</small>
+
+                  <h5 class="notice-title">
+                    <span>GM(IT) 76.CS(BV).2026</span>
+                    <span class="new-tag">New</span>
+                  </h5>
+
+                  <p>
+                    Empanelment of PCS firm and tender-related update.
+                  </p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+              </a>
+
+
+
+
+              <!-- NOTICE 5 -->
+              <a href="#" class="notice-item" data-type="commercial">
+
+                <span class="notice-date">
+                  08
+                  <span>JUL</span>
+                </span>
+
+                <div class="notice-content">
+
+                  <small>COMMERCIAL</small>
+
+                  <h5 class="notice-title">
+                    <span>Revised Tariff Order 2026</span>
+                    <span class="new-tag">New</span>
+                  </h5>
+
+                  <p>
+                    Commercial circular regarding revised tariff.
+                  </p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+              </a>
+
+
+              <!-- NOTICE 6 -->
+              <a href="#" class="notice-item" data-type="admin">
+
+                <span class="notice-date">
+                  05
+                  <span>JUL</span>
+                </span>
+
+                <div class="notice-content">
+
+                  <small>ADMINISTRATIVE</small>
+
+                  <h5 class="notice-title">
+                    <span>Office Order No. 1205</span>
+                    <span class="new-tag">New</span>
+                  </h5>
+
+                  <p>
+                    Official administrative office order.
+                  </p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+              </a>
+
+
+              <!-- NOTICE 7 -->
+              <a href="#" class="notice-item" data-type="tender">
+
+                <span class="notice-date">
+                  01
+                  <span>JUL</span>
+                </span>
+
+                <div class="notice-content">
+
+                  <small>TENDER</small>
+
+                  <h5 class="notice-title">
+                    <span>E-Tender Notice No. 45/2026</span>
+                    <span class="new-tag">New</span>
+                  </h5>
+
+                  <p>
+                    E-tender invitation for various works.
+                  </p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+              </a>
+
+
+              <!-- NOTICE 8 -->
+              <a href="#" class="notice-item" data-type="commercial">
+
+                <span class="notice-date">
+                  28
+                  <span>JUN</span>
+                </span>
+
+                <div class="notice-content">
+
+                  <small>COMMERCIAL</small>
+
+                  <h5 class="notice-title">
+                    <span>Consumer Service Circular</span>
+                    <span class="new-tag">New</span>
+                  </h5>
+
+                  <p>
+                    Important update regarding consumer services.
+                  </p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+              </a>
+
+
+              <!-- NOTICE 9 -->
+              <a href="#" class="notice-item" data-type="admin">
+
+                <span class="notice-date">
+                  25
+                  <span>JUN</span>
+                </span>
+
+                <div class="notice-content">
+
+                  <small>ADMINISTRATIVE</small>
+
+                  <h5 class="notice-title">
+                    <span>Personnel Department Notification</span>
+                    <span class="new-tag">New</span>
+                  </h5>
+
+                  <p>
+                    Latest notification issued by the department.
+                  </p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+              </a>
+
+
+
+
+              <!-- NOTICE 10 -->
+              <a href="#" class="notice-item" data-type="account">
+
+                <span class="notice-date">
+                  20
+                  <span>JUN</span>
+                </span>
+
+                <div class="notice-content">
+
+                  <small>ACCOUNT</small>
+
+                  <h5 class="notice-title">
+                    <span>Annual Account & Financial Statement 2025-26</span>
+                    <span class="new-tag">New</span>
+                  </h5>
+
+                  <p>
+                    Important financial and accounting related notification.
+                  </p>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+    <!-- Calculater -->
+
+    <section class="section bg-soft" id="calculators">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <div><span class="section-kicker">SMART TOOLS</span>
+            <h2>Calculators & Estimators</h2>
+            <p>Useful electricity tools based on JBVNL consumer services.</p>
+          </div>
+        </div>
+        <div class="calculator-grid">
+          <a class="calc-card" href="#">
+            <div class="calc-number">01</div><i class="fa-solid fa-calculator"></i>
+            <h4>Fix Calculator</h4>
+            <p>Estimate applicable fixed charges.</p><span>Open calculator →</span>
+          </a>
+          <a class="calc-card" href="#">
+            <div class="calc-number">02</div><i class="fa-solid fa-chart-line"></i>
+            <h4>Effective Tariff</h4>
+            <p>Explore current tariff information and calculations.</p><span>Open calculator →</span>
+          </a>
+          <a class="calc-card" href="#">
+            <div class="calc-number">03</div><i class="fa-solid fa-bolt"></i>
+            <h4>Load Calculator</h4>
+            <p>Estimate connected electrical load.</p><span>Open calculator →</span>
+          </a>
+          <a class="calc-card" href="#">
+            <div class="calc-number">04</div><i class="fa-solid fa-file-circle-check"></i>
+            <h4>Cost Estimate</h4>
+            <p>Estimate connection-related costs.</p><span>Open calculator →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Solar Energy -->
+
+    <section class="solar-section" id="solar">
+      <div class="container">
+        <div class="solar-inner">
+          <div class="solar-copy" data-aos="fade-right">
+            <span class="section-kicker light">GREEN ENERGY</span>
+            <h2>Power Your Home With Rooftop Solar</h2>
+            <p>Explore PM Surya Ghar, rooftop solar and net-metering services through JBVNL.</p>
+            <div class="solar-pills"><span><i class="fa-solid fa-sun"></i> Clean Energy</span><span><i
+                  class="fa-solid fa-house"></i> Rooftop Solar</span><span><i class="fa-solid fa-bolt"></i> Net
+                Metering</span></div>
+            <a href="#" class="btn btn-light-custom">Apply for Rooftop Solar <i
+                class="fa-solid fa-arrow-right ms-2"></i></a>
+          </div>
+          <div class="solar-art" data-aos="fade-left"><img
+              src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1000&q=85"
+              alt="Rooftop solar"></div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="section bg-soft" id="downloads">
+      <div class="container">
+        <div class="section-head">
+          <div><span class="section-kicker">RESOURCE CENTRE</span>
+            <h2>Downloads & Important Links</h2>
+            <p>Forms, tariff documents, annual reports and useful portals.</p>
+          </div>
+        </div>
+        <div class="resource-grid">
+          <a href="#"><i class="fa-solid fa-file-lines"></i><span>New Application Form A</span><small>LT
+              Domestic</small></a>
+          <a href="#"><i class="fa-solid fa-file-lines"></i><span>New Application Form B</span><small>Non-Domestic /
+              HT / EHT</small></a>
+          <a href="#"><i class="fa-solid fa-file-pdf"></i><span>Tariff Documents</span><small>FY 2026-27 and previous
+              years</small></a>
+          <a href="#"><i class="fa-solid fa-book-open"></i><span>Annual Reports</span><small>JBVNL reports &
+              documents</small></a>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+    <!-- NEED Help 24*7 -->
+
+    <style>
+      .digital-services {
+
+        background: #f7fbff;
+
+      }
+
+      .digital-services h4 {
+        color: #003580;
+      }
+
+      .digital-services span {
+        display: inline-block;
+        background: #003580;
+        color: #fff;
+        padding: 6px 18px;
+        border-radius: 50px;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+
+      .digital-card {
+
+        background: #fff;
+
+        border-radius: 20px;
+
+        padding: 35px 25px;
+
+        text-align: center;
+
+        height: 100%;
+
+        box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+
+        transition: .35s;
+
+      }
+
+      .digital-card:hover {
+
+        transform: translateY(-10px);
+
+      }
+
+      .digital-icon {
+
+        width: 85px;
+
+        height: 85px;
+
+        margin: auto;
+
+        border-radius: 50%;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        font-size: 34px;
+
+        color: #fff;
+
+        margin-bottom: 20px;
+
+      }
+
+      .app {
+        background: #0d6efd;
+      }
+
+      .ai {
+        background: #8e44ad;
+      }
+
+      .whatsapp {
+        background: #25D366;
+      }
+
+      .download {
+        background: #ff9800;
+      }
+
+      .help-box {
+
+        background: #dfeaff;
+
+        color: #003580;
+
+        padding: 40px;
+
+        border-radius: 20px;
+
+        height: 100%;
+
+      }
+
+      .help-box h3 {
+        color: #003580;
+      }
+
+      .help-box .btn {
+
+        margin-right: 10px;
+        background: #003580;
+        color: #fff;
+        margin-top: 10px;
+
+      }
+
+      .support-card {
+
+        background: #fff;
+
+        border-radius: 20px;
+
+        padding: 40px;
+
+        text-align: center;
+
+        box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+
+        height: 100%;
+
+
+      }
+
+      .support-card i {
+
+        font-size: 55px;
+
+        color: #003580;
+
+        margin-bottom: 20px;
+
+      }
+
+      .support-card h2 {
+
+        color: #003580;
+
+        font-size: 48px;
+
+        font-weight: 700;
+
+      }
+    </style>
+
+    <section class="digital-services py-5">
+
+      <div class="container">
+
+        <div class="text-center mb-5">
+
+          <span class="section-badge">
+            Digital Experience
+          </span>
+
+          <h2 class="section-title">
+            Smart Consumer Assistance
+          </h2>
+
+          <p class="section-subtitle">
+            Access digital services, AI assistance, mobile applications,
+            downloads and consumer support from one place.
+          </p>
+
+        </div>
+
+        <div class="row g-4">
+
+          <!-- Mobile App -->
+
+          <div class="col-lg-3 col-md-6">
+
+            <div class="digital-card">
+
+              <div class="digital-icon app">
+
+                <i class="fas fa-mobile-alt"></i>
+
+              </div>
+
+              <h4>JBVNL Mobile App</h4>
+
+              <p>
+
+                Pay bills, register complaints,
+                download bills and manage your account.
+
+              </p>
+
+              <a href="#" class="btn more-links-btn">
+
+                Download App
+
+              </a>
+
+
+            </div>
+
+          </div>
+
+          <!-- AI -->
+
+          <div class="col-lg-3 col-md-6">
+
+            <div class="digital-card">
+
+              <div class="digital-icon ai">
+
+                <i class="fas fa-robot"></i>
+
+              </div>
+
+              <h4>JBVNL Mitra AI</h4>
+
+              <p>
+
+                Get instant answers about billing,
+                complaints, new connection and schemes.
+
+              </p>
+
+              <a href="#" class="btn more-links-btn">
+
+                Chat Now
+
+              </a>
+
+            </div>
+
+          </div>
+
+          <!-- WhatsApp -->
+
+          <div class="col-lg-3 col-md-6">
+
+            <div class="digital-card">
+
+              <div class="digital-icon whatsapp">
+
+                <i class="fab fa-whatsapp"></i>
+
+              </div>
+
+              <h4>WhatsApp Service</h4>
+
+              <p>
+
+                Bill details, outage updates,
+                complaint registration and OTP services.
+
+              </p>
+
+              <a href="#" class="btn more-links-btn">
+
+                Connect
+
+              </a>
+
+            </div>
+
+          </div>
+
+          <!-- Downloads -->
+
+          <div class="col-lg-3 col-md-6">
+
+            <div class="digital-card">
+
+              <div class="digital-icon download">
+
+                <i class="fas fa-download"></i>
+
+              </div>
+
+              <h4>Download Centre</h4>
+
+              <p>
+
+                Application forms,
+                circulars,
+                tariff orders and reports.
+
+              </p>
+
+              <a href="#" class="btn more-links-btn">
+
+                View Downloads
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="row mt-5">
+
+          <div class="col-lg-8">
+
+            <div class="help-box">
+
+              <h3>
+
+                Need Help?
+
+              </h3>
+
+              <p>
+
+                Visit our FAQ section or contact our Consumer Care Team
+                for billing, complaints, outages, smart meter and
+                electricity connection related assistance.
+
+              </p>
+
+              <div class="mt-4">
+
+                <a href="#" class="btn btn-primary">
+
+                  FAQ
+
+                </a>
+
+                <a href="#" class="btn btn-outline-primary ">
+
+                  Contact Support
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-4">
+
+            <div class="support-card">
+
+              <i class="fas fa-headset"></i>
+
+              <h4>24×7 Consumer Care</h4>
+
+              <h2>1912</h2>
+
+              <p>
+
+                Toll Free Consumer Helpline
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-mark"></div>
+          <p class="muted py-2">Engineering Building, H.E.C., Dhurwa, Ranchi - 834004, Jharkhand</p>
+        </div>
+        <div>
+          <h5>Consumer Services</h5><a href="#">New Connection</a><a href="#">Energy Bill Payment</a><a
+            href="#">Complaint Status</a><a href="#">Safety Tips</a>
+        </div>
+        <div>
+          <h5>Quick Links</h5><a href="#">About Us</a><a href="#">Tariff</a><a href="#">Tenders</a><a
+            href="#">Downloads</a>
+        </div>
+        <div>
+          <h5>Policies & Support</h5><a href="#">Privacy Policy</a><a href="#">Disclaimer</a><a href="#">RTI</a><a
+            href="#">Site Map</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Jharkhand Bijli Vitran Nigam Limited. All Rights
+          Reserved.</span><span>Designed for a modern digital JBVNL experience.</span></div>
+    </div>
+  </footer>
+
+  <div class="floating-tools">
+    <button title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i
+        class="fa-solid fa-arrow-up"></i></button>
+    <a href="tel:1912" title="Call 1912"><i class="fa-solid fa-phone"></i></a>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="assets/js/app.js"></script>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <script src="assets/js/app.js"></script>
+
+
+
+  <script>
+    $(document).ready(function () {
+
+      $('.officers-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: true,
+        smartSpeed: 700,
+
+        navText: [
+          '<i class="fa-solid fa-chevron-left"></i>',
+          '<i class="fa-solid fa-chevron-right"></i>'
+        ],
+
+        responsive: {
+          0: { items: 1 },
+          576: { items: 2 },
+          992: { items: 3 },
+          1200: { items: 4 }
+        }
+      });
+
+    });
+  </script>
+
+
+  <!-- toggle button -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const menuToggle = document.getElementById("mobileMenuToggle");
+      const navbar = document.querySelector(".jbvnl-navbar");
+
+      if (!menuToggle || !navbar) {
+        console.log("Mobile menu elements not found");
+        return;
+      }
+
+      menuToggle.addEventListener("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        navbar.classList.toggle("mobile-open");
+        menuToggle.classList.toggle("active");
+
+        // Icon change
+        const icon = menuToggle.querySelector("i");
+
+        if (navbar.classList.contains("mobile-open")) {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-times");
+        } else {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+        }
+      });
+
+    });
+  </script>
+
+</body>
+
+
+
+</html>
