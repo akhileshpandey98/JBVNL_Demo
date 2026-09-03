@@ -2141,374 +2141,1104 @@
 
 
 
-    <!-- NEED Help 24*7 -->
+  <!-- =========================================================
+     JBVNL - SMART CONSUMER ASSISTANCE
+========================================================= -->
 
-    <style>
-      .digital-services {
+<style>
 
-        background: #f7fbff;
+/* =========================================================
+   JBVNL SMART CONSUMER ASSISTANCE
+   COMPACT + BACKGROUND IMAGE
+========================================================= */
 
-      }
+.digital-services {
+    position: relative;
+    padding: 28px 0 24px;
 
-      .digital-services h4 {
-        color: #003580;
-      }
+    background:
+        linear-gradient(
+            90deg,
+            rgba(247,251,255,.96) 0%,
+            rgba(247,251,255,.91) 45%,
+            rgba(247,251,255,.95) 100%
+        ),
+        url('/images/electricity-bg.jpg');
 
-      .digital-services span {
-        display: inline-block;
-        background: #003580;
-        color: #fff;
-        padding: 6px 18px;
-        border-radius: 50px;
-        font-size: 14px;
-        margin-bottom: 10px;
-      }
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
-      .digital-card {
+    overflow: hidden;
+}
 
-        background: #fff;
 
-        border-radius: 20px;
+/* =========================================================
+   CONTAINER
+========================================================= */
 
-        padding: 35px 25px;
+.digital-services .container {
+    position: relative;
+    z-index: 2;
+}
 
-        text-align: center;
 
-        height: 100%;
+/* =========================================================
+   HEADER
+========================================================= */
 
-        box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+.digital-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-        transition: .35s;
+.digital-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
 
-      }
+    padding: 5px 14px;
 
-      .digital-card:hover {
+    border: 1px solid #a9cafa;
+    border-radius: 30px;
 
-        transform: translateY(-10px);
+    background: rgba(255,255,255,.94);
 
-      }
+    color: #0759d6;
 
-      .digital-icon {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .3px;
 
-        width: 85px;
+    box-shadow: 0 3px 10px rgba(0,70,150,.06);
+}
 
-        height: 85px;
+.digital-badge i {
+    font-size: 11px;
+}
 
-        margin: auto;
+.digital-header h2 {
+    margin: 8px 0 4px;
 
-        border-radius: 50%;
+    color: #102d61;
 
-        display: flex;
+    font-size: 28px;
+    font-weight: 750;
+    line-height: 1.2;
+}
 
-        justify-content: center;
+.digital-header p {
+    max-width: 700px;
 
-        align-items: center;
+    margin: auto;
 
-        font-size: 34px;
+    color: #536681;
 
-        color: #fff;
+    font-size: 12px;
+    line-height: 1.5;
+}
 
-        margin-bottom: 20px;
 
-      }
+/* =========================================================
+   REMOVE OLD TOP LINE
+========================================================= */
 
-      .app {
-        background: #0d6efd;
-      }
+.digital-line {
+    display: none !important;
+}
 
-      .ai {
-        background: #8e44ad;
-      }
 
-      .whatsapp {
-        background: #25D366;
-      }
+/* =========================================================
+   SERVICE GRID
+========================================================= */
 
-      .download {
-        background: #ff9800;
-      }
+.digital-grid {
+    display: grid;
 
-      .help-box {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
 
-        background: #dfeaff;
+    gap: 14px;
+}
 
-        color: #003580;
 
-        padding: 40px;
+/* =========================================================
+   SERVICE CARD
+========================================================= */
 
-        border-radius: 20px;
+.digital-card {
+    position: relative;
 
-        height: 100%;
+    min-height: 335px;
 
-      }
+    display: flex;
+    flex-direction: column;
 
-      .help-box h3 {
-        color: #003580;
-      }
+    padding: 17px 17px 14px;
 
-      .help-box .btn {
+    background: rgba(255,255,255,.94);
 
-        margin-right: 10px;
-        background: #003580;
-        color: #fff;
-        margin-top: 10px;
+    border: 1px solid #cddff4;
+    border-radius: 13px;
 
-      }
+    box-shadow:
+        0 6px 18px rgba(22,65,115,.07);
 
-      .support-card {
+    overflow: hidden;
 
-        background: #fff;
+    transition: all .25s ease;
+}
 
-        border-radius: 20px;
+.digital-card:hover {
+    transform: translateY(-4px);
 
-        padding: 40px;
+    box-shadow:
+        0 12px 25px rgba(22,65,115,.12);
+}
 
-        text-align: center;
 
-        box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+/* =========================================================
+   ICON
+========================================================= */
 
-        height: 100%;
+.digital-icon {
+    width: 58px;
+    height: 58px;
 
+    margin: 0 auto 9px;
 
-      }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-      .support-card i {
+    border-radius: 50%;
 
-        font-size: 55px;
+    background: #f2f7ff;
 
-        color: #003580;
+    border: 1px solid #c8dcfa;
 
-        margin-bottom: 20px;
+    color: #0759d6;
 
-      }
+    font-size: 23px;
 
-      .support-card h2 {
+    box-shadow: 0 4px 10px rgba(0,70,150,.06);
+}
 
-        color: #003580;
 
-        font-size: 48px;
+/* =========================================================
+   CARD TITLE
+========================================================= */
 
-        font-weight: 700;
+.digital-card h4 {
+    margin: 0;
 
-      }
-    </style>
+    text-align: center;
 
-    <section class="digital-services py-5">
+    color: #0759d6;
 
-      <div class="container">
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.25;
+}
 
-        <div class="text-center mb-5">
+.digital-card > p {
+    min-height: 38px;
 
-          <span class="section-badge">
-            Digital Experience
-          </span>
+    margin: 5px 0 8px;
 
-          <h2 class="section-title">
-            Smart Consumer Assistance
-          </h2>
+    text-align: center;
 
-          <p class="section-subtitle">
-            Access digital services, AI assistance, mobile applications,
-            downloads and consumer support from one place.
-          </p>
+    color: #687994;
+
+    font-size: 11px;
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.digital-divider {
+    width: 28px;
+    height: 2px;
+
+    margin: 0 auto 8px;
+
+    border-radius: 5px;
+
+    background: #0759d6;
+}
+
+
+/* =========================================================
+   SERVICE LIST
+========================================================= */
+
+.digital-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.digital-list li {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    min-height: 27px;
+
+    color: #334563;
+
+    font-size: 11px;
+
+    border-bottom: 1px solid #edf2f8;
+}
+
+.digital-list li:last-child {
+    border-bottom: 0;
+}
+
+.digital-list li i {
+    color: #0759d6;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.digital-btn {
+    width: 100%;
+
+    margin-top: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 7px 11px;
+
+    border: 1px solid #9fc3f5;
+    border-radius: 6px;
+
+    background: #0759d6;
+
+    color: #fff !important;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    transition: all .2s ease;
+}
+
+.digital-btn:hover {
+    background: #064aa9;
+
+    color: #fff !important;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   CARD BOTTOM EFFECT
+========================================================= */
+
+.digital-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: -20px;
+    right: -20px;
+    bottom: -45px;
+
+    height: 70px;
+
+    border-radius: 50% 50% 0 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(7,89,214,.01),
+            rgba(7,89,214,.06)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HELP + 1912
+========================================================= */
+
+.help-row {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 14px;
+
+    margin-top: 14px;
+}
+
+
+/* =========================================================
+   HELP BOX
+========================================================= */
+
+.help-box {
+    min-height: 165px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 18px 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(232,245,255,.96),
+            rgba(255,255,255,.94)
+        );
+
+    border: 1px solid #c9def8;
+
+    border-radius: 13px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 16px rgba(30,75,130,.06);
+}
+
+
+/* HELP ICON */
+
+.help-icon {
+    width: 78px;
+    height: 78px;
+
+    flex: 0 0 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    border: 1px solid #c9def8;
+
+    color: #0759d6;
+
+    font-size: 34px;
+
+    box-shadow:
+        0 5px 14px rgba(7,89,214,.08);
+}
+
+.help-content {
+    position: relative;
+    z-index: 2;
+}
+
+.help-content h3 {
+    margin: 0 0 4px;
+
+    color: #0759d6;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.help-content h3::after {
+    content: "";
+
+    display: block;
+
+    width: 30px;
+    height: 2px;
+
+    margin-top: 5px;
+
+    border-radius: 5px;
+
+    background: #0759d6;
+}
+
+.help-content p {
+    max-width: 620px;
+
+    margin: 7px 0 9px;
+
+    color: #52647f;
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   HELP BUTTONS
+========================================================= */
+
+.help-buttons {
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+}
+
+.help-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 7px 13px;
+
+    border-radius: 6px;
+
+    background: #0759d6;
+
+    border: 1px solid #0759d6;
+
+    color: #fff !important;
+
+    text-decoration: none;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    transition: .2s ease;
+}
+
+.help-btn:hover {
+    background: #064aa9;
+
+    color: #fff !important;
+
+    transform: translateY(-1px);
+}
+
+.help-btn-outline {
+    background: #fff;
+
+    color: #0759d6 !important;
+}
+
+.help-btn-outline:hover {
+    background: #0759d6;
+
+    color: #fff !important;
+}
+
+
+/* =========================================================
+   24x7 SUPPORT
+========================================================= */
+
+.support-card {
+    min-height: 165px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 17px;
+
+    background: rgba(255,255,255,.95);
+
+    border: 1px solid #c9def8;
+
+    border-radius: 13px;
+
+    box-shadow:
+        0 5px 16px rgba(30,75,130,.06);
+}
+
+.support-icon {
+    width: 68px;
+    height: 68px;
+
+    flex: 0 0 68px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f1f7ff;
+
+    border: 1px solid #c9def8;
+
+    color: #0759d6;
+
+    font-size: 30px;
+}
+
+.support-content {
+    text-align: left;
+}
+
+.support-content h5 {
+    margin: 0;
+
+    color: #0759d6;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.support-number {
+    margin: 2px 0;
+
+    color: #0759d6;
+
+    font-size: 36px;
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.support-content p {
+    margin: 4px 0 0;
+
+    color: #71809a;
+
+    font-size: 9px;
+}
+
+
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .digital-services {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .digital-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .digital-card {
+        min-height: 335px;
+    }
+
+    .help-row {
+        grid-template-columns: 1fr;
+    }
+
+
+
+ 
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .digital-services {
+        padding: 22px 10px;
+    }
+
+    .digital-header {
+        margin-bottom: 17px;
+    }
+
+    .digital-badge {
+        font-size: 9px;
+        padding: 5px 11px;
+    }
+
+    .digital-header h2 {
+        font-size: 22px;
+    }
+
+    .digital-header p {
+        font-size: 10px;
+    }
+
+    .digital-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .digital-card {
+        min-height: 330px;
+
+        padding: 17px 16px 14px;
+
+        border-radius: 11px;
+    }
+
+    .digital-icon {
+        width: 55px;
+        height: 55px;
+
+        font-size: 22px;
+    }
+
+    .digital-card h4 {
+        font-size: 15px;
+    }
+
+    .digital-card > p {
+        font-size: 10px;
+    }
+
+    .digital-list li {
+        min-height: 26px;
+
+        font-size: 10px;
+    }
+
+    .digital-btn {
+        font-size: 10px;
+    }
+
+
+    /* HELP */
+
+    .help-row {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .help-box {
+        min-height: auto;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 18px;
+
+        gap: 12px;
+    }
+
+    .help-icon {
+        width: 62px;
+        height: 62px;
+
+        flex-basis: 62px;
+
+        font-size: 28px;
+    }
+
+    .help-content h3 {
+        font-size: 20px;
+    }
+
+    .help-content p {
+        font-size: 10px;
+    }
+
+
+    /* SUPPORT */
+
+    .support-card {
+        min-height: 135px;
+
+        padding: 15px;
+    }
+
+    .support-icon {
+        width: 58px;
+        height: 58px;
+
+        flex-basis: 58px;
+
+        font-size: 25px;
+    }
+
+    .support-number {
+        font-size: 32px;
+    }
+
+
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .digital-services {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .digital-header h2 {
+        font-size: 20px;
+    }
+
+    .digital-header p {
+        font-size: 9px;
+    }
+
+    .digital-card {
+        min-height: 320px;
+
+        border-radius: 10px;
+    }
+
+    .digital-icon {
+        width: 52px;
+        height: 52px;
+
+        font-size: 21px;
+    }
+
+    .help-content h3 {
+        font-size: 19px;
+    }
+
+    .support-number {
+        font-size: 29px;
+    }
+}
+
+</style>
+
+
+<section class="digital-services">
+
+    <div class="digital-line"></div>
+
+    <div class="container">
+
+        <!-- ================= HEADER ================= -->
+
+        <div class="digital-header">
+
+            <span class="digital-badge">
+                <i class="fas fa-desktop"></i>
+                DIGITAL EXPERIENCE
+            </span>
+
+            <h2>Smart Consumer Assistance</h2>
+
+            <p>
+                Access digital services, mobile applications, online support,
+                downloads and consumer assistance — all from one place.
+            </p>
 
         </div>
 
-        <div class="row g-4">
 
-          <!-- Mobile App -->
+        <!-- ================= SERVICE CARDS ================= -->
 
-          <div class="col-lg-3 col-md-6">
-
-            <div class="digital-card">
-
-              <div class="digital-icon app">
-
-                <i class="fas fa-mobile-alt"></i>
-
-              </div>
-
-              <h4>JBVNL Mobile App</h4>
-
-              <p>
-
-                Pay bills, register complaints,
-                download bills and manage your account.
-
-              </p>
-
-              <a href="#" class="btn more-links-btn">
-
-                Download App
-
-              </a>
+        <div class="digital-grid">
 
 
-            </div>
-
-          </div>
-
-          <!-- AI -->
-
-          <div class="col-lg-3 col-md-6">
+            <!-- MOBILE APP -->
 
             <div class="digital-card">
 
-              <div class="digital-icon ai">
+                <div class="digital-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
 
-                <i class="fas fa-robot"></i>
+                <h4>Mobile App</h4>
 
-              </div>
+                <p>
+                    Access essential electricity services
+                    directly from your mobile device.
+                </p>
 
-              <h4>JBVNL Mitra AI</h4>
+                <div class="digital-divider"></div>
 
-              <p>
+                <ul class="digital-list">
 
-                Get instant answers about billing,
-                complaints, new connection and schemes.
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Bill Payment
+                    </li>
 
-              </p>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        New Connection
+                    </li>
 
-              <a href="#" class="btn more-links-btn">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Complaint Registration
+                    </li>
 
-                Chat Now
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Consumer Services
+                    </li>
 
-              </a>
+                </ul>
+
+                <a href="#" class="digital-btn">
+                    Download App
+                    <i class="fas fa-download"></i>
+                </a>
 
             </div>
 
-          </div>
 
-          <!-- WhatsApp -->
-
-          <div class="col-lg-3 col-md-6">
+            <!-- AI ASSISTANT -->
 
             <div class="digital-card">
 
-              <div class="digital-icon whatsapp">
+                <div class="digital-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
 
-                <i class="fab fa-whatsapp"></i>
+                <h4>AI Assistant</h4>
 
-              </div>
+                <p>
+                    Get quick assistance for consumer
+                    queries and electricity services.
+                </p>
 
-              <h4>WhatsApp Service</h4>
+                <div class="digital-divider"></div>
 
-              <p>
+                <ul class="digital-list">
 
-                Bill details, outage updates,
-                complaint registration and OTP services.
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Billing Queries
+                    </li>
 
-              </p>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Complaint Status
+                    </li>
 
-              <a href="#" class="btn more-links-btn">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        New Connection Info
+                    </li>
 
-                Connect
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Scheme Information
+                    </li>
 
-              </a>
+                </ul>
+
+                <a href="#" class="digital-btn">
+                    Chat Now
+                    <i class="fas fa-comments"></i>
+                </a>
 
             </div>
 
-          </div>
 
-          <!-- Downloads -->
-
-          <div class="col-lg-3 col-md-6">
+            <!-- WHATSAPP -->
 
             <div class="digital-card">
 
-              <div class="digital-icon download">
+                <div class="digital-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
 
-                <i class="fas fa-download"></i>
+                <h4>WhatsApp Service</h4>
 
-              </div>
+                <p>
+                    Connect through WhatsApp for
+                    quick consumer assistance.
+                </p>
 
-              <h4>Download Centre</h4>
+                <div class="digital-divider"></div>
 
-              <p>
+                <ul class="digital-list">
 
-                Application forms,
-                circulars,
-                tariff orders and reports.
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Bill Details
+                    </li>
 
-              </p>
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Complaint Registration
+                    </li>
 
-              <a href="#" class="btn more-links-btn">
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Service Assistance
+                    </li>
 
-                View Downloads
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Important Updates
+                    </li>
 
-              </a>
+                </ul>
+
+                <a href="#" class="digital-btn">
+                    Connect Now
+                    <i class="fab fa-whatsapp"></i>
+                </a>
 
             </div>
 
-          </div>
+
+            <!-- DOWNLOAD CENTRE -->
+
+            <div class="digital-card">
+
+                <div class="digital-icon">
+                    <i class="fas fa-download"></i>
+                </div>
+
+                <h4>Download Centre</h4>
+
+                <p>
+                    Access important forms, circulars,
+                    tariff documents and reports.
+                </p>
+
+                <div class="digital-divider"></div>
+
+                <ul class="digital-list">
+
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Application Forms
+                    </li>
+
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Tariff Documents
+                    </li>
+
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Circulars &amp; Notices
+                    </li>
+
+                    <li>
+                        <i class="fas fa-check-circle"></i>
+                        Reports &amp; Publications
+                    </li>
+
+                </ul>
+
+                <a href="#" class="digital-btn">
+                    View Downloads
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </div>
 
         </div>
 
-        <div class="row mt-5">
 
-          <div class="col-lg-8">
+        <!-- ================= HELP AREA ================= -->
+
+        <div class="help-row">
+
+
+            <!-- NEED HELP -->
 
             <div class="help-box">
 
-              <h3>
+                <div class="help-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
 
-                Need Help?
+                <div class="help-content">
 
-              </h3>
+                    <h3>Need Help?</h3>
 
-              <p>
+                    <p>
+                        Find answers to frequently asked questions or connect
+                        with consumer support for billing, complaints,
+                        electricity supply, new connection and other services.
+                    </p>
 
-                Visit our FAQ section or contact our Consumer Care Team
-                for billing, complaints, outages, smart meter and
-                electricity connection related assistance.
+                    <div class="help-buttons">
 
-              </p>
+                        <a href="#" class="help-btn">
+                            <i class="fas fa-circle-question"></i>
+                            View FAQ
+                        </a>
 
-              <div class="mt-4">
+                        <a href="#" class="help-btn help-btn-outline">
+                            <i class="fas fa-headset"></i>
+                            Contact Support
+                        </a>
 
-                <a href="#" class="btn btn-primary">
+                    </div>
 
-                  FAQ
-
-                </a>
-
-                <a href="#" class="btn btn-outline-primary ">
-
-                  Contact Support
-
-                </a>
-
-              </div>
+                </div>
 
             </div>
 
-          </div>
 
-          <div class="col-lg-4">
+            <!-- 24x7 -->
 
             <div class="support-card">
 
-              <i class="fas fa-headset"></i>
+                <div class="support-icon">
+                    <i class="fas fa-phone-volume"></i>
+                </div>
 
-              <h4>24×7 Consumer Care</h4>
+                <div class="support-content">
 
-              <h2>1912</h2>
+                    <h5>24×7 Consumer Care</h5>
 
-              <p>
+                    <div class="support-number">
+                        1912
+                    </div>
 
-                Toll Free Consumer Helpline
+                    <p>
+                        Toll Free Consumer Helpline
+                    </p>
 
-              </p>
+                </div>
 
             </div>
 
-          </div>
-
         </div>
 
-      </div>
 
-    </section>
+     
+
+    </div>
+
+</section>
 
   </main>
 
