@@ -415,16 +415,16 @@ body {
 ========================================================= */
 
 .jbvnl-nav-link:hover {
-    color: #003580 !important;
+    color: #0b0471 !important;
     background: #f5f8fc;
 }
 
 .jbvnl-nav-link:hover>i:first-child {
-    color: #003580;
+    color: #0b0471;
 }
 
 .jbvnl-nav-link:hover .nav-arrow {
-    color: #003580 !important;
+    color: #0b0471 !important;
     transform: rotate(180deg);
 }
 
@@ -448,7 +448,7 @@ body {
 
     height: 3px;
 
-    background: #003580;
+    background: #0b0471;
 
     transform: scaleX(0);
     transform-origin: center;
@@ -541,7 +541,7 @@ body {
 
     margin-bottom: 7px;
 
-    color: #003580;
+    color: #0b0471;
 
     font-size: 10px;
     font-weight: 600;
@@ -640,7 +640,7 @@ body {
 }
 
 .mega-column>a:not(.mega-main-link):hover i {
-    color: #003580;
+    color: #0b0471;
     transform: translateX(2px);
 }
 
@@ -671,7 +671,7 @@ body {
 }
 
 .mega-main-link:hover {
-    background: #003580;
+    background: #0b0471;
     color: #fff !important;
 
     transform: translateY(-1px);
@@ -698,7 +698,7 @@ body {
 }
 
 .mega-highlight span {
-    color: #003580;
+    color: #0b0471;
 
     font-size: 9px;
     font-weight: 600;
@@ -768,8 +768,8 @@ body {
 }
 
 .employee-link:hover {
-    border-bottom: 3px solid #003580;
-    color: #003580 !important;
+    border-bottom: 3px solid #0b0471;
+    color: #0b0471 !important;
 }
 
 .employee-link::after {
@@ -812,7 +812,7 @@ body {
 }
 
 .menu-toggle.active {
-    background: #003580;
+    background: #0b0471;
 }
 
 
@@ -939,7 +939,7 @@ body {
 
         background: #fff;
 
-        color: #073b7a !important;
+        color: #0b0471 !important;
 
         font-size: 13px;
 
@@ -1205,7 +1205,7 @@ body {
 
 
 
-/* HERO SECTION */
+/*====================== HERO SECTION =======================*/
 
 .hero {
     position: relative;
@@ -1245,8 +1245,8 @@ body {
 
 .hero .owl-nav button.owl-prev:hover,
 .hero .owl-nav button.owl-next:hover {
-    background: #087df5 !important;
-    border-color: #087df5 !important;
+    background: #0b0471 !important;
+    border-color: #0b0471 !important;
     transform: scale(1.08);
 }
 
@@ -1289,7 +1289,7 @@ body {
     font-size: 11px;
     letter-spacing: 2px;
     font-weight: 800;
-    color: #003580
+    color: #0b0471;
 }
 
 .eyebrow {
@@ -1321,11 +1321,16 @@ body {
 }
 
 .btn-primary-custom {
-    background: #0878ff;
+    background:#0b0471;
     color: #fff;
     border-radius: 10px;
     padding: 12px 20px;
     font-weight: 700
+}
+.btn-primary-custom:hover {
+    background: #fff;
+    color: #0b0471;
+
 }
 
 .btn-outline-light-custom {
@@ -1335,6 +1340,9 @@ body {
     padding: 12px 20px;
     font-weight: 700
 }
+
+
+
 
 .service-dock {
     margin-top: -45px;
@@ -1392,7 +1400,7 @@ body {
 
 .blue {
     background: #e9f2ff;
-    color: #003580
+    color: #0b0471
 }
 
 .green {
@@ -1438,7 +1446,7 @@ body {
 }
 
 .view-all {
-    color: #003580;
+    color: #0b0471;
     text-decoration: none;
     font-weight: 700;
     font-size: 13px
@@ -1474,14 +1482,15 @@ body {
 }
 
 .service-card a {
-    color:#003580;
+    color:#0b0471;
     text-decoration: none;
     font-size: 13px;
     font-weight: 800
 }
 
 .quick-panel {
-    padding: 0 0 20px
+    padding: 0 0 20px;
+    margin-top: 20px;
 }
 
 .quick-grid {
@@ -1510,58 +1519,6 @@ body {
     margin-bottom: 8px
 }
 
-.calculator-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px
-}
-
-.calc-card {
-    background: #fff;
-    border: 1px solid #e4eaf2;
-    border-radius: 18px;
-    padding: 25px;
-    text-decoration: none;
-    color: #172033;
-    position: relative;
-    overflow: hidden;
-    transition: .3s
-}
-
-.calc-card:hover {
-    transform: translateY(-6px);
-    border-color: #bcd6ff
-}
-
-.calc-number {
-    position: absolute;
-    right: 20px;
-    top: 18px;
-    color: #dbe6f7;
-    font-weight: 800;
-    font-size: 35px
-}
-
-.calc-card>i {
-    font-size: 25px;
-    color: #003580
-}
-
-.calc-card h4 {
-    font-family: Poppins;
-    margin: 20px 0 5px
-}
-
-.calc-card p {
-    color: #667085;
-    font-size: 13px
-}
-
-.calc-card span {
-    color: #003580;
-    font-size: 12px;
-    font-weight: 800
-}
 
 
 /* Notice, Circulars & Tenders */
@@ -1590,7 +1547,7 @@ body {
 
 .notice-tab.active {
     background: #fff;
-    color: #003580
+    color: #0b0471
 }
 
 .notice-item {
@@ -1609,7 +1566,7 @@ body {
     width: 55px;
     height: 55px;
     background: #eaf2ff;
-    color: #003580;
+    color: #0b0471;
     border-radius: 12px;
     display: grid;
     place-items: center;
@@ -1625,7 +1582,7 @@ body {
 
 .notice-item small {
     font-size: 9px;
-    color: #003580;
+    color: #0b0471;
     font-weight: 800;
     letter-spacing: 1px
 }
@@ -1841,7 +1798,7 @@ body {
 
     margin-bottom: 4px;
 
-    color: #003580;
+    color: #0b0471;
 
     font-size: 10px;
 
@@ -1890,7 +1847,7 @@ body {
 .notice-item:hover>i {
     transform: translate(3px, -3px);
 
-    color: #003580;
+    color: #0b0471;
 }
 
 
@@ -2042,447 +1999,8 @@ body {
 
 
 
-/* ========================================= */
 
-.solar-section {
-    padding: 90px 0;
-    background: linear-gradient(125deg, #06182f, #0b3155)
-}
-
-.solar-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center
-}
-
-.light {
-    color: #6edcff
-}
-
-.solar-copy h2 {
-    font-family: Poppins;
-    color: #fff;
-    font-size: 40px;
-    line-height: 1.2;
-    margin: 10px 0 15px
-}
-
-.solar-copy p {
-    color: #cbd8e7;
-    font-size: 16px
-}
-
-.solar-pills {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin: 25px 0
-}
-
-.solar-pills span {
-    border: 1px solid #ffffff1f;
-    background: #ffffff0b;
-    color: #eaf3ff;
-    border-radius: 50px;
-    padding: 8px 13px;
-    font-size: 12px
-}
-
-.solar-pills i {
-    color: #68d8ff
-}
-
-.btn-light-custom {
-    background: #fff;
-    color: #09213e;
-    padding: 12px 18px;
-    border-radius: 10px;
-    font-weight: 800
-}
-
-.btn-light-custom:hover {
-    background: #09213e;
-    color: #fff;
-    border: 1px solid #ffffff1f;
-}
-
-.solar-art img {
-    width: 100%;
-    height: 360px;
-    object-fit: cover;
-    border-radius: 25px;
-    box-shadow: 0 25px 60px #0004
-}
-
-
-.resource-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px
-}
-
-.resource-grid a {
-    background: #fff;
-    border: 1px solid #e5eaf1;
-    border-radius: 16px;
-    padding: 23px;
-    text-decoration: none;
-    color: #172033
-}
-
-.resource-grid i {
-    color: #003580;
-    font-size: 23px
-}
-
-.resource-grid span {
-    display: block;
-    font-weight: 800;
-    margin-top: 14px;
-    font-size: 14px
-}
-
-.resource-grid small {
-    color: #7b8494;
-    font-size: 11px
-}
-
-
-
-/* =========================================================
-   ABOUT JBVNL + LEADERSHIP
-========================================================= */
-
-.about-jbvnl-section {
-    width: 100%;
-    background: #eef3fb;
-    padding: 55px 0;
-    overflow: hidden;
-}
-
-
-/* =========================================================
-   ABOUT LEFT
-========================================================= */
-
-.about-content {
-    padding-right: 45px;
-}
-
-.about-kicker {
-    display: block;
-
-    margin-bottom: 8px;
-
-    color: #0b0471;
-
-    font-size: 14px;
-    font-weight: 700;
-
-    letter-spacing: 1.5px;
-}
-
-.about-title {
-    margin: 0 0 18px;
-
-    color: #1b4286;
-
-    font-size: 34px;
-    font-weight: 700;
-
-    line-height: 1.2;
-}
-
-.about-content p {
-    margin-bottom: 13px;
-
-    color: #26364d;
-
-    font-size: 15px;
-    line-height: 1.7;
-}
-
-.about-more-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-
-    margin-top: 12px;
-
-    padding: 11px 19px;
-
-    background: #003580;
-    color: #fff !important;
-
-    border-radius: 6px;
-
-    text-decoration: none;
-
-    font-size: 13px;
-    font-weight: 600;
-
-    transition: .25s ease;
-}
-
-.about-more-btn:hover {
-    background: #c9161f;
-    color: #fff !important;
-}
-
-
-/* =========================================================
-   RIGHT LEADERSHIP
-========================================================= */
-
-.leadership-box {
-    position: relative;
-
-    padding: 12px 0;
-}
-
-
-/* =========================================================
-   LEADERSHIP CARD
-========================================================= */
-
-.leadership-card {
-    position: relative;
-
-    display: flex;
-    align-items: stretch;
-
-    min-height: 190px;
-
-    margin-bottom: 18px;
-
-    background: #fff;
-
-    overflow: hidden;
-
-    box-shadow: 0 5px 20px rgba(20, 50, 90, .07);
-
-    transition: .25s ease;
-}
-
-.leadership-card:last-child {
-    margin-bottom: 0;
-}
-
-.leadership-card:hover {
-    transform: translateY(-3px);
-
-    box-shadow: 0 10px 28px rgba(20, 50, 90, .12);
-}
-
-
-/* =========================================================
-   LEADER IMAGE
-========================================================= */
-
-.leader-image {
-    width: 180px;
-    min-width: 180px;
-
-    background: #dce7f6;
-
-    overflow: hidden;
-}
-
-.leader-image img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-}
-
-
-/* =========================================================
-   LEADER CONTENT
-========================================================= */
-
-.leader-content {
-    flex: 1;
-
-    padding: 20px 20px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.leader-label {
-    display: block;
-
-    margin-bottom: 5px;
-
-    color: #0b0471;
-
-    font-size: 10px;
-    font-weight: 700;
-
-    letter-spacing: 1px;
-}
-
-.leader-content h3 {
-    margin: 0 0 5px;
-
-    color: #173f83;
-
-    font-size: 20px;
-    font-weight: 700;
-
-    line-height: 1.25;
-}
-
-.leader-message-title {
-    margin: 3px 0 4px !important;
-
-    color: #003580 !important;
-
-    font-size: 13px !important;
-    font-weight: 700;
-}
-
-.leader-message {
-    margin: 0 0 8px !important;
-
-    color: #596579;
-
-    font-size: 12px !important;
-
-    line-height: 1.45;
-}
-
-.message-link {
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 6px;
-
-    color: #0b0471;
-
-    font-size: 11px;
-
-    font-weight: 700;
-
-    text-decoration: none;
-}
-
-.message-link:hover {
-    color: #003580;
-}
-
-
-/* =========================================================
-   RED DECORATION
-========================================================= */
-
-.leadership-box::after {
-    content: "";
-
-    position: absolute;
-
-    right: -20px;
-    bottom: -15px;
-
-    width: 80px;
-    height: 80px;
-
-    border-right: 6px solid #003580;
-    border-bottom: 6px solid #003580;
-
-    pointer-events: none;
-}
-
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-
-@media (max-width: 1199px) {
-
-    .leader-image {
-        width: 155px;
-        min-width: 155px;
-    }
-
-    .leader-content {
-        padding: 16px;
-    }
-
-    .about-title {
-        font-size: 30px;
-    }
-
-}
-
-
-@media (max-width: 991px) {
-
-    .about-jbvnl-section {
-        padding: 40px 0;
-    }
-
-    .about-content {
-        padding-right: 0;
-        margin-bottom: 35px;
-    }
-
-    .leadership-card {
-        min-height: 180px;
-    }
-
-}
-
-
-@media (max-width: 575px) {
-
-    .about-jbvnl-section {
-        padding: 30px 15px;
-    }
-
-    .about-title {
-        font-size: 26px;
-    }
-
-    .about-content p {
-        font-size: 14px;
-    }
-
-    .leadership-card {
-        min-height: 150px;
-    }
-
-    .leader-image {
-        width: 115px;
-        min-width: 115px;
-    }
-
-    .leader-content {
-        padding: 12px;
-    }
-
-    .leader-label {
-        font-size: 8px;
-    }
-
-    .leader-content h3 {
-        font-size: 16px;
-    }
-
-    .leader-message {
-        font-size: 11px !important;
-    }
-
-}
-
-
-
-/* Footer */
+/* =================== Footer ============================= */
 
 .footer {
     background: #071225;
@@ -3083,7 +2601,7 @@ body {
 }
 
 .menu-toggle.active {
-    background: #003580;
+    background: #0b0471;
 }
 
 
@@ -3154,7 +2672,7 @@ body {
         align-items: center;
         gap: 10px;
 
-        color: #073b7a !important;
+        color: #0b0471 !important;
         background: #fff;
 
         text-decoration: none;
@@ -3265,7 +2783,7 @@ body {
 
 
     .jbvnl-mega-menu a:hover {
-        color: #003580 !important;
+        color: #0b0471 !important;
     }
 
 
@@ -3488,7 +3006,7 @@ RIGHT STICKY NAV Quick Links
 .top-header a {
     display: inline-block;
     padding: 10px 7px;
-    color: #003580;
+    color: #0b0471;
     font-size: 11px;
     font-weight: 400;
     text-decoration: none;
@@ -3630,6 +3148,402 @@ body {
 
 
 
+/* =========================================================
+   MOBILE HEADER - FINAL FIX
+   ========================================================= */
+
+@media (max-width: 575px) {
+
+    .header-inner {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 5px 10px;
+        gap: 8px;
+        overflow: hidden;
+    }
+
+    .brand {
+        flex: 1 1 auto;
+        min-width: 0;
+        max-width: calc(100% - 50px);
+        overflow: hidden;
+    }
+
+    .brand-mark {
+        width: 100%;
+        max-width: 300px;
+        height: 60px;
+        flex-shrink: 1;
+        background-size: 100% 100%;
+    }
+
+    .menu-toggle {
+        width: 42px;
+        height: 42px;
+        flex: 0 0 42px;
+        margin: 0;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .header-inner {
+        padding-left: 8px;
+        padding-right: 8px;
+        gap: 5px;
+    }
+
+    .brand {
+        max-width: calc(100% - 45px);
+    }
+
+    .brand-mark {
+        max-width: 190px;
+        height: 58px;
+    }
+
+    .menu-toggle {
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
+    }
+}
+
+
+/* =========================================================
+   STOP HORIZONTAL PAGE MOVEMENT
+   ========================================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+}
+
+
+@media (max-width: 1100px) {
+
+    .jbvnl-navbar .nav-list {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .jbvnl-navbar,
+    .jbvnl-nav-container,
+    .jbvnl-nav-list {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+}
+
+
+
+
+
+
+/* =========================================================
+   JBVNL FINAL RESPONSIVE OVERRIDE
+   =========================================================
+   Purpose:
+   1. Keep desktop mega menu on mouse hover.
+   2. Keep hamburger on tablet/mobile.
+   3. After hamburger opens, mega menu also opens on hover.
+   4. Prevent old mobile-active/display:none rules from blocking hover.
+   5. Prevent horizontal page movement on small screens.
+   6. Keep the existing CSS above unchanged for reference.
+========================================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+}
+
+/* =========================================================
+   DESKTOP - EXISTING HOVER BEHAVIOUR
+========================================================= */
+
+@media (min-width: 1101px) {
+
+    .jbvnl-nav-item.has-mega:hover>.jbvnl-mega-menu {
+        display: grid !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateY(0) !important;
+        pointer-events: auto !important;
+    }
+
+}
+
+/* =========================================================
+   TABLET + MOBILE
+   Hamburger opens the navbar.
+   Mega menu opens by mouse hover.
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .jbvnl-navbar {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .jbvnl-navbar.mobile-open {
+        max-height: calc(100vh - 70px) !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateY(0) !important;
+    }
+
+    .jbvnl-nav-container,
+    .jbvnl-nav-list {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .jbvnl-nav-list {
+        display: flex !important;
+        flex-direction: column !important;
+        overflow: visible !important;
+    }
+
+    .jbvnl-nav-item {
+        width: 100% !important;
+        position: relative !important;
+    }
+
+    /* ---------------------------------------------------------
+       MOBILE MEGA MENU - HIDDEN BY DEFAULT
+    --------------------------------------------------------- */
+
+    .jbvnl-nav-item.has-mega>.jbvnl-mega-menu {
+        position: static !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        display: none !important;
+
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+
+        padding: 0 !important;
+
+        background: #f6f9fd !important;
+        border: 0 !important;
+        border-top: 1px solid #dfe7f1 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        pointer-events: auto !important;
+    }
+
+    /* ---------------------------------------------------------
+       MOBILE/TABLET HOVER - OPEN MEGA MENU
+       This overrides the old display:none hover rule.
+    --------------------------------------------------------- */
+
+    .jbvnl-nav-item.has-mega:hover>.jbvnl-mega-menu,
+    .jbvnl-nav-item.has-mega:focus-within>.jbvnl-mega-menu {
+        display: grid !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        pointer-events: auto !important;
+    }
+
+    /* ---------------------------------------------------------
+       If old JavaScript adds mobile-active, keep it working too.
+       Hover remains the primary method.
+    --------------------------------------------------------- */
+
+    .jbvnl-nav-item.has-mega.mobile-active>.jbvnl-mega-menu {
+        display: grid !important;
+    }
+
+    /* ---------------------------------------------------------
+       NAV ARROW
+    --------------------------------------------------------- */
+
+    .jbvnl-nav-link .nav-arrow {
+        margin-left: auto !important;
+    }
+
+    .jbvnl-nav-item.has-mega:hover>.jbvnl-nav-link .nav-arrow {
+        transform: rotate(180deg) !important;
+    }
+
+    .jbvnl-nav-item.has-mega:focus-within>.jbvnl-nav-link .nav-arrow {
+        transform: rotate(180deg) !important;
+    }
+
+    .jbvnl-nav-item.has-mega.mobile-active>.jbvnl-nav-link .nav-arrow {
+        transform: rotate(180deg) !important;
+    }
+
+}
+
+/* =========================================================
+   MOBILE HEADER - NO HORIZONTAL OVERFLOW
+========================================================= */
+
+@media (max-width: 575px) {
+
+    .header-inner {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        padding: 5px 10px !important;
+        gap: 8px !important;
+        overflow: hidden !important;
+    }
+
+    .brand {
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+        max-width: calc(100% - 50px) !important;
+        overflow: hidden !important;
+    }
+
+
+
+    .menu-toggle {
+        width: 42px !important;
+        height: 42px !important;
+        flex: 0 0 42px !important;
+        margin: 0 !important;
+    }
+
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .header-inner {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        gap: 5px !important;
+    }
+
+    .brand {
+        max-width: calc(100% - 45px) !important;
+    }
+
+    .brand-mark {
+        max-width: 280px !important;
+        height: 58px !important;
+    }
+
+    .menu-toggle {
+        width: 40px !important;
+        height: 40px !important;
+        flex: 0 0 40px !important;
+    }
+
+}
+
+/* =========================================================
+   MOBILE MEGA CONTENT
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .jbvnl-mega-menu .mega-column {
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 17px 20px !important;
+        border-left: 0 !important;
+        border-bottom: 1px solid #e1e8f1 !important;
+    }
+
+    .jbvnl-mega-menu .mega-column:last-child {
+        border-bottom: 0 !important;
+    }
+
+    .jbvnl-mega-menu .mega-intro {
+        padding-right: 20px !important;
+        background: #edf4fc !important;
+    }
+
+    .jbvnl-mega-menu h3 {
+        font-size: 19px !important;
+        line-height: 1.3 !important;
+    }
+
+    .jbvnl-mega-menu h4 {
+        font-size: 13px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .jbvnl-mega-menu p {
+        font-size: 12px !important;
+        line-height: 1.6 !important;
+    }
+
+    .jbvnl-mega-menu a {
+        display: flex !important;
+        align-items: center !important;
+        gap: 9px !important;
+        padding: 8px 0 !important;
+        font-size: 13px !important;
+        background: transparent !important;
+    }
+
+}
+
+/* =========================================================
+   SMALL MOBILE MEGA CONTENT
+========================================================= */
+
+@media (max-width: 575px) {
+
+    .jbvnl-mega-menu .mega-column {
+        padding: 15px !important;
+    }
+
+    .jbvnl-mega-menu .mega-intro {
+        padding: 17px 15px !important;
+    }
+
+    .jbvnl-mega-menu h3 {
+        font-size: 18px !important;
+    }
+
+    .jbvnl-mega-menu h4 {
+        font-size: 12px !important;
+    }
+
+    .jbvnl-mega-menu a {
+        font-size: 12px !important;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
 
 /* ==========================================
    QUICK LINKS BUTTON
@@ -3654,7 +3568,7 @@ body {
     border: 0;
     border-radius: 0 6px 6px 0;
 
-    background: #003580;
+    background: #0b0471;
     color: #fff;
 
     cursor: pointer;
@@ -3764,7 +3678,7 @@ body {
     min-height: 70px;
     padding: 0 20px;
 
-    background: #003580;
+    background: #0b0471;
     color: #fff;
 
     z-index: 2;
@@ -3870,7 +3784,7 @@ body {
     border-radius: 8px;
 
     background: #eef4ff;
-    color: #003580;
+    color: #0b0471;
 
     transition: .3s ease;
 }
@@ -3880,7 +3794,7 @@ body {
 }
 
 .quick-link-item:hover .quick-link-icon {
-    background: #003580;
+    background: #0b0471;
     color: #fff;
 }
 
@@ -3920,7 +3834,7 @@ body {
 .quick-link-arrow {
     flex: 0 0 auto;
 
-    color: #003580;
+    color: #0b0471;
 
     font-size: 18px;
 
@@ -4455,393 +4369,337 @@ body {
 
 
 
-/* =========================================================
-   MOBILE HEADER - FINAL FIX
-   ========================================================= */
-
-@media (max-width: 575px) {
-
-    .header-inner {
-        width: 100%;
-        max-width: 100%;
-        min-width: 0;
-        padding: 5px 10px;
-        gap: 8px;
-        overflow: hidden;
-    }
-
-    .brand {
-        flex: 1 1 auto;
-        min-width: 0;
-        max-width: calc(100% - 50px);
-        overflow: hidden;
-    }
-
-    .brand-mark {
-        width: 100%;
-        max-width: 300px;
-        height: 60px;
-        flex-shrink: 1;
-        background-size: 100% 100%;
-    }
-
-    .menu-toggle {
-        width: 42px;
-        height: 42px;
-        flex: 0 0 42px;
-        margin: 0;
-    }
-}
 
 
 /* =========================================================
-   VERY SMALL PHONES
-   ========================================================= */
+   ABOUT JBVNL + LEADERSHIP
+========================================================= */
 
-@media (max-width: 360px) {
-
-    .header-inner {
-        padding-left: 8px;
-        padding-right: 8px;
-        gap: 5px;
-    }
-
-    .brand {
-        max-width: calc(100% - 45px);
-    }
-
-    .brand-mark {
-        max-width: 190px;
-        height: 58px;
-    }
-
-    .menu-toggle {
-        width: 40px;
-        height: 40px;
-        flex: 0 0 40px;
-    }
-}
-
-
-/* =========================================================
-   STOP HORIZONTAL PAGE MOVEMENT
-   ========================================================= */
-
-html,
-body {
+.about-jbvnl-section {
     width: 100%;
-    max-width: 100%;
-    overflow-x: hidden !important;
+    background: #eef3fb;
+    padding: 55px 0;
+    overflow: hidden;
 }
-
-
-@media (max-width: 1100px) {
-
-    .jbvnl-navbar .nav-list {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-    }
-
-    .jbvnl-navbar,
-    .jbvnl-nav-container,
-    .jbvnl-nav-list {
-        max-width: 100% !important;
-        overflow-x: hidden !important;
-    }
-}
-
-
-
-
 
 
 /* =========================================================
-   JBVNL FINAL RESPONSIVE OVERRIDE
-   =========================================================
-   Purpose:
-   1. Keep desktop mega menu on mouse hover.
-   2. Keep hamburger on tablet/mobile.
-   3. After hamburger opens, mega menu also opens on hover.
-   4. Prevent old mobile-active/display:none rules from blocking hover.
-   5. Prevent horizontal page movement on small screens.
-   6. Keep the existing CSS above unchanged for reference.
+   ABOUT LEFT
 ========================================================= */
 
-html,
-body {
+.about-content {
+    padding-right: 45px;
+}
+
+.about-kicker {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #0b0471;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.about-title {
+    margin: 0 0 18px;
+
+    color: #1b4286;
+
+    font-size: 34px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+.about-content p {
+    margin-bottom: 13px;
+
+    color: #26364d;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.about-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-top: 12px;
+
+    padding: 11px 19px;
+
+    background: #0b0471;
+    color: #fff !important;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: .25s ease;
+}
+
+.about-more-btn:hover {
+    background: #c9161f;
+    color: #fff !important;
+}
+
+
+/* =========================================================
+   RIGHT LEADERSHIP
+========================================================= */
+
+.leadership-box {
+    position: relative;
+
+    padding: 12px 0;
+}
+
+
+/* =========================================================
+   LEADERSHIP CARD
+========================================================= */
+
+.leadership-card {
+    position: relative;
+
+    display: flex;
+    align-items: stretch;
+
+    min-height: 190px;
+
+    margin-bottom: 18px;
+
+    background: #fff;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(20, 50, 90, .07);
+
+    transition: .25s ease;
+}
+
+.leadership-card:last-child {
+    margin-bottom: 0;
+}
+
+.leadership-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 28px rgba(20, 50, 90, .12);
+}
+
+
+/* =========================================================
+   LEADER IMAGE
+========================================================= */
+
+.leader-image {
+    width: 180px;
+    min-width: 180px;
+
+    background: #dce7f6;
+
+    overflow: hidden;
+}
+
+.leader-image img {
     width: 100%;
-    max-width: 100%;
-    overflow-x: hidden !important;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
 }
 
+
 /* =========================================================
-   DESKTOP - EXISTING HOVER BEHAVIOUR
+   LEADER CONTENT
 ========================================================= */
 
-@media (min-width: 1101px) {
+.leader-content {
+    flex: 1;
 
-    .jbvnl-nav-item.has-mega:hover>.jbvnl-mega-menu {
-        display: grid !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        transform: translateY(0) !important;
-        pointer-events: auto !important;
-    }
+    padding: 20px 20px;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+.leader-label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #0b0471;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.leader-content h3 {
+    margin: 0 0 5px;
+
+    color: #173f83;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+.leader-message-title {
+    margin: 3px 0 4px !important;
+
+    color: #0b0471 !important;
+
+    font-size: 13px !important;
+    font-weight: 700;
+}
+
+.leader-message {
+    margin: 0 0 8px !important;
+
+    color: #596579;
+
+    font-size: 12px !important;
+
+    line-height: 1.45;
+}
+
+.message-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: #0b0471;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.message-link:hover {
+    color: #0b0471;
+}
+
+
 /* =========================================================
-   TABLET + MOBILE
-   Hamburger opens the navbar.
-   Mega menu opens by mouse hover.
+   RED DECORATION
 ========================================================= */
 
-@media (max-width: 1100px) {
+.leadership-box::after {
+    content: "";
 
-    .jbvnl-navbar {
-        width: 100% !important;
-        max-width: 100% !important;
+    position: absolute;
+
+    right: -20px;
+    bottom: -15px;
+
+    width: 80px;
+    height: 80px;
+
+    border-right: 6px solid #0b0471;
+    border-bottom: 6px solid #0b0471;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1199px) {
+
+    .leader-image {
+        width: 155px;
+        min-width: 155px;
     }
 
-    .jbvnl-navbar.mobile-open {
-        max-height: calc(100vh - 70px) !important;
-        overflow-y: auto !important;
-        overflow-x: hidden !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        transform: translateY(0) !important;
+    .leader-content {
+        padding: 16px;
     }
 
-    .jbvnl-nav-container,
-    .jbvnl-nav-list {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-    }
-
-    .jbvnl-nav-list {
-        display: flex !important;
-        flex-direction: column !important;
-        overflow: visible !important;
-    }
-
-    .jbvnl-nav-item {
-        width: 100% !important;
-        position: relative !important;
-    }
-
-    /* ---------------------------------------------------------
-       MOBILE MEGA MENU - HIDDEN BY DEFAULT
-    --------------------------------------------------------- */
-
-    .jbvnl-nav-item.has-mega>.jbvnl-mega-menu {
-        position: static !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        display: none !important;
-
-        grid-template-columns: 1fr !important;
-        gap: 0 !important;
-
-        padding: 0 !important;
-
-        background: #f6f9fd !important;
-        border: 0 !important;
-        border-top: 1px solid #dfe7f1 !important;
-        border-radius: 0 !important;
-        box-shadow: none !important;
-
-        opacity: 1 !important;
-        visibility: visible !important;
-        transform: none !important;
-        pointer-events: auto !important;
-    }
-
-    /* ---------------------------------------------------------
-       MOBILE/TABLET HOVER - OPEN MEGA MENU
-       This overrides the old display:none hover rule.
-    --------------------------------------------------------- */
-
-    .jbvnl-nav-item.has-mega:hover>.jbvnl-mega-menu,
-    .jbvnl-nav-item.has-mega:focus-within>.jbvnl-mega-menu {
-        display: grid !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        transform: none !important;
-        pointer-events: auto !important;
-    }
-
-    /* ---------------------------------------------------------
-       If old JavaScript adds mobile-active, keep it working too.
-       Hover remains the primary method.
-    --------------------------------------------------------- */
-
-    .jbvnl-nav-item.has-mega.mobile-active>.jbvnl-mega-menu {
-        display: grid !important;
-    }
-
-    /* ---------------------------------------------------------
-       NAV ARROW
-    --------------------------------------------------------- */
-
-    .jbvnl-nav-link .nav-arrow {
-        margin-left: auto !important;
-    }
-
-    .jbvnl-nav-item.has-mega:hover>.jbvnl-nav-link .nav-arrow {
-        transform: rotate(180deg) !important;
-    }
-
-    .jbvnl-nav-item.has-mega:focus-within>.jbvnl-nav-link .nav-arrow {
-        transform: rotate(180deg) !important;
-    }
-
-    .jbvnl-nav-item.has-mega.mobile-active>.jbvnl-nav-link .nav-arrow {
-        transform: rotate(180deg) !important;
+    .about-title {
+        font-size: 30px;
     }
 
 }
 
-/* =========================================================
-   MOBILE HEADER - NO HORIZONTAL OVERFLOW
-========================================================= */
+
+@media (max-width: 991px) {
+
+    .about-jbvnl-section {
+        padding: 40px 0;
+    }
+
+    .about-content {
+        padding-right: 0;
+        margin-bottom: 35px;
+    }
+
+    .leadership-card {
+        min-height: 180px;
+    }
+
+}
+
 
 @media (max-width: 575px) {
 
-    .header-inner {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-        padding: 5px 10px !important;
-        gap: 8px !important;
-        overflow: hidden !important;
+    .about-jbvnl-section {
+        padding: 30px 15px;
     }
 
-    .brand {
-        flex: 1 1 auto !important;
-        min-width: 0 !important;
-        max-width: calc(100% - 50px) !important;
-        overflow: hidden !important;
+    .about-title {
+        font-size: 26px;
     }
 
-
-
-    .menu-toggle {
-        width: 42px !important;
-        height: 42px !important;
-        flex: 0 0 42px !important;
-        margin: 0 !important;
+    .about-content p {
+        font-size: 14px;
     }
 
-}
-
-/* =========================================================
-   VERY SMALL PHONES
-========================================================= */
-
-@media (max-width: 360px) {
-
-    .header-inner {
-        padding-left: 8px !important;
-        padding-right: 8px !important;
-        gap: 5px !important;
+    .leadership-card {
+        min-height: 150px;
     }
 
-    .brand {
-        max-width: calc(100% - 45px) !important;
+    .leader-image {
+        width: 115px;
+        min-width: 115px;
     }
 
-    .brand-mark {
-        max-width: 280px !important;
-        height: 58px !important;
+    .leader-content {
+        padding: 12px;
     }
 
-    .menu-toggle {
-        width: 40px !important;
-        height: 40px !important;
-        flex: 0 0 40px !important;
+    .leader-label {
+        font-size: 8px;
+    }
+
+    .leader-content h3 {
+        font-size: 16px;
+    }
+
+    .leader-message {
+        font-size: 11px !important;
     }
 
 }
-
-/* =========================================================
-   MOBILE MEGA CONTENT
-========================================================= */
-
-@media (max-width: 1100px) {
-
-    .jbvnl-mega-menu .mega-column {
-        width: 100% !important;
-        min-width: 0 !important;
-        padding: 17px 20px !important;
-        border-left: 0 !important;
-        border-bottom: 1px solid #e1e8f1 !important;
-    }
-
-    .jbvnl-mega-menu .mega-column:last-child {
-        border-bottom: 0 !important;
-    }
-
-    .jbvnl-mega-menu .mega-intro {
-        padding-right: 20px !important;
-        background: #edf4fc !important;
-    }
-
-    .jbvnl-mega-menu h3 {
-        font-size: 19px !important;
-        line-height: 1.3 !important;
-    }
-
-    .jbvnl-mega-menu h4 {
-        font-size: 13px !important;
-        margin-bottom: 10px !important;
-    }
-
-    .jbvnl-mega-menu p {
-        font-size: 12px !important;
-        line-height: 1.6 !important;
-    }
-
-    .jbvnl-mega-menu a {
-        display: flex !important;
-        align-items: center !important;
-        gap: 9px !important;
-        padding: 8px 0 !important;
-        font-size: 13px !important;
-        background: transparent !important;
-    }
-
-}
-
-/* =========================================================
-   SMALL MOBILE MEGA CONTENT
-========================================================= */
-
-@media (max-width: 575px) {
-
-    .jbvnl-mega-menu .mega-column {
-        padding: 15px !important;
-    }
-
-    .jbvnl-mega-menu .mega-intro {
-        padding: 17px 15px !important;
-    }
-
-    .jbvnl-mega-menu h3 {
-        font-size: 18px !important;
-    }
-
-    .jbvnl-mega-menu h4 {
-        font-size: 12px !important;
-    }
-
-    .jbvnl-mega-menu a {
-        font-size: 12px !important;
-    }
-
-}
-
 
 
 
@@ -4893,7 +4751,7 @@ body {
     background: #ffffff;
     border: 1px solid #c8dcfa;
 
-    color:#003580;
+    color:#0b0471;
     font-size: 24px;
 
     box-shadow: 0 5px 18px rgba(7, 89, 214, .10);
@@ -4951,7 +4809,7 @@ body {
     border: 1px solid #a9c8f5;
     border-radius: 22px;
 
-    color:#003580;
+    color:#0b0471;
 
     text-decoration: none;
 
@@ -4962,8 +4820,8 @@ body {
 }
 
 .auth-item a:hover {
-    background:#003580;
-    border-color:#003580;
+    background:#0b0471;
+    border-color:#0b0471;
     color: #ffffff;
 
     transform: translateY(-2px);
@@ -4972,13 +4830,13 @@ body {
 }
 
 .auth-item .login-btn {
-    color:#003580;
+    color:#0b0471;
     border-color: #a9c8f5;
 }
 
 .auth-item .login-btn:hover {
-    background:#003580;
-    border-color:#003580;
+    background:#0b0471;
+    border-color:#0b0471;
     color: #ffffff;
 }
 
@@ -5099,7 +4957,7 @@ body {
 
     border: 1px solid #c6dcfb;
 
-    color:#003580;
+    color:#0b0471;
 
     font-size: 27px;
 }
@@ -5113,7 +4971,7 @@ body {
 
     margin: 0;
 
-    color:#003580;
+    color:#0b0471;
 
     font-size: 17px;
 
@@ -5154,7 +5012,7 @@ body {
 
     border-radius: 5px;
 
-    background:#003580;
+    background:#0b0471;
 }
 
 
@@ -5208,7 +5066,7 @@ body {
 
     text-align: center;
 
-    color:#003580;
+    color:#0b0471;
 
     font-size: 14px;
 }
@@ -5241,13 +5099,13 @@ body {
 .cc-links a:hover {
     padding-left: 8px;
 
-    color:#003580;
+    color:#0b0471;
 
     background: #f7faff;
 }
 
 .cc-links a:hover > i:last-child {
-    color:#003580;
+    color:#0b0471;
 
     transform: translateX(3px);
 }
@@ -5269,7 +5127,7 @@ body {
 
     background: #eef5ff;
 
-    color:#003580;
+    color:#0b0471;
 }
 
 
@@ -5306,7 +5164,7 @@ body {
 
     border-radius: 20px;
 
-    color:#003580;
+    color:#0b0471;
 
     text-decoration: none;
 
@@ -5318,9 +5176,9 @@ body {
 }
 
 .cc-view-btn:hover {
-    background:#003580;
+    background:#0b0471;
 
-    border-color:#003580;
+    border-color:#0b0471;
 
     color: #ffffff;
 
@@ -5351,7 +5209,7 @@ body {
 
     gap: 28px;
 
-    color:#003580;
+    color:#0b0471;
 
     opacity: .10;
 
@@ -5382,7 +5240,7 @@ body {
 .bill-card .cc-card-icon,
 .service-card .cc-card-icon,
 .complaint-card .cc-card-icon {
-    color:#003580;
+    color:#0b0471;
 
     background: #f3f8ff;
 
@@ -5393,28 +5251,28 @@ body {
 .bill-card h3,
 .service-card h3,
 .complaint-card h3 {
-    color:#003580;
+    color:#0b0471;
 }
 
 .connection-card .cc-line,
 .bill-card .cc-line,
 .service-card .cc-line,
 .complaint-card .cc-line {
-    background:#003580;
+    background:#0b0471;
 }
 
 .connection-card .cc-links a > i:first-child,
 .bill-card .cc-links a > i:first-child,
 .service-card .cc-links a > i:first-child,
 .complaint-card .cc-links a > i:first-child {
-    color:#003580;
+    color:#0b0471;
 }
 
 .connection-card .cc-view-btn,
 .bill-card .cc-view-btn,
 .service-card .cc-view-btn,
 .complaint-card .cc-view-btn {
-    color:#003580;
+    color:#0b0471;
 
     border-color: #9fc3f5;
 }
@@ -5425,16 +5283,16 @@ body {
 .complaint-card .cc-view-btn:hover {
     color: #ffffff;
 
-    background:#003580;
+    background:#0b0471;
 
-    border-color:#003580;
+    border-color:#0b0471;
 }
 
 .connection-art,
 .bill-art,
 .service-art,
 .complaint-art {
-    color:#003580;
+    color:#0b0471;
 }
 
 
@@ -5494,7 +5352,7 @@ body {
 
     border: 1px solid #c6dcfb;
 
-    color:#003580;
+    color:#0b0471;
 
     font-size: 18px;
 }

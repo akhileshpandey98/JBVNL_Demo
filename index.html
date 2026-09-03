@@ -17,7 +17,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -25,7 +26,7 @@
 
 
 
-
+  <!--============ Title: JBVNL - jharkhand bijli vitran nigam limited ======-->
   <div class="top-strip">
 
     <div class="container top-strip-inner">
@@ -134,6 +135,8 @@
 
   </div>
 
+
+  <!-- ========================== Header Section ========================= -->
   <header class="main-header">
     <div class="container header-inner">
 
@@ -243,6 +246,7 @@
     </div>
   </header>
 
+  <!-- ================= NAVIGATION MENU ================= -->
   <nav class="jbvnl-navbar">
     <div class="jbvnl-nav-container">
 
@@ -344,6 +348,17 @@
                 Finance
               </a>
 
+              <a href="{{ route('ruralelect') }}">
+                <i class="fa fa-bolt"></i>
+                Electric Status
+              </a>
+
+              <a href="{{ route('storepurchase') }}">
+                <i class="fa fa-shopping-bag"></i>
+                JBVNL Store
+              </a>
+
+             
             </div>
 
 
@@ -353,6 +368,11 @@
                 <i class="fa-solid fa-users"></i>
                 People & Initiatives
               </h4>
+
+               <a href="{{ route('info_techno') }}">
+                <i class="fa fa-laptop"></i>
+                IT 
+              </a>
 
               <a href="{{ route('hradmin') }}">
                 <i class="fa-solid fa-user-group"></i>
@@ -860,14 +880,17 @@
     </div>
   </nav>
 
-  <!-- ==========SLIDER=========== -->
+
+
 
   <main id="main">
+
+    <!-- ==========Hero SLIDER=========== -->
     <section class="hero">
-      
+
       <div class="hero-slider owl-carousel">
 
-         <div class="hero-slide" style="background-image:url('assets/images/jbvnl_cover.png')">
+        <div class="hero-slide" style="background-image:url('assets/images/jbvnl_cover.png')">
         </div>
 
         <div class="hero-slide" style="background-image:url('assets/images/hightension_tower.png')">
@@ -904,7 +927,7 @@
         </div>
 
 
-       
+
 
         <div class="hero-slide" style="background-image:url('assets/images/notice.png')">
           <!-- <div class="container hero-content" data-aos="fade-up">
@@ -957,15 +980,17 @@
         <div class="hero-slide" style="background-image:url('assets/images/pm_surya.png')">
         </div>
 
-        <!-- <div class="hero-slide"
-          style="background-image:url('assets/images/green_tree.png')">
-        </div> -->
+        <div class="hero-slide"
+          style="background-image:url('assets/images/transformers_image.png')">
+        </div>
 
 
 
       </div>
     </section>
 
+
+    <!-- ========Services ===========-->
     <section class="service-dock">
       <div class="container">
         <div class="service-dock-grid">
@@ -987,18 +1012,16 @@
 
 
 
-    <!-- QUICK LINKS BUTTON -->
+    <!-- ============QUICK LINKS ===========-->
     <button type="button" class="quick-links-btn" id="quickLinksBtn">
       <i class="bi bi-lightning-charge-fill"></i>
       <span>Quick Links</span>
     </button>
 
-
     <!-- OVERLAY -->
     <div class="quick-links-overlay" id="quickLinksOverlay"></div>
 
-
-    <!-- QUICK LINKS SIDE PANEL -->
+    <!--====== QUICK LINKS SIDE PANEL =========-->
     <div class="quick-links-panel" id="quickLinksPanel">
 
       <div class="quick-links-header">
@@ -1201,8 +1224,9 @@
     </div>
 
 
-    <!-- Board Of Directors -->
 
+
+    <!-- ==============Board Of Directors -->
     <section class="jbvnl-officers">
       <div class="container-fluid ">
 
@@ -1316,7 +1340,7 @@
 
 
 
-    <!-- ABOUT US -->
+    <!-- ==============ABOUT US ============= -->
     <section class="about-jbvnl-section">
       <div class="container">
 
@@ -1448,100 +1472,100 @@
 
 
 
-<!-- ================= CONSUMER CORNER ================= -->
-<section class="consumer-corner">
+    <!-- ==============CONSUMER CORNER ============= -->
+    <section class="consumer-corner">
 
-    <!-- Header -->
-    <div class="cc-header">
+      <!-- Header -->
+      <div class="cc-header">
         <div class="cc-title">
-            <div class="cc-title-icon">
-                <i class="fa-solid fa-user"></i>
-            </div>
+          <div class="cc-title-icon">
+            <i class="fa-solid fa-user"></i>
+          </div>
 
-            <div>
-                <h2>Consumer Corner</h2>
-                <p>All Your Services, One Click Away</p>
-            </div>
+          <div>
+            <h2>Consumer Corner</h2>
+            <p>All Your Services, One Click Away</p>
+          </div>
         </div>
 
         <div class="cc-auth">
-            <div class="auth-item">
-                <span>New User ?</span>
-                <a href="#">Register <i class="fa-solid fa-user-plus"></i></a>
-            </div>
+          <div class="auth-item">
+            <span>New User ?</span>
+            <a href="#">Register <i class="fa-solid fa-user-plus"></i></a>
+          </div>
 
-            <div class="auth-divider"></div>
+          <div class="auth-divider"></div>
 
-            <div class="auth-item">
-                <span>Registered User ?</span>
-                <a href="#" class="login-btn">
-                    Login <i class="fa-solid fa-lock"></i>
-                </a>
-            </div>
+          <div class="auth-item">
+            <span>Registered User ?</span>
+            <a href="#" class="login-btn">
+              Login <i class="fa-solid fa-lock"></i>
+            </a>
+          </div>
         </div>
-    </div>
+      </div>
 
 
-    <!-- Cards -->
-    <div class="cc-grid">
+      <!-- Cards -->
+      <div class="cc-grid">
 
         <!-- NEW CONNECTION -->
         <div class="cc-card connection-card">
 
-            <div class="cc-card-top">
-                <div class="cc-card-icon">
-                    <i class="fa-solid fa-bolt"></i>
-                </div>
-
-                <h3>New Connection</h3>
-                <p>Apply for new electricity connection</p>
-
-                <span class="cc-line"></span>
+          <div class="cc-card-top">
+            <div class="cc-card-icon">
+              <i class="fa-solid fa-bolt"></i>
             </div>
 
-            <div class="cc-links">
+            <h3>New Connection</h3>
+            <p>Apply for new electricity connection</p>
 
-                <a href="#">
-                    <i class="fa-solid fa-house"></i>
-                    <span>Domestic Connection</span>
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
+            <span class="cc-line"></span>
+          </div>
 
-                <a href="#">
-                    <i class="fa-solid fa-building"></i>
-                    <span>Commercial Connection</span>
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
+          <div class="cc-links">
 
-                <a href="#">
-                    <i class="fa-solid fa-industry"></i>
-                    <span>Industrial Connection</span>
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
-
-                <a href="#">
-                    <i class="fa-regular fa-clock"></i>
-                    <span>Temporary Connection</span>
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
-
-                <a href="#">
-                    <i class="fa-solid fa-water"></i>
-                    <span>Tube Well Connection</span>
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
-
-            </div>
-
-            <a href="#" class="cc-view-btn">
-                View All <i class="fa-solid fa-arrow-right"></i>
+            <a href="#">
+              <i class="fa-solid fa-house"></i>
+              <span>Domestic Connection</span>
+              <i class="fa-solid fa-angle-right"></i>
             </a>
 
-            <div class="cc-bottom-art connection-art">
-                <i class="fa-solid fa-tower-broadcast"></i>
-                <i class="fa-solid fa-city"></i>
-                <i class="fa-solid fa-tower-broadcast"></i>
-            </div>
+            <a href="#">
+              <i class="fa-solid fa-building"></i>
+              <span>Commercial Connection</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+            <a href="#">
+              <i class="fa-solid fa-industry"></i>
+              <span>Industrial Connection</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+            <a href="#">
+              <i class="fa-regular fa-clock"></i>
+              <span>Temporary Connection</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+            <a href="#">
+              <i class="fa-solid fa-water"></i>
+              <span>Tube Well Connection</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+          </div>
+
+          <a href="#" class="cc-view-btn">
+            View All <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <div class="cc-bottom-art connection-art">
+            <i class="fa-solid fa-tower-broadcast"></i>
+            <i class="fa-solid fa-city"></i>
+            <i class="fa-solid fa-tower-broadcast"></i>
+          </div>
 
         </div>
 
@@ -1549,72 +1573,72 @@
         <!-- BILL PAYMENT -->
         <div class="cc-card bill-card">
 
-            <div class="cc-card-top">
-                <div class="cc-card-icon">
-                    <i class="fa-solid fa-file-invoice-dollar"></i>
-                </div>
-
-                <h3>Bill Generation & Payment</h3>
-                <p>Pay bills &amp; manage your account</p>
-
-                <span class="cc-line"></span>
+          <div class="cc-card-top">
+            <div class="cc-card-icon">
+              <i class="fa-solid fa-file-invoice-dollar"></i>
             </div>
 
-            <div class="cc-links">
+            <h3>Bill Generation & Payment</h3>
+            <p>Pay bills &amp; manage your account</p>
 
-                <a href="#">
-                    <i class="fa-solid fa-credit-card"></i>
-                    <span>Bill Payment</span>
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
+            <span class="cc-line"></span>
+          </div>
 
-                <a href="#">
-                    <i class="fa-solid fa-money-bill"></i>
-                    <span>Smart Meter Recharge</span>
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
+          <div class="cc-links">
 
-                <a href="#">
-                    <i class="fa-solid fa-wallet"></i>
-                    <span>Prepaid Meter Recharge</span>
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
+            <a href="#">
+              <i class="fa-solid fa-credit-card"></i>
+              <span>Bill Payment</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
 
-                <a href="#">
-                    <i class="fa-solid fa-user"></i>
-                    <span>Self Bill Generation</span>
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
+            <a href="#">
+              <i class="fa-solid fa-money-bill"></i>
+              <span>Smart Meter Recharge</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
 
-                <a href="#">
-                    <i class="fa-solid fa-calculator"></i>
-                    <span>Net Meter Bill Generation</span>
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
+            <a href="#">
+              <i class="fa-solid fa-wallet"></i>
+              <span>Prepaid Meter Recharge</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
 
-                <!-- <a href="#">
+            <a href="#">
+              <i class="fa-solid fa-user"></i>
+              <span>Self Bill Generation</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+            <a href="#">
+              <i class="fa-solid fa-calculator"></i>
+              <span>Net Meter Bill Generation</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+            <!-- <a href="#">
                     <i class="fa-solid fa-book-open"></i>
                     <span>Online Bill Payment Guide</span>
                     <i class="fa-solid fa-angle-right"></i>
                 </a> -->
 
-                <a href="#">
-                    <i class="fa-solid fa-headset"></i>
-                    <span>Payment Helpdesk</span>
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
-
-            </div>
-
-            <a href="#" class="cc-view-btn">
-                View All <i class="fa-solid fa-arrow-right"></i>
+            <a href="#">
+              <i class="fa-solid fa-headset"></i>
+              <span>Payment Helpdesk</span>
+              <i class="fa-solid fa-angle-right"></i>
             </a>
 
-            <div class="cc-bottom-art bill-art">
-                <i class="fa-solid fa-solar-panel"></i>
-                <i class="fa-solid fa-wind"></i>
-                <i class="fa-solid fa-bolt"></i>
-            </div>
+          </div>
+
+          <a href="#" class="cc-view-btn">
+            View All <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <div class="cc-bottom-art bill-art">
+            <i class="fa-solid fa-solar-panel"></i>
+            <i class="fa-solid fa-wind"></i>
+            <i class="fa-solid fa-bolt"></i>
+          </div>
 
         </div>
 
@@ -1622,67 +1646,67 @@
         <!-- SERVICE REQUEST -->
         <div class="cc-card service-card">
 
-            <div class="cc-card-top">
-                <div class="cc-card-icon">
-                    <i class="fa-solid fa-screwdriver-wrench"></i>
-                </div>
-
-                <h3>Service Request</h3>
-                <p>Raise service request easily</p>
-
-                <span class="cc-line"></span>
+          <div class="cc-card-top">
+            <div class="cc-card-icon">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
             </div>
 
-            <div class="cc-links">
+            <h3>Service Request</h3>
+            <p>Raise service request easily</p>
 
-                <a href="#">
-                    <i class="fa-regular fa-file-lines"></i>
-                    <span>Bill Correction Request</span>
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
+            <span class="cc-line"></span>
+          </div>
 
-                <a href="#">
-                    <i class="fa-regular fa-user"></i>
-                    <span>Name Correction</span>
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
+          <div class="cc-links">
 
-                <a href="#">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span>Address Correction</span>
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
-
-                <a href="#">
-                    <i class="fa-solid fa-phone"></i>
-                    <span>Mobile Number &amp; Email Update</span>
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
-
-                <a href="#">
-                    <i class="fa-solid fa-gauge-high"></i>
-                    <span>Load Change Request</span>
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
-
-                <a href="#">
-                    <i class="fa-solid fa-table-cells-large"></i>
-                    <span>Category Change</span>
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
-
-              
-
-            </div>
-
-            <a href="#" class="cc-view-btn">
-                View All <i class="fa-solid fa-arrow-right"></i>
+            <a href="#">
+              <i class="fa-regular fa-file-lines"></i>
+              <span>Bill Correction Request</span>
+              <i class="fa-solid fa-angle-right"></i>
             </a>
 
-            <div class="cc-bottom-art service-art">
-                <i class="fa-solid fa-building"></i>
-                <i class="fa-solid fa-house"></i>
-            </div>
+            <a href="#">
+              <i class="fa-regular fa-user"></i>
+              <span>Name Correction</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+            <a href="#">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Address Correction</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+            <a href="#">
+              <i class="fa-solid fa-phone"></i>
+              <span>Mobile Number &amp; Email Update</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+            <a href="#">
+              <i class="fa-solid fa-gauge-high"></i>
+              <span>Load Change Request</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+            <a href="#">
+              <i class="fa-solid fa-table-cells-large"></i>
+              <span>Category Change</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+
+
+          </div>
+
+          <a href="#" class="cc-view-btn">
+            View All <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <div class="cc-bottom-art service-art">
+            <i class="fa-solid fa-building"></i>
+            <i class="fa-solid fa-house"></i>
+          </div>
 
         </div>
 
@@ -1690,124 +1714,79 @@
         <!-- COMPLAINT -->
         <div class="cc-card complaint-card">
 
-            <div class="cc-card-top">
-                <div class="cc-card-icon">
-                    <i class="fa-solid fa-headset"></i>
-                </div>
-
-                <h3>Consumer Complaint</h3>
-                <p>We are here to help you</p>
-
-                <span class="cc-line"></span>
+          <div class="cc-card-top">
+            <div class="cc-card-icon">
+              <i class="fa-solid fa-headset"></i>
             </div>
 
-            <div class="cc-links">
+            <h3>Consumer Complaint</h3>
+            <p>We are here to help you</p>
 
-                <a href="#">
-                    <i class="fa-regular fa-pen-to-square"></i>
-                    <span>Register Complaint</span>
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
+            <span class="cc-line"></span>
+          </div>
 
-                <a href="#" class="active-link">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <span>Track Complaint Status</span>
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
+          <div class="cc-links">
 
-                <a href="#">
-                    <i class="fa-regular fa-id-card"></i>
-                    <span>Consumer Care Portal</span>
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
-
-                <a href="#">
-                    <i class="fa-brands fa-whatsapp"></i>
-                    <span>WhatsApp Chatbot</span>
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
-
-                <a href="#">
-                    <i class="fa-regular fa-envelope"></i>
-                    <span>Email Support</span>
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
-
-                <a href="#">
-                    <i class="fa-solid fa-phone"></i>
-                    <span>Consumer Helpline (1912)</span>
-                    <i class="fa-solid fa-angle-right"></i>
-                </a>
-
-            </div>
-
-            <a href="#" class="cc-view-btn">
-                View All <i class="fa-solid fa-arrow-right"></i>
+            <a href="#">
+              <i class="fa-regular fa-pen-to-square"></i>
+              <span>Register Complaint</span>
+              <i class="fa-solid fa-angle-right"></i>
             </a>
 
-            <div class="cc-bottom-art complaint-art">
-                <i class="fa-solid fa-lightbulb"></i>
-                <i class="fa-solid fa-tower-broadcast"></i>
-            </div>
+            <a href="#" class="active-link">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span>Track Complaint Status</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+            <a href="#">
+              <i class="fa-regular fa-id-card"></i>
+              <span>Consumer Care Portal</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+            <a href="#">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>WhatsApp Chatbot</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+            <a href="#">
+              <i class="fa-regular fa-envelope"></i>
+              <span>Email Support</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+            <a href="#">
+              <i class="fa-solid fa-phone"></i>
+              <span>Consumer Helpline (1912)</span>
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+
+          </div>
+
+          <a href="#" class="cc-view-btn">
+            View All <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <div class="cc-bottom-art complaint-art">
+            <i class="fa-solid fa-lightbulb"></i>
+            <i class="fa-solid fa-tower-broadcast"></i>
+          </div>
 
         </div>
 
-    </div>
-
-
- 
-
-</section>
-
-
-
-    <!-- <section class="section" id="services">
-      <div class="container">
-        <div class="section-head" data-aos="fade-up">
-          <div><span class="section-kicker">CONSUMER FIRST</span>
-            <h2>Popular Online Services</h2>
-            <p>Everything you need to manage your electricity connection.</p>
-          </div>
-          <a href="#" class="view-all">View all services <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="row g-4">
-          <div class="col-lg-3 col-md-6" data-aos="fade-up">
-            <div class="service-card">
-              <div class="service-icon blue"><i class="fa-solid fa-file-invoice-dollar"></i></div>
-              <h4>Energy Bill Payment</h4>
-              <p>Pay postpaid bill or recharge prepaid account securely.</p><a href="#">Pay Now <i
-                  class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="80">
-            <div class="service-card">
-              <div class="service-icon green"><i class="fa-solid fa-plug-circle-plus"></i></div>
-              <h4>New Connection</h4>
-              <p>Apply for LT, LTIS and HT electricity connections.</p><a href="#">Apply Now <i
-                  class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="160">
-            <div class="service-card">
-              <div class="service-icon orange"><i class="fa-solid fa-ticket"></i></div>
-              <h4>Complaint Status</h4>
-              <p>Register a service complaint and track its progress.</p><a href="#">Track Complaint <i
-                  class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="240">
-            <div class="service-card">
-              <div class="service-icon purple"><i class="fa-solid fa-gauge-high"></i></div>
-              <h4>Consumer Login</h4>
-              <p>Access bill history, requests and consumer services.</p><a href="#">Login <i
-                  class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
       </div>
-    </section> -->
 
 
+
+
+    </section>
+
+
+
+
+    <!-- ==============quick-panel================== -->
 
     <section class="quick-panel">
       <div class="container">
@@ -2154,91 +2133,6 @@
 
         </div>
 
-      </div>
-    </section>
-
-
-
-
-    <!-- Calculater -->
-
-    <section class="section bg-soft" id="calculators">
-      <div class="container">
-        <div class="section-head" data-aos="fade-up">
-          <div><span class="section-kicker">SMART TOOLS</span>
-            <h2>Calculators & Estimators</h2>
-            <p>Useful electricity tools based on JBVNL consumer services.</p>
-          </div>
-        </div>
-        <div class="calculator-grid">
-          <a class="calc-card" href="#">
-            <div class="calc-number">01</div><i class="fa-solid fa-calculator"></i>
-            <h4>Fix Calculator</h4>
-            <p>Estimate applicable fixed charges.</p><span>Open calculator →</span>
-          </a>
-          <a class="calc-card" href="#">
-            <div class="calc-number">02</div><i class="fa-solid fa-chart-line"></i>
-            <h4>Effective Tariff</h4>
-            <p>Explore current tariff information and calculations.</p><span>Open calculator →</span>
-          </a>
-          <a class="calc-card" href="#">
-            <div class="calc-number">03</div><i class="fa-solid fa-bolt"></i>
-            <h4>Load Calculator</h4>
-            <p>Estimate connected electrical load.</p><span>Open calculator →</span>
-          </a>
-          <a class="calc-card" href="#">
-            <div class="calc-number">04</div><i class="fa-solid fa-file-circle-check"></i>
-            <h4>Cost Estimate</h4>
-            <p>Estimate connection-related costs.</p><span>Open calculator →</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-
-
-    <!-- Solar Energy -->
-
-    <section class="solar-section" id="solar">
-      <div class="container">
-        <div class="solar-inner">
-          <div class="solar-copy" data-aos="fade-right">
-            <span class="section-kicker light">GREEN ENERGY</span>
-            <h2>Power Your Home With Rooftop Solar</h2>
-            <p>Explore PM Surya Ghar, rooftop solar and net-metering services through JBVNL.</p>
-            <div class="solar-pills"><span><i class="fa-solid fa-sun"></i> Clean Energy</span><span><i
-                  class="fa-solid fa-house"></i> Rooftop Solar</span><span><i class="fa-solid fa-bolt"></i> Net
-                Metering</span></div>
-            <a href="#" class="btn btn-light-custom">Apply for Rooftop Solar <i
-                class="fa-solid fa-arrow-right ms-2"></i></a>
-          </div>
-          <div class="solar-art" data-aos="fade-left"><img
-              src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1000&q=85"
-              alt="Rooftop solar"></div>
-        </div>
-      </div>
-    </section>
-
-
-
-    <section class="section bg-soft" id="downloads">
-      <div class="container">
-        <div class="section-head">
-          <div><span class="section-kicker">RESOURCE CENTRE</span>
-            <h2>Downloads & Important Links</h2>
-            <p>Forms, tariff documents, annual reports and useful portals.</p>
-          </div>
-        </div>
-        <div class="resource-grid">
-          <a href="#"><i class="fa-solid fa-file-lines"></i><span>New Application Form A</span><small>LT
-              Domestic</small></a>
-          <a href="#"><i class="fa-solid fa-file-lines"></i><span>New Application Form B</span><small>Non-Domestic /
-              HT / EHT</small></a>
-          <a href="#"><i class="fa-solid fa-file-pdf"></i><span>Tariff Documents</span><small>FY 2026-27 and previous
-              years</small></a>
-          <a href="#"><i class="fa-solid fa-book-open"></i><span>Annual Reports</span><small>JBVNL reports &
-              documents</small></a>
-        </div>
       </div>
     </section>
 
@@ -2619,6 +2513,9 @@
   </main>
 
 
+
+
+  <!-- =======footer  ==========-->
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
