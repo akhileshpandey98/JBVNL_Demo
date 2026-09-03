@@ -358,7 +358,7 @@
                 JBVNL Store
               </a>
 
-             
+
             </div>
 
 
@@ -369,9 +369,9 @@
                 People & Initiatives
               </h4>
 
-               <a href="{{ route('info_techno') }}">
+              <a href="{{ route('info_techno') }}">
                 <i class="fa fa-laptop"></i>
-                IT 
+                IT
               </a>
 
               <a href="{{ route('hradmin') }}">
@@ -980,8 +980,7 @@
         <div class="hero-slide" style="background-image:url('assets/images/pm_surya.png')">
         </div>
 
-        <div class="hero-slide"
-          style="background-image:url('assets/images/transformers_image.png')">
+        <div class="hero-slide" style="background-image:url('assets/images/transformers_image.png')">
         </div>
 
 
@@ -2141,33 +2140,1446 @@
 
 
 
-  <!-- =========================================================
+    <!-- =========================================================
      JBVNL - SMART CONSUMER ASSISTANCE
 ========================================================= -->
 
-<style>
-
-/* =========================================================
+    <style>
+      /* =========================================================
    JBVNL SMART CONSUMER ASSISTANCE
    COMPACT + BACKGROUND IMAGE
 ========================================================= */
 
-.digital-services {
+      .digital-services {
+        position: relative;
+        padding: 28px 0 24px;
+
+        background:
+          linear-gradient(90deg,
+            rgba(247, 251, 255, .96) 0%,
+            rgba(247, 251, 255, .91) 45%,
+            rgba(247, 251, 255, .95) 100%),
+          url('/images/electricity-bg.jpg');
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        overflow: hidden;
+      }
+
+
+      /* =========================================================
+   CONTAINER
+========================================================= */
+
+      .digital-services .container {
+        position: relative;
+        z-index: 2;
+      }
+
+
+      /* =========================================================
+   HEADER
+========================================================= */
+
+      .digital-header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .digital-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+
+        padding: 5px 14px;
+
+        border: 1px solid #a9cafa;
+        border-radius: 30px;
+
+        background: rgba(255, 255, 255, .94);
+
+        color: #0b0471;
+
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: .3px;
+
+        box-shadow: 0 3px 10px rgba(0, 70, 150, .06);
+      }
+
+      .digital-badge i {
+        font-size: 11px;
+      }
+
+      .digital-header h2 {
+        margin: 8px 0 4px;
+
+        color: #102d61;
+
+        font-size: 28px;
+        font-weight: 750;
+        line-height: 1.2;
+      }
+
+      .digital-header p {
+        max-width: 700px;
+
+        margin: auto;
+
+        color: #536681;
+
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+
+      /* =========================================================
+   REMOVE OLD TOP LINE
+========================================================= */
+
+      .digital-line {
+        display: none !important;
+      }
+
+
+      /* =========================================================
+   SERVICE GRID
+========================================================= */
+
+      .digital-grid {
+        display: grid;
+
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+
+        gap: 14px;
+      }
+
+
+      /* =========================================================
+   SERVICE CARD
+========================================================= */
+
+      .digital-card {
+        position: relative;
+
+        min-height: 335px;
+
+        display: flex;
+        flex-direction: column;
+
+        padding: 17px 17px 14px;
+
+        background: rgba(255, 255, 255, .94);
+
+        border: 1px solid #cddff4;
+        border-radius: 13px;
+
+        box-shadow:
+          0 6px 18px rgba(22, 65, 115, .07);
+
+        overflow: hidden;
+
+        transition: all .25s ease;
+      }
+
+      .digital-card:hover {
+        transform: translateY(-4px);
+
+        box-shadow:
+          0 12px 25px rgba(22, 65, 115, .12);
+      }
+
+
+      /* =========================================================
+   ICON
+========================================================= */
+
+      .digital-icon {
+        width: 58px;
+        height: 58px;
+
+        margin: 0 auto 9px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+
+        background: #f2f7ff;
+
+        border: 1px solid #c8dcfa;
+
+        color: #0b0471;
+
+        font-size: 23px;
+
+        box-shadow: 0 4px 10px rgba(0, 70, 150, .06);
+      }
+
+
+      /* =========================================================
+   CARD TITLE
+========================================================= */
+
+      .digital-card h4 {
+        margin: 0;
+
+        text-align: center;
+
+        color: #0b0471;
+
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.25;
+      }
+
+      .digital-card>p {
+        min-height: 38px;
+
+        margin: 5px 0 8px;
+
+        text-align: center;
+
+        color: #687994;
+
+        font-size: 11px;
+        line-height: 1.45;
+      }
+
+
+      /* =========================================================
+   DIVIDER
+========================================================= */
+
+      .digital-divider {
+        width: 28px;
+        height: 2px;
+
+        margin: 0 auto 8px;
+
+        border-radius: 5px;
+
+        background: #0b0471;
+      }
+
+
+      /* =========================================================
+   SERVICE LIST
+========================================================= */
+
+      .digital-list {
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+      }
+
+      .digital-list li {
+        display: flex;
+        align-items: center;
+
+        gap: 7px;
+
+        min-height: 27px;
+
+        color: #334563;
+
+        font-size: 11px;
+
+        border-bottom: 1px solid #edf2f8;
+      }
+
+      .digital-list li:last-child {
+        border-bottom: 0;
+      }
+
+      .digital-list li i {
+        color: #0b0471;
+
+        font-size: 9px;
+      }
+
+
+      /* =========================================================
+   BUTTON
+========================================================= */
+
+      .digital-btn {
+        width: 100%;
+
+        margin-top: auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 7px;
+
+        padding: 7px 11px;
+
+        border: 1px solid #9fc3f5;
+        border-radius: 6px;
+
+        background: #0b0471;
+
+        color: #fff !important;
+
+        text-decoration: none;
+
+        font-size: 11px;
+        font-weight: 700;
+
+        transition: all .2s ease;
+      }
+
+      .digital-btn:hover {
+        background: #064aa9;
+
+        color: #fff !important;
+
+        transform: translateY(-1px);
+      }
+
+
+      /* =========================================================
+   CARD BOTTOM EFFECT
+========================================================= */
+
+      .digital-card::after {
+        content: "";
+
+        position: absolute;
+
+        left: -20px;
+        right: -20px;
+        bottom: -45px;
+
+        height: 70px;
+
+        border-radius: 50% 50% 0 0;
+
+        background:
+          linear-gradient(180deg,
+            rgba(7, 89, 214, .01),
+            rgba(7, 89, 214, .06));
+
+        pointer-events: none;
+      }
+
+
+      /* =========================================================
+   HELP + 1912
+========================================================= */
+
+      .help-row {
+        display: grid;
+
+        grid-template-columns: 2fr 1fr;
+
+        gap: 14px;
+
+        margin-top: 14px;
+      }
+
+
+      /* =========================================================
+   HELP BOX
+========================================================= */
+
+      .help-box {
+        min-height: 165px;
+
+        position: relative;
+
+        display: flex;
+        align-items: center;
+
+        gap: 18px;
+
+        padding: 18px 22px;
+
+        background:
+          linear-gradient(135deg,
+            rgba(232, 245, 255, .96),
+            rgba(255, 255, 255, .94));
+
+        border: 1px solid #c9def8;
+
+        border-radius: 13px;
+
+        overflow: hidden;
+
+        box-shadow:
+          0 5px 16px rgba(30, 75, 130, .06);
+      }
+
+
+      /* HELP ICON */
+
+      .help-icon {
+        width: 78px;
+        height: 78px;
+
+        flex: 0 0 78px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+
+        background: #fff;
+
+        border: 1px solid #c9def8;
+
+        color: #0b0471;
+
+        font-size: 34px;
+
+        box-shadow:
+          0 5px 14px rgba(7, 89, 214, .08);
+      }
+
+      .help-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .help-content h3 {
+        margin: 0 0 4px;
+
+        color: #0b0471;
+
+        font-size: 22px;
+        font-weight: 700;
+      }
+
+      .help-content h3::after {
+        content: "";
+
+        display: block;
+
+        width: 30px;
+        height: 2px;
+
+        margin-top: 5px;
+
+        border-radius: 5px;
+
+        background: #0b0471;
+      }
+
+      .help-content p {
+        max-width: 620px;
+
+        margin: 7px 0 9px;
+
+        color: #52647f;
+
+        font-size: 11px;
+        line-height: 1.5;
+      }
+
+
+      /* =========================================================
+   HELP BUTTONS
+========================================================= */
+
+      .help-buttons {
+        display: flex;
+
+        gap: 8px;
+
+        flex-wrap: wrap;
+      }
+
+      .help-btn {
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 6px;
+
+        padding: 7px 13px;
+
+        border-radius: 6px;
+
+        background: #0b0471;
+
+        border: 1px solid #0b0471;
+
+        color: #fff !important;
+
+        text-decoration: none;
+
+        font-size: 10px;
+        font-weight: 700;
+
+        transition: .2s ease;
+      }
+
+      .help-btn:hover {
+        background: #064aa9;
+
+        color: #fff !important;
+
+        transform: translateY(-1px);
+      }
+
+      .help-btn-outline {
+        background: #fff;
+
+        color: #0759d6 !important;
+      }
+
+      .help-btn-outline:hover {
+        background: #0b0471;
+
+        color: #fff !important;
+      }
+
+
+      /* =========================================================
+   24x7 SUPPORT
+========================================================= */
+
+      .support-card {
+        min-height: 165px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 12px;
+
+        padding: 17px;
+
+        background: rgba(255, 255, 255, .95);
+
+        border: 1px solid #c9def8;
+
+        border-radius: 13px;
+
+        box-shadow:
+          0 5px 16px rgba(30, 75, 130, .06);
+      }
+
+      .support-icon {
+        width: 68px;
+        height: 68px;
+
+        flex: 0 0 68px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+
+        background: #f1f7ff;
+
+        border: 1px solid #c9def8;
+
+        color: #0b0471;
+
+        font-size: 30px;
+      }
+
+      .support-content {
+        text-align: left;
+      }
+
+      .support-content h5 {
+        margin: 0;
+
+        color: #0b0471;
+
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .support-number {
+        margin: 2px 0;
+
+        color: #0b0471;
+
+        font-size: 36px;
+        line-height: 1;
+
+        font-weight: 800;
+
+        letter-spacing: 1px;
+      }
+
+      .support-content p {
+        margin: 4px 0 0;
+
+        color: #71809a;
+
+        font-size: 9px;
+      }
+
+
+
+
+      /* =========================================================
+   TABLET
+========================================================= */
+
+      @media (max-width: 1100px) {
+
+        .digital-services {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+
+        .digital-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .digital-card {
+          min-height: 335px;
+        }
+
+        .help-row {
+          grid-template-columns: 1fr;
+        }
+
+
+
+
+      }
+
+
+      /* =========================================================
+   MOBILE
+========================================================= */
+
+      @media (max-width: 767px) {
+
+        .digital-services {
+          padding: 22px 10px;
+        }
+
+        .digital-header {
+          margin-bottom: 17px;
+        }
+
+        .digital-badge {
+          font-size: 9px;
+          padding: 5px 11px;
+        }
+
+        .digital-header h2 {
+          font-size: 22px;
+        }
+
+        .digital-header p {
+          font-size: 10px;
+        }
+
+        .digital-grid {
+          grid-template-columns: 1fr;
+
+          gap: 12px;
+        }
+
+        .digital-card {
+          min-height: 330px;
+
+          padding: 17px 16px 14px;
+
+          border-radius: 11px;
+        }
+
+        .digital-icon {
+          width: 55px;
+          height: 55px;
+
+          font-size: 22px;
+        }
+
+        .digital-card h4 {
+          font-size: 15px;
+        }
+
+        .digital-card>p {
+          font-size: 10px;
+        }
+
+        .digital-list li {
+          min-height: 26px;
+
+          font-size: 10px;
+        }
+
+        .digital-btn {
+          font-size: 10px;
+        }
+
+
+        /* HELP */
+
+        .help-row {
+          grid-template-columns: 1fr;
+
+          gap: 12px;
+        }
+
+        .help-box {
+          min-height: auto;
+
+          flex-direction: column;
+
+          align-items: flex-start;
+
+          padding: 18px;
+
+          gap: 12px;
+        }
+
+        .help-icon {
+          width: 62px;
+          height: 62px;
+
+          flex-basis: 62px;
+
+          font-size: 28px;
+        }
+
+        .help-content h3 {
+          font-size: 20px;
+        }
+
+        .help-content p {
+          font-size: 10px;
+        }
+
+
+        /* SUPPORT */
+
+        .support-card {
+          min-height: 135px;
+
+          padding: 15px;
+        }
+
+        .support-icon {
+          width: 58px;
+          height: 58px;
+
+          flex-basis: 58px;
+
+          font-size: 25px;
+        }
+
+        .support-number {
+          font-size: 32px;
+        }
+
+
+
+      }
+
+
+      /* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+      @media (max-width: 400px) {
+
+        .digital-services {
+          padding-left: 8px;
+          padding-right: 8px;
+        }
+
+        .digital-header h2 {
+          font-size: 20px;
+        }
+
+        .digital-header p {
+          font-size: 9px;
+        }
+
+        .digital-card {
+          min-height: 320px;
+
+          border-radius: 10px;
+        }
+
+        .digital-icon {
+          width: 52px;
+          height: 52px;
+
+          font-size: 21px;
+        }
+
+        .help-content h3 {
+          font-size: 19px;
+        }
+
+        .support-number {
+          font-size: 29px;
+        }
+      }
+    </style>
+
+
+    <section class="digital-services">
+
+      <div class="digital-line"></div>
+
+      <div class="container">
+
+        <!-- ================= HEADER ================= -->
+
+        <div class="digital-header">
+
+          <span class="digital-badge">
+            <i class="fas fa-desktop"></i>
+            DIGITAL EXPERIENCE
+          </span>
+
+          <h2>Smart Consumer Assistance</h2>
+
+          <p>
+            Access digital services, mobile applications, online support,
+            downloads and consumer assistance — all from one place.
+          </p>
+
+        </div>
+
+
+        <!-- ================= SERVICE CARDS ================= -->
+
+        <div class="digital-grid">
+
+
+          <!-- MOBILE APP -->
+
+          <div class="digital-card">
+
+            <div class="digital-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+
+            <h4>Mobile App</h4>
+
+            <p>
+              Access essential electricity services
+              directly from your mobile device.
+            </p>
+
+            <div class="digital-divider"></div>
+
+            <ul class="digital-list">
+
+              <li>
+                <i class="fas fa-check-circle"></i>
+                Bill Payment
+              </li>
+
+              <li>
+                <i class="fas fa-check-circle"></i>
+                New Connection
+              </li>
+
+              <li>
+                <i class="fas fa-check-circle"></i>
+                Complaint Registration
+              </li>
+
+              <li>
+                <i class="fas fa-check-circle"></i>
+                Consumer Services
+              </li>
+
+            </ul>
+
+            <a href="#" class="digital-btn">
+              Download App
+              <i class="fas fa-download"></i>
+            </a>
+
+          </div>
+
+
+          <!-- AI ASSISTANT -->
+
+          <div class="digital-card">
+
+            <div class="digital-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+
+            <h4>AI Assistant</h4>
+
+            <p>
+              Get quick assistance for consumer
+              queries and electricity services.
+            </p>
+
+            <div class="digital-divider"></div>
+
+            <ul class="digital-list">
+
+              <li>
+                <i class="fas fa-check-circle"></i>
+                Billing Queries
+              </li>
+
+              <li>
+                <i class="fas fa-check-circle"></i>
+                Complaint Status
+              </li>
+
+              <li>
+                <i class="fas fa-check-circle"></i>
+                New Connection Info
+              </li>
+
+              <li>
+                <i class="fas fa-check-circle"></i>
+                Scheme Information
+              </li>
+
+            </ul>
+
+            <a href="#" class="digital-btn">
+              Chat Now
+              <i class="fas fa-comments"></i>
+            </a>
+
+          </div>
+
+
+          <!-- WHATSAPP -->
+
+          <div class="digital-card">
+
+            <div class="digital-icon">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+
+            <h4>WhatsApp Service</h4>
+
+            <p>
+              Connect through WhatsApp for
+              quick consumer assistance.
+            </p>
+
+            <div class="digital-divider"></div>
+
+            <ul class="digital-list">
+
+              <li>
+                <i class="fas fa-check-circle"></i>
+                Bill Details
+              </li>
+
+              <li>
+                <i class="fas fa-check-circle"></i>
+                Complaint Registration
+              </li>
+
+              <li>
+                <i class="fas fa-check-circle"></i>
+                Service Assistance
+              </li>
+
+              <li>
+                <i class="fas fa-check-circle"></i>
+                Important Updates
+              </li>
+
+            </ul>
+
+            <a href="#" class="digital-btn">
+              Connect Now
+              <i class="fab fa-whatsapp"></i>
+            </a>
+
+          </div>
+
+
+          <!-- DOWNLOAD CENTRE -->
+
+          <div class="digital-card">
+
+            <div class="digital-icon">
+              <i class="fas fa-download"></i>
+            </div>
+
+            <h4>Download Centre</h4>
+
+            <p>
+              Access important forms, circulars,
+              tariff documents and reports.
+            </p>
+
+            <div class="digital-divider"></div>
+
+            <ul class="digital-list">
+
+              <li>
+                <i class="fas fa-check-circle"></i>
+                Application Forms
+              </li>
+
+              <li>
+                <i class="fas fa-check-circle"></i>
+                Tariff Documents
+              </li>
+
+              <li>
+                <i class="fas fa-check-circle"></i>
+                Circulars &amp; Notices
+              </li>
+
+              <li>
+                <i class="fas fa-check-circle"></i>
+                Reports &amp; Publications
+              </li>
+
+            </ul>
+
+            <a href="#" class="digital-btn">
+              View Downloads
+              <i class="fas fa-arrow-right"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- ================= HELP AREA ================= -->
+
+        <div class="help-row">
+
+
+          <!-- NEED HELP -->
+
+          <div class="help-box">
+
+            <div class="help-icon">
+              <i class="fas fa-headset"></i>
+            </div>
+
+            <div class="help-content">
+
+              <h3>Need Help?</h3>
+
+              <p>
+                Find answers to frequently asked questions or connect
+                with consumer support for billing, complaints,
+                electricity supply, new connection and other services.
+              </p>
+
+              <div class="help-buttons">
+
+                <a href="#" class="help-btn">
+                  <i class="fas fa-circle-question"></i>
+                  View FAQ
+                </a>
+
+                <a href="#" class="help-btn help-btn-outline">
+                  <i class="fas fa-headset"></i>
+                  Contact Support
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- 24x7 -->
+
+          <div class="support-card">
+
+            <div class="support-icon">
+              <i class="fas fa-phone-volume"></i>
+            </div>
+
+            <div class="support-content">
+
+              <h5>24×7 Consumer Care</h5>
+
+              <div class="support-number">
+                1912
+              </div>
+
+              <p>
+                Toll Free Consumer Helpline
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+
+
+
+    <!-- =========================================================
+     JBVNL - PARTNER ORGANIZATIONS
+     PROFESSIONAL CONTINUOUS MARQUEE
+========================================================= -->
+
+<section class="partner-section">
+
+    <div class="partner-container">
+
+        <!-- ================= HEADER ================= -->
+
+        <div class="partner-header">
+
+            <span class="partner-badge">
+                <i class="fa-solid fa-building-columns"></i>
+                Government Collaboration
+            </span>
+
+            <h2>Partner Organizations</h2>
+
+            <div class="partner-title-line">
+                <span></span>
+                <i class="fa-solid fa-circle"></i>
+                <span></span>
+            </div>
+
+            <p>
+                Explore important government organizations, national initiatives and
+                electricity sector partners associated with JBVNL.
+            </p>
+
+        </div>
+
+
+        <!-- ================= MARQUEE ================= -->
+
+        <div class="partner-marquee">
+
+            <div class="partner-track">
+
+
+                <!-- ================= SET 1 ================= -->
+
+                <!-- PMNRF -->
+                <a href="https://pmnrf.gov.in/en/"
+                   target="_blank"
+                   class="partner-card">
+
+                    <div class="partner-logo">
+                        <img
+                            src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110840-ogkarj0fuvot3qe34kaqro3ehmxrkh3ud8idoq2foo.png"
+                            alt="PMNRF">
+                    </div>
+
+                    <div class="partner-name">
+                        PMNRF
+                    </div>
+
+                    <div class="partner-arrow">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </a>
+
+
+                <!-- MyGov -->
+                <a href="https://www.mygov.in/"
+                   target="_blank"
+                   class="partner-card">
+
+                    <div class="partner-logo">
+                        <img
+                            src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110867-ogkarkw48jrdqybctl3zwnmboeohzvbb1htcn9znc8.png"
+                            alt="MyGov">
+                    </div>
+
+                    <div class="partner-name">
+                        MyGov
+                    </div>
+
+                    <div class="partner-arrow">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </a>
+
+
+                <!-- PM INDIA -->
+                <a href="https://www.pmindia.gov.in/en/"
+                   target="_blank"
+                   class="partner-card">
+
+                    <div class="partner-logo">
+                        <img
+                            src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110850-ogkari2lo1nis4fga1w476bxw92ecs0413uw7g3tuw.png"
+                            alt="PM India">
+                    </div>
+
+                    <div class="partner-name">
+                        PM India
+                    </div>
+
+                    <div class="partner-arrow">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </a>
+
+
+                <!-- DIGITAL INDIA -->
+                <a href="https://www.digitalindia.gov.in/"
+                   target="_blank"
+                   class="partner-card">
+
+                    <div class="partner-logo">
+                        <img
+                            src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110890-ogkarjya1pq3fccpz2pdc5uv30t4s67kpd5v6011ig.png"
+                            alt="Digital India">
+                    </div>
+
+                    <div class="partner-name">
+                        Digital India
+                    </div>
+
+                    <div class="partner-arrow">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </a>
+
+
+                <!-- INDIA PORTAL -->
+                <a href="https://www.india.gov.in/"
+                   target="_blank"
+                   class="partner-card">
+
+                    <div class="partner-logo">
+                        <img
+                            src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110845-ogkarkw48jrdqybctl3zwnmboeohzvbb1htcn9znc8.png"
+                            alt="India Portal">
+                    </div>
+
+                    <div class="partner-name">
+                        India Portal
+                    </div>
+
+                    <div class="partner-arrow">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </a>
+
+
+                <!-- INCREDIBLE INDIA -->
+                <a href="https://www.incredibleindia.org/"
+                   target="_blank"
+                   class="partner-card">
+
+                    <div class="partner-logo">
+                        <img
+                            src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110821-ogkari2lo1nis4fga1w476bxw92ecs0413uw7g3tuw.png"
+                            alt="Incredible India">
+                    </div>
+
+                    <div class="partner-name">
+                        Incredible India
+                    </div>
+
+                    <div class="partner-arrow">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </a>
+
+
+                <!-- ================= SET 2 ================= -->
+                <!-- EXACT DUPLICATE FOR SEAMLESS LOOP -->
+
+
+                <!-- PMNRF -->
+                <a href="https://pmnrf.gov.in/en/"
+                   target="_blank"
+                   class="partner-card">
+
+                    <div class="partner-logo">
+                        <img
+                            src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110840-ogkarj0fuvot3qe34kaqro3ehmxrkh3ud8idoq2foo.png"
+                            alt="PMNRF">
+                    </div>
+
+                    <div class="partner-name">
+                        PMNRF
+                    </div>
+
+                    <div class="partner-arrow">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </a>
+
+
+                <!-- MyGov -->
+                <a href="https://www.mygov.in/"
+                   target="_blank"
+                   class="partner-card">
+
+                    <div class="partner-logo">
+                        <img
+                            src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110867-ogkarkw48jrdqybctl3zwnmboeohzvbb1htcn9znc8.png"
+                            alt="MyGov">
+                    </div>
+
+                    <div class="partner-name">
+                        MyGov
+                    </div>
+
+                    <div class="partner-arrow">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </a>
+
+
+                <!-- PM INDIA -->
+                <a href="https://www.pmindia.gov.in/en/"
+                   target="_blank"
+                   class="partner-card">
+
+                    <div class="partner-logo">
+                        <img
+                            src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110850-ogkari2lo1nis4fga1w476bxw92ecs0413uw7g3tuw.png"
+                            alt="PM India">
+                    </div>
+
+                    <div class="partner-name">
+                        PM India
+                    </div>
+
+                    <div class="partner-arrow">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </a>
+
+
+                <!-- DIGITAL INDIA -->
+                <a href="https://www.digitalindia.gov.in/"
+                   target="_blank"
+                   class="partner-card">
+
+                    <div class="partner-logo">
+                        <img
+                            src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110890-ogkarjya1pq3fccpz2pdc5uv30t4s67kpd5v6011ig.png"
+                            alt="Digital India">
+                    </div>
+
+                    <div class="partner-name">
+                        Digital India
+                    </div>
+
+                    <div class="partner-arrow">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </a>
+
+
+                <!-- INDIA PORTAL -->
+                <a href="https://www.india.gov.in/"
+                   target="_blank"
+                   class="partner-card">
+
+                    <div class="partner-logo">
+                        <img
+                            src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110845-ogkarkw48jrdqybctl3zwnmboeohzvbb1htcn9znc8.png"
+                            alt="India Portal">
+                    </div>
+
+                    <div class="partner-name">
+                        India Portal
+                    </div>
+
+                    <div class="partner-arrow">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </a>
+
+
+                <!-- INCREDIBLE INDIA -->
+                <a href="https://www.incredibleindia.org/"
+                   target="_blank"
+                   class="partner-card">
+
+                    <div class="partner-logo">
+                        <img
+                            src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110821-ogkari2lo1nis4fga1w476bxw92ecs0413uw7g3tuw.png"
+                            alt="Incredible India">
+                    </div>
+
+                    <div class="partner-name">
+                        Incredible India
+                    </div>
+
+                    <div class="partner-arrow">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<style>
+
+/* =========================================================
+   PARTNER ORGANIZATIONS
+========================================================= */
+
+.partner-section {
     position: relative;
-    padding: 28px 0 24px;
+
+    padding: 38px 0 35px;
 
     background:
-        linear-gradient(
-            90deg,
-            rgba(247,251,255,.96) 0%,
-            rgba(247,251,255,.91) 45%,
-            rgba(247,251,255,.95) 100%
+        radial-gradient(
+            circle at 10% 40%,
+            rgba(14,105,210,.07),
+            transparent 28%
         ),
-        url('/images/electricity-bg.jpg');
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+        radial-gradient(
+            circle at 90% 60%,
+            rgba(14,105,210,.06),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f7fbff 50%,
+            #edf6ff 100%
+        );
 
     overflow: hidden;
 }
@@ -2177,9 +3589,14 @@
    CONTAINER
 ========================================================= */
 
-.digital-services .container {
-    position: relative;
-    z-index: 2;
+.partner-container {
+    width: 100%;
+
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    padding: 0 25px;
 }
 
 
@@ -2187,550 +3604,408 @@
    HEADER
 ========================================================= */
 
-.digital-header {
+.partner-header {
     text-align: center;
-    margin-bottom: 20px;
+
+    margin-bottom: 24px;
 }
 
-.digital-badge {
+
+/* BADGE */
+
+.partner-badge {
     display: inline-flex;
+
     align-items: center;
-    gap: 7px;
+    justify-content: center;
 
-    padding: 5px 14px;
+    gap: 8px;
 
-    border: 1px solid #a9cafa;
+    padding: 6px 18px;
+
     border-radius: 30px;
 
-    background: rgba(255,255,255,.94);
+    background: #063f91;
 
-    color: #0b0471;
+    color: #ffffff;
 
-    font-size: 11px;
+    font-size: 13px;
+
     font-weight: 700;
-    letter-spacing: .3px;
-
-    box-shadow: 0 3px 10px rgba(0,70,150,.06);
-}
-
-.digital-badge i {
-    font-size: 11px;
-}
-
-.digital-header h2 {
-    margin: 8px 0 4px;
-
-    color: #102d61;
-
-    font-size: 28px;
-    font-weight: 750;
-    line-height: 1.2;
-}
-
-.digital-header p {
-    max-width: 700px;
-
-    margin: auto;
-
-    color: #536681;
-
-    font-size: 12px;
-    line-height: 1.5;
-}
-
-
-/* =========================================================
-   REMOVE OLD TOP LINE
-========================================================= */
-
-.digital-line {
-    display: none !important;
-}
-
-
-/* =========================================================
-   SERVICE GRID
-========================================================= */
-
-.digital-grid {
-    display: grid;
-
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-
-    gap: 14px;
-}
-
-
-/* =========================================================
-   SERVICE CARD
-========================================================= */
-
-.digital-card {
-    position: relative;
-
-    min-height: 335px;
-
-    display: flex;
-    flex-direction: column;
-
-    padding: 17px 17px 14px;
-
-    background: rgba(255,255,255,.94);
-
-    border: 1px solid #cddff4;
-    border-radius: 13px;
 
     box-shadow:
-        0 6px 18px rgba(22,65,115,.07);
+        0 5px 15px rgba(0,63,145,.15);
+}
+
+.partner-badge i {
+    font-size: 12px;
+}
+
+
+/* TITLE */
+
+.partner-header h2 {
+    margin: 8px 0 3px;
+
+    color: #0a315f;
+
+    font-size: 38px;
+
+    line-height: 1.15;
+
+    font-weight: 800;
+
+    letter-spacing: -.5px;
+}
+
+
+/* TITLE LINE */
+
+.partner-title-line {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    margin: 6px auto 7px;
+}
+
+.partner-title-line span {
+    width: 38px;
+
+    height: 2px;
+
+    background: #1265cf;
+
+    border-radius: 10px;
+}
+
+.partner-title-line i {
+    color: #1265cf;
+
+    font-size: 8px;
+}
+
+
+/* SUBTITLE */
+
+.partner-header p {
+    max-width: 750px;
+
+    margin: 0 auto;
+
+    color: #61718a;
+
+    font-size: 14px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   MARQUEE OUTER
+========================================================= */
+
+.partner-marquee {
+    position: relative;
+
+    width: 100%;
 
     overflow: hidden;
 
-    transition: all .25s ease;
-}
-
-.digital-card:hover {
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 12px 25px rgba(22,65,115,.12);
+    padding: 8px 0 14px;
 }
 
 
-/* =========================================================
-   ICON
-========================================================= */
+/* FADE EDGES */
 
-.digital-icon {
-    width: 58px;
-    height: 58px;
-
-    margin: 0 auto 9px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: #f2f7ff;
-
-    border: 1px solid #c8dcfa;
-
-    color: #0b0471;
-
-    font-size: 23px;
-
-    box-shadow: 0 4px 10px rgba(0,70,150,.06);
-}
-
-
-/* =========================================================
-   CARD TITLE
-========================================================= */
-
-.digital-card h4 {
-    margin: 0;
-
-    text-align: center;
-
-    color: #0b0471;
-
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.25;
-}
-
-.digital-card > p {
-    min-height: 38px;
-
-    margin: 5px 0 8px;
-
-    text-align: center;
-
-    color: #687994;
-
-    font-size: 11px;
-    line-height: 1.45;
-}
-
-
-/* =========================================================
-   DIVIDER
-========================================================= */
-
-.digital-divider {
-    width: 28px;
-    height: 2px;
-
-    margin: 0 auto 8px;
-
-    border-radius: 5px;
-
-    background: #0b0471;
-}
-
-
-/* =========================================================
-   SERVICE LIST
-========================================================= */
-
-.digital-list {
-    margin: 0;
-    padding: 0;
-
-    list-style: none;
-}
-
-.digital-list li {
-    display: flex;
-    align-items: center;
-
-    gap: 7px;
-
-    min-height: 27px;
-
-    color: #334563;
-
-    font-size: 11px;
-
-    border-bottom: 1px solid #edf2f8;
-}
-
-.digital-list li:last-child {
-    border-bottom: 0;
-}
-
-.digital-list li i {
-    color: #0b0471;
-
-    font-size: 9px;
-}
-
-
-/* =========================================================
-   BUTTON
-========================================================= */
-
-.digital-btn {
-    width: 100%;
-
-    margin-top: auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 7px;
-
-    padding: 7px 11px;
-
-    border: 1px solid #9fc3f5;
-    border-radius: 6px;
-
-    background: #0b0471;
-
-    color: #fff !important;
-
-    text-decoration: none;
-
-    font-size: 11px;
-    font-weight: 700;
-
-    transition: all .2s ease;
-}
-
-.digital-btn:hover {
-    background: #064aa9;
-
-    color: #fff !important;
-
-    transform: translateY(-1px);
-}
-
-
-/* =========================================================
-   CARD BOTTOM EFFECT
-========================================================= */
-
-.digital-card::after {
+.partner-marquee::before,
+.partner-marquee::after {
     content: "";
 
     position: absolute;
 
-    left: -20px;
-    right: -20px;
-    bottom: -45px;
+    top: 0;
+    bottom: 0;
 
-    height: 70px;
+    width: 70px;
 
-    border-radius: 50% 50% 0 0;
-
-    background:
-        linear-gradient(
-            180deg,
-            rgba(7,89,214,.01),
-            rgba(7,89,214,.06)
-        );
+    z-index: 5;
 
     pointer-events: none;
 }
 
-
-/* =========================================================
-   HELP + 1912
-========================================================= */
-
-.help-row {
-    display: grid;
-
-    grid-template-columns: 2fr 1fr;
-
-    gap: 14px;
-
-    margin-top: 14px;
-}
-
-
-/* =========================================================
-   HELP BOX
-========================================================= */
-
-.help-box {
-    min-height: 165px;
-
-    position: relative;
-
-    display: flex;
-    align-items: center;
-
-    gap: 18px;
-
-    padding: 18px 22px;
+.partner-marquee::before {
+    left: 0;
 
     background:
         linear-gradient(
-            135deg,
-            rgba(232,245,255,.96),
-            rgba(255,255,255,.94)
+            90deg,
+            #f8fbff,
+            rgba(248,251,255,0)
         );
+}
 
-    border: 1px solid #c9def8;
+.partner-marquee::after {
+    right: 0;
 
-    border-radius: 13px;
+    background:
+        linear-gradient(
+            270deg,
+            #f8fbff,
+            rgba(248,251,255,0)
+        );
+}
+
+
+/* =========================================================
+   TRACK
+========================================================= */
+
+.partner-track {
+    display: flex;
+
+    align-items: stretch;
+
+    gap: 18px;
+
+    width: max-content;
+
+    will-change: transform;
+
+    animation:
+        partnerMarquee 32s linear infinite;
+}
+
+
+/*
+   IMPORTANT:
+   NO HOVER PAUSE
+   MARQUEE ALWAYS CONTINUES
+*/
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.partner-card {
+    position: relative;
+
+    width: 235px;
+
+    min-width: 235px;
+
+    height: 150px;
+
+    flex: 0 0 235px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 16px;
+
+    text-decoration: none !important;
+
+    background:
+        rgba(255,255,255,.96);
+
+    border: 1px solid #d9e7f7;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 7px 20px rgba(18,72,125,.08);
 
     overflow: hidden;
 
-    box-shadow:
-        0 5px 16px rgba(30,75,130,.06);
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
 }
 
 
-/* HELP ICON */
+/* TOP BLUE LINE */
 
-.help-icon {
-    width: 78px;
-    height: 78px;
-
-    flex: 0 0 78px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: #fff;
-
-    border: 1px solid #c9def8;
-
-    color: #0b0471;
-
-    font-size: 34px;
-
-    box-shadow:
-        0 5px 14px rgba(7,89,214,.08);
-}
-
-.help-content {
-    position: relative;
-    z-index: 2;
-}
-
-.help-content h3 {
-    margin: 0 0 4px;
-
-    color: #0b0471;
-
-    font-size: 22px;
-    font-weight: 700;
-}
-
-.help-content h3::after {
+.partner-card::before {
     content: "";
 
-    display: block;
+    position: absolute;
 
-    width: 30px;
-    height: 2px;
+    left: 20px;
+    right: 20px;
 
-    margin-top: 5px;
+    top: 0;
 
-    border-radius: 5px;
+    height: 3px;
 
-    background: #0b0471;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #0b62c9,
+            transparent
+        );
+
+    opacity: .75;
 }
 
-.help-content p {
-    max-width: 620px;
 
-    margin: 7px 0 9px;
+/* HOVER */
 
-    color: #52647f;
+.partner-card:hover {
+    transform: translateY(-5px);
 
-    font-size: 11px;
-    line-height: 1.5;
+    border-color: #9ec6f5;
+
+    box-shadow:
+        0 13px 28px rgba(0,53,128,.14);
 }
 
 
 /* =========================================================
-   HELP BUTTONS
+   LOGO
 ========================================================= */
 
-.help-buttons {
+.partner-logo {
+    width: 155px;
+
+    height: 76px;
+
     display: flex;
-
-    gap: 8px;
-
-    flex-wrap: wrap;
-}
-
-.help-btn {
-    display: inline-flex;
 
     align-items: center;
 
-    gap: 6px;
-
-    padding: 7px 13px;
-
-    border-radius: 6px;
-
-    background: #0b0471;
-
-    border: 1px solid #0b0471;
-
-    color: #fff !important;
-
-    text-decoration: none;
-
-    font-size: 10px;
-    font-weight: 700;
-
-    transition: .2s ease;
+    justify-content: center;
 }
 
-.help-btn:hover {
-    background: #064aa9;
+.partner-logo img {
+    display: block;
 
-    color: #fff !important;
+    width: 145px;
 
-    transform: translateY(-1px);
+    height: 68px;
+
+    object-fit: contain;
+
+    transition:
+        transform .25s ease;
 }
 
-.help-btn-outline {
-    background: #fff;
-
-    color: #0759d6 !important;
-}
-
-.help-btn-outline:hover {
-    background: #0b0471;
-
-    color: #fff !important;
+.partner-card:hover .partner-logo img {
+    transform: scale(1.05);
 }
 
 
 /* =========================================================
-   24x7 SUPPORT
+   NAME
 ========================================================= */
 
-.support-card {
-    min-height: 165px;
-
+.partner-name {
     display: flex;
+
     align-items: center;
     justify-content: center;
 
-    gap: 12px;
+    min-height: 25px;
 
-    padding: 17px;
+    color: #073f8e;
 
-    background: rgba(255,255,255,.95);
+    font-size: 14px;
 
-    border: 1px solid #c9def8;
+    font-weight: 700;
 
-    border-radius: 13px;
+    line-height: 1.2;
 
-    box-shadow:
-        0 5px 16px rgba(30,75,130,.06);
+    text-align: center;
 }
 
-.support-icon {
-    width: 68px;
-    height: 68px;
 
-    flex: 0 0 68px;
+/* =========================================================
+   ARROW
+========================================================= */
+
+.partner-arrow {
+    position: absolute;
+
+    right: 10px;
+
+    bottom: 9px;
+
+    width: 23px;
+
+    height: 23px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     border-radius: 50%;
 
-    background: #f1f7ff;
+    background: #eef6ff;
 
-    border: 1px solid #c9def8;
-
-    color: #0b0471;
-
-    font-size: 30px;
-}
-
-.support-content {
-    text-align: left;
-}
-
-.support-content h5 {
-    margin: 0;
-
-    color: #0b0471;
-
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.support-number {
-    margin: 2px 0;
-
-    color: #0b0471;
-
-    font-size: 36px;
-    line-height: 1;
-
-    font-weight: 800;
-
-    letter-spacing: 1px;
-}
-
-.support-content p {
-    margin: 4px 0 0;
-
-    color: #71809a;
+    color: #1265cf;
 
     font-size: 9px;
+
+    opacity: 0;
+
+    transform: translateX(5px);
+
+    transition: .25s ease;
+}
+
+.partner-card:hover .partner-arrow {
+    opacity: 1;
+
+    transform: translateX(0);
 }
 
 
+/* =========================================================
+   CONTINUOUS MARQUEE
+========================================================= */
+
+@keyframes partnerMarquee {
+
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (min-width: 1500px) {
+
+    .partner-card {
+        width: 250px;
+
+        min-width: 250px;
+
+        flex-basis: 250px;
+
+        height: 155px;
+    }
+
+}
 
 
 /* =========================================================
@@ -2739,26 +4014,40 @@
 
 @media (max-width: 1100px) {
 
-    .digital-services {
-        padding-left: 15px;
-        padding-right: 15px;
+    .partner-container {
+        padding: 0 18px;
     }
 
-    .digital-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .partner-header h2 {
+        font-size: 32px;
     }
 
-    .digital-card {
-        min-height: 335px;
+    .partner-header p {
+        font-size: 13px;
     }
 
-    .help-row {
-        grid-template-columns: 1fr;
+    .partner-card {
+        width: 220px;
+
+        min-width: 220px;
+
+        flex-basis: 220px;
+
+        height: 140px;
     }
 
+    .partner-logo {
+        width: 140px;
 
+        height: 65px;
+    }
 
- 
+    .partner-logo img {
+        width: 130px;
+
+        height: 58px;
+    }
+
 }
 
 
@@ -2768,127 +4057,88 @@
 
 @media (max-width: 767px) {
 
-    .digital-services {
-        padding: 22px 10px;
+    .partner-section {
+        padding: 28px 0 25px;
     }
 
-    .digital-header {
-        margin-bottom: 17px;
+    .partner-container {
+        padding: 0 10px;
     }
 
-    .digital-badge {
-        font-size: 9px;
-        padding: 5px 11px;
+    .partner-header {
+        margin-bottom: 16px;
     }
 
-    .digital-header h2 {
-        font-size: 22px;
-    }
+    .partner-badge {
+        padding: 5px 13px;
 
-    .digital-header p {
         font-size: 10px;
     }
 
-    .digital-grid {
-        grid-template-columns: 1fr;
+    .partner-header h2 {
+        font-size: 24px;
 
-        gap: 12px;
+        margin-top: 7px;
     }
 
-    .digital-card {
-        min-height: 330px;
+    .partner-title-line {
+        margin: 5px auto;
+    }
 
-        padding: 17px 16px 14px;
+    .partner-header p {
+        font-size: 11px;
+
+        line-height: 1.5;
+    }
+
+    .partner-marquee {
+        padding: 5px 0 10px;
+    }
+
+    .partner-track {
+        gap: 12px;
+
+        animation-duration: 25s;
+    }
+
+    .partner-card {
+        width: 165px;
+
+        min-width: 165px;
+
+        flex-basis: 165px;
+
+        height: 120px;
+
+        padding: 10px;
 
         border-radius: 11px;
     }
 
-    .digital-icon {
-        width: 55px;
-        height: 55px;
+    .partner-logo {
+        width: 120px;
 
-        font-size: 22px;
+        height: 57px;
     }
 
-    .digital-card h4 {
-        font-size: 15px;
+    .partner-logo img {
+        width: 110px;
+
+        height: 50px;
     }
 
-    .digital-card > p {
-        font-size: 10px;
+    .partner-name {
+        font-size: 11px;
     }
 
-    .digital-list li {
-        min-height: 26px;
-
-        font-size: 10px;
+    .partner-arrow {
+        display: none;
     }
 
-    .digital-btn {
-        font-size: 10px;
+    .partner-marquee::before,
+    .partner-marquee::after {
+        width: 30px;
     }
-
-
-    /* HELP */
-
-    .help-row {
-        grid-template-columns: 1fr;
-
-        gap: 12px;
-    }
-
-    .help-box {
-        min-height: auto;
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        padding: 18px;
-
-        gap: 12px;
-    }
-
-    .help-icon {
-        width: 62px;
-        height: 62px;
-
-        flex-basis: 62px;
-
-        font-size: 28px;
-    }
-
-    .help-content h3 {
-        font-size: 20px;
-    }
-
-    .help-content p {
-        font-size: 10px;
-    }
-
-
-    /* SUPPORT */
-
-    .support-card {
-        min-height: 135px;
-
-        padding: 15px;
-    }
-
-    .support-icon {
-        width: 58px;
-        height: 58px;
-
-        flex-basis: 58px;
-
-        font-size: 25px;
-    }
-
-    .support-number {
-        font-size: 32px;
-    }
-
-
 
 }
 
@@ -2899,346 +4149,44 @@
 
 @media (max-width: 400px) {
 
-    .digital-services {
-        padding-left: 8px;
-        padding-right: 8px;
-    }
-
-    .digital-header h2 {
-        font-size: 20px;
-    }
-
-    .digital-header p {
-        font-size: 9px;
-    }
-
-    .digital-card {
-        min-height: 320px;
-
-        border-radius: 10px;
-    }
-
-    .digital-icon {
-        width: 52px;
-        height: 52px;
-
+    .partner-header h2 {
         font-size: 21px;
     }
 
-    .help-content h3 {
-        font-size: 19px;
+    .partner-header p {
+        font-size: 10px;
     }
 
-    .support-number {
-        font-size: 29px;
+    .partner-card {
+        width: 145px;
+
+        min-width: 145px;
+
+        flex-basis: 145px;
+
+        height: 110px;
     }
+
+    .partner-logo {
+        width: 105px;
+
+        height: 50px;
+    }
+
+    .partner-logo img {
+        width: 95px;
+
+        height: 44px;
+    }
+
+    .partner-name {
+        font-size: 10px;
+    }
+
 }
 
+
 </style>
-
-
-<section class="digital-services">
-
-    <div class="digital-line"></div>
-
-    <div class="container">
-
-        <!-- ================= HEADER ================= -->
-
-        <div class="digital-header">
-
-            <span class="digital-badge">
-                <i class="fas fa-desktop"></i>
-                DIGITAL EXPERIENCE
-            </span>
-
-            <h2>Smart Consumer Assistance</h2>
-
-            <p>
-                Access digital services, mobile applications, online support,
-                downloads and consumer assistance — all from one place.
-            </p>
-
-        </div>
-
-
-        <!-- ================= SERVICE CARDS ================= -->
-
-        <div class="digital-grid">
-
-
-            <!-- MOBILE APP -->
-
-            <div class="digital-card">
-
-                <div class="digital-icon">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-
-                <h4>Mobile App</h4>
-
-                <p>
-                    Access essential electricity services
-                    directly from your mobile device.
-                </p>
-
-                <div class="digital-divider"></div>
-
-                <ul class="digital-list">
-
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        Bill Payment
-                    </li>
-
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        New Connection
-                    </li>
-
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        Complaint Registration
-                    </li>
-
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        Consumer Services
-                    </li>
-
-                </ul>
-
-                <a href="#" class="digital-btn">
-                    Download App
-                    <i class="fas fa-download"></i>
-                </a>
-
-            </div>
-
-
-            <!-- AI ASSISTANT -->
-
-            <div class="digital-card">
-
-                <div class="digital-icon">
-                    <i class="fas fa-robot"></i>
-                </div>
-
-                <h4>AI Assistant</h4>
-
-                <p>
-                    Get quick assistance for consumer
-                    queries and electricity services.
-                </p>
-
-                <div class="digital-divider"></div>
-
-                <ul class="digital-list">
-
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        Billing Queries
-                    </li>
-
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        Complaint Status
-                    </li>
-
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        New Connection Info
-                    </li>
-
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        Scheme Information
-                    </li>
-
-                </ul>
-
-                <a href="#" class="digital-btn">
-                    Chat Now
-                    <i class="fas fa-comments"></i>
-                </a>
-
-            </div>
-
-
-            <!-- WHATSAPP -->
-
-            <div class="digital-card">
-
-                <div class="digital-icon">
-                    <i class="fab fa-whatsapp"></i>
-                </div>
-
-                <h4>WhatsApp Service</h4>
-
-                <p>
-                    Connect through WhatsApp for
-                    quick consumer assistance.
-                </p>
-
-                <div class="digital-divider"></div>
-
-                <ul class="digital-list">
-
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        Bill Details
-                    </li>
-
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        Complaint Registration
-                    </li>
-
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        Service Assistance
-                    </li>
-
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        Important Updates
-                    </li>
-
-                </ul>
-
-                <a href="#" class="digital-btn">
-                    Connect Now
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-
-            </div>
-
-
-            <!-- DOWNLOAD CENTRE -->
-
-            <div class="digital-card">
-
-                <div class="digital-icon">
-                    <i class="fas fa-download"></i>
-                </div>
-
-                <h4>Download Centre</h4>
-
-                <p>
-                    Access important forms, circulars,
-                    tariff documents and reports.
-                </p>
-
-                <div class="digital-divider"></div>
-
-                <ul class="digital-list">
-
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        Application Forms
-                    </li>
-
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        Tariff Documents
-                    </li>
-
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        Circulars &amp; Notices
-                    </li>
-
-                    <li>
-                        <i class="fas fa-check-circle"></i>
-                        Reports &amp; Publications
-                    </li>
-
-                </ul>
-
-                <a href="#" class="digital-btn">
-                    View Downloads
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- ================= HELP AREA ================= -->
-
-        <div class="help-row">
-
-
-            <!-- NEED HELP -->
-
-            <div class="help-box">
-
-                <div class="help-icon">
-                    <i class="fas fa-headset"></i>
-                </div>
-
-                <div class="help-content">
-
-                    <h3>Need Help?</h3>
-
-                    <p>
-                        Find answers to frequently asked questions or connect
-                        with consumer support for billing, complaints,
-                        electricity supply, new connection and other services.
-                    </p>
-
-                    <div class="help-buttons">
-
-                        <a href="#" class="help-btn">
-                            <i class="fas fa-circle-question"></i>
-                            View FAQ
-                        </a>
-
-                        <a href="#" class="help-btn help-btn-outline">
-                            <i class="fas fa-headset"></i>
-                            Contact Support
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- 24x7 -->
-
-            <div class="support-card">
-
-                <div class="support-icon">
-                    <i class="fas fa-phone-volume"></i>
-                </div>
-
-                <div class="support-content">
-
-                    <h5>24×7 Consumer Care</h5>
-
-                    <div class="support-number">
-                        1912
-                    </div>
-
-                    <p>
-                        Toll Free Consumer Helpline
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-     
-
-    </div>
-
-</section>
 
   </main>
 
