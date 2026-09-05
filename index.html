@@ -990,24 +990,672 @@
 
 
     <!-- ========Services ===========-->
-    <section class="service-dock">
-      <div class="container">
-        <div class="service-dock-grid">
-          <a href="#" class="dock-card"><span class="dock-icon blue"><i
-                class="fa-solid fa-indian-rupee-sign"></i></span><span><b>Pay Bill</b><small>Quick bill
-                payment</small></span><i class="fa-solid fa-arrow-right"></i></a>
-          <a href="#" class="dock-card"><span class="dock-icon green"><i
-                class="fa-solid fa-plug-circle-plus"></i></span><span><b>New Connection</b><small>Apply
-                online</small></span><i class="fa-solid fa-arrow-right"></i></a>
-          <a href="#" class="dock-card"><span class="dock-icon orange"><i
-                class="fa-solid fa-headset"></i></span><span><b>Complaint</b><small>Register / track</small></span><i
-              class="fa-solid fa-arrow-right"></i></a>
-          <a href="#" class="dock-card"><span class="dock-icon purple"><i
-                class="fa-solid fa-user"></i></span><span><b>Consumer Login</b><small>Manage account</small></span><i
-              class="fa-solid fa-arrow-right"></i></a>
+<!-- =========================================================
+     JBVNL QUICK ACTION BAR
+     EXACT SAME STYLE
+========================================================= -->
+
+
+<style>
+
+/* =========================================================
+   MAIN BAR
+========================================================= */
+
+.jbvnl-quick-bar {
+    position: relative;
+    z-index: 50;
+
+    width: calc(100% - 28px);
+    max-width: 1550px;
+
+    height: 84px;
+
+    margin: -1px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    background:
+        linear-gradient(
+            105deg,
+            #dbeafe 0%,
+            #eef6ff 45%,
+            #f8fbff 100%
+        );
+
+    border: 1px solid rgba(190, 215, 240, .9);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 22px rgba(28, 77, 130, .12);
+
+    overflow: hidden;
+    transform: translateY(-25%);
+}
+
+
+/* =========================================================
+   BLUE SIDE CAPS
+========================================================= */
+
+.jbvnl-quick-bar::before {
+    content: "";
+
+    position: absolute;
+
+    left: -18px;
+    top: 0;
+    bottom: 0;
+
+    width: 50px;
+
+    background: #1477df;
+
+    border-radius: 22px 0 0 22px;
+
+    transform: skewX(-18deg);
+
+    z-index: -1;
+}
+
+.jbvnl-quick-bar::after {
+    content: "";
+
+    position: absolute;
+
+    right: -18px;
+    top: 0;
+    bottom: 0;
+
+    width: 55px;
+
+    background: #1477df;
+
+    border-radius: 0 22px 22px 0;
+
+    transform: skewX(18deg);
+
+    z-index: -1;
+}
+
+
+/* =========================================================
+   ITEM
+========================================================= */
+
+.jbvnl-quick-item {
+    position: relative;
+
+    height: 94px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 10px 27px;
+
+    color: #152a49;
+
+    text-decoration: none !important;
+
+    overflow: hidden;
+
+    border-right: 1px solid rgba(188, 210, 233, .85);
+
+    transition: .3s ease;
+}
+
+.jbvnl-quick-item:last-child {
+    border-right: 0;
+}
+
+
+/* =========================================================
+   BOTTOM WAVE
+========================================================= */
+
+.jbvnl-quick-item::after {
+    content: "";
+
+    position: absolute;
+
+    left: -20px;
+    right: -20px;
+    bottom: -25px;
+
+    height: 48px;
+
+    border-radius: 50% 50% 0 0;
+
+    opacity: .9;
+
+    pointer-events: none;
+
+    transition: .3s ease;
+}
+
+
+/* BLUE */
+
+.jbvnl-quick-item.pay::after {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(39,126,231,.10),
+            rgba(39,126,231,.22)
+        );
+}
+
+
+/* GREEN */
+
+.jbvnl-quick-item.connection::after {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(21,190,125,.08),
+            rgba(21,190,125,.20)
+        );
+}
+
+
+/* ORANGE */
+
+.jbvnl-quick-item.complaint::after {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,160,40,.08),
+            rgba(255,160,40,.20)
+        );
+}
+
+
+/* PURPLE */
+
+.jbvnl-quick-item.login::after {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(119,76,220,.08),
+            rgba(119,76,220,.20)
+        );
+}
+
+
+/* =========================================================
+   ICON BOX
+========================================================= */
+
+.jbvnl-quick-icon {
+    position: relative;
+    z-index: 2;
+
+    width: 56px;
+    height: 56px;
+
+    min-width: 56px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    font-size: 22px;
+
+    transition: .3s ease;
+}
+
+
+/* PAY */
+
+.pay .jbvnl-quick-icon {
+    background: #e9f1ff;
+
+    color: #1450bc;
+}
+
+
+/* CONNECTION */
+
+.connection .jbvnl-quick-icon {
+    background: #e2f8ef;
+
+    color: #079968;
+}
+
+
+/* COMPLAINT */
+
+.complaint .jbvnl-quick-icon {
+    background: #fff0df;
+
+    color: #f47a0c;
+}
+
+
+/* LOGIN */
+
+.login .jbvnl-quick-icon {
+    background: #f0eaff;
+
+    color: #7043dc;
+}
+
+
+/* RUPEE + DOCUMENT */
+
+.pay .jbvnl-quick-icon i:first-child {
+    position: absolute;
+
+    font-size: 21px;
+
+    transform: translate(-5px,-3px);
+}
+
+.pay .jbvnl-quick-icon i:last-child {
+    position: absolute;
+
+    font-size: 15px;
+
+    transform: translate(7px,7px);
+}
+
+
+/* PLUG PLUS */
+
+.connection .jbvnl-quick-icon i {
+    font-size: 22px;
+}
+
+.connection .jbvnl-quick-icon b {
+    position: absolute;
+
+    margin: 12px 0 0 19px;
+
+    width: 17px;
+    height: 17px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #079968;
+
+    color: #fff;
+
+    font-size: 13px;
+
+    line-height: 1;
+}
+
+
+/* LOGIN USER + GEAR */
+
+.login .jbvnl-quick-icon i:first-child {
+    font-size: 21px;
+}
+
+.login .jbvnl-quick-icon i:last-child {
+    position: absolute;
+
+    margin: 16px 0 0 19px;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.jbvnl-quick-text {
+    position: relative;
+    z-index: 2;
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+.jbvnl-quick-text h4 {
+    margin: 0 0 3px;
+
+    color: #1c2c45;
+
+    font-size: 17px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.jbvnl-quick-text span {
+    display: block;
+
+    color: #7b899c;
+
+    font-size: 12px;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.jbvnl-quick-arrow {
+    position: relative;
+    z-index: 3;
+
+    width: 28px;
+    height: 28px;
+
+    min-width: 28px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.48);
+
+    color: #94a4b7;
+
+    font-size: 12px;
+
+    transition: .3s ease;
+}
+
+
+/* ARROW COLORS */
+
+.pay .jbvnl-quick-arrow {
+    color: #1c68c9;
+}
+
+.connection .jbvnl-quick-arrow {
+    color: #079968;
+}
+
+.complaint .jbvnl-quick-arrow {
+    color: #ed7b18;
+}
+
+.login .jbvnl-quick-arrow {
+    color: #6940d1;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.jbvnl-quick-item:hover {
+    background: rgba(255,255,255,.52);
+
+    color: #152a49;
+}
+
+.jbvnl-quick-item:hover .jbvnl-quick-icon {
+    transform: translateY(-2px) scale(1.04);
+}
+
+.jbvnl-quick-item:hover .jbvnl-quick-arrow {
+    transform: translateX(4px);
+
+    background: #fff;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .jbvnl-quick-bar {
+        height: 82px;
+
+        width: calc(100% - 20px);
+    }
+
+    .jbvnl-quick-item {
+        height: 82px;
+
+        padding: 8px 14px;
+
+        gap: 10px;
+    }
+
+    .jbvnl-quick-icon {
+        width: 46px;
+        height: 46px;
+
+        min-width: 46px;
+
+        border-radius: 12px;
+
+        font-size: 18px;
+    }
+
+    .jbvnl-quick-text h4 {
+        font-size: 14px;
+    }
+
+    .jbvnl-quick-text span {
+        font-size: 10px;
+    }
+
+    .jbvnl-quick-arrow {
+        width: 24px;
+        height: 24px;
+
+        min-width: 24px;
+
+        font-size: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .jbvnl-quick-bar {
+        width: calc(100% - 12px);
+
+        height: auto;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        border-radius: 13px;
+    }
+
+    .jbvnl-quick-item {
+        height: 68px;
+
+        padding: 8px 10px;
+
+        gap: 8px;
+    }
+
+    .jbvnl-quick-item:nth-child(2) {
+        border-right: 0;
+    }
+
+    .jbvnl-quick-item:nth-child(3),
+    .jbvnl-quick-item:nth-child(4) {
+        border-top: 1px solid rgba(188,210,233,.7);
+    }
+
+    .jbvnl-quick-item:nth-child(4) {
+        border-right: 0;
+    }
+
+    .jbvnl-quick-icon {
+        width: 40px;
+        height: 40px;
+
+        min-width: 40px;
+
+        border-radius: 10px;
+
+        font-size: 16px;
+    }
+
+    .jbvnl-quick-text h4 {
+        font-size: 12px;
+    }
+
+    .jbvnl-quick-text span {
+        font-size: 8px;
+    }
+
+    .jbvnl-quick-arrow {
+        display: none;
+    }
+
+    .jbvnl-quick-bar::before,
+    .jbvnl-quick-bar::after {
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .jbvnl-quick-item {
+        padding: 7px;
+        gap: 6px;
+    }
+
+    .jbvnl-quick-icon {
+        width: 36px;
+        height: 36px;
+
+        min-width: 36px;
+    }
+
+    .jbvnl-quick-text h4 {
+        font-size: 11px;
+    }
+
+    .jbvnl-quick-text span {
+        font-size: 7px;
+    }
+
+}
+
+</style>
+
+<div class="jbvnl-quick-bar">
+
+    <!-- PAY BILL -->
+    <a href="#" class="jbvnl-quick-item pay">
+
+        <div class="jbvnl-quick-icon">
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+            <i class="fa-solid fa-file-invoice"></i>
         </div>
-      </div>
-    </section>
+
+        <div class="jbvnl-quick-text">
+            <h4>Pay Bill</h4>
+            <span>Quick bill payment</span>
+        </div>
+
+        <div class="jbvnl-quick-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+
+    </a>
+
+
+    <!-- NEW CONNECTION -->
+    <a href="#" class="jbvnl-quick-item connection">
+
+        <div class="jbvnl-quick-icon">
+            <i class="fa-solid fa-plug"></i>
+            <b>+</b>
+        </div>
+
+        <div class="jbvnl-quick-text">
+            <h4>New Connection</h4>
+            <span>Apply online</span>
+        </div>
+
+        <div class="jbvnl-quick-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+
+    </a>
+
+
+    <!-- COMPLAINT -->
+    <a href="#" class="jbvnl-quick-item complaint">
+
+        <div class="jbvnl-quick-icon">
+            <i class="fa-solid fa-headset"></i>
+        </div>
+
+        <div class="jbvnl-quick-text">
+            <h4>Complaint</h4>
+            <span>Register / track</span>
+        </div>
+
+        <div class="jbvnl-quick-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+
+    </a>
+
+
+    <!-- CONSUMER LOGIN -->
+    <a href="#" class="jbvnl-quick-item login">
+
+        <div class="jbvnl-quick-icon">
+            <i class="fa-solid fa-user"></i>
+            <i class="fa-solid fa-gear"></i>
+        </div>
+
+        <div class="jbvnl-quick-text">
+            <h4>Consumer Login</h4>
+            <span>Manage account</span>
+        </div>
+
+        <div class="jbvnl-quick-arrow">
+            <i class="fa-solid fa-arrow-right"></i>
+        </div>
+
+    </a>
+
+</div>
+
+
 
 
 
@@ -1020,7 +1668,7 @@
     <!-- OVERLAY -->
     <div class="quick-links-overlay" id="quickLinksOverlay"></div>
 
-    <!--====== QUICK LINKS SIDE PANEL =========-->
+    <!--====== QUICK LINKS Left SIDE PANEL =========-->
     <div class="quick-links-panel" id="quickLinksPanel">
 
       <div class="quick-links-header">
