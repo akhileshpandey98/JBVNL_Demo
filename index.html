@@ -990,670 +990,658 @@
 
 
     <!-- ========Services ===========-->
-<!-- =========================================================
+    <!-- =========================================================
      JBVNL QUICK ACTION BAR
      EXACT SAME STYLE
 ========================================================= -->
 
 
-<style>
-
-/* =========================================================
+    <style>
+      /* =========================================================
    MAIN BAR
 ========================================================= */
 
-.jbvnl-quick-bar {
-    position: relative;
-    z-index: 50;
+      .jbvnl-quick-bar {
+        position: relative;
+        z-index: 50;
 
-    width: calc(100% - 28px);
-    max-width: 1550px;
+        width: calc(100% - 28px);
+        max-width: 1550px;
 
-    height: 84px;
+        height: 84px;
 
-    margin: -1px auto 0;
+        margin: -1px auto 0;
 
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
 
-    background:
-        linear-gradient(
-            105deg,
+        background:
+          linear-gradient(105deg,
             #dbeafe 0%,
             #eef6ff 45%,
-            #f8fbff 100%
-        );
+            #f8fbff 100%);
 
-    border: 1px solid rgba(190, 215, 240, .9);
+        border: 1px solid rgba(190, 215, 240, .9);
 
-    border-radius: 18px;
+        border-radius: 18px;
 
-    box-shadow:
-        0 8px 22px rgba(28, 77, 130, .12);
+        box-shadow:
+          0 8px 22px rgba(28, 77, 130, .12);
 
-    overflow: hidden;
-    transform: translateY(-25%);
-}
+        overflow: hidden;
+        transform: translateY(-25%);
+      }
 
 
-/* =========================================================
+      /* =========================================================
    BLUE SIDE CAPS
 ========================================================= */
 
-.jbvnl-quick-bar::before {
-    content: "";
+      .jbvnl-quick-bar::before {
+        content: "";
 
-    position: absolute;
+        position: absolute;
 
-    left: -18px;
-    top: 0;
-    bottom: 0;
+        left: -18px;
+        top: 0;
+        bottom: 0;
 
-    width: 50px;
+        width: 50px;
 
-    background: #1477df;
+        background: #1477df;
 
-    border-radius: 22px 0 0 22px;
+        border-radius: 22px 0 0 22px;
 
-    transform: skewX(-18deg);
+        transform: skewX(-18deg);
 
-    z-index: -1;
-}
+        z-index: -1;
+      }
 
-.jbvnl-quick-bar::after {
-    content: "";
+      .jbvnl-quick-bar::after {
+        content: "";
 
-    position: absolute;
+        position: absolute;
 
-    right: -18px;
-    top: 0;
-    bottom: 0;
+        right: -18px;
+        top: 0;
+        bottom: 0;
 
-    width: 55px;
+        width: 55px;
 
-    background: #1477df;
+        background: #1477df;
 
-    border-radius: 0 22px 22px 0;
+        border-radius: 0 22px 22px 0;
 
-    transform: skewX(18deg);
+        transform: skewX(18deg);
 
-    z-index: -1;
-}
+        z-index: -1;
+      }
 
 
-/* =========================================================
+      /* =========================================================
    ITEM
 ========================================================= */
 
-.jbvnl-quick-item {
-    position: relative;
+      .jbvnl-quick-item {
+        position: relative;
 
-    height: 94px;
+        height: 94px;
 
-    display: flex;
+        display: flex;
 
-    align-items: center;
+        align-items: center;
 
-    gap: 14px;
+        gap: 14px;
 
-    padding: 10px 27px;
+        padding: 10px 27px;
 
-    color: #152a49;
+        color: #152a49;
 
-    text-decoration: none !important;
+        text-decoration: none !important;
 
-    overflow: hidden;
+        overflow: hidden;
 
-    border-right: 1px solid rgba(188, 210, 233, .85);
+        border-right: 1px solid rgba(188, 210, 233, .85);
 
-    transition: .3s ease;
-}
+        transition: .3s ease;
+      }
 
-.jbvnl-quick-item:last-child {
-    border-right: 0;
-}
+      .jbvnl-quick-item:last-child {
+        border-right: 0;
+      }
 
 
-/* =========================================================
+      /* =========================================================
    BOTTOM WAVE
 ========================================================= */
 
-.jbvnl-quick-item::after {
-    content: "";
+      .jbvnl-quick-item::after {
+        content: "";
 
-    position: absolute;
+        position: absolute;
 
-    left: -20px;
-    right: -20px;
-    bottom: -25px;
+        left: -20px;
+        right: -20px;
+        bottom: -25px;
 
-    height: 48px;
+        height: 48px;
 
-    border-radius: 50% 50% 0 0;
+        border-radius: 50% 50% 0 0;
 
-    opacity: .9;
+        opacity: .9;
 
-    pointer-events: none;
+        pointer-events: none;
 
-    transition: .3s ease;
-}
-
-
-/* BLUE */
-
-.jbvnl-quick-item.pay::after {
-    background:
-        linear-gradient(
-            180deg,
-            rgba(39,126,231,.10),
-            rgba(39,126,231,.22)
-        );
-}
+        transition: .3s ease;
+      }
 
 
-/* GREEN */
+      /* BLUE */
 
-.jbvnl-quick-item.connection::after {
-    background:
-        linear-gradient(
-            180deg,
-            rgba(21,190,125,.08),
-            rgba(21,190,125,.20)
-        );
-}
+      .jbvnl-quick-item.pay::after {
+        background:
+          linear-gradient(180deg,
+            rgba(39, 126, 231, .10),
+            rgba(39, 126, 231, .22));
+      }
 
 
-/* ORANGE */
+      /* GREEN */
 
-.jbvnl-quick-item.complaint::after {
-    background:
-        linear-gradient(
-            180deg,
-            rgba(255,160,40,.08),
-            rgba(255,160,40,.20)
-        );
-}
+      .jbvnl-quick-item.connection::after {
+        background:
+          linear-gradient(180deg,
+            rgba(21, 190, 125, .08),
+            rgba(21, 190, 125, .20));
+      }
 
 
-/* PURPLE */
+      /* ORANGE */
 
-.jbvnl-quick-item.login::after {
-    background:
-        linear-gradient(
-            180deg,
-            rgba(119,76,220,.08),
-            rgba(119,76,220,.20)
-        );
-}
+      .jbvnl-quick-item.complaint::after {
+        background:
+          linear-gradient(180deg,
+            rgba(255, 160, 40, .08),
+            rgba(255, 160, 40, .20));
+      }
 
 
-/* =========================================================
+      /* PURPLE */
+
+      .jbvnl-quick-item.login::after {
+        background:
+          linear-gradient(180deg,
+            rgba(119, 76, 220, .08),
+            rgba(119, 76, 220, .20));
+      }
+
+
+      /* =========================================================
    ICON BOX
 ========================================================= */
 
-.jbvnl-quick-icon {
-    position: relative;
-    z-index: 2;
+      .jbvnl-quick-icon {
+        position: relative;
+        z-index: 2;
 
-    width: 56px;
-    height: 56px;
+        width: 56px;
+        height: 56px;
 
-    min-width: 56px;
+        min-width: 56px;
 
-    display: flex;
+        display: flex;
 
-    align-items: center;
-    justify-content: center;
+        align-items: center;
+        justify-content: center;
 
-    border-radius: 14px;
+        border-radius: 14px;
 
-    font-size: 22px;
+        font-size: 22px;
 
-    transition: .3s ease;
-}
-
-
-/* PAY */
-
-.pay .jbvnl-quick-icon {
-    background: #e9f1ff;
-
-    color: #1450bc;
-}
+        transition: .3s ease;
+      }
 
 
-/* CONNECTION */
+      /* PAY */
 
-.connection .jbvnl-quick-icon {
-    background: #e2f8ef;
+      .pay .jbvnl-quick-icon {
+        background: #e9f1ff;
 
-    color: #079968;
-}
-
-
-/* COMPLAINT */
-
-.complaint .jbvnl-quick-icon {
-    background: #fff0df;
-
-    color: #f47a0c;
-}
+        color: #1450bc;
+      }
 
 
-/* LOGIN */
+      /* CONNECTION */
 
-.login .jbvnl-quick-icon {
-    background: #f0eaff;
+      .connection .jbvnl-quick-icon {
+        background: #e2f8ef;
 
-    color: #7043dc;
-}
-
-
-/* RUPEE + DOCUMENT */
-
-.pay .jbvnl-quick-icon i:first-child {
-    position: absolute;
-
-    font-size: 21px;
-
-    transform: translate(-5px,-3px);
-}
-
-.pay .jbvnl-quick-icon i:last-child {
-    position: absolute;
-
-    font-size: 15px;
-
-    transform: translate(7px,7px);
-}
+        color: #079968;
+      }
 
 
-/* PLUG PLUS */
+      /* COMPLAINT */
 
-.connection .jbvnl-quick-icon i {
-    font-size: 22px;
-}
+      .complaint .jbvnl-quick-icon {
+        background: #fff0df;
 
-.connection .jbvnl-quick-icon b {
-    position: absolute;
-
-    margin: 12px 0 0 19px;
-
-    width: 17px;
-    height: 17px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: #079968;
-
-    color: #fff;
-
-    font-size: 13px;
-
-    line-height: 1;
-}
+        color: #f47a0c;
+      }
 
 
-/* LOGIN USER + GEAR */
+      /* LOGIN */
 
-.login .jbvnl-quick-icon i:first-child {
-    font-size: 21px;
-}
+      .login .jbvnl-quick-icon {
+        background: #f0eaff;
 
-.login .jbvnl-quick-icon i:last-child {
-    position: absolute;
-
-    margin: 16px 0 0 19px;
-
-    font-size: 11px;
-}
+        color: #7043dc;
+      }
 
 
-/* =========================================================
+      /* RUPEE + DOCUMENT */
+
+      .pay .jbvnl-quick-icon i:first-child {
+        position: absolute;
+
+        font-size: 21px;
+
+        transform: translate(-5px, -3px);
+      }
+
+      .pay .jbvnl-quick-icon i:last-child {
+        position: absolute;
+
+        font-size: 15px;
+
+        transform: translate(7px, 7px);
+      }
+
+
+      /* PLUG PLUS */
+
+      .connection .jbvnl-quick-icon i {
+        font-size: 22px;
+      }
+
+      .connection .jbvnl-quick-icon b {
+        position: absolute;
+
+        margin: 12px 0 0 19px;
+
+        width: 17px;
+        height: 17px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+
+        background: #079968;
+
+        color: #fff;
+
+        font-size: 13px;
+
+        line-height: 1;
+      }
+
+
+      /* LOGIN USER + GEAR */
+
+      .login .jbvnl-quick-icon i:first-child {
+        font-size: 21px;
+      }
+
+      .login .jbvnl-quick-icon i:last-child {
+        position: absolute;
+
+        margin: 16px 0 0 19px;
+
+        font-size: 11px;
+      }
+
+
+      /* =========================================================
    TEXT
 ========================================================= */
 
-.jbvnl-quick-text {
-    position: relative;
-    z-index: 2;
+      .jbvnl-quick-text {
+        position: relative;
+        z-index: 2;
 
-    flex: 1;
+        flex: 1;
 
-    min-width: 0;
-}
+        min-width: 0;
+      }
 
-.jbvnl-quick-text h4 {
-    margin: 0 0 3px;
+      .jbvnl-quick-text h4 {
+        margin: 0 0 3px;
 
-    color: #1c2c45;
+        color: #1c2c45;
 
-    font-size: 17px;
+        font-size: 17px;
 
-    line-height: 1.2;
+        line-height: 1.2;
 
-    font-weight: 700;
+        font-weight: 700;
 
-    white-space: nowrap;
-}
+        white-space: nowrap;
+      }
 
-.jbvnl-quick-text span {
-    display: block;
+      .jbvnl-quick-text span {
+        display: block;
 
-    color: #7b899c;
+        color: #7b899c;
 
-    font-size: 12px;
+        font-size: 12px;
 
-    line-height: 1.2;
+        line-height: 1.2;
 
-    white-space: nowrap;
-}
+        white-space: nowrap;
+      }
 
 
-/* =========================================================
+      /* =========================================================
    ARROW
 ========================================================= */
 
-.jbvnl-quick-arrow {
-    position: relative;
-    z-index: 3;
+      .jbvnl-quick-arrow {
+        position: relative;
+        z-index: 3;
 
-    width: 28px;
-    height: 28px;
+        width: 28px;
+        height: 28px;
 
-    min-width: 28px;
+        min-width: 28px;
 
-    display: flex;
+        display: flex;
 
-    align-items: center;
-    justify-content: center;
+        align-items: center;
+        justify-content: center;
 
-    border-radius: 50%;
+        border-radius: 50%;
 
-    background: rgba(255,255,255,.48);
+        background: rgba(255, 255, 255, .48);
 
-    color: #94a4b7;
+        color: #94a4b7;
 
-    font-size: 12px;
+        font-size: 12px;
 
-    transition: .3s ease;
-}
-
-
-/* ARROW COLORS */
-
-.pay .jbvnl-quick-arrow {
-    color: #1c68c9;
-}
-
-.connection .jbvnl-quick-arrow {
-    color: #079968;
-}
-
-.complaint .jbvnl-quick-arrow {
-    color: #ed7b18;
-}
-
-.login .jbvnl-quick-arrow {
-    color: #6940d1;
-}
+        transition: .3s ease;
+      }
 
 
-/* =========================================================
+      /* ARROW COLORS */
+
+      .pay .jbvnl-quick-arrow {
+        color: #1c68c9;
+      }
+
+      .connection .jbvnl-quick-arrow {
+        color: #079968;
+      }
+
+      .complaint .jbvnl-quick-arrow {
+        color: #ed7b18;
+      }
+
+      .login .jbvnl-quick-arrow {
+        color: #6940d1;
+      }
+
+
+      /* =========================================================
    HOVER
 ========================================================= */
 
-.jbvnl-quick-item:hover {
-    background: rgba(255,255,255,.52);
+      .jbvnl-quick-item:hover {
+        background: rgba(255, 255, 255, .52);
 
-    color: #152a49;
-}
+        color: #152a49;
+      }
 
-.jbvnl-quick-item:hover .jbvnl-quick-icon {
-    transform: translateY(-2px) scale(1.04);
-}
+      .jbvnl-quick-item:hover .jbvnl-quick-icon {
+        transform: translateY(-2px) scale(1.04);
+      }
 
-.jbvnl-quick-item:hover .jbvnl-quick-arrow {
-    transform: translateX(4px);
+      .jbvnl-quick-item:hover .jbvnl-quick-arrow {
+        transform: translateX(4px);
 
-    background: #fff;
-}
+        background: #fff;
+      }
 
 
-/* =========================================================
+      /* =========================================================
    TABLET
 ========================================================= */
 
-@media (max-width: 1000px) {
+      @media (max-width: 1000px) {
 
-    .jbvnl-quick-bar {
-        height: 82px;
+        .jbvnl-quick-bar {
+          height: 82px;
 
-        width: calc(100% - 20px);
-    }
+          width: calc(100% - 20px);
+        }
 
-    .jbvnl-quick-item {
-        height: 82px;
+        .jbvnl-quick-item {
+          height: 82px;
 
-        padding: 8px 14px;
+          padding: 8px 14px;
 
-        gap: 10px;
-    }
+          gap: 10px;
+        }
 
-    .jbvnl-quick-icon {
-        width: 46px;
-        height: 46px;
+        .jbvnl-quick-icon {
+          width: 46px;
+          height: 46px;
 
-        min-width: 46px;
+          min-width: 46px;
 
-        border-radius: 12px;
+          border-radius: 12px;
 
-        font-size: 18px;
-    }
+          font-size: 18px;
+        }
 
-    .jbvnl-quick-text h4 {
-        font-size: 14px;
-    }
+        .jbvnl-quick-text h4 {
+          font-size: 14px;
+        }
 
-    .jbvnl-quick-text span {
-        font-size: 10px;
-    }
+        .jbvnl-quick-text span {
+          font-size: 10px;
+        }
 
-    .jbvnl-quick-arrow {
-        width: 24px;
-        height: 24px;
+        .jbvnl-quick-arrow {
+          width: 24px;
+          height: 24px;
 
-        min-width: 24px;
+          min-width: 24px;
 
-        font-size: 10px;
-    }
+          font-size: 10px;
+        }
 
-}
+      }
 
 
-/* =========================================================
+      /* =========================================================
    MOBILE
 ========================================================= */
 
-@media (max-width: 767px) {
+      @media (max-width: 767px) {
 
-    .jbvnl-quick-bar {
-        width: calc(100% - 12px);
+        .jbvnl-quick-bar {
+          width: calc(100% - 12px);
 
-        height: auto;
+          height: auto;
 
-        grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(2, 1fr);
 
-        border-radius: 13px;
-    }
+          border-radius: 13px;
+        }
 
-    .jbvnl-quick-item {
-        height: 68px;
+        .jbvnl-quick-item {
+          height: 68px;
 
-        padding: 8px 10px;
+          padding: 8px 10px;
 
-        gap: 8px;
-    }
+          gap: 8px;
+        }
 
-    .jbvnl-quick-item:nth-child(2) {
-        border-right: 0;
-    }
+        .jbvnl-quick-item:nth-child(2) {
+          border-right: 0;
+        }
 
-    .jbvnl-quick-item:nth-child(3),
-    .jbvnl-quick-item:nth-child(4) {
-        border-top: 1px solid rgba(188,210,233,.7);
-    }
+        .jbvnl-quick-item:nth-child(3),
+        .jbvnl-quick-item:nth-child(4) {
+          border-top: 1px solid rgba(188, 210, 233, .7);
+        }
 
-    .jbvnl-quick-item:nth-child(4) {
-        border-right: 0;
-    }
+        .jbvnl-quick-item:nth-child(4) {
+          border-right: 0;
+        }
 
-    .jbvnl-quick-icon {
-        width: 40px;
-        height: 40px;
+        .jbvnl-quick-icon {
+          width: 40px;
+          height: 40px;
 
-        min-width: 40px;
+          min-width: 40px;
 
-        border-radius: 10px;
+          border-radius: 10px;
 
-        font-size: 16px;
-    }
+          font-size: 16px;
+        }
 
-    .jbvnl-quick-text h4 {
-        font-size: 12px;
-    }
+        .jbvnl-quick-text h4 {
+          font-size: 12px;
+        }
 
-    .jbvnl-quick-text span {
-        font-size: 8px;
-    }
+        .jbvnl-quick-text span {
+          font-size: 8px;
+        }
 
-    .jbvnl-quick-arrow {
-        display: none;
-    }
+        .jbvnl-quick-arrow {
+          display: none;
+        }
 
-    .jbvnl-quick-bar::before,
-    .jbvnl-quick-bar::after {
-        display: none;
-    }
+        .jbvnl-quick-bar::before,
+        .jbvnl-quick-bar::after {
+          display: none;
+        }
 
-}
+      }
 
 
-/* =========================================================
+      /* =========================================================
    SMALL MOBILE
 ========================================================= */
 
-@media (max-width: 380px) {
+      @media (max-width: 380px) {
 
-    .jbvnl-quick-item {
-        padding: 7px;
-        gap: 6px;
-    }
+        .jbvnl-quick-item {
+          padding: 7px;
+          gap: 6px;
+        }
 
-    .jbvnl-quick-icon {
-        width: 36px;
-        height: 36px;
+        .jbvnl-quick-icon {
+          width: 36px;
+          height: 36px;
 
-        min-width: 36px;
-    }
+          min-width: 36px;
+        }
 
-    .jbvnl-quick-text h4 {
-        font-size: 11px;
-    }
+        .jbvnl-quick-text h4 {
+          font-size: 11px;
+        }
 
-    .jbvnl-quick-text span {
-        font-size: 7px;
-    }
+        .jbvnl-quick-text span {
+          font-size: 7px;
+        }
 
-}
+      }
+    </style>
 
-</style>
+    <div class="jbvnl-quick-bar">
 
-<div class="jbvnl-quick-bar">
-
-    <!-- PAY BILL -->
-    <a href="#" class="jbvnl-quick-item pay">
+      <!-- PAY BILL -->
+      <a href="#" class="jbvnl-quick-item pay">
 
         <div class="jbvnl-quick-icon">
-            <i class="fa-solid fa-indian-rupee-sign"></i>
-            <i class="fa-solid fa-file-invoice"></i>
+          <i class="fa-solid fa-indian-rupee-sign"></i>
+          <i class="fa-solid fa-file-invoice"></i>
         </div>
 
         <div class="jbvnl-quick-text">
-            <h4>Pay Bill</h4>
-            <span>Quick bill payment</span>
+          <h4>Pay Bill</h4>
+          <span>Quick bill payment</span>
         </div>
 
         <div class="jbvnl-quick-arrow">
-            <i class="fa-solid fa-arrow-right"></i>
+          <i class="fa-solid fa-arrow-right"></i>
         </div>
 
-    </a>
+      </a>
 
 
-    <!-- NEW CONNECTION -->
-    <a href="#" class="jbvnl-quick-item connection">
+      <!-- NEW CONNECTION -->
+      <a href="#" class="jbvnl-quick-item connection">
 
         <div class="jbvnl-quick-icon">
-            <i class="fa-solid fa-plug"></i>
-            <b>+</b>
+          <i class="fa-solid fa-plug"></i>
+          <b>+</b>
         </div>
 
         <div class="jbvnl-quick-text">
-            <h4>New Connection</h4>
-            <span>Apply online</span>
+          <h4>New Connection</h4>
+          <span>Apply online</span>
         </div>
 
         <div class="jbvnl-quick-arrow">
-            <i class="fa-solid fa-arrow-right"></i>
+          <i class="fa-solid fa-arrow-right"></i>
         </div>
 
-    </a>
+      </a>
 
 
-    <!-- COMPLAINT -->
-    <a href="#" class="jbvnl-quick-item complaint">
+      <!-- COMPLAINT -->
+      <a href="#" class="jbvnl-quick-item complaint">
 
         <div class="jbvnl-quick-icon">
-            <i class="fa-solid fa-headset"></i>
+          <i class="fa-solid fa-headset"></i>
         </div>
 
         <div class="jbvnl-quick-text">
-            <h4>Complaint</h4>
-            <span>Register / track</span>
+          <h4>Complaint</h4>
+          <span>Register / track</span>
         </div>
 
         <div class="jbvnl-quick-arrow">
-            <i class="fa-solid fa-arrow-right"></i>
+          <i class="fa-solid fa-arrow-right"></i>
         </div>
 
-    </a>
+      </a>
 
 
-    <!-- CONSUMER LOGIN -->
-    <a href="#" class="jbvnl-quick-item login">
+      <!-- CONSUMER LOGIN -->
+      <a href="#" class="jbvnl-quick-item login">
 
         <div class="jbvnl-quick-icon">
-            <i class="fa-solid fa-user"></i>
-            <i class="fa-solid fa-gear"></i>
+          <i class="fa-solid fa-user"></i>
+          <i class="fa-solid fa-gear"></i>
         </div>
 
         <div class="jbvnl-quick-text">
-            <h4>Consumer Login</h4>
-            <span>Manage account</span>
+          <h4>Consumer Login</h4>
+          <span>Manage account</span>
         </div>
 
         <div class="jbvnl-quick-arrow">
-            <i class="fa-solid fa-arrow-right"></i>
+          <i class="fa-solid fa-arrow-right"></i>
         </div>
 
-    </a>
+      </a>
 
-</div>
+    </div>
 
 
 
@@ -1876,6 +1864,18 @@
     <!-- ==============Board Of Directors -->
     <section class="jbvnl-officers">
       <div class="container-fluid ">
+
+        <div class="section-header text-center">
+          <span class="section-kicker digital-badge">
+            BOARD OF DIRECTORS
+          </span>
+
+          <h3 class="section-title fw-bold">
+            Meet Our Leadership Team
+          </h3>
+
+
+        </div>
 
         <div class="officers-carousel owl-carousel owl-theme">
 
@@ -2450,7 +2450,7 @@
 
 
 
-    <!-- Notice, Circulars & Tenders SECTION -->
+    <!-- Latest Notices & Announcements SECTION -->
     <!-- 
       <section class="section" id="notices">
         <div class="container">
@@ -2496,19 +2496,19 @@
 
         <div class="section-head">
           <div>
-            <span class="section-kicker">LATEST UPDATES</span>
+            <span class="section-kicker digital-badge">LATEST UPDATES</span>
 
-            <h2>Notice, Circulars & Tenders</h2>
+            <h2>Latest Notices & Announcements</h2>
 
             <p>
-              Stay updated with official JBVNL announcements.
+              Stay updated with the latest notices, tenders, circulars, recruitment updates and important announcements.
             </p>
           </div>
 
-          <a class="view-all" href="#">
+          <!-- <a class="view-all" href="#">
             All notices
             <i class="fa-solid fa-arrow-right"></i>
-          </a>
+          </a> -->
         </div>
 
 
@@ -2788,6 +2788,897 @@
 
 
 
+
+    <!-- 
+    {{-- =========================================================
+     JBVNL LIVE STATISTICS DASHBOARD
+========================================================= --}} -->
+
+    <section class="jbvnl-stats">
+
+      <div class="container">
+
+        <!-- ================= HEADER ================= -->
+
+        <div class="stats-header">
+
+          <span class="stats-tag">
+            <i class="fa-solid fa-chart-line"></i>
+            Live Dashboard
+          </span>
+
+          <h2 class="stats-title">
+            JBVNL at a Glance
+          </h2>
+
+          <div class="stats-title-line">
+            <span></span>
+            <i class="fa-solid fa-circle"></i>
+            <span></span>
+          </div>
+
+          <p class="stats-subtitle">
+            Delivering Reliable, Affordable and Consumer-Centric Electricity
+            Services Across Jharkhand
+          </p>
+
+        </div>
+
+
+        <!-- ================= STATISTICS ================= -->
+
+        <div class="stats-grid">
+
+
+          <!-- TOTAL CONSUMERS -->
+
+          <div class="stat-card">
+
+            <div class="stat-icon">
+              <i class="fas fa-users"></i>
+            </div>
+
+            <div class="stat-info">
+
+              <span class="stat-label">
+                Network Reach
+              </span>
+
+              <h3 class="counter" data-count="4200000">
+                0
+              </h3>
+
+              <p>Total Consumers</p>
+
+            </div>
+
+            <div class="stat-corner">
+              <i class="fa-solid fa-arrow-up-right"></i>
+            </div>
+
+          </div>
+
+
+          <!-- SUBSTATIONS -->
+
+          <div class="stat-card">
+
+            <div class="stat-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+
+            <div class="stat-info">
+
+              <span class="stat-label">
+                Power Infrastructure
+              </span>
+
+              <h3 class="counter" data-count="580">
+                0
+              </h3>
+
+              <p>Power Substations</p>
+
+            </div>
+
+            <div class="stat-corner">
+              <i class="fa-solid fa-arrow-up-right"></i>
+            </div>
+
+          </div>
+
+
+          <!-- FEEDERS -->
+
+          <div class="stat-card">
+
+            <div class="stat-icon">
+              <i class="fas fa-network-wired"></i>
+            </div>
+
+            <div class="stat-info">
+
+              <span class="stat-label">
+                Distribution Network
+              </span>
+
+              <h3 class="counter" data-count="2500">
+                0
+              </h3>
+
+              <p>11 KV Feeders</p>
+
+            </div>
+
+            <div class="stat-corner">
+              <i class="fa-solid fa-arrow-up-right"></i>
+            </div>
+
+          </div>
+
+
+          <!-- SMART METERS -->
+
+          <div class="stat-card">
+
+            <div class="stat-icon">
+              <i class="fas fa-mobile-screen-button"></i>
+            </div>
+
+            <div class="stat-info">
+
+              <span class="stat-label">
+                Smart Infrastructure
+              </span>
+
+              <h3 class="counter" data-count="1500000">
+                0
+              </h3>
+
+              <p>Smart Meters</p>
+
+            </div>
+
+            <div class="stat-corner">
+              <i class="fa-solid fa-arrow-up-right"></i>
+            </div>
+
+          </div>
+
+
+          <!-- DISTRICT OFFICES -->
+
+          <div class="stat-card">
+
+            <div class="stat-icon">
+              <i class="fas fa-city"></i>
+            </div>
+
+            <div class="stat-info">
+
+              <span class="stat-label">
+                Administrative Network
+              </span>
+
+              <h3 class="counter" data-count="24">
+                0
+              </h3>
+
+              <p>District Offices</p>
+
+            </div>
+
+            <div class="stat-corner">
+              <i class="fa-solid fa-arrow-up-right"></i>
+            </div>
+
+          </div>
+
+
+          <!-- SOLAR -->
+
+          <div class="stat-card">
+
+            <div class="stat-icon">
+              <i class="fas fa-solar-panel"></i>
+            </div>
+
+            <div class="stat-info">
+
+              <span class="stat-label">
+                Renewable Energy
+              </span>
+
+              <h3 class="counter" data-count="35000">
+                0
+              </h3>
+
+              <p>Solar Consumers</p>
+
+            </div>
+
+            <div class="stat-corner">
+              <i class="fa-solid fa-arrow-up-right"></i>
+            </div>
+
+          </div>
+
+
+          <!-- HELPLINE -->
+
+          <div class="stat-card">
+
+            <div class="stat-icon">
+              <i class="fas fa-headset"></i>
+            </div>
+
+            <div class="stat-info">
+
+              <span class="stat-label">
+                Consumer Support
+              </span>
+
+              <h3 class="counter" data-count="1912">
+                0
+              </h3>
+
+              <p>Consumer Helpline</p>
+
+            </div>
+
+            <div class="stat-corner">
+              <i class="fa-solid fa-arrow-up-right"></i>
+            </div>
+
+          </div>
+
+
+          <!-- 24x7 -->
+
+          <div class="stat-card">
+
+            <div class="stat-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+
+            <div class="stat-info">
+
+              <span class="stat-label">
+                Consumer Service
+              </span>
+
+              <h3>
+                24×7
+              </h3>
+
+              <p>Power Support</p>
+
+            </div>
+
+            <div class="stat-corner">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <style>
+      /* =========================================================
+   JBVNL LIVE STATISTICS
+========================================================= */
+
+      .jbvnl-stats {
+
+        position: relative;
+
+        width: 100%;
+
+        padding: 38px 0 42px;
+
+        background:
+          radial-gradient(circle at 5% 40%,
+            rgba(7, 89, 214, .07),
+            transparent 28%),
+          radial-gradient(circle at 95% 60%,
+            rgba(7, 89, 214, .06),
+            transparent 30%),
+          linear-gradient(135deg,
+            #ffffff 0%,
+            #f5faff 50%,
+            #edf6ff 100%);
+
+        overflow: hidden;
+      }
+
+
+      /* =========================================================
+   HEADER
+========================================================= */
+
+      .stats-header {
+
+        text-align: center;
+
+        margin-bottom: 25px;
+
+      }
+
+
+      /* BADGE */
+
+      .stats-tag {
+
+        display: inline-flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 7px;
+
+        padding: 6px 16px;
+
+        border-radius: 30px;
+
+        /* background: #063f91; */
+
+        color:#0b0471;
+
+        font-size: 11px;
+
+        font-weight: 700;
+
+        letter-spacing: .2px;
+
+        box-shadow:
+          0 5px 14px rgba(6, 63, 145, .14);
+
+      }
+
+      .stats-tag i {
+
+        font-size: 12px;
+
+      }
+
+
+      /* TITLE */
+
+      .stats-title {
+
+        margin: 8px 0 3px;
+
+        color:#0b0471;
+
+        font-size: 34px;
+
+        line-height: 1.2;
+
+        font-weight: 800;
+
+        letter-spacing: -.3px;
+
+      }
+
+
+      /* TITLE LINE */
+
+      .stats-title-line {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 7px;
+
+        margin: 6px auto 7px;
+
+      }
+
+      .stats-title-line span {
+
+        width: 34px;
+
+        height: 2px;
+
+        border-radius: 10px;
+
+        background: #0759d6;
+
+      }
+
+      .stats-title-line i {
+
+        color: #0759d6;
+
+        font-size: 7px;
+
+      }
+
+
+      /* SUBTITLE */
+
+      .stats-subtitle {
+
+        max-width: 720px;
+
+        margin: 0 auto;
+
+        color: #687991;
+
+        font-size: 14px;
+
+        line-height: 1.55;
+
+      }
+
+
+      /* =========================================================
+   GRID
+========================================================= */
+
+      .stats-grid {
+
+        display: grid;
+
+        grid-template-columns:
+          repeat(4, minmax(0, 1fr));
+
+        gap: 13px;
+
+      }
+
+
+      /* =========================================================
+   CARD
+========================================================= */
+
+      .stat-card {
+
+        position: relative;
+
+        min-height: 108px;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 13px;
+
+        padding: 14px 15px;
+
+        background:
+          linear-gradient(135deg,
+            rgba(255, 255, 255, .98),
+            rgba(247, 251, 255, .96));
+
+        border: 1px solid #d7e6f7;
+
+        border-radius: 13px;
+
+        box-shadow:
+          0 6px 18px rgba(24, 72, 125, .07);
+
+        overflow: hidden;
+
+        transition:
+          transform .25s ease,
+          box-shadow .25s ease,
+          border-color .25s ease;
+
+      }
+
+
+      /* TOP BLUE LINE */
+
+      .stat-card::before {
+
+        content: "";
+
+        position: absolute;
+
+        left: 16px;
+        right: 16px;
+
+        top: 0;
+
+        height: 2px;
+
+        background:
+          linear-gradient(90deg,
+            transparent,
+            #0759d6,
+            transparent);
+
+        opacity: .65;
+
+      }
+
+
+      /* BOTTOM LIGHT EFFECT */
+
+      .stat-card::after {
+
+        content: "";
+
+        position: absolute;
+
+        width: 100px;
+        height: 100px;
+
+        right: -55px;
+        bottom: -55px;
+
+        border-radius: 50%;
+
+        background:
+          rgba(7, 89, 214, .055);
+
+        pointer-events: none;
+
+      }
+
+
+      /* HOVER */
+
+      .stat-card:hover {
+
+        transform: translateY(-4px);
+
+        border-color: #abcbed;
+
+        box-shadow:
+          0 12px 25px rgba(24, 72, 125, .12);
+
+      }
+
+
+      /* =========================================================
+   ICON
+========================================================= */
+
+      .stat-icon {
+
+        position: relative;
+
+        z-index: 2;
+
+        width: 57px;
+        height: 57px;
+
+        flex: 0 0 57px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 14px;
+
+        background:
+          linear-gradient(135deg,
+            #edf5ff,
+            #dcecff);
+
+        border: 1px solid #c9def6;
+
+        color: #0759d6;
+
+        font-size: 21px;
+
+        box-shadow:
+          0 4px 10px rgba(7, 89, 214, .07);
+
+        transition: .25s ease;
+
+      }
+
+      .stat-card:hover .stat-icon {
+
+        transform:
+          scale(1.06) rotate(-2deg);
+
+        background:#0b0471;
+
+        color: #ffffff;
+
+      }
+
+
+      /* =========================================================
+   INFO
+========================================================= */
+
+      .stat-info {
+
+        position: relative;
+
+        z-index: 2;
+
+        min-width: 0;
+
+        flex: 1;
+
+      }
+
+
+      /* SMALL LABEL */
+
+      .stat-label {
+
+        display: block;
+
+        margin-bottom: 2px;
+
+        color: #8291a5;
+
+        font-size: 11px;
+
+        font-weight: 600;
+
+        text-transform: uppercase;
+
+        letter-spacing: .35px;
+
+      }
+
+
+      /* NUMBER */
+
+      .stat-info h3 {
+
+        margin: 0;
+
+        color:#0b0471;
+
+        font-size: 27px;
+
+        line-height: 1.05;
+
+        font-weight: 800;
+
+        letter-spacing: -.4px;
+
+      }
+
+
+      /* DESCRIPTION */
+
+      .stat-info p {
+
+        margin: 3px 0 0;
+
+        color: #50627b;
+
+        font-size: 14px;
+
+        line-height: 1.3;
+
+      }
+
+
+      /* =========================================================
+   CORNER ICON
+========================================================= */
+
+      .stat-corner {
+
+        position: absolute;
+
+        right: 10px;
+        top: 9px;
+
+        width: 21px;
+        height: 21px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+
+        background: #f0f6fd;
+
+        color: #91a4bb;
+
+        font-size: 8px;
+
+        opacity: 0;
+
+        transform: translate(4px, -4px);
+
+        transition: .25s ease;
+
+      }
+
+      .stat-card:hover .stat-corner {
+
+        opacity: 1;
+
+        transform: translate(0, 0);
+
+      }
+
+
+      /* =========================================================
+   TABLET
+========================================================= */
+
+      @media (max-width: 1100px) {
+
+        .jbvnl-stats {
+
+          padding: 32px 15px 35px;
+
+        }
+
+        .stats-grid {
+
+          grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        }
+
+        .stats-title {
+
+          font-size: 30px;
+
+        }
+
+      }
+
+
+      /* =========================================================
+   MOBILE
+========================================================= */
+
+      @media (max-width: 767px) {
+
+        .jbvnl-stats {
+
+          padding: 27px 10px 30px;
+
+        }
+
+        .stats-header {
+
+          margin-bottom: 18px;
+
+        }
+
+        .stats-tag {
+
+          padding: 5px 13px;
+
+          font-size: 10px;
+
+        }
+
+        .stats-title {
+
+          font-size: 24px;
+
+        }
+
+        .stats-subtitle {
+
+          font-size: 10px;
+
+        }
+
+        .stats-grid {
+
+          grid-template-columns: 1fr;
+
+          gap: 10px;
+
+        }
+
+        .stat-card {
+
+          min-height: 91px;
+
+          padding: 11px 13px;
+
+          border-radius: 11px;
+
+        }
+
+        .stat-icon {
+
+          width: 47px;
+          height: 47px;
+
+          flex-basis: 47px;
+
+          border-radius: 11px;
+
+          font-size: 18px;
+
+        }
+
+        .stat-info h3 {
+
+          font-size: 24px;
+
+        }
+
+        .stat-info p {
+
+          font-size: 9px;
+
+        }
+
+        .stat-label {
+
+          font-size: 7px;
+
+        }
+
+      }
+
+
+      /* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+      @media (max-width: 400px) {
+
+        .stats-title {
+
+          font-size: 21px;
+
+        }
+
+        .stats-subtitle {
+
+          font-size: 9px;
+
+        }
+
+        .stat-card {
+
+          min-height: 84px;
+
+          padding: 10px;
+
+        }
+
+        .stat-icon {
+
+          width: 42px;
+          height: 42px;
+
+          flex-basis: 42px;
+
+          border-radius: 10px;
+
+          font-size: 16px;
+
+        }
+
+        .stat-info h3 {
+
+          font-size: 22px;
+
+        }
+
+      }
+    </style>
+
+
+
+
+
     <!-- =========================================================
      JBVNL - SMART CONSUMER ASSISTANCE
 ========================================================= -->
@@ -2864,7 +3755,7 @@
       .digital-header h2 {
         margin: 8px 0 4px;
 
-        color: #102d61;
+        color: #0b0471;
 
         font-size: 28px;
         font-weight: 750;
@@ -3886,31 +4777,31 @@
      PROFESSIONAL CONTINUOUS MARQUEE
 ========================================================= -->
 
-<section class="partner-section">
+    <section class="partner-section">
 
-    <div class="partner-container">
+      <div class="partner-container">
 
         <!-- ================= HEADER ================= -->
 
         <div class="partner-header">
 
-            <span class="partner-badge">
-                <i class="fa-solid fa-building-columns"></i>
-                Government Collaboration
-            </span>
+          <span class="partner-badge">
+            <i class="fa-solid fa-building-columns"></i>
+            Government Collaboration
+          </span>
 
-            <h2>Partner Organizations</h2>
+          <h2>Partner Organizations</h2>
 
-            <div class="partner-title-line">
-                <span></span>
-                <i class="fa-solid fa-circle"></i>
-                <span></span>
-            </div>
+          <div class="partner-title-line">
+            <span></span>
+            <i class="fa-solid fa-circle"></i>
+            <span></span>
+          </div>
 
-            <p>
-                Explore important government organizations, national initiatives and
-                electricity sector partners associated with JBVNL.
-            </p>
+          <p>
+            Explore important government organizations, national initiatives and
+            electricity sector partners associated with JBVNL.
+          </p>
 
         </div>
 
@@ -3919,953 +4810,2630 @@
 
         <div class="partner-marquee">
 
-            <div class="partner-track">
+          <div class="partner-track">
 
 
-                <!-- ================= SET 1 ================= -->
+            <!-- ================= SET 1 ================= -->
 
-                <!-- PMNRF -->
-                <a href="https://pmnrf.gov.in/en/"
-                   target="_blank"
-                   class="partner-card">
+            <!-- PMNRF -->
+            <a href="https://pmnrf.gov.in/en/" target="_blank" class="partner-card">
 
-                    <div class="partner-logo">
-                        <img
-                            src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110840-ogkarj0fuvot3qe34kaqro3ehmxrkh3ud8idoq2foo.png"
-                            alt="PMNRF">
-                    </div>
+              <div class="partner-logo">
+                <img
+                  src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110840-ogkarj0fuvot3qe34kaqro3ehmxrkh3ud8idoq2foo.png"
+                  alt="PMNRF">
+              </div>
 
-                    <div class="partner-name">
-                        PMNRF
-                    </div>
+              <div class="partner-name">
+                PMNRF
+              </div>
 
-                    <div class="partner-arrow">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </div>
+              <div class="partner-arrow">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </div>
 
-                </a>
+            </a>
 
 
-                <!-- MyGov -->
-                <a href="https://www.mygov.in/"
-                   target="_blank"
-                   class="partner-card">
+            <!-- MyGov -->
+            <a href="https://www.mygov.in/" target="_blank" class="partner-card">
 
-                    <div class="partner-logo">
-                        <img
-                            src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110867-ogkarkw48jrdqybctl3zwnmboeohzvbb1htcn9znc8.png"
-                            alt="MyGov">
-                    </div>
+              <div class="partner-logo">
+                <img
+                  src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110867-ogkarkw48jrdqybctl3zwnmboeohzvbb1htcn9znc8.png"
+                  alt="MyGov">
+              </div>
 
-                    <div class="partner-name">
-                        MyGov
-                    </div>
+              <div class="partner-name">
+                MyGov
+              </div>
 
-                    <div class="partner-arrow">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </div>
+              <div class="partner-arrow">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </div>
 
-                </a>
+            </a>
 
 
-                <!-- PM INDIA -->
-                <a href="https://www.pmindia.gov.in/en/"
-                   target="_blank"
-                   class="partner-card">
+            <!-- PM INDIA -->
+            <a href="https://www.pmindia.gov.in/en/" target="_blank" class="partner-card">
 
-                    <div class="partner-logo">
-                        <img
-                            src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110850-ogkari2lo1nis4fga1w476bxw92ecs0413uw7g3tuw.png"
-                            alt="PM India">
-                    </div>
+              <div class="partner-logo">
+                <img
+                  src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110850-ogkari2lo1nis4fga1w476bxw92ecs0413uw7g3tuw.png"
+                  alt="PM India">
+              </div>
 
-                    <div class="partner-name">
-                        PM India
-                    </div>
+              <div class="partner-name">
+                PM India
+              </div>
 
-                    <div class="partner-arrow">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </div>
+              <div class="partner-arrow">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </div>
 
-                </a>
+            </a>
 
 
-                <!-- DIGITAL INDIA -->
-                <a href="https://www.digitalindia.gov.in/"
-                   target="_blank"
-                   class="partner-card">
+            <!-- DIGITAL INDIA -->
+            <a href="https://www.digitalindia.gov.in/" target="_blank" class="partner-card">
 
-                    <div class="partner-logo">
-                        <img
-                            src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110890-ogkarjya1pq3fccpz2pdc5uv30t4s67kpd5v6011ig.png"
-                            alt="Digital India">
-                    </div>
+              <div class="partner-logo">
+                <img
+                  src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110890-ogkarjya1pq3fccpz2pdc5uv30t4s67kpd5v6011ig.png"
+                  alt="Digital India">
+              </div>
 
-                    <div class="partner-name">
-                        Digital India
-                    </div>
+              <div class="partner-name">
+                Digital India
+              </div>
 
-                    <div class="partner-arrow">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </div>
+              <div class="partner-arrow">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </div>
 
-                </a>
+            </a>
 
 
-                <!-- INDIA PORTAL -->
-                <a href="https://www.india.gov.in/"
-                   target="_blank"
-                   class="partner-card">
+            <!-- INDIA PORTAL -->
+            <a href="https://www.india.gov.in/" target="_blank" class="partner-card">
 
-                    <div class="partner-logo">
-                        <img
-                            src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110845-ogkarkw48jrdqybctl3zwnmboeohzvbb1htcn9znc8.png"
-                            alt="India Portal">
-                    </div>
+              <div class="partner-logo">
+                <img
+                  src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110845-ogkarkw48jrdqybctl3zwnmboeohzvbb1htcn9znc8.png"
+                  alt="India Portal">
+              </div>
 
-                    <div class="partner-name">
-                        India Portal
-                    </div>
+              <div class="partner-name">
+                India Portal
+              </div>
 
-                    <div class="partner-arrow">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </div>
+              <div class="partner-arrow">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </div>
 
-                </a>
+            </a>
 
 
-                <!-- INCREDIBLE INDIA -->
-                <a href="https://www.incredibleindia.org/"
-                   target="_blank"
-                   class="partner-card">
+            <!-- INCREDIBLE INDIA -->
+            <a href="https://www.incredibleindia.org/" target="_blank" class="partner-card">
 
-                    <div class="partner-logo">
-                        <img
-                            src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110821-ogkari2lo1nis4fga1w476bxw92ecs0413uw7g3tuw.png"
-                            alt="Incredible India">
-                    </div>
+              <div class="partner-logo">
+                <img
+                  src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110821-ogkari2lo1nis4fga1w476bxw92ecs0413uw7g3tuw.png"
+                  alt="Incredible India">
+              </div>
 
-                    <div class="partner-name">
-                        Incredible India
-                    </div>
+              <div class="partner-name">
+                Incredible India
+              </div>
 
-                    <div class="partner-arrow">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </div>
+              <div class="partner-arrow">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </div>
 
-                </a>
+            </a>
 
 
-                <!-- ================= SET 2 ================= -->
-                <!-- EXACT DUPLICATE FOR SEAMLESS LOOP -->
+            <!-- ================= SET 2 ================= -->
+            <!-- EXACT DUPLICATE FOR SEAMLESS LOOP -->
 
 
-                <!-- PMNRF -->
-                <a href="https://pmnrf.gov.in/en/"
-                   target="_blank"
-                   class="partner-card">
+            <!-- PMNRF -->
+            <a href="https://pmnrf.gov.in/en/" target="_blank" class="partner-card">
 
-                    <div class="partner-logo">
-                        <img
-                            src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110840-ogkarj0fuvot3qe34kaqro3ehmxrkh3ud8idoq2foo.png"
-                            alt="PMNRF">
-                    </div>
+              <div class="partner-logo">
+                <img
+                  src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110840-ogkarj0fuvot3qe34kaqro3ehmxrkh3ud8idoq2foo.png"
+                  alt="PMNRF">
+              </div>
 
-                    <div class="partner-name">
-                        PMNRF
-                    </div>
+              <div class="partner-name">
+                PMNRF
+              </div>
 
-                    <div class="partner-arrow">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </div>
+              <div class="partner-arrow">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </div>
 
-                </a>
+            </a>
 
 
-                <!-- MyGov -->
-                <a href="https://www.mygov.in/"
-                   target="_blank"
-                   class="partner-card">
+            <!-- MyGov -->
+            <a href="https://www.mygov.in/" target="_blank" class="partner-card">
 
-                    <div class="partner-logo">
-                        <img
-                            src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110867-ogkarkw48jrdqybctl3zwnmboeohzvbb1htcn9znc8.png"
-                            alt="MyGov">
-                    </div>
+              <div class="partner-logo">
+                <img
+                  src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110867-ogkarkw48jrdqybctl3zwnmboeohzvbb1htcn9znc8.png"
+                  alt="MyGov">
+              </div>
 
-                    <div class="partner-name">
-                        MyGov
-                    </div>
+              <div class="partner-name">
+                MyGov
+              </div>
 
-                    <div class="partner-arrow">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </div>
+              <div class="partner-arrow">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </div>
 
-                </a>
+            </a>
 
 
-                <!-- PM INDIA -->
-                <a href="https://www.pmindia.gov.in/en/"
-                   target="_blank"
-                   class="partner-card">
+            <!-- PM INDIA -->
+            <a href="https://www.pmindia.gov.in/en/" target="_blank" class="partner-card">
 
-                    <div class="partner-logo">
-                        <img
-                            src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110850-ogkari2lo1nis4fga1w476bxw92ecs0413uw7g3tuw.png"
-                            alt="PM India">
-                    </div>
+              <div class="partner-logo">
+                <img
+                  src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110850-ogkari2lo1nis4fga1w476bxw92ecs0413uw7g3tuw.png"
+                  alt="PM India">
+              </div>
 
-                    <div class="partner-name">
-                        PM India
-                    </div>
+              <div class="partner-name">
+                PM India
+              </div>
 
-                    <div class="partner-arrow">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </div>
+              <div class="partner-arrow">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </div>
 
-                </a>
+            </a>
 
 
-                <!-- DIGITAL INDIA -->
-                <a href="https://www.digitalindia.gov.in/"
-                   target="_blank"
-                   class="partner-card">
+            <!-- DIGITAL INDIA -->
+            <a href="https://www.digitalindia.gov.in/" target="_blank" class="partner-card">
 
-                    <div class="partner-logo">
-                        <img
-                            src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110890-ogkarjya1pq3fccpz2pdc5uv30t4s67kpd5v6011ig.png"
-                            alt="Digital India">
-                    </div>
+              <div class="partner-logo">
+                <img
+                  src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110890-ogkarjya1pq3fccpz2pdc5uv30t4s67kpd5v6011ig.png"
+                  alt="Digital India">
+              </div>
 
-                    <div class="partner-name">
-                        Digital India
-                    </div>
+              <div class="partner-name">
+                Digital India
+              </div>
 
-                    <div class="partner-arrow">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </div>
+              <div class="partner-arrow">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </div>
 
-                </a>
+            </a>
 
 
-                <!-- INDIA PORTAL -->
-                <a href="https://www.india.gov.in/"
-                   target="_blank"
-                   class="partner-card">
+            <!-- INDIA PORTAL -->
+            <a href="https://www.india.gov.in/" target="_blank" class="partner-card">
 
-                    <div class="partner-logo">
-                        <img
-                            src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110845-ogkarkw48jrdqybctl3zwnmboeohzvbb1htcn9znc8.png"
-                            alt="India Portal">
-                    </div>
+              <div class="partner-logo">
+                <img
+                  src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110845-ogkarkw48jrdqybctl3zwnmboeohzvbb1htcn9znc8.png"
+                  alt="India Portal">
+              </div>
 
-                    <div class="partner-name">
-                        India Portal
-                    </div>
+              <div class="partner-name">
+                India Portal
+              </div>
 
-                    <div class="partner-arrow">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </div>
+              <div class="partner-arrow">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </div>
 
-                </a>
+            </a>
 
 
-                <!-- INCREDIBLE INDIA -->
-                <a href="https://www.incredibleindia.org/"
-                   target="_blank"
-                   class="partner-card">
+            <!-- INCREDIBLE INDIA -->
+            <a href="https://www.incredibleindia.org/" target="_blank" class="partner-card">
 
-                    <div class="partner-logo">
-                        <img
-                            src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110821-ogkari2lo1nis4fga1w476bxw92ecs0413uw7g3tuw.png"
-                            alt="Incredible India">
-                    </div>
+              <div class="partner-logo">
+                <img
+                  src="https://cdnbbsr.s3waas.gov.in/s3955cb567b6e38f4c6b3f28cc857fc38c/uploads/bfi_thumb/2019110821-ogkari2lo1nis4fga1w476bxw92ecs0413uw7g3tuw.png"
+                  alt="Incredible India">
+              </div>
 
-                    <div class="partner-name">
-                        Incredible India
-                    </div>
+              <div class="partner-name">
+                Incredible India
+              </div>
 
-                    <div class="partner-arrow">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    </div>
+              <div class="partner-arrow">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </div>
 
-                </a>
+            </a>
 
-            </div>
+          </div>
 
         </div>
 
-    </div>
+      </div>
 
-</section>
+    </section>
 
 
-<style>
-
-/* =========================================================
+    <style>
+      /* =========================================================
    PARTNER ORGANIZATIONS
 ========================================================= */
 
-.partner-section {
-    position: relative;
+      .partner-section {
+        position: relative;
 
-    padding: 38px 0 35px;
+        padding: 38px 0 35px;
 
-    background:
-        radial-gradient(
-            circle at 10% 40%,
-            rgba(14,105,210,.07),
-            transparent 28%
-        ),
-        radial-gradient(
-            circle at 90% 60%,
-            rgba(14,105,210,.06),
-            transparent 30%
-        ),
-        linear-gradient(
-            135deg,
+        background:
+          radial-gradient(circle at 10% 40%,
+            rgba(14, 105, 210, .07),
+            transparent 28%),
+          radial-gradient(circle at 90% 60%,
+            rgba(14, 105, 210, .06),
+            transparent 30%),
+          linear-gradient(135deg,
             #ffffff 0%,
             #f7fbff 50%,
-            #edf6ff 100%
-        );
+            #edf6ff 100%);
 
-    overflow: hidden;
-}
+        overflow: hidden;
+      }
 
 
-/* =========================================================
+      /* =========================================================
    CONTAINER
 ========================================================= */
 
-.partner-container {
-    width: 100%;
+      .partner-container {
+        width: 100%;
 
-    max-width: 1500px;
+        max-width: 1500px;
 
-    margin: 0 auto;
+        margin: 0 auto;
 
-    padding: 0 25px;
-}
+        padding: 0 25px;
+      }
 
 
-/* =========================================================
+      /* =========================================================
    HEADER
 ========================================================= */
 
-.partner-header {
-    text-align: center;
+      .partner-header {
+        text-align: center;
 
-    margin-bottom: 24px;
-}
-
-
-/* BADGE */
-
-.partner-badge {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    gap: 8px;
-
-    padding: 6px 18px;
-
-    border-radius: 30px;
-
-    background: #063f91;
-
-    color: #ffffff;
-
-    font-size: 13px;
-
-    font-weight: 700;
-
-    box-shadow:
-        0 5px 15px rgba(0,63,145,.15);
-}
-
-.partner-badge i {
-    font-size: 12px;
-}
+        margin-bottom: 24px;
+      }
 
 
-/* TITLE */
+      /* BADGE */
 
-.partner-header h2 {
-    margin: 8px 0 3px;
+      .partner-badge {
+        display: inline-flex;
 
-    color: #0a315f;
+        align-items: center;
+        justify-content: center;
 
-    font-size: 38px;
+        gap: 8px;
 
-    line-height: 1.15;
+        padding: 6px 18px;
 
-    font-weight: 800;
+        border-radius: 30px;
 
-    letter-spacing: -.5px;
-}
+        /* background: #063f91; */
 
+        color: #0b0471;
 
-/* TITLE LINE */
+        font-size: 13px;
 
-.partner-title-line {
-    display: flex;
+        font-weight: 700;
 
-    align-items: center;
-    justify-content: center;
+        box-shadow:
+          0 5px 15px rgba(0, 63, 145, .15);
+      }
 
-    gap: 7px;
-
-    margin: 6px auto 7px;
-}
-
-.partner-title-line span {
-    width: 38px;
-
-    height: 2px;
-
-    background: #1265cf;
-
-    border-radius: 10px;
-}
-
-.partner-title-line i {
-    color: #1265cf;
-
-    font-size: 8px;
-}
+      .partner-badge i {
+        font-size: 12px;
+      }
 
 
-/* SUBTITLE */
+      /* TITLE */
 
-.partner-header p {
-    max-width: 750px;
+      .partner-header h2 {
+        margin: 8px 0 3px;
 
-    margin: 0 auto;
+        color: #0b0471;
 
-    color: #61718a;
+        font-size: 28px;
 
-    font-size: 14px;
+        line-height: 1.15;
 
-    line-height: 1.55;
-}
+        font-weight: 800;
+
+        letter-spacing: -.5px;
+      }
 
 
-/* =========================================================
+      /* TITLE LINE */
+
+      .partner-title-line {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 7px;
+
+        margin: 6px auto 7px;
+      }
+
+      .partner-title-line span {
+        width: 38px;
+
+        height: 2px;
+
+        background: #1265cf;
+
+        border-radius: 10px;
+      }
+
+      .partner-title-line i {
+        color: #1265cf;
+
+        font-size: 8px;
+      }
+
+
+      /* SUBTITLE */
+
+      .partner-header p {
+        max-width: 750px;
+
+        margin: 0 auto;
+
+        color: #61718a;
+
+        font-size: 14px;
+
+        line-height: 1.55;
+      }
+
+
+      /* =========================================================
    MARQUEE OUTER
 ========================================================= */
 
-.partner-marquee {
-    position: relative;
+      .partner-marquee {
+        position: relative;
 
-    width: 100%;
+        width: 100%;
 
-    overflow: hidden;
+        overflow: hidden;
 
-    padding: 8px 0 14px;
-}
+        padding: 8px 0 14px;
+      }
 
 
-/* FADE EDGES */
+      /* FADE EDGES */
 
-.partner-marquee::before,
-.partner-marquee::after {
-    content: "";
+      .partner-marquee::before,
+      .partner-marquee::after {
+        content: "";
 
-    position: absolute;
+        position: absolute;
 
-    top: 0;
-    bottom: 0;
+        top: 0;
+        bottom: 0;
 
-    width: 70px;
+        width: 70px;
 
-    z-index: 5;
+        z-index: 5;
 
-    pointer-events: none;
-}
+        pointer-events: none;
+      }
 
-.partner-marquee::before {
-    left: 0;
+      .partner-marquee::before {
+        left: 0;
 
-    background:
-        linear-gradient(
-            90deg,
+        background:
+          linear-gradient(90deg,
             #f8fbff,
-            rgba(248,251,255,0)
-        );
-}
+            rgba(248, 251, 255, 0));
+      }
 
-.partner-marquee::after {
-    right: 0;
+      .partner-marquee::after {
+        right: 0;
 
-    background:
-        linear-gradient(
-            270deg,
+        background:
+          linear-gradient(270deg,
             #f8fbff,
-            rgba(248,251,255,0)
-        );
-}
+            rgba(248, 251, 255, 0));
+      }
 
 
-/* =========================================================
+      /* =========================================================
    TRACK
 ========================================================= */
 
-.partner-track {
-    display: flex;
+      .partner-track {
+        display: flex;
 
-    align-items: stretch;
+        align-items: stretch;
 
-    gap: 18px;
+        gap: 18px;
 
-    width: max-content;
+        width: max-content;
 
-    will-change: transform;
+        will-change: transform;
 
-    animation:
-        partnerMarquee 32s linear infinite;
-}
+        animation:
+          partnerMarquee 32s linear infinite;
+      }
 
 
-/*
+      /*
    IMPORTANT:
    NO HOVER PAUSE
    MARQUEE ALWAYS CONTINUES
 */
 
 
-/* =========================================================
+      /* =========================================================
    CARD
 ========================================================= */
 
-.partner-card {
-    position: relative;
+      .partner-card {
+        position: relative;
 
-    width: 235px;
+        width: 235px;
 
-    min-width: 235px;
+        min-width: 235px;
 
-    height: 150px;
+        height: 150px;
 
-    flex: 0 0 235px;
+        flex: 0 0 235px;
 
-    display: flex;
+        display: flex;
 
-    flex-direction: column;
+        flex-direction: column;
 
-    align-items: center;
+        align-items: center;
 
-    justify-content: center;
+        justify-content: center;
 
-    padding: 16px;
+        padding: 16px;
 
-    text-decoration: none !important;
+        text-decoration: none !important;
 
-    background:
-        rgba(255,255,255,.96);
+        background:
+          rgba(255, 255, 255, .96);
 
-    border: 1px solid #d9e7f7;
+        border: 1px solid #d9e7f7;
 
-    border-radius: 15px;
+        border-radius: 15px;
 
-    box-shadow:
-        0 7px 20px rgba(18,72,125,.08);
+        box-shadow:
+          0 7px 20px rgba(18, 72, 125, .08);
 
-    overflow: hidden;
+        overflow: hidden;
 
-    transition:
-        transform .25s ease,
-        box-shadow .25s ease,
-        border-color .25s ease;
-}
+        transition:
+          transform .25s ease,
+          box-shadow .25s ease,
+          border-color .25s ease;
+      }
 
 
-/* TOP BLUE LINE */
+      /* TOP BLUE LINE */
 
-.partner-card::before {
-    content: "";
+      .partner-card::before {
+        content: "";
 
-    position: absolute;
+        position: absolute;
 
-    left: 20px;
-    right: 20px;
+        left: 20px;
+        right: 20px;
 
-    top: 0;
+        top: 0;
 
-    height: 3px;
+        height: 3px;
 
-    background:
-        linear-gradient(
-            90deg,
+        background:
+          linear-gradient(90deg,
             transparent,
             #0b62c9,
-            transparent
-        );
+            transparent);
 
-    opacity: .75;
-}
-
-
-/* HOVER */
-
-.partner-card:hover {
-    transform: translateY(-5px);
-
-    border-color: #9ec6f5;
-
-    box-shadow:
-        0 13px 28px rgba(0,53,128,.14);
-}
+        opacity: .75;
+      }
 
 
-/* =========================================================
+      /* HOVER */
+
+      .partner-card:hover {
+        transform: translateY(-5px);
+
+        border-color: #9ec6f5;
+
+        box-shadow:
+          0 13px 28px rgba(0, 53, 128, .14);
+      }
+
+
+      /* =========================================================
    LOGO
 ========================================================= */
 
-.partner-logo {
-    width: 155px;
+      .partner-logo {
+        width: 155px;
 
-    height: 76px;
+        height: 76px;
 
-    display: flex;
+        display: flex;
 
-    align-items: center;
+        align-items: center;
 
-    justify-content: center;
-}
+        justify-content: center;
+      }
 
-.partner-logo img {
-    display: block;
+      .partner-logo img {
+        display: block;
 
-    width: 145px;
+        width: 145px;
 
-    height: 68px;
+        height: 68px;
 
-    object-fit: contain;
+        object-fit: contain;
 
-    transition:
-        transform .25s ease;
-}
+        transition:
+          transform .25s ease;
+      }
 
-.partner-card:hover .partner-logo img {
-    transform: scale(1.05);
-}
+      .partner-card:hover .partner-logo img {
+        transform: scale(1.05);
+      }
 
 
-/* =========================================================
+      /* =========================================================
    NAME
 ========================================================= */
 
-.partner-name {
-    display: flex;
+      .partner-name {
+        display: flex;
 
-    align-items: center;
-    justify-content: center;
+        align-items: center;
+        justify-content: center;
 
-    min-height: 25px;
+        min-height: 25px;
 
-    color: #073f8e;
+        color: #073f8e;
 
-    font-size: 14px;
+        font-size: 14px;
 
-    font-weight: 700;
+        font-weight: 700;
 
-    line-height: 1.2;
+        line-height: 1.2;
 
-    text-align: center;
-}
+        text-align: center;
+      }
 
 
-/* =========================================================
+      /* =========================================================
    ARROW
 ========================================================= */
 
-.partner-arrow {
-    position: absolute;
+      .partner-arrow {
+        position: absolute;
 
-    right: 10px;
+        right: 10px;
 
-    bottom: 9px;
+        bottom: 9px;
 
-    width: 23px;
+        width: 23px;
 
-    height: 23px;
+        height: 23px;
 
-    display: flex;
+        display: flex;
 
-    align-items: center;
+        align-items: center;
 
-    justify-content: center;
+        justify-content: center;
 
-    border-radius: 50%;
+        border-radius: 50%;
 
-    background: #eef6ff;
+        background: #eef6ff;
 
-    color: #1265cf;
+        color: #1265cf;
 
-    font-size: 9px;
+        font-size: 9px;
 
-    opacity: 0;
+        opacity: 0;
 
-    transform: translateX(5px);
+        transform: translateX(5px);
 
-    transition: .25s ease;
-}
+        transition: .25s ease;
+      }
 
-.partner-card:hover .partner-arrow {
-    opacity: 1;
+      .partner-card:hover .partner-arrow {
+        opacity: 1;
 
-    transform: translateX(0);
-}
+        transform: translateX(0);
+      }
 
 
-/* =========================================================
+      /* =========================================================
    CONTINUOUS MARQUEE
 ========================================================= */
 
-@keyframes partnerMarquee {
+      @keyframes partnerMarquee {
 
-    0% {
-        transform: translate3d(0, 0, 0);
-    }
+        0% {
+          transform: translate3d(0, 0, 0);
+        }
 
-    100% {
-        transform: translate3d(-50%, 0, 0);
-    }
+        100% {
+          transform: translate3d(-50%, 0, 0);
+        }
 
-}
+      }
 
 
-/* =========================================================
+      /* =========================================================
    LARGE DESKTOP
 ========================================================= */
 
-@media (min-width: 1500px) {
+      @media (min-width: 1500px) {
 
-    .partner-card {
-        width: 250px;
+        .partner-card {
+          width: 250px;
 
-        min-width: 250px;
+          min-width: 250px;
 
-        flex-basis: 250px;
+          flex-basis: 250px;
 
-        height: 155px;
-    }
+          height: 155px;
+        }
 
-}
+      }
 
 
-/* =========================================================
+      /* =========================================================
    TABLET
 ========================================================= */
 
-@media (max-width: 1100px) {
+      @media (max-width: 1100px) {
 
-    .partner-container {
-        padding: 0 18px;
-    }
+        .partner-container {
+          padding: 0 18px;
+        }
 
-    .partner-header h2 {
-        font-size: 32px;
-    }
+        .partner-header h2 {
+          font-size: 32px;
+        }
 
-    .partner-header p {
-        font-size: 13px;
-    }
+        .partner-header p {
+          font-size: 13px;
+        }
 
-    .partner-card {
-        width: 220px;
+        .partner-card {
+          width: 220px;
 
-        min-width: 220px;
+          min-width: 220px;
 
-        flex-basis: 220px;
+          flex-basis: 220px;
 
-        height: 140px;
-    }
+          height: 140px;
+        }
 
-    .partner-logo {
-        width: 140px;
+        .partner-logo {
+          width: 140px;
 
-        height: 65px;
-    }
+          height: 65px;
+        }
 
-    .partner-logo img {
-        width: 130px;
+        .partner-logo img {
+          width: 130px;
 
-        height: 58px;
-    }
+          height: 58px;
+        }
 
-}
+      }
 
 
-/* =========================================================
+      /* =========================================================
    MOBILE
 ========================================================= */
 
-@media (max-width: 767px) {
+      @media (max-width: 767px) {
 
-    .partner-section {
-        padding: 28px 0 25px;
-    }
+        .partner-section {
+          padding: 28px 0 25px;
+        }
 
-    .partner-container {
-        padding: 0 10px;
-    }
+        .partner-container {
+          padding: 0 10px;
+        }
 
-    .partner-header {
-        margin-bottom: 16px;
-    }
+        .partner-header {
+          margin-bottom: 16px;
+        }
 
-    .partner-badge {
-        padding: 5px 13px;
+        .partner-badge {
+          padding: 5px 13px;
 
-        font-size: 10px;
-    }
+          font-size: 10px;
+        }
 
-    .partner-header h2 {
-        font-size: 24px;
+        .partner-header h2 {
+          font-size: 24px;
 
-        margin-top: 7px;
-    }
+          margin-top: 7px;
+        }
 
-    .partner-title-line {
-        margin: 5px auto;
-    }
+        .partner-title-line {
+          margin: 5px auto;
+        }
 
-    .partner-header p {
-        font-size: 11px;
+        .partner-header p {
+          font-size: 11px;
 
-        line-height: 1.5;
-    }
+          line-height: 1.5;
+        }
 
-    .partner-marquee {
-        padding: 5px 0 10px;
-    }
+        .partner-marquee {
+          padding: 5px 0 10px;
+        }
 
-    .partner-track {
-        gap: 12px;
+        .partner-track {
+          gap: 12px;
 
-        animation-duration: 25s;
-    }
+          animation-duration: 25s;
+        }
 
-    .partner-card {
-        width: 165px;
+        .partner-card {
+          width: 165px;
 
-        min-width: 165px;
+          min-width: 165px;
 
-        flex-basis: 165px;
+          flex-basis: 165px;
 
-        height: 120px;
+          height: 120px;
 
-        padding: 10px;
+          padding: 10px;
 
-        border-radius: 11px;
-    }
+          border-radius: 11px;
+        }
 
-    .partner-logo {
-        width: 120px;
+        .partner-logo {
+          width: 120px;
 
-        height: 57px;
-    }
+          height: 57px;
+        }
 
-    .partner-logo img {
-        width: 110px;
+        .partner-logo img {
+          width: 110px;
 
-        height: 50px;
-    }
+          height: 50px;
+        }
 
-    .partner-name {
-        font-size: 11px;
-    }
+        .partner-name {
+          font-size: 11px;
+        }
 
-    .partner-arrow {
-        display: none;
-    }
+        .partner-arrow {
+          display: none;
+        }
 
-    .partner-marquee::before,
-    .partner-marquee::after {
-        width: 30px;
-    }
+        .partner-marquee::before,
+        .partner-marquee::after {
+          width: 30px;
+        }
 
-}
+      }
 
 
-/* =========================================================
+      /* =========================================================
    SMALL MOBILE
 ========================================================= */
 
-@media (max-width: 400px) {
+      @media (max-width: 400px) {
 
-    .partner-header h2 {
-        font-size: 21px;
-    }
+        .partner-header h2 {
+          font-size: 21px;
+        }
 
-    .partner-header p {
+        .partner-header p {
+          font-size: 10px;
+        }
+
+        .partner-card {
+          width: 145px;
+
+          min-width: 145px;
+
+          flex-basis: 145px;
+
+          height: 110px;
+        }
+
+        .partner-logo {
+          width: 105px;
+
+          height: 50px;
+        }
+
+        .partner-logo img {
+          width: 95px;
+
+          height: 44px;
+        }
+
+        .partner-name {
+          font-size: 10px;
+        }
+
+      }
+    </style>
+
+
+
+
+
+
+
+
+
+
+    <!-- =========================================================
+     JBVNL DISTRIBUTION AREA
+     GALLERY + INTERACTIVE MAP + HQ MODAL
+========================================================= -->
+
+    <section class="jbvnl-network-section">
+
+      <div class="container-fluid px-lg-5">
+
+        <!-- ================= HEADER ================= -->
+
+        <div class="network-header text-center">
+
+          <span class="network-badge">
+            <i class="fa-solid fa-tower-broadcast"></i>
+            Our Network
+          </span>
+
+          <h2>JBVNL Distribution Area</h2>
+
+          <div class="network-title-line">
+            <span></span>
+            <i class="fa-solid fa-circle"></i>
+            <span></span>
+          </div>
+
+          <p>
+            Click on the location to view office information,
+            consumer services and contact details.
+          </p>
+
+        </div>
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <div class="row g-4 align-items-stretch">
+
+
+          <!-- =================================================
+                 LEFT : PHOTO GALLERY
+            ================================================== -->
+
+          <div class="col-lg-5">
+
+            <div class="network-gallery">
+
+              <!-- HEADER -->
+
+              <div class="gallery-header">
+
+                <div class="gallery-heading">
+
+                  <div class="gallery-icon">
+                    <i class="fa-solid fa-images"></i>
+                  </div>
+
+                  <div>
+                    <h4>Photo Gallery</h4>
+                    <span>JBVNL Infrastructure &amp; Activities</span>
+                  </div>
+
+                </div>
+
+                <i class="fa-solid fa-arrow-up-right-from-square gallery-open-icon"></i>
+
+              </div>
+
+
+              <!-- TOP SLIDER -->
+
+              <div class="owl-carousel gallery-slider">
+
+                <div class="gallery-item">
+                  <img src="assets\images\ntps1.jpg" alt="JBVNL Gallery">
+                </div>
+
+                <div class="gallery-item">
+                  <img src="assets\images\ntps2.jpg" alt="JBVNL Gallery">
+                </div>
+
+                <div class="gallery-item">
+                  <img src="assets\images\ntps13.jpg" alt="JBVNL Gallery">
+                </div>
+
+                <div class="gallery-item">
+                  <img src="assets\images\ntps14.jpg" alt="JBVNL Gallery">
+                </div>
+
+              </div>
+
+
+              <!-- BOTTOM SLIDER -->
+
+              <div class="owl-carousel gallery-slider2">
+
+                <div class="gallery-item">
+                  <img src="assets\images\ntps15.jpg" alt="JBVNL Gallery">
+                </div>
+
+                <div class="gallery-item">
+                  <img src="assets\images\ntps16.jpg" alt="JBVNL Gallery">
+                </div>
+
+                <div class="gallery-item">
+                  <img src="assets\images\ntps17.jpg" alt="JBVNL Gallery">
+                </div>
+
+                <div class="gallery-item">
+                  <img src="assets\images\ntps18.jpg" alt="JBVNL Gallery">
+                </div>
+
+              </div>
+
+
+              <!-- FOOTER -->
+
+              <div class="gallery-footer">
+
+                <span>
+                  <i class="fa-solid fa-camera"></i>
+                  Explore JBVNL Gallery
+                </span>
+
+                <a href="#" class="gallery-btn">
+                  View Gallery
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- =================================================
+                 RIGHT : DISTRIBUTION MAP
+            ================================================== -->
+
+          <div class="col-lg-7">
+
+            <div class="distribution-map-card">
+
+              <!-- MAP HEADER -->
+
+              <!-- MAP -->
+
+              <div class="jbvnl-map">
+
+                <img src="assets\images\JBVNL Distribution.png" alt="JBVNL Distribution Map"
+                  class="distribution-map-image">
+
+
+                <!-- RANCHI LOCATION -->
+
+                <button type="button" class="map-point ranchi" data-bs-toggle="modal" data-bs-target="#hqModal"
+                  aria-label="JBVNL Head Office Ranchi">
+
+                  <span class="map-pulse"></span>
+
+                  <i class="fa-solid fa-location-dot"></i>
+
+                </button>
+
+
+                <!-- RANCHI LABEL -->
+
+                <!-- <div class="map-label">
+
+                  <strong>JBVNL HQ</strong>
+
+                  <span>Ranchi</span>
+
+                </div> -->
+
+              </div>
+
+
+              <!-- MAP FOOTER -->
+
+              <div class="map-card-footer">
+
+                <div>
+                  <i class="fa-solid fa-circle-info"></i>
+                  Select the highlighted location for office details.
+                </div>
+
+                <span>
+                  <i class="fa-solid fa-location-dot"></i>
+                  Ranchi
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+     JBVNL HQ MODAL
+========================================================= -->
+
+    <div class="modal fade jbvnl-hq-modal" id="hqModal" tabindex="-1" aria-labelledby="hqModalLabel" aria-hidden="true">
+
+      <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content">
+
+          <!-- HEADER -->
+
+          <div class="modal-header">
+
+            <div class="modal-title-wrap">
+
+              <div class="modal-location-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+
+              <div>
+                <h5 id="hqModalLabel">
+                  JBVNL Head Office
+                </h5>
+
+                <span>
+                  Ranchi, Jharkhand
+                </span>
+              </div>
+
+            </div>
+
+            <button type="button" class="modal-close" data-bs-dismiss="modal" aria-label="Close">
+
+              <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+          </div>
+
+
+          <!-- BODY -->
+
+          <div class="modal-body">
+
+            <div class="hq-intro">
+
+              <div class="hq-building-icon">
+                <i class="fa-solid fa-building-columns"></i>
+              </div>
+
+              <div>
+
+                <h4>
+                  Jharkhand Bijli Vitran Nigam Limited
+                </h4>
+
+                <p>
+                  Corporate / Head Office
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <!-- ADDRESS -->
+
+            <div class="hq-detail">
+
+              <div class="detail-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+
+              <div>
+
+                <span>Office Address</span>
+
+                <p>
+                  Engineering Building,<br>
+                  Heavy Engineering Corporation (H.E.C.) Campus,<br>
+                  Dhurwa, Ranchi – 834004,<br>
+                  Jharkhand, India
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <!-- CONTACT GRID -->
+
+            <div class="hq-contact-grid">
+
+
+              <a href="tel:18003456570" class="hq-contact">
+
+                <div class="contact-icon phone">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+
+                <div>
+                  <span>Consumer Helpline</span>
+                  <strong>1800 345 6570</strong>
+                </div>
+
+              </a>
+
+
+              <a href="tel:1912" class="hq-contact">
+
+                <div class="contact-icon call">
+                  <i class="fa-solid fa-headset"></i>
+                </div>
+
+                <div>
+                  <span>Complaint Helpline</span>
+                  <strong>1912</strong>
+                </div>
+
+              </a>
+
+
+              <a href="tel:06512710002" class="hq-contact">
+
+                <div class="contact-icon office">
+                  <i class="fa-solid fa-phone-volume"></i>
+                </div>
+
+                <div>
+                  <span>Office Contact</span>
+                  <strong>0651-2710002</strong>
+                </div>
+
+              </a>
+
+
+              <a href="https://wa.me/919431135503" target="_blank" class="hq-contact">
+
+                <div class="contact-icon whatsapp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+
+                <div>
+                  <span>WhatsApp Support</span>
+                  <strong>9431135503</strong>
+                </div>
+
+              </a>
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <a href="mailto:contactus@jbvnl.co.in" class="hq-email">
+
+              <i class="fa-solid fa-envelope"></i>
+
+              <span>
+                contactus@jbvnl.co.in
+              </span>
+
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+          </div>
+
+
+          <!-- FOOTER -->
+
+          <div class="modal-footer">
+
+            <button type="button" class="modal-secondary-btn" data-bs-dismiss="modal">
+
+              Close
+
+            </button>
+
+            <a href="https://maps.google.com/?q=JBVNL+HQ+Ranchi" target="_blank" class="modal-map-btn">
+
+              <i class="fa-solid fa-map-location-dot"></i>
+
+              Open in Google Maps
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <style>
+      /* =========================================================
+   JBVNL NETWORK SECTION
+========================================================= */
+
+      .jbvnl-network-section {
+        position: relative;
+
+        width: 100%;
+
+        padding: 36px 0 38px;
+
+      }
+
+
+      /* =========================================================
+   HEADER
+========================================================= */
+
+      .network-header {
+        margin-bottom: 24px;
+      }
+
+      .network-badge {
+        display: inline-flex;
+
+        align-items: center;
+        gap: 7px;
+
+        padding: 6px 16px;
+
+        border-radius: 30px;
+
+        /* background: #063f91; */
+
+        color: #0b0471;
+
+        font-size: 12px;
+
+        font-weight: 700;
+
+        box-shadow:
+          0 5px 14px rgba(6, 63, 145, .14);
+      }
+
+      .network-badge i {
+        font-size: 11px;
+      }
+
+      .network-header h2 {
+        margin: 8px 0 3px;
+
+        color: #0b0471;
+
+        font-size: 28px;
+
+        line-height: 1.2;
+
+        font-weight: 800;
+      }
+
+      .network-title-line {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 7px;
+
+        margin: 6px auto 7px;
+      }
+
+      .network-title-line span {
+        width: 34px;
+        height: 2px;
+
+        border-radius: 10px;
+
+        background: #0759d6;
+      }
+
+      .network-title-line i {
+        color: #0759d6;
+
+        font-size: 7px;
+      }
+
+      .network-header p {
+        max-width: 700px;
+
+        margin: auto;
+
+        color: #697a91;
+
+        font-size: 13px;
+
+        line-height: 1.5;
+      }
+
+
+      /* =========================================================
+   GALLERY CARD
+========================================================= */
+
+      .network-gallery {
+        position: relative;
+
+        height: 100%;
+
+        min-height: 430px;
+
+        padding: 17px;
+
+        background:
+          rgba(255, 255, 255, .96);
+
+        border: 1px solid #d7e6f7;
+
+        border-radius: 15px;
+
+        box-shadow:
+          0 8px 25px rgba(22, 72, 125, .08);
+
+        overflow: hidden;
+      }
+
+
+      /* HEADER */
+
+      .gallery-header {
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        margin-bottom: 13px;
+      }
+
+      .gallery-heading {
+        display: flex;
+
+        align-items: center;
+
+        gap: 10px;
+      }
+
+      .gallery-icon {
+        width: 40px;
+        height: 40px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 10px;
+
+        background: #edf5ff;
+
+        color: #0759d6;
+
+        font-size: 17px;
+      }
+
+      .gallery-heading h4 {
+        margin: 0 0 2px;
+
+        color: #0a3f82;
+
+        font-size: 16px;
+
+        font-weight: 750;
+      }
+
+      .gallery-heading span {
+        color: #8190a3;
+
+        font-size: 9px;
+      }
+
+      .gallery-open-icon {
+        color: #8ca1b8;
+
+        font-size: 12px;
+      }
+
+
+      /* =========================================================
+   GALLERY IMAGES
+========================================================= */
+
+      .gallery-slider,
+      .gallery-slider2 {
+        margin: 0 0 9px;
+
+        padding: 0;
+      }
+
+      .gallery-item {
+        height: 145px;
+
+        overflow: hidden;
+
+        border-radius: 10px;
+
+        background: #edf4fc;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+
+        transition: transform .4s ease;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.05);
+      }
+
+
+      /* =========================================================
+   GALLERY FOOTER
+========================================================= */
+
+      .gallery-footer {
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 10px;
+
+        margin-top: 10px;
+
+        padding-top: 10px;
+
+        border-top: 1px solid #e6eef7;
+      }
+
+      .gallery-footer>span {
+        color: #718197;
+
         font-size: 10px;
-    }
+      }
 
-    .partner-card {
-        width: 145px;
+      .gallery-footer>span i {
+        margin-right: 4px;
 
-        min-width: 145px;
+        color: #0759d6;
+      }
 
-        flex-basis: 145px;
+      .gallery-btn {
+        display: inline-flex;
 
-        height: 110px;
-    }
+        align-items: center;
 
-    .partner-logo {
-        width: 105px;
+        gap: 6px;
 
-        height: 50px;
-    }
+        padding: 7px 13px;
 
-    .partner-logo img {
-        width: 95px;
+        border-radius: 6px;
 
-        height: 44px;
-    }
+        background: #0759d6;
 
-    .partner-name {
+        color: #fff !important;
+
+        text-decoration: none !important;
+
         font-size: 10px;
-    }
 
-}
+        font-weight: 700;
+
+        transition: .25s ease;
+      }
+
+      .gallery-btn:hover {
+        background: #064aa9;
+
+        transform: translateY(-1px);
+      }
 
 
-</style>
+      /* =========================================================
+   MAP CARD
+========================================================= */
+
+      .distribution-map-card {
+        position: relative;
+
+        height: 100%;
+
+        min-height: 430px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        background:
+          rgba(255, 255, 255, .97);
+
+        border: 1px solid #d7e6f7;
+
+        border-radius: 15px;
+
+        box-shadow:
+          0 8px 25px rgba(22, 72, 125, .08);
+
+        overflow: hidden;
+      }
+
+
+
+
+
+      /* =========================================================
+   MAP
+========================================================= */
+
+      .jbvnl-map {
+        position: relative;
+
+        flex: 1;
+
+        min-height: 330px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        /* padding: 10px; */
+
+        background:
+          linear-gradient(135deg,
+            #f8fbff,
+            #edf6ff);
+
+        overflow: hidden;
+      }
+
+      .jbvnl-map::before {
+        content: "";
+
+        position: absolute;
+
+        inset: 0;
+
+        background:
+          radial-gradient(circle at 50% 50%,
+            rgba(7, 89, 214, .07),
+            transparent 45%);
+
+        pointer-events: none;
+      }
+
+      .distribution-map-image {
+        position: relative;
+
+        z-index: 1;
+
+        width: 100%;
+        height: 100%;
+
+        max-height: 390px;
+
+        object-fit: 100% 100%;
+
+        display: block;
+      }
+
+
+      /* =========================================================
+   MAP POINT
+========================================================= */
+
+      .map-point {
+        position: absolute;
+
+        z-index: 10;
+
+        top: 55%;
+        left: 42.2%;
+
+        width: 35px;
+        height: 35px;
+
+        padding: 0;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border: 0;
+
+        background: transparent;
+
+        color: #e53935;
+
+        cursor: pointer;
+
+        animation: mapBounce 1.8s infinite;
+      }
+
+      .map-point>i {
+        position: relative;
+
+        z-index: 3;
+
+        font-size: 27px;
+
+        color: #e53935;
+
+        filter:
+          drop-shadow(0 3px 5px rgba(0, 0, 0, .18));
+      }
+
+      .map-pulse {
+        position: absolute;
+
+        width: 26px;
+        height: 26px;
+
+        border-radius: 50%;
+
+        background: rgba(229, 57, 53, .18);
+
+        animation: mapPulse 1.8s infinite;
+      }
+
+
+      /* =========================================================
+   MAP LABEL
+========================================================= */
+
+      .map-label {
+        position: absolute;
+
+        z-index: 12;
+
+        top: calc(55% - 9px);
+        left: calc(43% + 34px);
+
+        display: flex;
+
+        flex-direction: column;
+
+        padding: 6px 10px;
+
+        border-radius: 7px;
+
+        background: rgba(255, 255, 255, .96);
+
+        border: 1px solid #d6e5f6;
+
+        box-shadow:
+          0 5px 15px rgba(20, 65, 110, .12);
+
+        white-space: nowrap;
+
+        pointer-events: none;
+      }
+
+      .map-label strong {
+        color: #0a3f82;
+
+        font-size: 10px;
+
+        font-weight: 750;
+      }
+
+      .map-label span {
+        margin-top: 1px;
+
+        color: #718198;
+
+        font-size: 8px;
+      }
+
+
+      /* =========================================================
+   MAP FOOTER
+========================================================= */
+
+      .map-card-footer {
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 9px 15px;
+
+        border-top: 1px solid #e6eef7;
+
+        background: #fff;
+
+        color: #718197;
+
+        font-size: 9px;
+      }
+
+      .map-card-footer i {
+        color: #0759d6;
+      }
+
+      .map-card-footer>span {
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 5px;
+
+        color: #0759d6;
+
+        font-weight: 700;
+      }
+
+
+      /* =========================================================
+   ANIMATION
+========================================================= */
+
+      @keyframes mapPulse {
+
+        0% {
+          transform: scale(.65);
+
+          opacity: .8;
+        }
+
+        70% {
+          transform: scale(1.45);
+
+          opacity: 0;
+        }
+
+        100% {
+          transform: scale(1.45);
+
+          opacity: 0;
+        }
+      }
+
+      @keyframes mapBounce {
+
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+
+
+      /* =========================================================
+   MODAL
+========================================================= */
+
+      .jbvnl-hq-modal .modal-dialog {
+        max-width: 650px;
+
+        margin: 20px auto;
+      }
+
+      .jbvnl-hq-modal .modal-content {
+        border: 1px solid #d6e5f6;
+
+        border-radius: 17px;
+
+        overflow: hidden;
+
+        background: #fff;
+
+        box-shadow:
+          0 20px 55px rgba(10, 55, 105, .22);
+      }
+
+
+      /* =========================================================
+   MODAL HEADER
+========================================================= */
+
+      .jbvnl-hq-modal .modal-header {
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 13px 17px;
+
+        border: 0;
+
+        background:
+          linear-gradient(105deg,
+            #06469d,
+            #1268ce);
+      }
+
+      .modal-title-wrap {
+        display: flex;
+
+        align-items: center;
+
+        gap: 10px;
+      }
+
+      .modal-location-icon {
+        width: 39px;
+        height: 39px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 10px;
+
+        background: rgba(255, 255, 255, .15);
+
+        border: 1px solid rgba(255, 255, 255, .25);
+
+        color: #fff;
+
+        font-size: 16px;
+      }
+
+      .modal-title-wrap h5 {
+        margin: 0;
+
+        color: #fff;
+
+        font-size: 16px;
+
+        font-weight: 750;
+      }
+
+      .modal-title-wrap span {
+        display: block;
+
+        margin-top: 2px;
+
+        color: rgba(255, 255, 255, .75);
+
+        font-size: 9px;
+      }
+
+
+      /* CLOSE */
+
+      .modal-close {
+        width: 31px;
+        height: 31px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        padding: 0;
+
+        border: 1px solid rgba(255, 255, 255, .35);
+
+        border-radius: 50%;
+
+        background: rgba(255, 255, 255, .12);
+
+        color: #fff;
+
+        cursor: pointer;
+
+        transition: .25s ease;
+      }
+
+      .modal-close:hover {
+        background: #fff;
+
+        color: #0759d6;
+
+        transform: rotate(90deg);
+      }
+
+
+      /* =========================================================
+   MODAL BODY
+========================================================= */
+
+      .jbvnl-hq-modal .modal-body {
+        padding: 18px;
+
+        background: #f8fbff;
+      }
+
+
+      /* INTRO */
+
+      .hq-intro {
+        display: flex;
+
+        align-items: center;
+
+        gap: 11px;
+
+        padding-bottom: 14px;
+
+        border-bottom: 1px solid #e1ebf6;
+      }
+
+      .hq-building-icon {
+        width: 45px;
+        height: 45px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 11px;
+
+        background: #eaf3ff;
+
+        color: #0759d6;
+
+        font-size: 19px;
+      }
+
+      .hq-intro h4 {
+        margin: 0 0 2px;
+
+        color: #0a3f82;
+
+        font-size: 14px;
+
+        font-weight: 750;
+      }
+
+      .hq-intro p {
+        margin: 0;
+
+        color: #8492a5;
+
+        font-size: 9px;
+      }
+
+
+      /* =========================================================
+   ADDRESS
+========================================================= */
+
+      .hq-detail {
+        display: flex;
+
+        gap: 11px;
+
+        padding: 14px 0;
+
+        border-bottom: 1px solid #e1ebf6;
+      }
+
+      .detail-icon {
+        width: 35px;
+        height: 35px;
+
+        flex: 0 0 35px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 9px;
+
+        background: #edf5ff;
+
+        color: #0759d6;
+
+        font-size: 13px;
+      }
+
+      .hq-detail span {
+        display: block;
+
+        margin-bottom: 3px;
+
+        color: #7a899d;
+
+        font-size: 9px;
+
+        font-weight: 600;
+      }
+
+      .hq-detail p {
+        margin: 0;
+
+        color: #40516a;
+
+        font-size: 10px;
+
+        line-height: 1.55;
+      }
+
+
+      /* =========================================================
+   CONTACT GRID
+========================================================= */
+
+      .hq-contact-grid {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 8px;
+
+        padding: 14px 0;
+      }
+
+      .hq-contact {
+        display: flex;
+
+        align-items: center;
+
+        gap: 9px;
+
+        padding: 9px;
+
+        border: 1px solid #dce8f5;
+
+        border-radius: 9px;
+
+        background: #fff;
+
+        text-decoration: none !important;
+
+        transition: .25s ease;
+      }
+
+      .hq-contact:hover {
+        border-color: #a9c9ec;
+
+        transform: translateY(-2px);
+
+        box-shadow:
+          0 5px 14px rgba(20, 72, 125, .07);
+      }
+
+      .contact-icon {
+        width: 32px;
+        height: 32px;
+
+        flex: 0 0 32px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 8px;
+
+        font-size: 12px;
+      }
+
+      .contact-icon.phone,
+      .contact-icon.call,
+      .contact-icon.office {
+        background: #edf5ff;
+
+        color: #0759d6;
+      }
+
+      .contact-icon.whatsapp {
+        background: #eaf8f1;
+
+        color: #159464;
+      }
+
+      .hq-contact span {
+        display: block;
+
+        color: #8794a5;
+
+        font-size: 8px;
+
+        line-height: 1.2;
+      }
+
+      .hq-contact strong {
+        display: block;
+
+        margin-top: 2px;
+
+        color: #28415f;
+
+        font-size: 10px;
+
+        font-weight: 700;
+      }
+
+
+      /* =========================================================
+   EMAIL
+========================================================= */
+
+      .hq-email {
+        display: flex;
+
+        align-items: center;
+
+        gap: 8px;
+
+        padding: 9px 11px;
+
+        border-radius: 8px;
+
+        background: #edf5ff;
+
+        color: #0759d6 !important;
+
+        text-decoration: none !important;
+
+        font-size: 10px;
+
+        font-weight: 600;
+      }
+
+      .hq-email i:first-child {
+        font-size: 12px;
+      }
+
+      .hq-email span {
+        flex: 1;
+      }
+
+      .hq-email i:last-child {
+        font-size: 9px;
+      }
+
+
+      /* =========================================================
+   MODAL FOOTER
+========================================================= */
+
+      .jbvnl-hq-modal .modal-footer {
+        display: flex;
+
+        justify-content: flex-end;
+
+        gap: 8px;
+
+        padding: 12px 17px;
+
+        border-top: 1px solid #e3ebf5;
+
+        background: #fff;
+      }
+
+      .modal-secondary-btn,
+      .modal-map-btn {
+        min-height: 34px;
+
+        display: inline-flex;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 6px;
+
+        padding: 7px 13px;
+
+        border-radius: 6px;
+
+        font-size: 10px;
+
+        font-weight: 700;
+
+        text-decoration: none !important;
+
+        cursor: pointer;
+
+        transition: .25s ease;
+      }
+
+      .modal-secondary-btn {
+        border: 1px solid #d5e1ef;
+
+        background: #fff;
+
+        color: #617188;
+      }
+
+      .modal-secondary-btn:hover {
+        background: #f4f8fc;
+      }
+
+      .modal-map-btn {
+        border: 1px solid #0759d6;
+
+        background: #0759d6;
+
+        color: #fff !important;
+      }
+
+      .modal-map-btn:hover {
+        background: #064aa9;
+
+        color: #fff !important;
+      }
+
+
+      /* =========================================================
+   TABLET
+========================================================= */
+
+      @media (max-width: 991px) {
+
+        .jbvnl-network-section {
+          padding: 30px 0;
+        }
+
+        .network-header h2 {
+          font-size: 30px;
+        }
+
+        .network-gallery,
+        .distribution-map-card {
+          min-height: 400px;
+        }
+
+        .gallery-item {
+          height: 145px;
+        }
+
+        .jbvnl-map {
+          min-height: 300px;
+        }
+
+      }
+
+
+      /* =========================================================
+   MOBILE
+========================================================= */
+
+      @media (max-width: 767px) {
+
+        .jbvnl-network-section {
+          padding: 25px 0;
+        }
+
+        .network-header {
+          margin-bottom: 17px;
+        }
+
+        .network-badge {
+          font-size: 10px;
+
+          padding: 5px 13px;
+        }
+
+        .network-header h2 {
+          font-size: 23px;
+        }
+
+        .network-header p {
+          padding: 0 10px;
+
+          font-size: 10px;
+        }
+
+        .network-gallery,
+        .distribution-map-card {
+          min-height: 0;
+
+          border-radius: 12px;
+        }
+
+        .network-gallery {
+          padding: 13px;
+        }
+
+        .gallery-item {
+          height: 145px;
+        }
+
+        .gallery-heading h4,
+        .map-heading h4 {
+          font-size: 14px;
+        }
+
+        .map-status {
+          display: none;
+        }
+
+        .jbvnl-map {
+          min-height: 270px;
+
+          padding: 7px;
+        }
+
+        .distribution-map-image {
+          max-height: 270px;
+        }
+
+        .map-point {
+          top: 54%;
+          left: 42%;
+        }
+
+        .map-label {
+          top: calc(54% - 8px);
+          left: calc(42% + 29px);
+
+          padding: 5px 8px;
+        }
+
+        .map-label strong {
+          font-size: 9px;
+        }
+
+        .map-label span {
+          font-size: 7px;
+        }
+
+        .map-card-footer {
+          font-size: 8px;
+        }
+
+        .map-card-footer>span {
+          display: none;
+        }
+
+        .hq-contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .jbvnl-hq-modal .modal-dialog {
+          max-width: calc(100% - 20px);
+
+          margin: 10px auto;
+        }
+
+        .jbvnl-hq-modal .modal-body {
+          padding: 14px;
+        }
+
+        .jbvnl-hq-modal .modal-footer {
+          flex-direction: column;
+        }
+
+        .modal-secondary-btn,
+        .modal-map-btn {
+          width: 100%;
+        }
+
+      }
+
+
+      /* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+      @media (max-width: 400px) {
+
+        .network-header h2 {
+          font-size: 21px;
+        }
+
+        .gallery-item {
+          height: 130px;
+        }
+
+        .jbvnl-map {
+          min-height: 230px;
+        }
+
+        .distribution-map-image {
+          max-height: 230px;
+        }
+
+        .gallery-footer>span {
+          display: none;
+        }
+
+        .gallery-btn {
+          width: 100%;
+        }
+
+        .map-card-footer {
+          padding: 8px 10px;
+        }
+
+      }
+    </style>
 
   </main>
 
 
 
 
-  <!-- =======footer  ==========-->
-  <footer class="footer">
+<!-- ======= FOOTER ========== -->
+<footer class="footer">
+
     <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="brand-mark"></div>
-          <p class="muted py-2">Engineering Building, H.E.C., Dhurwa, Ranchi - 834004, Jharkhand</p>
+
+        <div class="footer-top">
+
+            <!-- BRAND -->
+            <div class="footer-brand">
+
+                <div class="brand-mark"></div>
+
+                <p class="muted py-2">
+                    Engineering Building, H.E.C., Dhurwa,
+                    Ranchi - 834004, Jharkhand
+                </p>
+
+                <!-- SOCIAL LINKS -->
+                <div class="footer-social">
+
+                    <a href="#" class="social-x" aria-label="Twitter / X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="#" class="social-instagram" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" class="social-facebook" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONSUMER SERVICES -->
+            <div>
+
+                <h5>Consumer Services</h5>
+
+                <a href="#">
+                    New Connection
+                </a>
+
+                <a href="#">
+                    Energy Bill Payment
+                </a>
+
+                <a href="#">
+                    Complaint Status
+                </a>
+
+                <a href="#">
+                    Safety Tips
+                </a>
+
+            </div>
+
+
+            <!-- QUICK LINKS -->
+            <div>
+
+                <h5>Quick Links</h5>
+
+                <a href="#">
+                    About Us
+                </a>
+
+                <a href="#">
+                    Tariff
+                </a>
+
+                <a href="#">
+                    Tenders
+                </a>
+
+                <a href="#">
+                    Downloads
+                </a>
+
+            </div>
+
+
+            <!-- POLICIES -->
+            <div>
+
+                <h5>Policies & Support</h5>
+
+                <a href="#">
+                    Privacy Policy
+                </a>
+
+                <a href="#">
+                    Disclaimer
+                </a>
+
+                <a href="#">
+                    RTI
+                </a>
+
+                <a href="#">
+                    Site Map
+                </a>
+
+            </div>
+
         </div>
-        <div>
-          <h5>Consumer Services</h5><a href="#">New Connection</a><a href="#">Energy Bill Payment</a><a
-            href="#">Complaint Status</a><a href="#">Safety Tips</a>
+
+
+        <!-- BOTTOM -->
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Jharkhand Bijli Vitran Nigam Limited.
+                All Rights Reserved.
+            </span>
+
+            <span>
+                Designed for a modern digital JBVNL experience.
+            </span>
+
         </div>
-        <div>
-          <h5>Quick Links</h5><a href="#">About Us</a><a href="#">Tariff</a><a href="#">Tenders</a><a
-            href="#">Downloads</a>
-        </div>
-        <div>
-          <h5>Policies & Support</h5><a href="#">Privacy Policy</a><a href="#">Disclaimer</a><a href="#">RTI</a><a
-            href="#">Site Map</a>
-        </div>
-      </div>
-      <div class="footer-bottom"><span>© 2026 Jharkhand Bijli Vitran Nigam Limited. All Rights
-          Reserved.</span><span>Designed for a modern digital JBVNL experience.</span></div>
+
     </div>
-  </footer>
+
+</footer>
 
   <div class="floating-tools">
     <button title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i
@@ -4956,6 +7524,201 @@
 
     });
   </script>
+
+
+  <script>
+    $(document).ready(function () {
+
+      /* =====================================================
+         AOS
+      ===================================================== */
+
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 800,
+          once: true
+        });
+      }
+
+
+      /* =====================================================
+         GALLERY SLIDER - ROW 1
+         ONLY GALLERY
+      ===================================================== */
+
+      if ($('.gallery-slider').length) {
+
+        $('.gallery-slider').owlCarousel({
+
+          loop: true,
+
+          margin: 10,
+
+          autoplay: true,
+
+          autoplayTimeout: 3000,
+
+          autoplayHoverPause: false,
+
+          smartSpeed: 700,
+
+          nav: false,
+
+          dots: false,
+
+          responsive: {
+            0: {
+              items: 1
+            },
+
+            576: {
+              items: 2
+            },
+
+            992: {
+              items: 2
+            }
+          }
+
+        });
+
+      }
+
+
+      /* =====================================================
+         GALLERY SLIDER - ROW 2
+         ONLY GALLERY
+      ===================================================== */
+
+      if ($('.gallery-slider2').length) {
+
+        $('.gallery-slider2').owlCarousel({
+
+          loop: true,
+
+          margin: 10,
+
+          autoplay: true,
+
+          autoplayTimeout: 3500,
+
+          autoplayHoverPause: false,
+
+          smartSpeed: 700,
+
+          nav: false,
+
+          dots: false,
+
+          responsive: {
+            0: {
+              items: 1
+            },
+
+            576: {
+              items: 2
+            },
+
+            992: {
+              items: 2
+            }
+          }
+
+        });
+
+      }
+
+
+      /* =====================================================
+         COUNTER UP
+      ===================================================== */
+
+      if ($.fn.counterUp && $('.counter').length) {
+
+        $('.counter').counterUp({
+          delay: 10,
+          time: 1500
+        });
+
+      }
+
+
+      /* =====================================================
+         GLIGHTBOX
+      ===================================================== */
+
+      if (typeof GLightbox !== 'undefined') {
+
+        GLightbox();
+
+      }
+
+
+      /* =====================================================
+         SWIPER
+      ===================================================== */
+
+      if (typeof Swiper !== 'undefined' &&
+        $('.mySwiper').length) {
+
+        new Swiper(".mySwiper", {
+
+          loop: true,
+
+          autoplay: {
+            delay: 4000,
+
+            disableOnInteraction: false
+          },
+
+          pagination: {
+            el: ".swiper-pagination",
+
+            clickable: true
+          }
+
+        });
+
+      }
+
+    });
+  </script>
+
+
+
+  <!-- {{-- Counter Animation (JavaScript) --}} -->
+  <script>
+    const counters = document.querySelectorAll('.counter');
+
+    counters.forEach(counter => {
+
+      const update = () => {
+
+        const target = +counter.getAttribute('data-count');
+
+        const count = +counter.innerText.replace(/,/g, '');
+
+        const increment = Math.ceil(target / 100);
+
+        if (count < target) {
+
+          counter.innerText = (count + increment).toLocaleString();
+
+          setTimeout(update, 20);
+
+        } else {
+
+          counter.innerText = target.toLocaleString();
+
+        }
+
+      };
+
+      update();
+
+    });
+  </script>
+
 
 </body>
 
