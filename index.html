@@ -2778,6 +2778,374 @@
 
 
 
+
+<style>
+/* =========================
+   NEWS & EVENTS
+========================= */
+
+.news-events {
+    width: 100%;
+    padding: 55px 0 70px;
+    background: #fff;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+.news-wrap {
+    width: min(94%, 1760px);
+    margin: auto;
+}
+
+.news-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.news-title {
+    margin: 0;
+    color:#0b0471;
+    font-size: clamp(30px, 2.3vw, 42px);
+    font-weight: 800;
+    font-size:28px;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+.news-title span {
+    color:  #17243a;
+}
+
+.news-arrows {
+    display: flex;
+    gap: 8px;
+}
+
+.news-arrow {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 7px;
+    background: #29499a;
+    color: #fff;
+    cursor: pointer;
+    font-size: 25px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .25s ease;
+}
+
+.news-arrow:hover {
+    background: #0b0471;
+    transform: translateY(-2px);
+}
+
+.news-slider {
+    position: relative;
+    overflow: hidden;
+    padding: 10px 2px 20px;
+}
+
+.news-track {
+    display: flex;
+    gap: 20px;
+    transition: transform .55s cubic-bezier(.22,.61,.36,1);
+    will-change: transform;
+}
+
+.news-card {
+    flex: 0 0 calc((100% - 40px) / 3);
+    min-width: 0;
+    border: 1px solid #dfe3eb;
+    border-radius: 12px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 7px 20px rgba(25, 42, 70, .09);
+    transition: .3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 28px rgba(25, 42, 70, .15);
+}
+
+.news-image {
+    position: relative;
+    height: 245px;
+    overflow: hidden;
+    background: #edf2fa;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.news-card:hover .news-image img {
+    transform: scale(1.04);
+}
+
+.news-date {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    padding: 7px 12px;
+    border-radius: 7px;
+    background: rgba(11, 4, 113, .95);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    backdrop-filter: blur(5px);
+}
+
+.news-tag {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    padding: 7px 11px;
+    border-radius: 20px;
+    background: rgba(255,255,255,.94);
+    color: #0b0471;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.news-body {
+    padding: 20px 20px 22px;
+}
+
+.news-body h3 {
+    margin: 0 0 10px;
+    color: #17243a;
+    font-size: 20px;
+    line-height: 1.35;
+    font-weight: 750;
+}
+
+.news-body p {
+    margin: 0 0 17px;
+    color: #68748a;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.news-read {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #0b0471;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.news-read:hover {
+    gap: 11px;
+}
+
+.news-dots {
+    display: flex;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 10px;
+}
+
+.news-dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #c9cdd5;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.news-dot.active {
+    width: 24px;
+    border-radius: 10px;
+    background: #29499a;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+    .news-card {
+        flex-basis: calc((100% - 20px) / 2);
+    }
+
+    .news-image {
+        height: 220px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+    .news-events {
+        padding: 38px 0 50px;
+    }
+
+    .news-wrap {
+        width: 92%;
+    }
+
+    .news-head {
+        margin-bottom: 18px;
+    }
+
+    .news-title {
+        font-size: 27px;
+    }
+
+    .news-arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 22px;
+    }
+
+    .news-track {
+        gap: 14px;
+    }
+
+    .news-card {
+        flex-basis: 100%;
+        border-radius: 10px;
+    }
+
+    .news-image {
+        height: 220px;
+    }
+
+    .news-body {
+        padding: 16px;
+    }
+
+    .news-body h3 {
+        font-size: 18px;
+    }
+
+    .news-body p {
+        font-size: 13px;
+    }
+}
+</style>
+
+<section class="news-events">
+    <div class="news-wrap">
+
+        <div class="news-head">
+            <h2 class="news-title">News <span>&</span> Events</h2>
+
+            <div class="news-arrows">
+                <button class="news-arrow" id="newsPrev" aria-label="Previous">&#8249;</button>
+                <button class="news-arrow" id="newsNext" aria-label="Next">&#8250;</button>
+            </div>
+        </div>
+
+        <div class="news-slider" id="newsSlider">
+            <div class="news-track" id="newsTrack">
+
+                <!-- CARD 1 -->
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=85"
+                             alt="Electricity transmission lines">
+                        <span class="news-date">01 Jul 2026</span>
+                        <span class="news-tag">NEWS</span>
+                    </div>
+                    <div class="news-body">
+                        <h3>New electricity service initiatives for consumers</h3>
+                        <p>Important updates and consumer-focused electricity service information from JBVNL.</p>
+                        <a href="#" class="news-read">Read More <span>→</span></a>
+                    </div>
+                </article>
+
+                <!-- CARD 2 -->
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85"
+                             alt="Office event">
+                        <span class="news-date">10 Jun 2026</span>
+                        <span class="news-tag">EVENT</span>
+                    </div>
+                    <div class="news-body">
+                        <h3>Consumer awareness and digital service campaign</h3>
+                        <p>Awareness activities designed to help consumers access faster and simpler online services.</p>
+                        <a href="#" class="news-read">Read More <span>→</span></a>
+                    </div>
+                </article>
+
+                <!-- CARD 3 -->
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTg_3LPY2JNkdhN_fr_D4eK843_jK80ItvYO0fbwpm03IZIdpjcWguYO9ns&s=10"
+                             alt="Smart electricity meter">
+                        <span class="news-date">10 Jun 2026</span>
+                        <span class="news-tag">UPDATE</span>
+                    </div>
+                    <div class="news-body">
+                        <h3>Smart meter services and digital billing update</h3>
+                        <p>Learn about smart metering, digital billing and improved consumer service facilities.</p>
+                        <a href="#" class="news-read">Read More <span>→</span></a>
+                    </div>
+                </article>
+
+                <!-- CARD 4 -->
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=85"
+                             alt="Solar energy">
+                        <span class="news-date">28 May 2026</span>
+                        <span class="news-tag">NEWS</span>
+                    </div>
+                    <div class="news-body">
+                        <h3>Renewable energy and sustainable power initiatives</h3>
+                        <p>Updates on clean energy initiatives and the future of reliable electricity services.</p>
+                        <a href="#" class="news-read">Read More <span>→</span></a>
+                    </div>
+                </article>
+
+                <!-- CARD 5 -->
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&w=1200&q=85"
+                             alt="Customer service">
+                        <span class="news-date">15 May 2026</span>
+                        <span class="news-tag">EVENT</span>
+                    </div>
+                    <div class="news-body">
+                        <h3>Customer service outreach programme</h3>
+                        <p>Consumer support and outreach activities across different service areas.</p>
+                        <a href="#" class="news-read">Read More <span>→</span></a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+        <div class="news-dots" id="newsDots"></div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
     <!-- 
     {{-- =========================================================
      JBVNL LIVE STATISTICS DASHBOARD
@@ -7708,6 +8076,111 @@
     });
   </script>
 
+
+
+<!-- =============News & Events=================== -->
+<script>
+(function () {
+    const track = document.getElementById("newsTrack");
+    const slider = document.getElementById("newsSlider");
+    const cards = Array.from(track.querySelectorAll(".news-card"));
+    const prev = document.getElementById("newsPrev");
+    const next = document.getElementById("newsNext");
+    const dotsBox = document.getElementById("newsDots");
+
+    let current = 0;
+    let timer;
+
+    function visibleCards() {
+        if (window.innerWidth <= 650) return 1;
+        if (window.innerWidth <= 1000) return 2;
+        return 3;
+    }
+
+    function maxIndex() {
+        return Math.max(0, cards.length - visibleCards());
+    }
+
+    function cardStep() {
+        const card = cards[0];
+        const gap = parseFloat(getComputedStyle(track).gap) || 0;
+        return card.getBoundingClientRect().width + gap;
+    }
+
+    function createDots() {
+        dotsBox.innerHTML = "";
+
+        const total = maxIndex() + 1;
+
+        for (let i = 0; i < total; i++) {
+            const dot = document.createElement("button");
+            dot.className = "news-dot";
+            dot.setAttribute("aria-label", "Go to slide " + (i + 1));
+
+            dot.addEventListener("click", function () {
+                current = i;
+                update();
+                restart();
+            });
+
+            dotsBox.appendChild(dot);
+        }
+    }
+
+    function update() {
+        current = Math.max(0, Math.min(current, maxIndex()));
+
+        track.style.transform =
+            "translateX(-" + (current * cardStep()) + "px)";
+
+        Array.from(dotsBox.children).forEach((dot, i) => {
+            dot.classList.toggle("active", i === current);
+        });
+    }
+
+    function goNext() {
+        current = current >= maxIndex() ? 0 : current + 1;
+        update();
+    }
+
+    function goPrev() {
+        current = current <= 0 ? maxIndex() : current - 1;
+        update();
+    }
+
+    function restart() {
+        clearInterval(timer);
+        timer = setInterval(goNext, 5000);
+    }
+
+    next.addEventListener("click", function () {
+        goNext();
+        restart();
+    });
+
+    prev.addEventListener("click", function () {
+        goPrev();
+        restart();
+    });
+
+    window.addEventListener("resize", function () {
+        current = Math.min(current, maxIndex());
+        createDots();
+        update();
+    });
+
+    /* Pause autoplay while mouse is over slider */
+    slider.addEventListener("mouseenter", function () {
+        clearInterval(timer);
+    });
+
+    slider.addEventListener("mouseleave", restart);
+
+    createDots();
+    update();
+    restart();
+})();
+</script>
 
 </body>
 
