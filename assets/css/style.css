@@ -1402,7 +1402,7 @@ body {
 }
 
 .btn-outline-light-custom {
-    border: 1px solid rgba(255,255,255,.45);
+    border: 1px solid rgba(255, 255, 255, .45);
     background: transparent;
 
     color: #fff;
@@ -1494,7 +1494,7 @@ body {
     */
     .hero-content {
         padding-top: 0;
-      
+
     }
 
     .hero .owl-nav {
@@ -1521,12 +1521,14 @@ body {
     .section-kicker {
         font-size: 7px;
         letter-spacing: 1px;
+        padding: 0;
     }
 
     .hero h1 {
-        font-size: 20px;
+        font-size: 18px !important;
         line-height: 1.1;
-        margin: 8px 0;
+        margin: 0;
+
     }
 
     .hero p {
@@ -1537,16 +1539,18 @@ body {
     }
 
     .hero-actions {
-        gap: 6px;
+        /* gap: 6px; */
         margin-top: 12px;
     }
 
     .btn-primary-custom,
     .btn-outline-light-custom {
         font-size: 10px;
-        padding: 7px 12px;
-        min-height: 32px;
+        padding: 5px 6px;
+        min-height: 25px;
         border-radius: 7px;
+        margin-top: 0;
+        margin-bottom: 10px;
     }
 }
 
