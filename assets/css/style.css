@@ -1206,11 +1206,19 @@ body {
 
 
 /*====================== HERO SECTION =======================*/
+/* =========================
+   HERO
+========================= */
 
 .hero {
     position: relative;
+    width: 100%;
     overflow: hidden;
 }
+
+/* =========================
+   OWL NAV
+========================= */
 
 .hero .owl-nav {
     position: absolute;
@@ -1218,29 +1226,41 @@ body {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+
     display: flex !important;
     justify-content: space-between;
     align-items: center;
+
     padding: 0 25px;
-    pointer-events: none;
     margin: 0 !important;
+
+    pointer-events: none;
+    z-index: 10;
 }
 
 .hero .owl-nav button.owl-prev,
 .hero .owl-nav button.owl-next {
     width: 46px;
     height: 46px;
+    min-width: 46px;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
     border-radius: 50% !important;
     border: 1px solid rgba(255, 255, 255, .35) !important;
+
     background: rgba(0, 0, 0, .28) !important;
     color: #fff !important;
+
     font-size: 17px !important;
+
     display: flex !important;
     align-items: center;
     justify-content: center;
+
     pointer-events: auto;
     transition: .3s ease;
-    margin: 0 !important;
 }
 
 .hero .owl-nav button.owl-prev:hover,
@@ -1255,34 +1275,65 @@ body {
 }
 
 
-.hero {
-    height: 535px;
-    position: relative
-}
+/* =========================
+   HERO SLIDE
+========================= */
 
 .hero-slide {
-    width: 100%;
-    aspect-ratio: 1920 / 655;
-    background-size: 100% 100%;
-    background-position: center;
-    background-repeat: no-repeat;
     position: relative;
+
+    width: 100%;
+
+    /*
+       IMPORTANT:
+       Banner original ratio = 1920 x 655
+    */
+    aspect-ratio: 1920 / 655;
+
+    /*
+       Full image show karega.
+       Crop nahi karega.
+    */
+    background-size: 100% 100%;
+
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 
-.hero-slide:before {
+/* =========================
+   OVERLAY
+========================= */
+
+.hero-slide::before {
     content: "";
     position: absolute;
     inset: 0;
-    /* background: linear-gradient(90deg, #071426df 0%, #071426a6 42%, #07142620 80%); */
+
+    /* Agar overlay nahi chahiye to transparent rakho */
+    background: transparent;
+
+    z-index: 0;
 }
+
+
+/* =========================
+   HERO CONTENT
+========================= */
 
 .hero-content {
     position: relative;
     z-index: 1;
+
     color: #fff;
-    padding-top: 105px
+
+    padding-top: 105px;
 }
+
+
+/* =========================
+   TEXT
+========================= */
 
 .eyebrow,
 .section-kicker {
@@ -1293,58 +1344,246 @@ body {
 }
 
 .eyebrow {
-    color: #72d7ff
+    color: #72d7ff;
 }
 
 .hero h1 {
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
+
     font-size: 52px;
     line-height: 1.12;
     font-weight: 800;
-    margin: 16px 0
+
+    margin: 16px 0;
 }
 
 .hero h1 span {
-    color: #67d5ff
+    color: #67d5ff;
 }
 
 .hero p {
     max-width: 570px;
+
     color: #e3eaf5;
-    font-size: 17px
+
+    font-size: 17px;
+    line-height: 1.5;
 }
 
 .hero-actions {
     display: flex;
     gap: 12px;
-    margin-top: 28px
+
+    margin-top: 28px;
 }
+
+
+/* =========================
+   BUTTON
+========================= */
 
 .btn-primary-custom {
     background: #0b0471;
     color: #fff;
+
+    border: 1px solid #0b0471;
     border-radius: 10px;
+
     padding: 12px 20px;
-    font-weight: 700
+
+    font-weight: 700;
+
+    transition: .3s ease;
 }
 
 .btn-primary-custom:hover {
     background: #fff;
     color: #0b0471;
-
 }
 
 .btn-outline-light-custom {
-    border: 1px solid #ffffff70;
+    border: 1px solid rgba(255,255,255,.45);
+    background: transparent;
+
     color: #fff;
+
     border-radius: 10px;
+
     padding: 12px 20px;
-    font-weight: 700
+
+    font-weight: 700;
+
+    transition: .3s ease;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .hero-slide {
+        /*
+           Ratio SAME rahega.
+           Image crop nahi hogi.
+        */
+        aspect-ratio: 1920 / 655;
+
+        background-size: 100% 100%;
+        background-position: center center;
+    }
+
+    .hero-content {
+        padding-top: 60px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .hero .owl-nav {
+        padding: 0 15px;
+    }
+
+    .hero .owl-nav button.owl-prev,
+    .hero .owl-nav button.owl-next {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 767px) {
+
+    .hero {
+        height: auto;
+        min-height: 0;
+    }
+
+    .hero-slide {
+
+        /*
+           VERY IMPORTANT
+
+           Mobile par height force mat karo.
+           Original 1920x655 ratio maintain hoga.
+        */
+        width: 100%;
+        min-height: auto;
+
+        aspect-ratio: 1920 / 655;
+
+        background-size: 100% 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    /*
+       Mobile par content ki extra height nahi chahiye
+       agar text banner image ke andar already hai.
+    */
+    .hero-content {
+        padding-top: 0;
+      
+    }
+
+    .hero .owl-nav {
+        padding: 0 8px;
+    }
+
+    .hero .owl-nav button.owl-prev,
+    .hero .owl-nav button.owl-next {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+
+        font-size: 14px !important;
+    }
+
+
+    .hero-content {
+        padding-top: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .eyebrow,
+    .section-kicker {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
+
+    .hero h1 {
+        font-size: 20px;
+        line-height: 1.1;
+        margin: 8px 0;
+    }
+
+    .hero p {
+        max-width: 100%;
+        font-size: 11px;
+        line-height: 1.35;
+        margin-bottom: 0;
+    }
+
+    .hero-actions {
+        gap: 6px;
+        margin-top: 12px;
+    }
+
+    .btn-primary-custom,
+    .btn-outline-light-custom {
+        font-size: 10px;
+        padding: 7px 12px;
+        min-height: 32px;
+        border-radius: 7px;
+    }
 }
 
 
 
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
 
+@media (max-width: 480px) {
+
+    .hero-slide {
+        /*
+           Same original ratio
+        */
+        aspect-ratio: 1920 / 655;
+
+        background-size: 100% 100%;
+    }
+
+    .hero .owl-nav {
+        padding: 0 5px;
+    }
+
+    .hero .owl-nav button.owl-prev,
+    .hero .owl-nav button.owl-next {
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+
+        font-size: 12px !important;
+    }
+}
+
+
+
+/* ====================Services left CSS========================== */
 .service-dock {
     margin-top: -45px;
     position: relative;
@@ -2009,7 +2248,7 @@ body {
 .footer {
     position: relative;
     width: 100%;
-    padding: 55px 0 0;
+    padding-top: 10px;
     color: #56657d;
     background-image: url("../images/footer_bg.png");
     background-size: cover;
