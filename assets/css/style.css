@@ -2561,7 +2561,7 @@ body {
 
     border-top: 1px solid #e4e7ef;
 
-    color: #6b7890;
+    color:#0c0471;
 
     font-size: 12px;
     font-weight: 400;
@@ -2575,7 +2575,7 @@ body {
 ========================================================= */
 
 .footer-bottom span:first-child {
-    color: #5d6b82;
+    color:#0c0471;
 }
 
 
@@ -3179,7 +3179,7 @@ body {
 }
 
 .brand-mark {
-    width: 450px;
+    width: 370px;
     height: 80px;
     border-radius: 13px;
     background-image: url('../images/jbvnl_logo2.png');
