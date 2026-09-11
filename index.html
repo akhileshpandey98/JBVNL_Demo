@@ -1053,321 +1053,34 @@
 
 
 
-    <!-- =========================================================
+      <!-- =========================================================
          FULL WIDTH VIDEO
          HERO KE SAME AREA ME
     ========================================================== -->
 
-    <div id="jbvnlVideoPlayer"
-         class="jbvnl-video-player">
+      <div id="jbvnlVideoPlayer" class="jbvnl-video-player">
 
-        <video id="jbvnlFullVideo"
-               class="jbvnl-full-video"
-               playsinline
-               preload="auto">
+        <video id="jbvnlFullVideo" class="jbvnl-full-video" playsinline preload="auto">
 
-            <source
-                src="assets/images/jbvnl-video720.mp4"
-                type="video/mp4">
+          <source src="assets/images/jbvnl-video720.mp4" type="video/mp4">
 
-            Your browser does not support HTML5 video.
+          Your browser does not support HTML5 video.
 
         </video>
 
 
-        <button type="button"
-                id="jbvnlVideoClose"
-                class="jbvnl-video-close"
-                aria-label="Close Video">
+        <button type="button" id="jbvnlVideoClose" class="jbvnl-video-close" aria-label="Close Video">
 
-            <i class="fa-solid fa-xmark"></i>
+          <i class="fa-solid fa-xmark"></i>
 
         </button>
 
-    </div>
+      </div>
 
 
     </section>
 
 
-    
-<script>
-
-document.addEventListener('DOMContentLoaded', function () {
-
-    /* =====================================================
-       ELEMENTS
-    ===================================================== */
-
-    const slider = $('#jbvnlHeroSlider');
-
-    const videoPlayer =
-        document.getElementById('jbvnlVideoPlayer');
-
-    const video =
-        document.getElementById('jbvnlFullVideo');
-
-    const closeButton =
-        document.getElementById('jbvnlVideoClose');
-
-    const cmButton =
-        document.querySelector('.cm-video-play-btn');
-
-
-    /* =====================================================
-       SAFETY CHECK
-    ===================================================== */
-
-    if (!slider.length) {
-
-        console.error(
-            'JBVNL HERO SLIDER NOT FOUND'
-        );
-
-        return;
-    }
-
-
-    if (!videoPlayer || !video || !cmButton) {
-
-        console.error(
-            'JBVNL VIDEO ELEMENTS NOT FOUND'
-        );
-
-        return;
-    }
-
-
-    /* =====================================================
-       INITIALIZE OWL SLIDER
-    ===================================================== */
-
-    if (!slider.hasClass('owl-loaded')) {
-
-        slider.owlCarousel({
-
-            items: 1,
-
-            loop: true,
-
-            autoplay: true,
-
-            autoplayTimeout: 10000,
-
-            autoplayHoverPause: true,
-
-            smartSpeed: 800,
-
-            nav: true,
-
-            dots: true,
-
-            mouseDrag: true,
-
-            touchDrag: true,
-
-            navText: [
-
-                '<i class="fa fa-angle-left"></i>',
-
-                '<i class="fa fa-angle-right"></i>'
-
-            ]
-
-        });
-
-    }
-
-
-    /* =====================================================
-       OPEN VIDEO
-    ===================================================== */
-
-    function openVideo() {
-
-        console.log(
-            'JBVNL CM VIDEO BUTTON CLICKED'
-        );
-
-
-        /* Stop slider autoplay */
-
-        slider.trigger(
-            'stop.owl.autoplay'
-        );
-
-
-        /* Show video */
-
-        videoPlayer.classList.add('active');
-
-
-        /* Reset video */
-
-        video.pause();
-
-        video.currentTime = 0;
-
-        video.muted = false;
-
-        video.volume = 1;
-
-
-        /* Play */
-
-        const playPromise =
-            video.play();
-
-
-        if (playPromise !== undefined) {
-
-            playPromise
-                .then(function () {
-
-                    console.log(
-                        'JBVNL VIDEO PLAYING'
-                    );
-
-                })
-                .catch(function (error) {
-
-                    console.error(
-                        'JBVNL VIDEO PLAY ERROR:',
-                        error
-                    );
-
-                    /*
-                     * अगर browser sound autoplay block करे,
-                     * muted करके दोबारा play.
-                     */
-
-                    video.muted = true;
-
-                    video.play()
-                        .catch(function (err) {
-
-                            console.error(
-                                'JBVNL MUTED VIDEO PLAY ERROR:',
-                                err
-                            );
-
-                        });
-
-                });
-
-        }
-
-    }
-
-
-    /* =====================================================
-       CLOSE VIDEO
-    ===================================================== */
-
-    function closeVideo() {
-
-        console.log(
-            'JBVNL VIDEO CLOSED'
-        );
-
-
-        video.pause();
-
-        video.currentTime = 0;
-
-
-        videoPlayer.classList.remove(
-            'active'
-        );
-
-
-        /* Slider वापस चालू */
-
-        slider.trigger(
-            'play.owl.autoplay'
-        );
-
-    }
-
-
-    /* =====================================================
-       CM BUTTON CLICK
-    ===================================================== */
-
-    cmButton.addEventListener(
-        'click',
-        function (event) {
-
-            event.preventDefault();
-
-            event.stopPropagation();
-
-            openVideo();
-
-        }
-    );
-
-
-    /* =====================================================
-       CLOSE BUTTON
-    ===================================================== */
-
-    closeButton.addEventListener(
-        'click',
-        function (event) {
-
-            event.preventDefault();
-
-            event.stopPropagation();
-
-            closeVideo();
-
-        }
-    );
-
-
-    /* =====================================================
-       VIDEO COMPLETE
-       VIDEO खत्म → SLIDER वापस
-    ===================================================== */
-
-    video.addEventListener(
-        'ended',
-        function () {
-
-            console.log(
-                'JBVNL VIDEO COMPLETED'
-            );
-
-            closeVideo();
-
-        }
-    );
-
-
-    /* =====================================================
-       ESC KEY
-    ===================================================== */
-
-    document.addEventListener(
-        'keydown',
-        function (event) {
-
-            if (
-                event.key === 'Escape' &&
-                videoPlayer.classList.contains('active')
-            ) {
-
-                closeVideo();
-
-            }
-
-        }
-    );
-
-});
-
-</script>
 
 
     <!-- ========Services ===========-->
@@ -5235,7 +4948,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         color: #0b0471;
 
-        font-size: 16px;
+        font-size: 17px;
         font-weight: 700;
         line-height: 1.25;
       }
@@ -5249,7 +4962,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         color: #687994;
 
-        font-size: 11px;
+        font-size: 12px;
         line-height: 1.45;
       }
 
@@ -5291,7 +5004,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         color: #334563;
 
-        font-size: 11px;
+        font-size: 12px;
 
         border-bottom: 1px solid #edf2f8;
       }
@@ -5333,7 +5046,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         text-decoration: none;
 
-        font-size: 11px;
+        font-size: 12px;
         font-weight: 700;
 
         transition: all .2s ease;
@@ -5349,8 +5062,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
       /* =========================================================
-   CARD BOTTOM EFFECT
-========================================================= */
+       CARD BOTTOM EFFECT
+      ========================================================= */
 
       .digital-card::after {
         content: "";
@@ -5368,15 +5081,15 @@ document.addEventListener('DOMContentLoaded', function () {
         background:
           linear-gradient(180deg,
             rgba(7, 89, 214, .01),
-            rgba(7, 89, 214, .06));
-
+            rgba(7, 89, 214, .06)); 
         pointer-events: none;
+
       }
 
 
       /* =========================================================
-   HELP + 1912
-========================================================= */
+        HELP + 1912
+       ========================================================= */
 
       .help-row {
         display: grid;
@@ -5483,7 +5196,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         color: #52647f;
 
-        font-size: 11px;
+        font-size: 12px;
         line-height: 1.5;
       }
 
@@ -5519,7 +5232,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         text-decoration: none;
 
-        font-size: 10px;
+        font-size: 12px;
         font-weight: 700;
 
         transition: .2s ease;
@@ -5623,7 +5336,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         color: #71809a;
 
-        font-size: 9px;
+        font-size: 12px;
       }
 
 
@@ -8825,7 +8538,7 @@ document.addEventListener('DOMContentLoaded', function () {
   <script src="assets/js/app.js"></script>
 
 
-
+<!-- ===========.owlCarousel  slider=====-->
   <script>
     $(document).ready(function () {
 
@@ -8856,7 +8569,7 @@ document.addEventListener('DOMContentLoaded', function () {
   </script>
 
 
-  <!-- toggle button -->
+  <!-- ===========toggle button ============-->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
 
@@ -8891,6 +8604,7 @@ document.addEventListener('DOMContentLoaded', function () {
   </script>
 
 
+<!-- ========= Photo Gallery ======== -->
   <script>
     $(document).ready(function () {
 
@@ -9050,7 +8764,6 @@ document.addEventListener('DOMContentLoaded', function () {
   </script>
 
 
-
   <!-- {{-- Counter Animation (JavaScript) --}} -->
   <script>
     const counters = document.querySelectorAll('.counter');
@@ -9083,7 +8796,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
   </script>
-
 
 
   <!-- =============News & Events=================== -->
@@ -9188,6 +8900,286 @@ document.addEventListener('DOMContentLoaded', function () {
       update();
       restart();
     })();
+  </script>
+
+
+  <!-- ============Slider Video Player JS =================-->
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+
+      /* =====================================================
+         ELEMENTS
+      ===================================================== */
+
+      const slider = $('#jbvnlHeroSlider');
+
+      const videoPlayer =
+        document.getElementById('jbvnlVideoPlayer');
+
+      const video =
+        document.getElementById('jbvnlFullVideo');
+
+      const closeButton =
+        document.getElementById('jbvnlVideoClose');
+
+      const cmButton =
+        document.querySelector('.cm-video-play-btn');
+
+
+      /* =====================================================
+         SAFETY CHECK
+      ===================================================== */
+
+      if (!slider.length) {
+
+        console.error(
+          'JBVNL HERO SLIDER NOT FOUND'
+        );
+
+        return;
+      }
+
+
+      if (!videoPlayer || !video || !cmButton) {
+
+        console.error(
+          'JBVNL VIDEO ELEMENTS NOT FOUND'
+        );
+
+        return;
+      }
+
+
+      /* =====================================================
+         INITIALIZE OWL SLIDER
+      ===================================================== */
+
+      if (!slider.hasClass('owl-loaded')) {
+
+        slider.owlCarousel({
+
+          items: 1,
+
+          loop: true,
+
+          autoplay: true,
+
+          autoplayTimeout: 10000,
+
+          autoplayHoverPause: true,
+
+          smartSpeed: 800,
+
+          nav: true,
+
+          dots: true,
+
+          mouseDrag: true,
+
+          touchDrag: true,
+
+          navText: [
+
+            '<i class="fa fa-angle-left"></i>',
+
+            '<i class="fa fa-angle-right"></i>'
+
+          ]
+
+        });
+
+      }
+
+
+      /* =====================================================
+         OPEN VIDEO
+      ===================================================== */
+
+      function openVideo() {
+
+        console.log(
+          'JBVNL CM VIDEO BUTTON CLICKED'
+        );
+
+
+        /* Stop slider autoplay */
+
+        slider.trigger(
+          'stop.owl.autoplay'
+        );
+
+
+        /* Show video */
+
+        videoPlayer.classList.add('active');
+
+
+        /* Reset video */
+
+        video.pause();
+
+        video.currentTime = 0;
+
+        video.muted = false;
+
+        video.volume = 1;
+
+
+        /* Play */
+
+        const playPromise =
+          video.play();
+
+
+        if (playPromise !== undefined) {
+
+          playPromise
+            .then(function () {
+
+              console.log(
+                'JBVNL VIDEO PLAYING'
+              );
+
+            })
+            .catch(function (error) {
+
+              console.error(
+                'JBVNL VIDEO PLAY ERROR:',
+                error
+              );
+
+              /*
+               * अगर browser sound autoplay block करे,
+               * muted करके दोबारा play.
+               */
+
+              video.muted = true;
+
+              video.play()
+                .catch(function (err) {
+
+                  console.error(
+                    'JBVNL MUTED VIDEO PLAY ERROR:',
+                    err
+                  );
+
+                });
+
+            });
+
+        }
+
+      }
+
+
+      /* =====================================================
+         CLOSE VIDEO
+      ===================================================== */
+
+      function closeVideo() {
+
+        console.log(
+          'JBVNL VIDEO CLOSED'
+        );
+
+
+        video.pause();
+
+        video.currentTime = 0;
+
+
+        videoPlayer.classList.remove(
+          'active'
+        );
+
+
+        /* Slider वापस चालू */
+
+        slider.trigger(
+          'play.owl.autoplay'
+        );
+
+      }
+
+
+      /* =====================================================
+         CM BUTTON CLICK
+      ===================================================== */
+
+      cmButton.addEventListener(
+        'click',
+        function (event) {
+
+          event.preventDefault();
+
+          event.stopPropagation();
+
+          openVideo();
+
+        }
+      );
+
+
+      /* =====================================================
+         CLOSE BUTTON
+      ===================================================== */
+
+      closeButton.addEventListener(
+        'click',
+        function (event) {
+
+          event.preventDefault();
+
+          event.stopPropagation();
+
+          closeVideo();
+
+        }
+      );
+
+
+      /* =====================================================
+         VIDEO COMPLETE
+         VIDEO खत्म → SLIDER वापस
+      ===================================================== */
+
+      video.addEventListener(
+        'ended',
+        function () {
+
+          console.log(
+            'JBVNL VIDEO COMPLETED'
+          );
+
+          closeVideo();
+
+        }
+      );
+
+
+      /* =====================================================
+         ESC KEY
+      ===================================================== */
+
+      document.addEventListener(
+        'keydown',
+        function (event) {
+
+          if (
+            event.key === 'Escape' &&
+            videoPlayer.classList.contains('active')
+          ) {
+
+            closeVideo();
+
+          }
+
+        }
+      );
+
+    });
+
   </script>
 
 </body>

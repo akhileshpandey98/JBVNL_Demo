@@ -1883,13 +1883,6 @@ body {
     }
 
     .hero-slide {
-
-        /*
-           VERY IMPORTANT
-
-           Mobile par height force mat karo.
-           Original 1920x655 ratio maintain hoga.
-        */
         width: 100%;
         min-height: auto;
 
