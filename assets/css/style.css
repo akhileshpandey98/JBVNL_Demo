@@ -1457,15 +1457,29 @@ body {
 .cm-video-play-btn .btn-primary-custom i {
     font-size: 20px;
     color: #fff;
+    animation: videoPlayBlink 1s ease-in-out infinite;
 }
 
+@keyframes videoPlayBlink {
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: .35;
+        transform: scale(1.45);
+    }
+}
+  
 
 /* =========================
    HOVER
 ========================= */
 
 .cm-video-play-btn:hover .btn-primary-custom {
-    background: #29499a !important;
+    background:#003f8f  !important;
     color: #fff !important;
     transform: translateY(-2px);
 }
@@ -2050,11 +2064,9 @@ body {
     border: 0
 }
 
-.dock-card>b {}
-
 .dock-card small {
     display: block;
-    color: #7b8494;
+    color: #7b8494; 
     font-size: 11px
 }
 
@@ -2669,8 +2681,6 @@ body {
     }
 
 }
-
-
 
 
 
