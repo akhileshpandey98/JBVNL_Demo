@@ -2179,37 +2179,339 @@ body {
     font-weight: 800
 }
 
+
+/* =========================================
+   JBVNL QUICK SERVICES PANEL
+========================================= */
+
 .quick-panel {
-    padding: 0 0 20px;
-    margin-top: 20px;
+    position: relative;
+    z-index: 10;
+    margin-top: -1px;
+    padding: 22px 0;
+    background: linear-gradient(
+        135deg,
+        #0b0471 0%,
+        #111c83 45%,
+        #173d9a 100%
+    );
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(103, 213, 255, 0.25);
+    box-shadow: 0 10px 35px rgba(11, 4, 113, 0.25);
+    overflow: hidden;
 }
+
+/* subtle background glow */
+.quick-panel::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    right: -100px;
+    top: -180px;
+    border-radius: 50%;
+    background: rgba(103, 213, 255, 0.15);
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+.quick-panel::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    left: -100px;
+    bottom: -170px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.07);
+    pointer-events: none;
+}
+
+
+/* GRID */
 
 .quick-grid {
+    position: relative;
+    z-index: 2;
+
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    /* background: #0c1a33; */
-    background: #eef3fb;
 
-    border-radius: 18px;
-    overflow: hidden
+    gap: 12px;
 }
 
-.quick-grid a {
-    color: #003f8f;
+
+/* ITEM */
+
+.quick-item {
+    position: relative;
+
+    min-height: 76px;
+    padding: 12px 14px;
+
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    color: #fff;
     text-decoration: none;
-    padding: 23px 16px;
-    text-align: center;
-    border-right: 1px solid #ffffff13;
-    font-size: 12px
+
+    background: rgba(255, 255, 255, 0.075);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+
+    border-radius: 12px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-.quick-grid i {
-    display: block;
-    color: #003f8f;
-    font-size: 21px;
-    margin-bottom: 8px
+
+/* top shine */
+
+.quick-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #67d5ff,
+        transparent
+    );
+
+    transition: left 0.5s ease;
 }
 
+
+/* ICON */
+
+.quick-icon {
+    flex: 0 0 43px;
+
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: rgba(103, 213, 255, 0.12);
+    border: 1px solid rgba(103, 213, 255, 0.28);
+
+    color: #72d7ff;
+
+    font-size: 18px;
+
+    transition: all 0.3s ease;
+}
+
+
+/* TEXT */
+
+.quick-text {
+    flex: 1;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.35;
+
+    color: #fff;
+}
+
+
+/* ARROW */
+
+.quick-arrow {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.5);
+
+    transition: all 0.3s ease;
+}
+
+
+/* HOVER */
+
+.quick-item:hover {
+    color: #fff;
+    text-decoration: none;
+
+    transform: translateY(-4px);
+
+    background: rgba(255, 255, 255, 0.13);
+
+    border-color: rgba(103, 213, 255, 0.65);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.20),
+        0 0 20px rgba(103, 213, 255, 0.10);
+}
+
+.quick-item:hover::before {
+    left: 100%;
+}
+
+.quick-item:hover .quick-icon {
+    color: #fff;
+
+    background: linear-gradient(
+        135deg,
+        #1b8fd1,
+        #67d5ff
+    );
+
+    border-color: transparent;
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 15px rgba(103, 213, 255, 0.35);
+}
+
+.quick-item:hover .quick-arrow {
+    color: #72d7ff;
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   LARGE TABLET
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .quick-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    .quick-panel {
+        padding: 16px 0;
+    }
+
+    .quick-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .quick-item {
+        min-height: 68px;
+        padding: 10px 11px;
+        border-radius: 10px;
+    }
+
+    .quick-icon {
+        width: 38px;
+        height: 38px;
+        flex-basis: 38px;
+        font-size: 16px;
+        border-radius: 8px;
+    }
+
+    .quick-text {
+        font-size: 12px;
+    }
+
+    .quick-arrow {
+        font-size: 10px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .quick-panel {
+        padding: 12px 0;
+    }
+
+    .quick-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .quick-item {
+        min-height: 64px;
+        padding: 8px 9px;
+        gap: 8px;
+        border-radius: 9px;
+    }
+
+    .quick-icon {
+        width: 34px;
+        height: 34px;
+        flex-basis: 34px;
+        font-size: 14px;
+        border-radius: 7px;
+    }
+
+    .quick-text {
+        font-size: 10.5px;
+        line-height: 1.25;
+    }
+
+    .quick-arrow {
+        display: none;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+
+    .quick-grid {
+        gap: 6px;
+    }
+
+    .quick-item {
+        min-height: 60px;
+        padding: 7px;
+        gap: 6px;
+    }
+
+    .quick-icon {
+        width: 31px;
+        height: 31px;
+        flex-basis: 31px;
+        font-size: 13px;
+    }
+
+    .quick-text {
+        font-size: 9.5px;
+    }
+
+}
 
 
 /* Notice, Circulars & Tenders */
