@@ -816,116 +816,116 @@
 
 
 
-/* =========================================================
+    /* =========================================================
    SUB MENU
 ========================================================= */
 
-.jbvnl-submenu{
-    display:none;
-    margin:2px 0 8px 11px;
-    padding:7px 7px 8px;
-    border-left:2px solid #d7eafa;
-    background:#fbfdff;
-    border-radius:0 8px 8px 0;
-}
+    .jbvnl-submenu {
+      display: none;
+      margin: 2px 0 8px 11px;
+      padding: 7px 7px 8px;
+      border-left: 2px solid #d7eafa;
+      background: #fbfdff;
+      border-radius: 0 8px 8px 0;
+    }
 
-.jbvnl-submenu.show{
-    display:block;
-}
-
-
-/* HIGHLIGHTED SUB HEADING */
-.jbvnl-sub-heading{
-    display:flex;
-    align-items:center;
-    gap:7px;
-    margin:8px 4px 5px;
-    padding:7px 9px;
-    border-left:3px solid #0878e8;
-    border-radius:5px;
-    background:linear-gradient(90deg,#e5f3ff,#f7fbff);
-    color:#0b0471;
-    font-size:10px;
-    font-weight:800;
-    text-transform:uppercase;
-    letter-spacing:.35px;
-}
-
-.jbvnl-sub-heading i{
-    color:#0878e8;
-    font-size:10px;
-}
+    .jbvnl-submenu.show {
+      display: block;
+    }
 
 
-/* SUB MENU LINKS */
-.jbvnl-submenu > a{
-    min-height:34px;
-    display:flex;
-    align-items:center;
-    gap:8px;
-    padding:7px 9px;
-    margin:2px 0;
-    border-radius:6px;
-    color:#526274;
-    text-decoration:none;
-    font-size:11px;
-    font-weight:500;
-    transition:.18s ease;
-}
+    /* HIGHLIGHTED SUB HEADING */
+    .jbvnl-sub-heading {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin: 8px 4px 5px;
+      padding: 7px 9px;
+      border-left: 3px solid #0878e8;
+      border-radius: 5px;
+      background: linear-gradient(90deg, #e5f3ff, #f7fbff);
+      color: #0b0471;
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .35px;
+    }
 
-.jbvnl-submenu > a i{
-    width:17px;
-    min-width:17px;
-    text-align:center;
-    color:#0878e8;
-    font-size:10px;
-}
-
-.jbvnl-submenu > a:hover{
-    background:#edf7ff;
-    color:#0878e8;
-    padding-left:12px;
-}
-
-.jbvnl-submenu > a:hover i{
-    color:#0b0471;
-}
+    .jbvnl-sub-heading i {
+      color: #0878e8;
+      font-size: 10px;
+    }
 
 
-/* =========================================================
+    /* SUB MENU LINKS */
+    .jbvnl-submenu>a {
+      min-height: 34px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 9px;
+      margin: 2px 0;
+      border-radius: 6px;
+      color: #526274;
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 500;
+      transition: .18s ease;
+    }
+
+    .jbvnl-submenu>a i {
+      width: 17px;
+      min-width: 17px;
+      text-align: center;
+      color: #0878e8;
+      font-size: 10px;
+    }
+
+    .jbvnl-submenu>a:hover {
+      background: #edf7ff;
+      color: #0878e8;
+      padding-left: 12px;
+    }
+
+    .jbvnl-submenu>a:hover i {
+      color: #0b0471;
+    }
+
+
+    /* =========================================================
    MOBILE
 ========================================================= */
 
-@media(max-width:768px){
+    @media(max-width:768px) {
 
-    .jbvnl-side-nav{
-        padding:7px 8px 18px;
-    }
+      .jbvnl-side-nav {
+        padding: 7px 8px 18px;
+      }
 
-    .jbvnl-side-link{
-        min-height:43px;
-        padding:8px 10px;
-        font-size:12px;
-    }
+      .jbvnl-side-link {
+        min-height: 43px;
+        padding: 8px 10px;
+        font-size: 12px;
+      }
 
-    .side-icon{
-        width:28px;
-        height:28px;
-        min-width:28px;
-    }
+      .side-icon {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+      }
 
-    .jbvnl-submenu{
-        margin-left:7px;
-    }
+      .jbvnl-submenu {
+        margin-left: 7px;
+      }
 
-    .jbvnl-sub-heading{
-        font-size:9px;
-    }
+      .jbvnl-sub-heading {
+        font-size: 9px;
+      }
 
-    .jbvnl-submenu > a{
-        font-size:10.5px;
+      .jbvnl-submenu>a {
+        font-size: 10.5px;
+      }
     }
-}
   </style>
 
   <aside class="jbvnl-sidebar" id="jbvnlSidebar">
@@ -954,785 +954,780 @@
     </div>
 
 
-<!-- =========================================================
+    <!-- =========================================================
      JBVNL LEFT SIDEBAR NAVIGATION
 ========================================================= -->
 
 
 
-<nav class="jbvnl-side-nav">
+    <nav class="jbvnl-side-nav">
 
-    <!-- ================= HOME ================= -->
-    <a href="{{ route('index') }}" class="jbvnl-side-link active">
+      <!-- ================= HOME ================= -->
+      <a href="{{ route('index') }}" class="jbvnl-side-link active">
         <span class="side-icon">
-            <i class="fa-solid fa-house"></i>
+          <i class="fa-solid fa-house"></i>
         </span>
         <span class="side-text">Home</span>
-    </a>
+      </a>
 
 
-    <!-- ================= ABOUT US ================= -->
-    <div class="jbvnl-side-item">
+      <!-- ================= ABOUT US ================= -->
+      <div class="jbvnl-side-item">
 
         <button type="button" class="jbvnl-side-link jbvnl-sub-toggle">
-            <span class="side-icon">
-                <i class="fa-solid fa-building"></i>
-            </span>
-            <span class="side-text">About Us</span>
-            <i class="fa-solid fa-chevron-right side-arrow"></i>
+          <span class="side-icon">
+            <i class="fa-solid fa-building"></i>
+          </span>
+          <span class="side-text">About Us</span>
+          <i class="fa-solid fa-chevron-right side-arrow"></i>
         </button>
 
         <div class="jbvnl-submenu">
 
-            <!-- COMPANY -->
-            <div class="jbvnl-sub-heading">
-                <i class="fa-solid fa-building"></i>
-                Company
-            </div>
+          <!-- COMPANY -->
+          <div class="jbvnl-sub-heading">
+            <i class="fa-solid fa-building"></i>
+            Company
+          </div>
 
-            <a href="{{ route('compprofile') }}">
-                <i class="fa-solid fa-circle-info"></i>
-                Company Profile
-            </a>
+          <a href="{{ route('compprofile') }}">
+            <i class="fa-solid fa-circle-info"></i>
+            Company Profile
+          </a>
 
-            <a href="{{ route('boardofdirector') }}">
-                <i class="fa-solid fa-users"></i>
-                Board of Directors
-            </a>
+          <a href="{{ route('boardofdirector') }}">
+            <i class="fa-solid fa-users"></i>
+            Board of Directors
+          </a>
 
-            <a href="{{ route('orgstructure') }}">
-                <i class="fa-solid fa-sitemap"></i>
-                Organization Chart
-            </a>
+          <a href="{{ route('orgstructure') }}">
+            <i class="fa-solid fa-sitemap"></i>
+            Organization Chart
+          </a>
 
-            <a href="#">
-                <i class="fa-solid fa-user-tie"></i>
-                Who's Who
-            </a>
-
-
-            <!-- DEPARTMENTS -->
-            <div class="jbvnl-sub-heading">
-                <i class="fa-solid fa-building-columns"></i>
-                Departments
-            </div>
-
-            <a href="{{ route('commercial') }}">
-                <i class="fa-solid fa-cart-shopping"></i>
-                Commercial
-            </a>
-
-            <a href="{{ route('revenue.department') }}">
-                <i class="fa-solid fa-indian-rupee-sign"></i>
-                Revenue
-            </a>
-
-            <a href="{{ route('projectdep') }}">
-                <i class="fa-solid fa-diagram-project"></i>
-                Projects
-            </a>
-
-            <a href="{{ route('finance') }}">
-                <i class="fa-solid fa-coins"></i>
-                Finance
-            </a>
-
-            <a href="{{ route('ruralelect') }}">
-                <i class="fa-solid fa-bolt"></i>
-                Electric Status
-            </a>
-
-            <a href="{{ route('storepurchase') }}">
-                <i class="fa-solid fa-shopping-bag"></i>
-                JBVNL Store
-            </a>
+          <a href="#">
+            <i class="fa-solid fa-user-tie"></i>
+            Who's Who
+          </a>
 
 
-            <!-- PEOPLE & INITIATIVES -->
-            <div class="jbvnl-sub-heading">
-                <i class="fa-solid fa-users-gear"></i>
-                People & Initiatives
-            </div>
+          <!-- DEPARTMENTS -->
+          <div class="jbvnl-sub-heading">
+            <i class="fa-solid fa-building-columns"></i>
+            Departments
+          </div>
 
-            <a href="{{ route('info_techno') }}">
-                <i class="fa-solid fa-laptop"></i>
-                IT
-            </a>
+          <a href="{{ route('commercial') }}">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Commercial
+          </a>
 
-            <a href="{{ route('hradmin') }}">
-                <i class="fa-solid fa-user-group"></i>
-                HR / Admin
-            </a>
+          <a href="{{ route('revenue.department') }}">
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+            Revenue
+          </a>
 
-            <a href="{{ route('oandm') }}">
-                <i class="fa-solid fa-gears"></i>
-                O&M
-            </a>
+          <a href="{{ route('projectdep') }}">
+            <i class="fa-solid fa-diagram-project"></i>
+            Projects
+          </a>
 
-            <a href="{{ route('initiatives') }}">
-                <i class="fa-solid fa-lightbulb"></i>
-                Initiatives
-            </a>
+          <a href="{{ route('finance') }}">
+            <i class="fa-solid fa-coins"></i>
+            Finance
+          </a>
 
-            <a href="{{ route('achivements') }}">
-                <i class="fa-solid fa-trophy"></i>
-                Achievements & Milestones
-            </a>
+          <a href="{{ route('ruralelect') }}">
+            <i class="fa-solid fa-bolt"></i>
+            Electric Status
+          </a>
+
+          <a href="{{ route('storepurchase') }}">
+            <i class="fa-solid fa-shopping-bag"></i>
+            JBVNL Store
+          </a>
+
+
+          <!-- PEOPLE & INITIATIVES -->
+          <div class="jbvnl-sub-heading">
+            <i class="fa-solid fa-users-gear"></i>
+            People & Initiatives
+          </div>
+
+          <a href="{{ route('info_techno') }}">
+            <i class="fa-solid fa-laptop"></i>
+            IT
+          </a>
+
+          <a href="{{ route('hradmin') }}">
+            <i class="fa-solid fa-user-group"></i>
+            HR / Admin
+          </a>
+
+          <a href="{{ route('oandm') }}">
+            <i class="fa-solid fa-gears"></i>
+            O&M
+          </a>
+
+          <a href="{{ route('initiatives') }}">
+            <i class="fa-solid fa-lightbulb"></i>
+            Initiatives
+          </a>
+
+          <a href="{{ route('achivements') }}">
+            <i class="fa-solid fa-trophy"></i>
+            Achievements & Milestones
+          </a>
 
         </div>
-    </div>
+      </div>
 
 
-    <!-- ================= CONSUMER CORNER ================= -->
-    <div class="jbvnl-side-item">
+      <!-- ================= CONSUMER CORNER ================= -->
+      <div class="jbvnl-side-item">
 
         <button type="button" class="jbvnl-side-link jbvnl-sub-toggle">
-            <span class="side-icon">
-                <i class="fa-solid fa-circle-check"></i>
-            </span>
-            <span class="side-text">Consumer Corner</span>
-            <i class="fa-solid fa-chevron-right side-arrow"></i>
+          <span class="side-icon">
+            <i class="fa-solid fa-circle-check"></i>
+          </span>
+          <span class="side-text">Consumer Corner</span>
+          <i class="fa-solid fa-chevron-right side-arrow"></i>
         </button>
 
         <div class="jbvnl-submenu">
 
-            <!-- ELECTRICITY SERVICES -->
-            <div class="jbvnl-sub-heading">
-                <i class="fa-solid fa-bolt"></i>
-                Electricity Services
-            </div>
+          <!-- ELECTRICITY SERVICES -->
+          <div class="jbvnl-sub-heading">
+            <i class="fa-solid fa-bolt"></i>
+            Electricity Services
+          </div>
 
-            <a href="#">
-                <i class="fa-solid fa-file-invoice"></i>
-                Pay Electricity Bill
-            </a>
+          <a href="#">
+            <i class="fa-solid fa-file-invoice"></i>
+            Pay Electricity Bill
+          </a>
 
-            <a href="https://suvidha.jbvnl.co.in/login.aspx" target="_blank">
-                <i class="fa-solid fa-solar-panel"></i>
-                Suvidha Portal
-            </a>
+          <a href="https://suvidha.jbvnl.co.in/login.aspx" target="_blank">
+            <i class="fa-solid fa-solar-panel"></i>
+            Suvidha Portal
+          </a>
 
-            <a href="{{ route('consumer.tracking') }}">
-                <i class="fa-solid fa-list-check"></i>
-                Consumer Services
-            </a>
-
-
-            <!-- CONNECTION SERVICES -->
-            <div class="jbvnl-sub-heading">
-                <i class="fa-solid fa-plug-circle-plus"></i>
-                Connection Services
-            </div>
-
-            <a href="https://advantage.jharkhand.gov.in/SingleWindow/users/login"
-               target="_blank">
-                <i class="fa-solid fa-industry"></i>
-                New Connection LTIS / HT
-            </a>
+          <a href="{{ route('consumer.tracking') }}">
+            <i class="fa-solid fa-list-check"></i>
+            Consumer Services
+          </a>
 
 
-            <!-- CALCULATORS -->
-            <div class="jbvnl-sub-heading">
-                <i class="fa-solid fa-calculator"></i>
-                Calculators
-            </div>
+          <!-- CONNECTION SERVICES -->
+          <div class="jbvnl-sub-heading">
+            <i class="fa-solid fa-plug-circle-plus"></i>
+            Connection Services
+          </div>
 
-            <a href="{{ route('fixcalculator') }}">
-                <i class="fa-solid fa-calculator"></i>
-                Fix Calculator
-            </a>
-
-            <a href="{{ route('load-calculator') }}">
-                <i class="fa-solid fa-bolt"></i>
-                Load Calculator
-            </a>
-
-            <a href="{{ route('effective.tariff.calculator') }}">
-                <i class="fa-solid fa-chart-line"></i>
-                Effective Tariff Calculator
-            </a>
+          <a href="https://advantage.jharkhand.gov.in/SingleWindow/users/login" target="_blank">
+            <i class="fa-solid fa-industry"></i>
+            New Connection LTIS / HT
+          </a>
 
 
-            <!-- CONSUMER AWARENESS -->
-            <div class="jbvnl-sub-heading">
-                <i class="fa-solid fa-leaf"></i>
-                Consumer Awareness
-            </div>
+          <!-- CALCULATORS -->
+          <div class="jbvnl-sub-heading">
+            <i class="fa-solid fa-calculator"></i>
+            Calculators
+          </div>
 
-            <a href="{{ route('stips') }}">
-                <i class="fa-solid fa-shield"></i>
-                Safety Tips
-            </a>
+          <a href="{{ route('fixcalculator') }}">
+            <i class="fa-solid fa-calculator"></i>
+            Fix Calculator
+          </a>
 
-            <a href="{{ asset('front/img/Energy Conservation.pdf') }}"
-               target="_blank">
-                <i class="fa-solid fa-leaf"></i>
-                Save Energy Campaign
-            </a>
+          <a href="{{ route('load-calculator') }}">
+            <i class="fa-solid fa-bolt"></i>
+            Load Calculator
+          </a>
+
+          <a href="{{ route('effective.tariff.calculator') }}">
+            <i class="fa-solid fa-chart-line"></i>
+            Effective Tariff Calculator
+          </a>
+
+
+          <!-- CONSUMER AWARENESS -->
+          <div class="jbvnl-sub-heading">
+            <i class="fa-solid fa-leaf"></i>
+            Consumer Awareness
+          </div>
+
+          <a href="{{ route('stips') }}">
+            <i class="fa-solid fa-shield"></i>
+            Safety Tips
+          </a>
+
+          <a href="{{ asset('front/img/Energy Conservation.pdf') }}" target="_blank">
+            <i class="fa-solid fa-leaf"></i>
+            Save Energy Campaign
+          </a>
 
         </div>
-    </div>
+      </div>
 
 
-    <!-- ================= NEW CONNECTION ================= -->
-    <div class="jbvnl-side-item">
+      <!-- ================= NEW CONNECTION ================= -->
+      <div class="jbvnl-side-item">
 
         <button type="button" class="jbvnl-side-link jbvnl-sub-toggle">
-            <span class="side-icon">
-                <i class="fa-solid fa-plug-circle-plus"></i>
-            </span>
-            <span class="side-text">New Connection</span>
-            <i class="fa-solid fa-chevron-right side-arrow"></i>
+          <span class="side-icon">
+            <i class="fa-solid fa-plug-circle-plus"></i>
+          </span>
+          <span class="side-text">New Connection</span>
+          <i class="fa-solid fa-chevron-right side-arrow"></i>
         </button>
 
         <div class="jbvnl-submenu">
 
-            <!-- CONNECTION SERVICES -->
-            <div class="jbvnl-sub-heading">
-                <i class="fa-solid fa-plug"></i>
-                Connection Services
-            </div>
+          <!-- CONNECTION SERVICES -->
+          <div class="jbvnl-sub-heading">
+            <i class="fa-solid fa-plug"></i>
+            Connection Services
+          </div>
 
-            <a href="https://suvidha.jbvnl.co.in/login.aspx" target="_blank">
-                <i class="fa-solid fa-house-circle-check"></i>
-                Apply New Connection
-            </a>
+          <a href="https://suvidha.jbvnl.co.in/login.aspx" target="_blank">
+            <i class="fa-solid fa-house-circle-check"></i>
+            Apply New Connection
+          </a>
 
-            <a href="{{ route('consumer.tracking') }}">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                Track Application
-            </a>
+          <a href="{{ route('consumer.tracking') }}">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Track Application
+          </a>
 
-            <a href="#">
-                <i class="fa-solid fa-file-lines"></i>
-                Required Documents
-            </a>
+          <a href="#">
+            <i class="fa-solid fa-file-lines"></i>
+            Required Documents
+          </a>
 
-            <a href="#">
-                <i class="fa-solid fa-indian-rupee-sign"></i>
-                Connection Charges
-            </a>
+          <a href="#">
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+            Connection Charges
+          </a>
 
-            <a href="https://advantage.jharkhand.gov.in/SingleWindow/users/login"
-               target="_blank">
-                <i class="fa-solid fa-industry"></i>
-                New Connection LTIS / HT
-            </a>
+          <a href="https://advantage.jharkhand.gov.in/SingleWindow/users/login" target="_blank">
+            <i class="fa-solid fa-industry"></i>
+            New Connection LTIS / HT
+          </a>
 
         </div>
-    </div>
+      </div>
 
 
-    <!-- ================= BILL PAYMENT ================= -->
-    <a href="#" class="jbvnl-side-link">
+      <!-- ================= BILL PAYMENT ================= -->
+      <a href="#" class="jbvnl-side-link">
         <span class="side-icon">
-            <i class="fa-solid fa-credit-card"></i>
+          <i class="fa-solid fa-credit-card"></i>
         </span>
         <span class="side-text">Bill Payment</span>
-    </a>
+      </a>
 
 
-    <!-- ================= COMPLAINT SERVICES ================= -->
-    <div class="jbvnl-side-item">
+      <!-- ================= COMPLAINT SERVICES ================= -->
+      <div class="jbvnl-side-item">
 
         <button type="button" class="jbvnl-side-link jbvnl-sub-toggle">
-            <span class="side-icon">
-                <i class="fa-solid fa-file-circle-exclamation"></i>
-            </span>
-            <span class="side-text">Complaint Services</span>
-            <i class="fa-solid fa-chevron-right side-arrow"></i>
+          <span class="side-icon">
+            <i class="fa-solid fa-file-circle-exclamation"></i>
+          </span>
+          <span class="side-text">Complaint Services</span>
+          <i class="fa-solid fa-chevron-right side-arrow"></i>
         </button>
 
         <div class="jbvnl-submenu">
 
-            <div class="jbvnl-sub-heading">
-                <i class="fa-solid fa-headset"></i>
-                Complaint Management
-            </div>
+          <div class="jbvnl-sub-heading">
+            <i class="fa-solid fa-headset"></i>
+            Complaint Management
+          </div>
 
-            <a href="#">
-                <i class="fa-solid fa-pen"></i>
-                Register Complaint
-            </a>
+          <a href="#">
+            <i class="fa-solid fa-pen"></i>
+            Register Complaint
+          </a>
 
-            <a href="#">
-                <i class="fa-solid fa-location-dot"></i>
-                Complaint Status
-            </a>
+          <a href="#">
+            <i class="fa-solid fa-location-dot"></i>
+            Complaint Status
+          </a>
 
-            <a href="#">
-                <i class="fa-solid fa-headset"></i>
-                Customer Care
-            </a>
+          <a href="#">
+            <i class="fa-solid fa-headset"></i>
+            Customer Care
+          </a>
 
-            <a href="#">
-                <i class="fa-solid fa-scale-balanced"></i>
-                Consumer Grievance
-            </a>
+          <a href="#">
+            <i class="fa-solid fa-scale-balanced"></i>
+            Consumer Grievance
+          </a>
 
-            <a href="#">
-                <i class="fa-solid fa-triangle-exclamation"></i>
-                Power Outage
-            </a>
+          <a href="#">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            Power Outage
+          </a>
 
         </div>
-    </div>
+      </div>
 
 
-    <!-- ================= TARIFF ORDERS ================= -->
-    <div class="jbvnl-side-item">
+      <!-- ================= TARIFF ORDERS ================= -->
+      <div class="jbvnl-side-item">
 
         <button type="button" class="jbvnl-side-link jbvnl-sub-toggle">
-            <span class="side-icon">
-                <i class="fa-solid fa-indian-rupee-sign"></i>
-            </span>
-            <span class="side-text">Tariff Orders</span>
-            <i class="fa-solid fa-chevron-right side-arrow"></i>
+          <span class="side-icon">
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+          </span>
+          <span class="side-text">Tariff Orders</span>
+          <i class="fa-solid fa-chevron-right side-arrow"></i>
         </button>
 
         <div class="jbvnl-submenu">
 
-            <div class="jbvnl-sub-heading">
-                <i class="fa-solid fa-calculator"></i>
-                Tariff Services
-            </div>
+          <div class="jbvnl-sub-heading">
+            <i class="fa-solid fa-calculator"></i>
+            Tariff Services
+          </div>
 
-            <a href="{{ route('effective.tariff.calculator') }}">
-                <i class="fa-solid fa-calculator"></i>
-                Tariff Calculator
-            </a>
+          <a href="{{ route('effective.tariff.calculator') }}">
+            <i class="fa-solid fa-calculator"></i>
+            Tariff Calculator
+          </a>
 
-            <a href="/tariff">
-                <i class="fa-solid fa-file-invoice-dollar"></i>
-                Tariff Orders
-            </a>
+          <a href="/tariff">
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+            Tariff Orders
+          </a>
 
-            <a href="{{ route('effective.tariff.calculator') }}">
-                <i class="fa-solid fa-bolt"></i>
-                Effective Tariff
-            </a>
+          <a href="{{ route('effective.tariff.calculator') }}">
+            <i class="fa-solid fa-bolt"></i>
+            Effective Tariff
+          </a>
 
         </div>
-    </div>
+      </div>
 
 
-    <!-- ================= ACTS & REGULATIONS ================= -->
-    <div class="jbvnl-side-item">
+      <!-- ================= ACTS & REGULATIONS ================= -->
+      <div class="jbvnl-side-item">
 
         <button type="button" class="jbvnl-side-link jbvnl-sub-toggle">
-            <span class="side-icon">
-                <i class="fa-solid fa-gavel"></i>
-            </span>
-            <span class="side-text">Acts & Regulations</span>
-            <i class="fa-solid fa-chevron-right side-arrow"></i>
+          <span class="side-icon">
+            <i class="fa-solid fa-gavel"></i>
+          </span>
+          <span class="side-text">Acts & Regulations</span>
+          <i class="fa-solid fa-chevron-right side-arrow"></i>
         </button>
 
         <div class="jbvnl-submenu">
 
-            <div class="jbvnl-sub-heading">
-                <i class="fa-solid fa-scale-balanced"></i>
-                Legal Information
-            </div>
+          <div class="jbvnl-sub-heading">
+            <i class="fa-solid fa-scale-balanced"></i>
+            Legal Information
+          </div>
 
-            <a href="{{ route('acts.regulations') }}">
-                <i class="fa-solid fa-scale-balanced"></i>
-                Acts
-            </a>
+          <a href="{{ route('acts.regulations') }}">
+            <i class="fa-solid fa-scale-balanced"></i>
+            Acts
+          </a>
 
-            <a href="{{ route('acts.regulations') }}">
-                <i class="fa-solid fa-book"></i>
-                Regulations
-            </a>
+          <a href="{{ route('acts.regulations') }}">
+            <i class="fa-solid fa-book"></i>
+            Regulations
+          </a>
 
-            <a href="{{ route('acts.regulations') }}">
-                <i class="fa-solid fa-file-contract"></i>
-                Rules & Orders
-            </a>
+          <a href="{{ route('acts.regulations') }}">
+            <i class="fa-solid fa-file-contract"></i>
+            Rules & Orders
+          </a>
 
         </div>
-    </div>
+      </div>
 
 
-    <!-- ================= DOWNLOADS ================= -->
-    <div class="jbvnl-side-item">
+      <!-- ================= DOWNLOADS ================= -->
+      <div class="jbvnl-side-item">
 
         <button type="button" class="jbvnl-side-link jbvnl-sub-toggle">
-            <span class="side-icon">
-                <i class="fa-solid fa-download"></i>
-            </span>
-            <span class="side-text">Downloads</span>
-            <i class="fa-solid fa-chevron-right side-arrow"></i>
+          <span class="side-icon">
+            <i class="fa-solid fa-download"></i>
+          </span>
+          <span class="side-text">Downloads</span>
+          <i class="fa-solid fa-chevron-right side-arrow"></i>
         </button>
 
         <div class="jbvnl-submenu">
 
-            <!-- DOCUMENTS -->
-            <div class="jbvnl-sub-heading">
-                <i class="fa-solid fa-folder-open"></i>
-                Documents
-            </div>
+          <!-- DOCUMENTS -->
+          <div class="jbvnl-sub-heading">
+            <i class="fa-solid fa-folder-open"></i>
+            Documents
+          </div>
 
-            <a href="{{ asset('document') }}">
-                <i class="fa-solid fa-file-pdf"></i>
-                Forms
-            </a>
+          <a href="{{ asset('document') }}">
+            <i class="fa-solid fa-file-pdf"></i>
+            Forms
+          </a>
 
-            <a href="{{ asset('document') }}">
-                <i class="fa-solid fa-file-arrow-down"></i>
-                Reports
-            </a>
+          <a href="{{ asset('document') }}">
+            <i class="fa-solid fa-file-arrow-down"></i>
+            Reports
+          </a>
 
-            <a href="{{ asset('document') }}">
-                <i class="fa-solid fa-file-lines"></i>
-                Documents
-            </a>
+          <a href="{{ asset('document') }}">
+            <i class="fa-solid fa-file-lines"></i>
+            Documents
+          </a>
 
-            <a href="{{ asset('document') }}">
-                <i class="fa-solid fa-folder-open"></i>
-                All Downloads
-            </a>
+          <a href="{{ asset('document') }}">
+            <i class="fa-solid fa-folder-open"></i>
+            All Downloads
+          </a>
 
-            <a href="{{ asset('document') }}">
-                <i class="fa-solid fa-folder"></i>
-                View Documents
-            </a>
-
-
-            <!-- REPORTS & TRAINING -->
-            <div class="jbvnl-sub-heading">
-                <i class="fa-solid fa-chart-column"></i>
-                Reports & Training
-            </div>
-
-            <a href="#">
-                <i class="fa-solid fa-chart-column"></i>
-                Annual Reports
-            </a>
-
-            <a href="#">
-                <i class="fa-solid fa-graduation-cap"></i>
-                Training / Pathshala
-            </a>
+          <a href="{{ asset('document') }}">
+            <i class="fa-solid fa-folder"></i>
+            View Documents
+          </a>
 
 
-            <!-- NCS FORMS -->
-            <div class="jbvnl-sub-heading">
-                <i class="fa-solid fa-file-pdf"></i>
-                NCS Forms
-            </div>
+          <!-- REPORTS & TRAINING -->
+          <div class="jbvnl-sub-heading">
+            <i class="fa-solid fa-chart-column"></i>
+            Reports & Training
+          </div>
 
-            <a href="/upload/Form%20A%20-%20Power%20Supply%20Connection%20(Low%20Tension%20Domestic).pdf"
-               target="_blank">
-                <i class="fa-solid fa-file-pdf"></i>
-                Form A - NCS
-            </a>
+          <a href="#">
+            <i class="fa-solid fa-chart-column"></i>
+            Annual Reports
+          </a>
 
-            <a href="/upload/Form%20B%20-%20(LT%20Service%20(Non-Domestic)%20-%20HT%20Service%20-%20EHT%20Service).pdf"
-               target="_blank">
-                <i class="fa-solid fa-file-pdf"></i>
-                Form B - NCS
-            </a>
+          <a href="#">
+            <i class="fa-solid fa-graduation-cap"></i>
+            Training / Pathshala
+          </a>
 
-            <a href="#">
-                <i class="fa-solid fa-file-pdf"></i>
-                Bill Revision Request
-            </a>
 
-            <a href="#">
-                <i class="fa-solid fa-file-pdf"></i>
-                LPC Form
-            </a>
+          <!-- NCS FORMS -->
+          <div class="jbvnl-sub-heading">
+            <i class="fa-solid fa-file-pdf"></i>
+            NCS Forms
+          </div>
 
-            <a href="#">
-                <i class="fa-solid fa-file-pdf"></i>
-                ACR Form
-            </a>
+          <a href="/upload/Form%20A%20-%20Power%20Supply%20Connection%20(Low%20Tension%20Domestic).pdf" target="_blank">
+            <i class="fa-solid fa-file-pdf"></i>
+            Form A - NCS
+          </a>
 
-            <a href="#">
-                <i class="fa-solid fa-file-pdf"></i>
-                Leave Form
-            </a>
+          <a href="/upload/Form%20B%20-%20(LT%20Service%20(Non-Domestic)%20-%20HT%20Service%20-%20EHT%20Service).pdf"
+            target="_blank">
+            <i class="fa-solid fa-file-pdf"></i>
+            Form B - NCS
+          </a>
 
-            <a href="#">
-                <i class="fa-solid fa-file-pdf"></i>
-                Medical Reimbursement
-            </a>
+          <a href="#">
+            <i class="fa-solid fa-file-pdf"></i>
+            Bill Revision Request
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-file-pdf"></i>
+            LPC Form
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-file-pdf"></i>
+            ACR Form
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-file-pdf"></i>
+            Leave Form
+          </a>
+
+          <a href="#">
+            <i class="fa-solid fa-file-pdf"></i>
+            Medical Reimbursement
+          </a>
 
         </div>
-    </div>
+      </div>
 
 
-    <!-- ================= NOTICE & CIRCULAR ================= -->
-    <div class="jbvnl-side-item">
+      <!-- ================= NOTICE & CIRCULAR ================= -->
+      <div class="jbvnl-side-item">
 
         <button type="button" class="jbvnl-side-link jbvnl-sub-toggle">
-            <span class="side-icon">
-                <i class="fa-solid fa-bullhorn"></i>
-            </span>
-            <span class="side-text">Notice & Circular</span>
-            <i class="fa-solid fa-chevron-right side-arrow"></i>
+          <span class="side-icon">
+            <i class="fa-solid fa-bullhorn"></i>
+          </span>
+          <span class="side-text">Notice & Circular</span>
+          <i class="fa-solid fa-chevron-right side-arrow"></i>
         </button>
 
         <div class="jbvnl-submenu">
 
-            <div class="jbvnl-sub-heading">
-                <i class="fa-solid fa-newspaper"></i>
-                Notices
-            </div>
+          <div class="jbvnl-sub-heading">
+            <i class="fa-solid fa-newspaper"></i>
+            Notices
+          </div>
 
-            <a href="{{ route('commercialNotice') }}">
-                <i class="fa-solid fa-cart-shopping"></i>
-                Commercial
-            </a>
+          <a href="{{ route('commercialNotice') }}">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Commercial
+          </a>
 
-            <a href="{{ route('administrative') }}">
-                <i class="fa-solid fa-building-columns"></i>
-                Administrative
-            </a>
+          <a href="{{ route('administrative') }}">
+            <i class="fa-solid fa-building-columns"></i>
+            Administrative
+          </a>
 
-            <a href="{{ route('annual-accounts') }}">
-                <i class="fa-solid fa-file-invoice-dollar"></i>
-                Annual Accounts
-            </a>
+          <a href="{{ route('annual-accounts') }}">
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+            Annual Accounts
+          </a>
 
-            <a href="#">
-                <i class="fa-solid fa-newspaper"></i>
-                Notices
-            </a>
+          <a href="#">
+            <i class="fa-solid fa-newspaper"></i>
+            Notices
+          </a>
 
-            <a href="#">
-                <i class="fa-solid fa-file-lines"></i>
-                Circulars
-            </a>
+          <a href="#">
+            <i class="fa-solid fa-file-lines"></i>
+            Circulars
+          </a>
 
-            <a href="#notices">
-                <i class="fa-solid fa-calendar-days"></i>
-                Latest Updates
-            </a>
+          <a href="#notices">
+            <i class="fa-solid fa-calendar-days"></i>
+            Latest Updates
+          </a>
 
         </div>
-    </div>
+      </div>
 
 
-    <!-- ================= TENDERS ================= -->
-    <div class="jbvnl-side-item">
+      <!-- ================= TENDERS ================= -->
+      <div class="jbvnl-side-item">
 
         <button type="button" class="jbvnl-side-link jbvnl-sub-toggle">
-            <span class="side-icon">
-                <i class="fa-solid fa-folder-open"></i>
-            </span>
-            <span class="side-text">Tenders</span>
-            <i class="fa-solid fa-chevron-right side-arrow"></i>
+          <span class="side-icon">
+            <i class="fa-solid fa-folder-open"></i>
+          </span>
+          <span class="side-text">Tenders</span>
+          <i class="fa-solid fa-chevron-right side-arrow"></i>
         </button>
 
         <div class="jbvnl-submenu">
 
-            <div class="jbvnl-sub-heading">
-                <i class="fa-solid fa-file-contract"></i>
-                Tender Services
-            </div>
+          <div class="jbvnl-sub-heading">
+            <i class="fa-solid fa-file-contract"></i>
+            Tender Services
+          </div>
 
-            <a href="https://jharkhandtenders.gov.in/nicgep/app"
-               target="_blank">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                e-Tender Portal
-            </a>
+          <a href="https://jharkhandtenders.gov.in/nicgep/app" target="_blank">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            e-Tender Portal
+          </a>
 
-            <a href="{{ route('tender') }}">
-                <i class="fa-solid fa-file-lines"></i>
-                Tender Notification
-            </a>
+          <a href="{{ route('tender') }}">
+            <i class="fa-solid fa-file-lines"></i>
+            Tender Notification
+          </a>
 
-            <a href="#">
-                <i class="fa-solid fa-file-contract"></i>
-                Tender Notices
-            </a>
+          <a href="#">
+            <i class="fa-solid fa-file-contract"></i>
+            Tender Notices
+          </a>
 
-            <a href="#">
-                <i class="fa-solid fa-file-circle-check"></i>
-                Active Tenders
-            </a>
+          <a href="#">
+            <i class="fa-solid fa-file-circle-check"></i>
+            Active Tenders
+          </a>
 
-            <a href="#">
-                <i class="fa-solid fa-clock"></i>
-                Tender Archive
-            </a>
+          <a href="#">
+            <i class="fa-solid fa-clock"></i>
+            Tender Archive
+          </a>
 
         </div>
-    </div>
+      </div>
 
 
-    <!-- ================= CAREER ================= -->
-    <a href="{{ asset('/careers') }}" class="jbvnl-side-link">
+      <!-- ================= CAREER ================= -->
+      <a href="{{ asset('/careers') }}" class="jbvnl-side-link">
         <span class="side-icon">
-            <i class="fa-solid fa-briefcase"></i>
+          <i class="fa-solid fa-briefcase"></i>
         </span>
         <span class="side-text">Career</span>
-    </a>
+      </a>
 
 
-    <!-- ================= MEDIA & GALLERY ================= -->
-    <div class="jbvnl-side-item">
+      <!-- ================= MEDIA & GALLERY ================= -->
+      <div class="jbvnl-side-item">
 
         <button type="button" class="jbvnl-side-link jbvnl-sub-toggle">
-            <span class="side-icon">
-                <i class="fa-solid fa-images"></i>
-            </span>
-            <span class="side-text">Media & Gallery</span>
-            <i class="fa-solid fa-chevron-right side-arrow"></i>
+          <span class="side-icon">
+            <i class="fa-solid fa-images"></i>
+          </span>
+          <span class="side-text">Media & Gallery</span>
+          <i class="fa-solid fa-chevron-right side-arrow"></i>
         </button>
 
         <div class="jbvnl-submenu">
 
-            <div class="jbvnl-sub-heading">
-                <i class="fa-solid fa-photo-film"></i>
-                Media
-            </div>
+          <div class="jbvnl-sub-heading">
+            <i class="fa-solid fa-photo-film"></i>
+            Media
+          </div>
 
-            <a href="{{ url('/media-gallery') }}">
-                <i class="fa-solid fa-image"></i>
-                Photo Gallery
-            </a>
+          <a href="{{ url('/media-gallery') }}">
+            <i class="fa-solid fa-image"></i>
+            Photo Gallery
+          </a>
 
-            <a href="#">
-                <i class="fa-solid fa-video"></i>
-                Video Gallery
-            </a>
+          <a href="#">
+            <i class="fa-solid fa-video"></i>
+            Video Gallery
+          </a>
 
-            <a href="#">
-                <i class="fa-solid fa-newspaper"></i>
-                Media Coverage
-            </a>
+          <a href="#">
+            <i class="fa-solid fa-newspaper"></i>
+            Media Coverage
+          </a>
 
         </div>
-    </div>
+      </div>
 
 
-    <!-- ================= FAQs ================= -->
-    <a href="{{ route('faqs') }}" class="jbvnl-side-link">
+      <!-- ================= FAQs ================= -->
+      <a href="{{ route('faqs') }}" class="jbvnl-side-link">
         <span class="side-icon">
-            <i class="fa-solid fa-circle-question"></i>
+          <i class="fa-solid fa-circle-question"></i>
         </span>
         <span class="side-text">FAQs</span>
-    </a>
+      </a>
 
 
-    <!-- ================= USEFUL LINKS ================= -->
-    <div class="jbvnl-side-item">
+      <!-- ================= USEFUL LINKS ================= -->
+      <div class="jbvnl-side-item">
 
         <button type="button" class="jbvnl-side-link jbvnl-sub-toggle">
-            <span class="side-icon">
-                <i class="fa-solid fa-link"></i>
-            </span>
-            <span class="side-text">Useful Links</span>
-            <i class="fa-solid fa-chevron-right side-arrow"></i>
+          <span class="side-icon">
+            <i class="fa-solid fa-link"></i>
+          </span>
+          <span class="side-text">Useful Links</span>
+          <i class="fa-solid fa-chevron-right side-arrow"></i>
         </button>
 
         <div class="jbvnl-submenu">
 
-            <div class="jbvnl-sub-heading">
-                <i class="fa-solid fa-globe"></i>
-                External Links
-            </div>
+          <div class="jbvnl-sub-heading">
+            <i class="fa-solid fa-globe"></i>
+            External Links
+          </div>
 
-            <a href="#">
-                <i class="fa-solid fa-globe"></i>
-                Important Websites
-            </a>
+          <a href="#">
+            <i class="fa-solid fa-globe"></i>
+            Important Websites
+          </a>
 
-            <a href="#">
-                <i class="fa-solid fa-building"></i>
-                Government Portals
-            </a>
+          <a href="#">
+            <i class="fa-solid fa-building"></i>
+            Government Portals
+          </a>
 
-            <a href="#">
-                <i class="fa-solid fa-link"></i>
-                Quick Links
-            </a>
+          <a href="#">
+            <i class="fa-solid fa-link"></i>
+            Quick Links
+          </a>
 
         </div>
-    </div>
+      </div>
 
 
-    <!-- ================= CONTACT ================= -->
-    <a href="#" class="jbvnl-side-link">
+      <!-- ================= CONTACT ================= -->
+      <a href="#" class="jbvnl-side-link">
         <span class="side-icon">
-            <i class="fa-solid fa-phone"></i>
+          <i class="fa-solid fa-phone"></i>
         </span>
         <span class="side-text">Contact Us</span>
-    </a>
+      </a>
 
-</nav>
+    </nav>
 
 
-<!-- =========================================================
+    <!-- =========================================================
     JS - SAME LOGIC
 ========================================================= -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
 
-    const toggles =
-        document.querySelectorAll(".jbvnl-sub-toggle");
+        const toggles =
+          document.querySelectorAll(".jbvnl-sub-toggle");
 
-    toggles.forEach(function (toggle) {
+        toggles.forEach(function (toggle) {
 
-        toggle.addEventListener("click", function (e) {
+          toggle.addEventListener("click", function (e) {
 
             e.preventDefault();
             e.stopPropagation();
 
             const parent =
-                this.closest(".jbvnl-side-item");
+              this.closest(".jbvnl-side-item");
 
             if (!parent) return;
 
             const submenu =
-                parent.querySelector(":scope > .jbvnl-submenu");
+              parent.querySelector(":scope > .jbvnl-submenu");
 
             if (!submenu) return;
 
             const isOpen =
-                submenu.classList.contains("show");
+              submenu.classList.contains("show");
 
             /* Close all other menus */
             document
-                .querySelectorAll(".jbvnl-submenu.show")
-                .forEach(function (menu) {
+              .querySelectorAll(".jbvnl-submenu.show")
+              .forEach(function (menu) {
 
-                    if (menu !== submenu) {
+                if (menu !== submenu) {
 
-                        menu.classList.remove("show");
+                  menu.classList.remove("show");
 
-                        const otherToggle =
-                            menu.parentElement.querySelector(
-                                ":scope > .jbvnl-sub-toggle"
-                            );
+                  const otherToggle =
+                    menu.parentElement.querySelector(
+                      ":scope > .jbvnl-sub-toggle"
+                    );
 
-                        if (otherToggle) {
-                            otherToggle.classList.remove("active");
-                        }
-                    }
-                });
+                  if (otherToggle) {
+                    otherToggle.classList.remove("active");
+                  }
+                }
+              });
 
             /* Toggle current menu */
             if (isOpen) {
 
-                submenu.classList.remove("show");
-                this.classList.remove("active");
+              submenu.classList.remove("show");
+              this.classList.remove("active");
 
             } else {
 
-                submenu.classList.add("show");
-                this.classList.add("active");
+              submenu.classList.add("show");
+              this.classList.add("active");
 
             }
 
+          });
+
         });
 
-    });
-
-});
-</script>
+      });
+    </script>
 
 
     <!-- Sidebar Footer -->
@@ -16219,7 +16214,7 @@ OjE4KzAwOjAwishxnAAAACh0RVh0ZGF0ZTp0aW1lc3RhbXAAMjAyNi0wOC0wM1QwNzoxNToxOCsw
         });
       </script>
 
-   
+
 
 
 
@@ -16405,7 +16400,7 @@ OjE4KzAwOjAwishxnAAAACh0RVh0ZGF0ZTp0aW1lc3RhbXAAMjAyNi0wOC0wM1QwNzoxNToxOCsw
 
 
 
-       <!-- ==============quick-panel================== -->
+      <!-- ==============quick-panel================== -->
 
       <section class="quick-panel">
         <div class="container">
@@ -19524,902 +19519,872 @@ OjE4KzAwOjAwishxnAAAACh0RVh0ZGF0ZTp0aW1lc3RhbXAAMjAyNi0wOC0wM1QwNzoxNToxOCsw
 
 
 
-          <!-- =========================================================
+      <!-- =========================================================
      JBVNL PHOTO GALLERY
 ========================================================= -->
 
-<section class="jbvnl-photo-showcase" id="jbvnlPhotoShowcase">
+      <section class="jbvnl-photo-showcase" id="jbvnlPhotoShowcase">
 
-    <div class="jbv-showcase-bg"></div>
-    <div class="jbv-showcase-shade"></div>
-   
+        <div class="jbv-showcase-bg"></div>
+        <div class="jbv-showcase-shade"></div>
 
-    <div class="jbv-showcase-container">
 
-        <!-- {{-- LEFT CONTENT --}} -->
-        <div class="jbv-showcase-content">
+        <div class="jbv-showcase-container">
+
+          <!-- {{-- LEFT CONTENT --}} -->
+          <div class="jbv-showcase-content">
 
             <div class="jbv-showcase-badge">
-                <i class="fa-regular fa-images"></i>
-                <span>JBVNL MEDIA</span>
+              <i class="fa-regular fa-images"></i>
+              <span>JBVNL MEDIA</span>
             </div>
 
             <div class="jbv-title-wrap">
 
-                <h1 class="jbv-showcase-title">
-                    JBVNL
-                    <span>Photo Gallery</span>
-                </h1>
+              <h1 class="jbv-showcase-title">
+                JBVNL
+                <span>Photo Gallery</span>
+              </h1>
             </div>
 
             <div class="jbv-showcase-line"></div>
 
             <h2 class="jbv-showcase-subtitle">
-                Powering Jharkhand, Serving Every Connection
+              Powering Jharkhand, Serving Every Connection
             </h2>
 
             <p class="jbv-showcase-text">
-                A glimpse into JBVNL's journey of strengthening electricity
-                distribution across Jharkhand through modern infrastructure,
-                technology-driven services and consumer-focused initiatives.
+              A glimpse into JBVNL's journey of strengthening electricity
+              distribution across Jharkhand through modern infrastructure,
+              technology-driven services and consumer-focused initiatives.
             </p>
 
             <p class="jbv-showcase-text">
-                Explore moments from JBVNL's power distribution network,
-                field operations, infrastructure development and initiatives
-                supporting reliable electricity services across its seven
-                Electric Supply Areas — Ranchi, Dhanbad, Jamshedpur,
-                Hazaribagh, Giridih, Dumka and Medininagar.
+              Explore moments from JBVNL's power distribution network,
+              field operations, infrastructure development and initiatives
+              supporting reliable electricity services across its seven
+              Electric Supply Areas — Ranchi, Dhanbad, Jamshedpur,
+              Hazaribagh, Giridih, Dumka and Medininagar.
             </p>
 
-            <a href="https://www.jbvnl.co.in/media-gallery"
-               class="jbv-showcase-button"
-               target="_blank"
-               rel="noopener noreferrer">
-                <span>VIEW ALL GALLERY</span>
-                <span class="jbv-button-icon">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </span>
+            <a href="https://www.jbvnl.co.in/media-gallery" class="jbv-showcase-button" target="_blank"
+              rel="noopener noreferrer">
+              <span>VIEW ALL GALLERY</span>
+              <span class="jbv-button-icon">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
             </a>
 
-        </div>
+          </div>
 
 
-        <!-- {{-- RIGHT OWL CAROUSEL --}} -->
-        <div class="jbv-showcase-visual">
+          <!-- {{-- RIGHT OWL CAROUSEL --}} -->
+          <div class="jbv-showcase-visual">
 
             <div class="jbv-owl-frame">
 
-                <div class="owl-carousel owl-theme jbv-photo-owl">
+              <div class="owl-carousel owl-theme jbv-photo-owl">
 
-                    <!-- {{-- SLIDE 1 --}} -->
-                    <div class="jbv-collage-slide">
-                        <div class="jbv-collage-grid">
+                <!-- {{-- SLIDE 1 --}} -->
+                <div class="jbv-collage-slide">
+                  <div class="jbv-collage-grid">
 
-                            <div class="jbv-collage-photo photo-large">
-                                <img src="assets/images/ntps1.jpg"
-                                     alt="JBVNL conference and audience"
-                                     loading="eager">
-                                <div class="jbv-photo-overlay">
-                                    <span><i class="fa-regular fa-images"></i> JBVNL Media</span>
-                                </div>
-                            </div>
-
-                            <div class="jbv-collage-photo photo-small-top">
-                                <img src="assets/images/ntps13.jpg"
-                                     alt="JBVNL official event" loading="lazy">
-                            </div>
-
-                            <div class="jbv-collage-photo photo-small-mid">
-                                <img src="assets/images/ntps14.jpg"
-                                     alt="JBVNL meeting" loading="lazy">
-                            </div>
-
-                            <div class="jbv-collage-photo photo-wide-left">
-                                <img src="assets/images/ntps2.jpg"
-                                     alt="JBVNL officials at a meeting" loading="lazy">
-                            </div>
-
-                            <div class="jbv-collage-photo photo-wide-right">
-                                <img src="assets/images/ntps15.jpg"
-                                     alt="JBVNL conference proceedings" loading="lazy">
-                            </div>
-
-                            <div class="jbv-collage-photo photo-bottom-left">
-                                <img src="assets/images/ntps16.jpg"
-                                     alt="JBVNL conference participants" loading="lazy">
-                            </div>
-
-                            <div class="jbv-collage-photo photo-bottom-mid">
-                                <img src="assets/images/ntps17.jpg"
-                                     alt="JBVNL event gathering" loading="lazy">
-                            </div>
-
-                            <div class="jbv-collage-photo photo-bottom-right">
-                                <img src="assets/images/ntps18.jpg"
-                                     alt="JBVNL institutional event" loading="lazy">
-                            </div>
-
-                        </div>
+                    <div class="jbv-collage-photo photo-large">
+                      <img src="assets/images/ntps1.jpg" alt="JBVNL conference and audience" loading="eager">
+                      <div class="jbv-photo-overlay">
+                        <span><i class="fa-regular fa-images"></i> JBVNL Media</span>
+                      </div>
                     </div>
 
-
-                    <!-- {{-- SLIDE 2 --}} -->
-                    <div class="jbv-collage-slide">
-                        <div class="jbv-collage-grid">
-
-                            <div class="jbv-collage-photo photo-large">
-                                <img src="assets/images/ntps17.jpg"
-                                     alt="JBVNL public event" loading="lazy">
-                                <div class="jbv-photo-overlay">
-                                    <span><i class="fa-regular fa-images"></i> Our Milestones</span>
-                                </div>
-                            </div>
-
-                            <div class="jbv-collage-photo photo-small-top">
-                                <img src="assets/images/ntps18.jpg"
-                                     alt="JBVNL event presentation" loading="lazy">
-                            </div>
-
-                            <div class="jbv-collage-photo photo-small-mid">
-                                <img src="assets/images/ntps13.jpg"
-                                     alt="JBVNL conference session" loading="lazy">
-                            </div>
-
-                            <div class="jbv-collage-photo photo-wide-left">
-                                <img src="assets/images/ntps14.jpg"
-                                     alt="JBVNL officials" loading="lazy">
-                            </div>
-
-                            <div class="jbv-collage-photo photo-wide-right">
-                                <img src="assets/images/ntps16.jpg"
-                                     alt="JBVNL meeting proceedings" loading="lazy">
-                            </div>
-
-                            <div class="jbv-collage-photo photo-bottom-left">
-                                <img src="assets/images/ntps2.jpg"
-                                     alt="JBVNL meeting participants" loading="lazy">
-                            </div>
-
-                            <div class="jbv-collage-photo photo-bottom-mid">
-                                <img src="assets/images/ntps15.jpg"
-                                     alt="JBVNL conference" loading="lazy">
-                            </div>
-
-                            <div class="jbv-collage-photo photo-bottom-right">
-                                <img src="assets/images/ntps1.jpg"
-                                     alt="JBVNL event" loading="lazy">
-                            </div>
-
-                        </div>
+                    <div class="jbv-collage-photo photo-small-top">
+                      <img src="assets/images/ntps13.jpg" alt="JBVNL official event" loading="lazy">
                     </div>
 
-
-                    <!-- {{-- SLIDE 3 --}} -->
-                    <div class="jbv-collage-slide">
-                        <div class="jbv-collage-grid">
-
-                            <div class="jbv-collage-photo photo-large">
-                                <img src="assets/images/ntps14.jpg"
-                                     alt="JBVNL infrastructure event" loading="lazy">
-                                <div class="jbv-photo-overlay">
-                                    <span><i class="fa-regular fa-images"></i> Our Journey</span>
-                                </div>
-                            </div>
-
-                            <div class="jbv-collage-photo photo-small-top">
-                                <img src="assets/images/ntps15.jpg"
-                                     alt="JBVNL official gathering" loading="lazy">
-                            </div>
-
-                            <div class="jbv-collage-photo photo-small-mid">
-                                <img src="assets/images/ntps17.jpg"
-                                     alt="JBVNL meeting room" loading="lazy">
-                            </div>
-
-                            <div class="jbv-collage-photo photo-wide-left">
-                                <img src="assets/images/ntps18.jpg"
-                                     alt="JBVNL conference" loading="lazy">
-                            </div>
-
-                            <div class="jbv-collage-photo photo-wide-right">
-                                <img src="assets/images/ntps13.jpg"
-                                     alt="JBVNL official programme" loading="lazy">
-                            </div>
-
-                            <div class="jbv-collage-photo photo-bottom-left">
-                                <img src="assets/images/ntps16.jpg"
-                                     alt="JBVNL officials in discussion" loading="lazy">
-                            </div>
-
-                            <div class="jbv-collage-photo photo-bottom-mid">
-                                <img src="assets/images/ntps1.jpg"
-                                     alt="JBVNL audience" loading="lazy">
-                            </div>
-
-                            <div class="jbv-collage-photo photo-bottom-right">
-                                <img src="assets/images/ntps2.jpg"
-                                     alt="JBVNL event participants" loading="lazy">
-                            </div>
-
-                        </div>
+                    <div class="jbv-collage-photo photo-small-mid">
+                      <img src="assets/images/ntps14.jpg" alt="JBVNL meeting" loading="lazy">
                     </div>
 
+                    <div class="jbv-collage-photo photo-wide-left">
+                      <img src="assets/images/ntps2.jpg" alt="JBVNL officials at a meeting" loading="lazy">
+                    </div>
+
+                    <div class="jbv-collage-photo photo-wide-right">
+                      <img src="assets/images/ntps15.jpg" alt="JBVNL conference proceedings" loading="lazy">
+                    </div>
+
+                    <div class="jbv-collage-photo photo-bottom-left">
+                      <img src="assets/images/ntps16.jpg" alt="JBVNL conference participants" loading="lazy">
+                    </div>
+
+                    <div class="jbv-collage-photo photo-bottom-mid">
+                      <img src="assets/images/ntps17.jpg" alt="JBVNL event gathering" loading="lazy">
+                    </div>
+
+                    <div class="jbv-collage-photo photo-bottom-right">
+                      <img src="assets/images/ntps18.jpg" alt="JBVNL institutional event" loading="lazy">
+                    </div>
+
+                  </div>
                 </div>
 
-                <!-- {{-- CUSTOM OWL CONTROLS --}} -->
-                <div class="jbv-owl-controls">
-                    <button type="button" class="jbv-owl-prev"
-                            aria-label="Previous gallery slide">
-                        <i class="fa-solid fa-arrow-left"></i>
-                    </button>
 
-                    <div class="jbv-owl-dots"></div>
+                <!-- {{-- SLIDE 2 --}} -->
+                <div class="jbv-collage-slide">
+                  <div class="jbv-collage-grid">
 
-                    <button type="button" class="jbv-owl-next"
-                            aria-label="Next gallery slide">
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </button>
+                    <div class="jbv-collage-photo photo-large">
+                      <img src="assets/images/ntps17.jpg" alt="JBVNL public event" loading="lazy">
+                      <div class="jbv-photo-overlay">
+                        <span><i class="fa-regular fa-images"></i> Our Milestones</span>
+                      </div>
+                    </div>
+
+                    <div class="jbv-collage-photo photo-small-top">
+                      <img src="assets/images/ntps18.jpg" alt="JBVNL event presentation" loading="lazy">
+                    </div>
+
+                    <div class="jbv-collage-photo photo-small-mid">
+                      <img src="assets/images/ntps13.jpg" alt="JBVNL conference session" loading="lazy">
+                    </div>
+
+                    <div class="jbv-collage-photo photo-wide-left">
+                      <img src="assets/images/ntps14.jpg" alt="JBVNL officials" loading="lazy">
+                    </div>
+
+                    <div class="jbv-collage-photo photo-wide-right">
+                      <img src="assets/images/ntps16.jpg" alt="JBVNL meeting proceedings" loading="lazy">
+                    </div>
+
+                    <div class="jbv-collage-photo photo-bottom-left">
+                      <img src="assets/images/ntps2.jpg" alt="JBVNL meeting participants" loading="lazy">
+                    </div>
+
+                    <div class="jbv-collage-photo photo-bottom-mid">
+                      <img src="assets/images/ntps15.jpg" alt="JBVNL conference" loading="lazy">
+                    </div>
+
+                    <div class="jbv-collage-photo photo-bottom-right">
+                      <img src="assets/images/ntps1.jpg" alt="JBVNL event" loading="lazy">
+                    </div>
+
+                  </div>
                 </div>
+
+
+                <!-- {{-- SLIDE 3 --}} -->
+                <div class="jbv-collage-slide">
+                  <div class="jbv-collage-grid">
+
+                    <div class="jbv-collage-photo photo-large">
+                      <img src="assets/images/ntps14.jpg" alt="JBVNL infrastructure event" loading="lazy">
+                      <div class="jbv-photo-overlay">
+                        <span><i class="fa-regular fa-images"></i> Our Journey</span>
+                      </div>
+                    </div>
+
+                    <div class="jbv-collage-photo photo-small-top">
+                      <img src="assets/images/ntps15.jpg" alt="JBVNL official gathering" loading="lazy">
+                    </div>
+
+                    <div class="jbv-collage-photo photo-small-mid">
+                      <img src="assets/images/ntps17.jpg" alt="JBVNL meeting room" loading="lazy">
+                    </div>
+
+                    <div class="jbv-collage-photo photo-wide-left">
+                      <img src="assets/images/ntps18.jpg" alt="JBVNL conference" loading="lazy">
+                    </div>
+
+                    <div class="jbv-collage-photo photo-wide-right">
+                      <img src="assets/images/ntps13.jpg" alt="JBVNL official programme" loading="lazy">
+                    </div>
+
+                    <div class="jbv-collage-photo photo-bottom-left">
+                      <img src="assets/images/ntps16.jpg" alt="JBVNL officials in discussion" loading="lazy">
+                    </div>
+
+                    <div class="jbv-collage-photo photo-bottom-mid">
+                      <img src="assets/images/ntps1.jpg" alt="JBVNL audience" loading="lazy">
+                    </div>
+
+                    <div class="jbv-collage-photo photo-bottom-right">
+                      <img src="assets/images/ntps2.jpg" alt="JBVNL event participants" loading="lazy">
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- {{-- CUSTOM OWL CONTROLS --}} -->
+              <div class="jbv-owl-controls">
+                <button type="button" class="jbv-owl-prev" aria-label="Previous gallery slide">
+                  <i class="fa-solid fa-arrow-left"></i>
+                </button>
+
+                <div class="jbv-owl-dots"></div>
+
+                <button type="button" class="jbv-owl-next" aria-label="Next gallery slide">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
 
             </div>
+          </div>
+
         </div>
 
-    </div>
+        <div class="jbv-showcase-wave wave-a"></div>
+        <div class="jbv-showcase-wave wave-b"></div>
 
-    <div class="jbv-showcase-wave wave-a"></div>
-    <div class="jbv-showcase-wave wave-b"></div>
-
-</section>
+      </section>
 
 
-<!-- {{-- =====================================================
+      <!-- {{-- =====================================================
     Photo Gallery Css
 ===================================================== --}} -->
 
-<style>
-
-.jbvnl-photo-showcase {
-    --navy: #07165f;
-    --deep: #092c82;
-    --blue: #0769ed;
-    --sky: #26a4ff;
-    --pale: #e8f5ff;
-    --text: #2b4b77;
-    position: relative;
-    isolation: isolate;
-    width: 100%;
-    padding: 25px 0 32px;
-    overflow: hidden;
-    background: linear-gradient(125deg,#fff 0%,#f4faff 48%,#e3f3ff 100%);
-    font-family: "Poppins","Inter",Arial,sans-serif;
-    color: var(--text);
-}
-
-.jbvnl-photo-showcase *,
-.jbvnl-photo-showcase *::before,
-.jbvnl-photo-showcase *::after {
-    box-sizing: border-box;
-}
-
-/* Background image */
-.jbv-showcase-bg {
-    position: absolute;
-    z-index: -3;
-    inset: 0;
-    background-image: url("/assets/images/gallery-bg.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-    opacity: .22;
-    pointer-events: none;
-}
-
-
-/* Main layout */
-.jbv-showcase-container {
-    width: min(94%,1280px);
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: minmax(0,.85fr) minmax(0,1.15fr);
-    align-items: center;
-    gap: 22px;
-}
-
-/* Left content */
-.jbv-showcase-content {
-    position: relative;
-    z-index: 2;
-    min-width: 0;
-}
-
-.jbv-showcase-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    padding: 6px 12px;
-    margin-bottom: 12px;
-    border: 1px solid #c5e4ff;
-    border-radius: 30px;
-    background: rgba(235,247,255,.88);
-    color: #0768e8;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.jbv-showcase-badge i {
-    font-size: 14px;
-}
-
-.jbv-title-wrap {
-    position: relative;
-}
-
-.jbv-title-watermark {
-    position: absolute;
-    top: -5px;
-    right: 0;
-    z-index: -1;
-    color: rgba(31,138,233,.06);
-    font-size: clamp(38px,4vw,65px);
-    font-weight: 800;
-    letter-spacing: -2px;
-    pointer-events: none;
-}
-
-.jbv-showcase-title {
-    margin: 0;
-    color: var(--navy);
-    font-size: clamp(30px,2.5vw,48px);
-    font-weight: 800;
-    line-height: 1.08;
-    letter-spacing: -1.2px;
-    overflow-wrap: break-word;
-}
-
-.jbv-showcase-title span {
-    display: block;
-    padding-bottom: 3px;
-    background: linear-gradient(100deg,#0750dc,#0783f4 58%,#25aaf4);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.jbv-showcase-line {
-    width: 75px;
-    height: 4px;
-    margin: 11px 0 13px;
-    border-radius: 10px;
-    background: linear-gradient(90deg,#071d80,#0878f5);
-}
-
-.jbv-showcase-subtitle {
-    margin: 0 0 10px;
-    color: #071d64;
-    font-size: clamp(14px,1.2vw,18px);
-    font-weight: 650;
-    line-height: 1.4;
-}
-
-.jbv-showcase-text {
-    max-width: 500px;
-    margin: 0 0 10px;
-    color: #536c8d;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1.65;
-}
-
-/* Button */
-.jbv-showcase-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    min-height: 46px;
-    margin-top: 5px;
-    padding: 6px 7px 6px 16px;
-    border: 1px solid rgba(255,255,255,.7);
-    border-radius: 11px;
-    background: linear-gradient(115deg,#081b85,#0754d7 57%,#0789fa);
-    color: #fff !important;
-    text-decoration: none !important;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: .3px;
-    box-shadow: 0 5px 14px rgba(7,87,202,.14);
-    transition: background .2s ease,box-shadow .2s ease;
-}
-
-.jbv-showcase-button:hover {
-    color: #fff !important;
-    background: linear-gradient(115deg,#09206d,#0878ed);
-    box-shadow: 0 7px 16px rgba(7,87,202,.2);
-}
-
-.jbv-button-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    border: 1px solid rgba(255,255,255,.2);
-    border-radius: 50%;
-    background: rgba(255,255,255,.14);
-    font-size: 13px;
-}
-
-/* Right side */
-.jbv-showcase-visual,
-.jbv-owl-frame,
-.jbv-photo-owl {
-    position: relative;
-    width: 100%;
-    min-width: 0;
-}
-
-/* Collage */
-.jbv-collage-grid {
-    display: grid;
-    width: 100%;
-    height: 390px;
-    grid-template-columns: 1.05fr 1.05fr .82fr;
-    grid-template-rows: 118px 118px 90px;
-    gap: 8px;
-}
-
-.jbv-collage-photo {
-    position: relative;
-    min-width: 0;
-    min-height: 0;
-    overflow: hidden;
-    border: 3px solid rgba(255,255,255,.97);
-    border-radius: 12px;
-    background: #dceeff;
-    box-shadow: 0 4px 12px rgba(8,72,145,.10),0 0 0 1px rgba(115,191,255,.3);
-}
-
-.jbv-collage-photo img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    transition: transform .25s ease;
-}
-
-.jbv-collage-photo:hover img {
-    transform: scale(1.02);
-}
-
-/* Desktop collage arrangement */
-.jbv-collage-photo.photo-large {
-    grid-column: 1/3;
-    grid-row: 1/3;
-}
-
-.jbv-collage-photo.photo-small-top {
-    grid-column: 3;
-    grid-row: 1;
-}
-
-.jbv-collage-photo.photo-small-mid {
-    grid-column: 3;
-    grid-row: 2;
-}
-
-.jbv-collage-photo.photo-wide-left {
-    grid-column: 1/2;
-    grid-row: 3;
-}
-
-.jbv-collage-photo.photo-wide-left {
-    grid-column: 1 / 2 !important;
-    grid-row: 3 !important;
-}
-
-.jbv-collage-photo.photo-wide-right {
-    grid-column: 2 / 3 !important;
-    grid-row: 3 !important;
-}
-
-/* Third bottom image */
-.jbv-collage-photo.photo-bottom-right {
-    display: block !important;
-    grid-column: 3 / 4 !important;
-    grid-row: 3 !important;
-}
-
-
-.jbv-collage-photo.photo-bottom-left,
-.jbv-collage-photo.photo-bottom-mid,
-.jbv-collage-photo.photo-bottom-right {
-    display: none;
-}
-
-/* Image overlay */
-.jbv-photo-overlay {
-    position: absolute;
-    left: 8px;
-    bottom: 8px;
-    padding: 6px 9px;
-    border: 1px solid rgba(255,255,255,.4);
-    border-radius: 7px;
-    background: rgba(5,27,75,.78);
-    color: #fff;
-    font-size: 9px;
-    font-weight: 650;
-    backdrop-filter: blur(6px);
-}
-
-.jbv-photo-overlay i {
-    margin-right: 5px;
-    color: #a6deff;
-}
-
-/* Carousel controls */
-.jbv-owl-controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 11px;
-}
-
-.jbv-owl-prev,
-.jbv-owl-next {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    padding: 0;
-    border: 1px solid #c5e4ff;
-    border-radius: 50%;
-    background: #fff;
-    color: #0768e8;
-    cursor: pointer;
-    box-shadow: 0 3px 9px rgba(7,55,120,.07);
-    transition: background .2s ease,color .2s ease;
-}
-
-.jbv-owl-prev:hover,
-.jbv-owl-next:hover {
-    background: #0768e8;
-    color: #fff;
-}
-
-.jbv-owl-dots {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.jbv-owl-dots .owl-dot {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    cursor: pointer;
-}
-
-.jbv-owl-dots .owl-dot span {
-    display: block;
-    width: 6px;
-    height: 6px;
-    margin: 0;
-    border-radius: 10px;
-    background: #b9d8f4;
-    transition: width .2s ease,background .2s ease;
-}
-
-.jbv-owl-dots .owl-dot.active span {
-    width: 18px;
-    background: linear-gradient(90deg,#071d80,#0789f5);
-}
-
-/* Decorative waves */
-.jbv-showcase-wave {
-    position: absolute;
-    z-index: -1;
-    left: -4%;
-    width: 108%;
-    height: 25px;
-    border-radius: 50%;
-    pointer-events: none;
-}
-
-.jbv-showcase-wave.wave-a {
-    bottom: -15px;
-    background: linear-gradient(90deg,#0878ee,#73ccff,#e1f4ff);
-    transform: rotate(-2deg);
-}
-
-.jbv-showcase-wave.wave-b {
-    bottom: -22px;
-    background: #d2ecff;
-    transform: rotate(1.3deg);
-}
-
-/* Laptop */
-@media (max-width: 1250px) {
-    .jbv-showcase-container {
-        width: 95%;
-        gap: 16px;
-    }
-
-    .jbv-showcase-title {
-        font-size: clamp(28px,3.2vw,40px);
-    }
-
-    .jbv-showcase-text {
-        font-size: 11.5px;
-        line-height: 1.6;
-    }
-
-    .jbv-collage-grid {
-        height: 350px;
-        grid-template-rows: 105px 105px 80px;
-        gap: 7px;
-    }
-}
-
-/* Tablet */
-@media (max-width: 991px) {
-    .jbvnl-photo-showcase {
-        padding: 25px 0 30px;
-    }
-
-    .jbv-showcase-container {
-        width: min(92%,760px);
-        grid-template-columns: 1fr;
-        gap: 22px;
-    }
-
-    .jbv-showcase-content {
-        text-align: center;
-    }
-
-    .jbv-showcase-title {
-        font-size: clamp(32px,5.5vw,45px);
-    }
-
-    .jbv-title-watermark {
-        right: 5%;
-        font-size: clamp(40px,7vw,65px);
-    }
-
-    .jbv-showcase-line {
-        margin: 10px auto 13px;
-    }
-
-    .jbv-showcase-text {
-        max-width: 650px;
-        margin-right: auto;
-        margin-left: auto;
-        font-size: 12px;
-    }
-
-    .jbv-showcase-subtitle {
-        font-size: 16px;
-    }
-
-    .jbv-collage-grid {
-        height: 350px;
-        grid-template-rows: 105px 105px 80px;
-        gap: 7px;
-    }
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-    .jbvnl-photo-showcase {
-        padding: 20px 0 27px;
-    }
-
-    .jbv-showcase-container {
-        width: 92%;
-        gap: 18px;
-    }
-
-    .jbv-showcase-badge {
-        gap: 6px;
-        padding: 5px 10px;
-        margin-bottom: 9px;
-        font-size: 9px;
-    }
-
-    .jbv-showcase-badge i {
-        font-size: 12px;
-    }
-
-    .jbv-showcase-title {
-        font-size: clamp(27px,7.5vw,36px);
-        line-height: 1.08;
-        letter-spacing: -.7px;
-    }
-
-    .jbv-title-watermark {
-        top: -3px;
-        right: 0;
-        font-size: 36px;
-        letter-spacing: -1px;
-    }
-
-    .jbv-showcase-line {
-        width: 55px;
-        height: 3px;
-        margin: 9px auto 11px;
-    }
-
-    .jbv-showcase-subtitle {
-        margin-bottom: 8px;
-        font-size: 13px;
-        line-height: 1.45;
-    }
-
-    .jbv-showcase-text {
-        margin-bottom: 8px;
-        font-size: 11px;
-        line-height: 1.6;
-    }
-
-    .jbv-showcase-button {
-        min-height: 39px;
-        gap: 9px;
-        padding: 5px 6px 5px 12px;
-        border-radius: 9px;
-        font-size: 10px;
-    }
-
-    .jbv-button-icon {
-        width: 27px;
-        height: 27px;
-        font-size: 11px;
-    }
-
-    .jbv-collage-grid {
-        height: 275px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 125px 65px 65px;
-        gap: 6px;
-    }
-
-    .jbv-collage-photo.photo-large {
-        grid-column: 1/3;
-        grid-row: 1;
-    }
-
-    .jbv-collage-photo.photo-small-top {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    .jbv-collage-photo.photo-small-mid {
-        grid-column: 2;
-        grid-row: 2;
-    }
-
-    .jbv-collage-photo.photo-wide-left {
-        grid-column: 1;
-        grid-row: 3;
-    }
-
-    .jbv-collage-photo.photo-wide-right {
-        grid-column: 2;
-        grid-row: 3;
-    }
-
-    .jbv-collage-photo {
-        border-width: 2px;
-        border-radius: 8px;
-    }
-
-    .jbv-photo-overlay {
-        left: 6px;
-        bottom: 6px;
-        padding: 5px 7px;
-        font-size: 8px;
-    }
-
-    .jbv-owl-controls {
-        gap: 8px;
-        margin-top: 9px;
-    }
-
-    .jbv-owl-prev,
-    .jbv-owl-next {
-        width: 27px;
-        height: 27px;
-    }
-
-    .jbv-showcase-dots {
-        width: 70px;
-        height: 70px;
-        background-size: 12px 12px;
-    }
-
-    .jbv-showcase-wave {
-        height: 20px;
-    }
-
-    .jbv-showcase-wave.wave-a {
-        bottom: -12px;
-    }
-
-    .jbv-showcase-wave.wave-b {
-        bottom: -18px;
-    }
-}
-
-/* Extra small mobile */
-@media (max-width: 380px) {
-    .jbv-showcase-container {
-        width: 94%;
-        gap: 15px;
-    }
-
-    .jbv-showcase-title {
-        font-size: 26px;
-    }
-
-    .jbv-showcase-subtitle {
-        font-size: 12px;
-    }
-
-    .jbv-showcase-text {
-        font-size: 10.5px;
-    }
-
-    .jbv-collage-grid {
-        height: 245px;
-        grid-template-rows: 110px 58px 58px;
-        gap: 5px;
-    }
-}
-
-
-/* Mobile */
-@media (max-width: 600px) {
-    .jbv-collage-photo.photo-wide-left {
-        grid-column: 1 / 2 !important;
-        grid-row: 3 !important;
-    }
-
-    .jbv-collage-photo.photo-wide-right {
-        grid-column: 2 / 3 !important;
-        grid-row: 3 !important;
-    }
-
-    .jbv-collage-photo.photo-bottom-right {
-        grid-column: 1 / 3 !important;
-        grid-row: 4 !important;
-    }
-}
-
-/* Accessibility */
-@media (prefers-reduced-motion: reduce) {
-    .jbvnl-photo-showcase *,
-    .jbvnl-photo-showcase *::before,
-    .jbvnl-photo-showcase *::after {
-        transition: none !important;
-        animation: none !important;
-    }
-}
-
-</style>
-
-
-
-
-
-
-
-<!-- ============ NEED HELP ================= -->
+      <style>
+        .jbvnl-photo-showcase {
+          --navy: #07165f;
+          --deep: #092c82;
+          --blue: #0769ed;
+          --sky: #26a4ff;
+          --pale: #e8f5ff;
+          --text: #2b4b77;
+          position: relative;
+          isolation: isolate;
+          width: 100%;
+          padding: 25px 0 32px;
+          overflow: hidden;
+          background: linear-gradient(125deg, #fff 0%, #f4faff 48%, #e3f3ff 100%);
+          font-family: "Poppins", "Inter", Arial, sans-serif;
+          color: var(--text);
+        }
+
+        .jbvnl-photo-showcase *,
+        .jbvnl-photo-showcase *::before,
+        .jbvnl-photo-showcase *::after {
+          box-sizing: border-box;
+        }
+
+        /* Background image */
+        .jbv-showcase-bg {
+          position: absolute;
+          z-index: -3;
+          inset: 0;
+          background-image: url("/assets/images/gallery-bg.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 100% 100%;
+          opacity: .22;
+          pointer-events: none;
+        }
+
+
+        /* Main layout */
+        .jbv-showcase-container {
+          width: min(94%, 1280px);
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+          align-items: center;
+          gap: 22px;
+        }
+
+        /* Left content */
+        .jbv-showcase-content {
+          position: relative;
+          z-index: 2;
+          min-width: 0;
+        }
+
+        .jbv-showcase-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 7px;
+          padding: 6px 12px;
+          margin-bottom: 12px;
+          border: 1px solid #c5e4ff;
+          border-radius: 30px;
+          background: rgba(235, 247, 255, .88);
+          color: #0768e8;
+          font-size: 10px;
+          font-weight: 700;
+          letter-spacing: 1px;
+        }
+
+        .jbv-showcase-badge i {
+          font-size: 14px;
+        }
+
+        .jbv-title-wrap {
+          position: relative;
+        }
+
+        .jbv-title-watermark {
+          position: absolute;
+          top: -5px;
+          right: 0;
+          z-index: -1;
+          color: rgba(31, 138, 233, .06);
+          font-size: clamp(38px, 4vw, 65px);
+          font-weight: 800;
+          letter-spacing: -2px;
+          pointer-events: none;
+        }
+
+        .jbv-showcase-title {
+          margin: 0;
+          color: var(--navy);
+          font-size: clamp(30px, 2.5vw, 48px);
+          font-weight: 800;
+          line-height: 1.08;
+          letter-spacing: -1.2px;
+          overflow-wrap: break-word;
+        }
+
+        .jbv-showcase-title span {
+          display: block;
+          padding-bottom: 3px;
+          background: linear-gradient(100deg, #0750dc, #0783f4 58%, #25aaf4);
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .jbv-showcase-line {
+          width: 75px;
+          height: 4px;
+          margin: 11px 0 13px;
+          border-radius: 10px;
+          background: linear-gradient(90deg, #071d80, #0878f5);
+        }
+
+        .jbv-showcase-subtitle {
+          margin: 0 0 10px;
+          color: #071d64;
+          font-size: clamp(14px, 1.2vw, 18px);
+          font-weight: 650;
+          line-height: 1.4;
+        }
+
+        .jbv-showcase-text {
+          max-width: 500px;
+          margin: 0 0 10px;
+          color: #536c8d;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 1.65;
+        }
+
+        /* Button */
+        .jbv-showcase-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+          min-height: 46px;
+          margin-top: 5px;
+          padding: 6px 7px 6px 16px;
+          border: 1px solid rgba(255, 255, 255, .7);
+          border-radius: 11px;
+          background: linear-gradient(115deg, #081b85, #0754d7 57%, #0789fa);
+          color: #fff !important;
+          text-decoration: none !important;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: .3px;
+          box-shadow: 0 5px 14px rgba(7, 87, 202, .14);
+          transition: background .2s ease, box-shadow .2s ease;
+        }
+
+        .jbv-showcase-button:hover {
+          color: #fff !important;
+          background: linear-gradient(115deg, #09206d, #0878ed);
+          box-shadow: 0 7px 16px rgba(7, 87, 202, .2);
+        }
+
+        .jbv-button-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 32px;
+          height: 32px;
+          border: 1px solid rgba(255, 255, 255, .2);
+          border-radius: 50%;
+          background: rgba(255, 255, 255, .14);
+          font-size: 13px;
+        }
+
+        /* Right side */
+        .jbv-showcase-visual,
+        .jbv-owl-frame,
+        .jbv-photo-owl {
+          position: relative;
+          width: 100%;
+          min-width: 0;
+        }
+
+        /* Collage */
+        .jbv-collage-grid {
+          display: grid;
+          width: 100%;
+          height: 390px;
+          grid-template-columns: 1.05fr 1.05fr .82fr;
+          grid-template-rows: 118px 118px 90px;
+          gap: 8px;
+        }
+
+        .jbv-collage-photo {
+          position: relative;
+          min-width: 0;
+          min-height: 0;
+          overflow: hidden;
+          border: 3px solid rgba(255, 255, 255, .97);
+          border-radius: 12px;
+          background: #dceeff;
+          box-shadow: 0 4px 12px rgba(8, 72, 145, .10), 0 0 0 1px rgba(115, 191, 255, .3);
+        }
+
+        .jbv-collage-photo img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          transition: transform .25s ease;
+        }
+
+        .jbv-collage-photo:hover img {
+          transform: scale(1.02);
+        }
+
+        /* Desktop collage arrangement */
+        .jbv-collage-photo.photo-large {
+          grid-column: 1/3;
+          grid-row: 1/3;
+        }
+
+        .jbv-collage-photo.photo-small-top {
+          grid-column: 3;
+          grid-row: 1;
+        }
+
+        .jbv-collage-photo.photo-small-mid {
+          grid-column: 3;
+          grid-row: 2;
+        }
+
+        .jbv-collage-photo.photo-wide-left {
+          grid-column: 1/2;
+          grid-row: 3;
+        }
+
+        .jbv-collage-photo.photo-wide-left {
+          grid-column: 1 / 2 !important;
+          grid-row: 3 !important;
+        }
+
+        .jbv-collage-photo.photo-wide-right {
+          grid-column: 2 / 3 !important;
+          grid-row: 3 !important;
+        }
+
+        /* Third bottom image */
+        .jbv-collage-photo.photo-bottom-right {
+          display: block !important;
+          grid-column: 3 / 4 !important;
+          grid-row: 3 !important;
+        }
+
+
+        .jbv-collage-photo.photo-bottom-left,
+        .jbv-collage-photo.photo-bottom-mid,
+        .jbv-collage-photo.photo-bottom-right {
+          display: none;
+        }
+
+        /* Image overlay */
+        .jbv-photo-overlay {
+          position: absolute;
+          left: 8px;
+          bottom: 8px;
+          padding: 6px 9px;
+          border: 1px solid rgba(255, 255, 255, .4);
+          border-radius: 7px;
+          background: rgba(5, 27, 75, .78);
+          color: #fff;
+          font-size: 9px;
+          font-weight: 650;
+          backdrop-filter: blur(6px);
+        }
+
+        .jbv-photo-overlay i {
+          margin-right: 5px;
+          color: #a6deff;
+        }
+
+        /* Carousel controls */
+        .jbv-owl-controls {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          margin-top: 11px;
+        }
+
+        .jbv-owl-prev,
+        .jbv-owl-next {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 30px;
+          height: 30px;
+          padding: 0;
+          border: 1px solid #c5e4ff;
+          border-radius: 50%;
+          background: #fff;
+          color: #0768e8;
+          cursor: pointer;
+          box-shadow: 0 3px 9px rgba(7, 55, 120, .07);
+          transition: background .2s ease, color .2s ease;
+        }
+
+        .jbv-owl-prev:hover,
+        .jbv-owl-next:hover {
+          background: #0768e8;
+          color: #fff;
+        }
+
+        .jbv-owl-dots {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+
+        .jbv-owl-dots .owl-dot {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0;
+          border: 0;
+          background: transparent;
+          cursor: pointer;
+        }
+
+        .jbv-owl-dots .owl-dot span {
+          display: block;
+          width: 6px;
+          height: 6px;
+          margin: 0;
+          border-radius: 10px;
+          background: #b9d8f4;
+          transition: width .2s ease, background .2s ease;
+        }
+
+        .jbv-owl-dots .owl-dot.active span {
+          width: 18px;
+          background: linear-gradient(90deg, #071d80, #0789f5);
+        }
+
+        /* Decorative waves */
+        .jbv-showcase-wave {
+          position: absolute;
+          z-index: -1;
+          left: -4%;
+          width: 108%;
+          height: 25px;
+          border-radius: 50%;
+          pointer-events: none;
+        }
+
+        .jbv-showcase-wave.wave-a {
+          bottom: -15px;
+          background: linear-gradient(90deg, #0878ee, #73ccff, #e1f4ff);
+          transform: rotate(-2deg);
+        }
+
+        .jbv-showcase-wave.wave-b {
+          bottom: -22px;
+          background: #d2ecff;
+          transform: rotate(1.3deg);
+        }
+
+        /* Laptop */
+        @media (max-width: 1250px) {
+          .jbv-showcase-container {
+            width: 95%;
+            gap: 16px;
+          }
+
+          .jbv-showcase-title {
+            font-size: clamp(28px, 3.2vw, 40px);
+          }
+
+          .jbv-showcase-text {
+            font-size: 11.5px;
+            line-height: 1.6;
+          }
+
+          .jbv-collage-grid {
+            height: 350px;
+            grid-template-rows: 105px 105px 80px;
+            gap: 7px;
+          }
+        }
+
+        /* Tablet */
+        @media (max-width: 991px) {
+          .jbvnl-photo-showcase {
+            padding: 25px 0 30px;
+          }
+
+          .jbv-showcase-container {
+            width: min(92%, 760px);
+            grid-template-columns: 1fr;
+            gap: 22px;
+          }
+
+          .jbv-showcase-content {
+            text-align: center;
+          }
+
+          .jbv-showcase-title {
+            font-size: clamp(32px, 5.5vw, 45px);
+          }
+
+          .jbv-title-watermark {
+            right: 5%;
+            font-size: clamp(40px, 7vw, 65px);
+          }
+
+          .jbv-showcase-line {
+            margin: 10px auto 13px;
+          }
+
+          .jbv-showcase-text {
+            max-width: 650px;
+            margin-right: auto;
+            margin-left: auto;
+            font-size: 12px;
+          }
+
+          .jbv-showcase-subtitle {
+            font-size: 16px;
+          }
+
+          .jbv-collage-grid {
+            height: 350px;
+            grid-template-rows: 105px 105px 80px;
+            gap: 7px;
+          }
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+          .jbvnl-photo-showcase {
+            padding: 20px 0 27px;
+          }
+
+          .jbv-showcase-container {
+            width: 92%;
+            gap: 18px;
+          }
+
+          .jbv-showcase-badge {
+            gap: 6px;
+            padding: 5px 10px;
+            margin-bottom: 9px;
+            font-size: 9px;
+          }
+
+          .jbv-showcase-badge i {
+            font-size: 12px;
+          }
+
+          .jbv-showcase-title {
+            font-size: clamp(27px, 7.5vw, 36px);
+            line-height: 1.08;
+            letter-spacing: -.7px;
+          }
+
+          .jbv-title-watermark {
+            top: -3px;
+            right: 0;
+            font-size: 36px;
+            letter-spacing: -1px;
+          }
+
+          .jbv-showcase-line {
+            width: 55px;
+            height: 3px;
+            margin: 9px auto 11px;
+          }
+
+          .jbv-showcase-subtitle {
+            margin-bottom: 8px;
+            font-size: 13px;
+            line-height: 1.45;
+          }
+
+          .jbv-showcase-text {
+            margin-bottom: 8px;
+            font-size: 11px;
+            line-height: 1.6;
+          }
+
+          .jbv-showcase-button {
+            min-height: 39px;
+            gap: 9px;
+            padding: 5px 6px 5px 12px;
+            border-radius: 9px;
+            font-size: 10px;
+          }
+
+          .jbv-button-icon {
+            width: 27px;
+            height: 27px;
+            font-size: 11px;
+          }
+
+          .jbv-collage-grid {
+            height: 275px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 125px 65px 65px;
+            gap: 6px;
+          }
+
+          .jbv-collage-photo.photo-large {
+            grid-column: 1/3;
+            grid-row: 1;
+          }
+
+          .jbv-collage-photo.photo-small-top {
+            grid-column: 1;
+            grid-row: 2;
+          }
+
+          .jbv-collage-photo.photo-small-mid {
+            grid-column: 2;
+            grid-row: 2;
+          }
+
+          .jbv-collage-photo.photo-wide-left {
+            grid-column: 1;
+            grid-row: 3;
+          }
+
+          .jbv-collage-photo.photo-wide-right {
+            grid-column: 2;
+            grid-row: 3;
+          }
+
+          .jbv-collage-photo {
+            border-width: 2px;
+            border-radius: 8px;
+          }
+
+          .jbv-photo-overlay {
+            left: 6px;
+            bottom: 6px;
+            padding: 5px 7px;
+            font-size: 8px;
+          }
+
+          .jbv-owl-controls {
+            gap: 8px;
+            margin-top: 9px;
+          }
+
+          .jbv-owl-prev,
+          .jbv-owl-next {
+            width: 27px;
+            height: 27px;
+          }
+
+          .jbv-showcase-dots {
+            width: 70px;
+            height: 70px;
+            background-size: 12px 12px;
+          }
+
+          .jbv-showcase-wave {
+            height: 20px;
+          }
+
+          .jbv-showcase-wave.wave-a {
+            bottom: -12px;
+          }
+
+          .jbv-showcase-wave.wave-b {
+            bottom: -18px;
+          }
+        }
+
+        /* Extra small mobile */
+        @media (max-width: 380px) {
+          .jbv-showcase-container {
+            width: 94%;
+            gap: 15px;
+          }
+
+          .jbv-showcase-title {
+            font-size: 26px;
+          }
+
+          .jbv-showcase-subtitle {
+            font-size: 12px;
+          }
+
+          .jbv-showcase-text {
+            font-size: 10.5px;
+          }
+
+          .jbv-collage-grid {
+            height: 245px;
+            grid-template-rows: 110px 58px 58px;
+            gap: 5px;
+          }
+        }
+
+
+        /* Mobile */
+        @media (max-width: 600px) {
+          .jbv-collage-photo.photo-wide-left {
+            grid-column: 1 / 2 !important;
+            grid-row: 3 !important;
+          }
+
+          .jbv-collage-photo.photo-wide-right {
+            grid-column: 2 / 3 !important;
+            grid-row: 3 !important;
+          }
+
+          .jbv-collage-photo.photo-bottom-right {
+            grid-column: 1 / 3 !important;
+            grid-row: 4 !important;
+          }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+
+          .jbvnl-photo-showcase *,
+          .jbvnl-photo-showcase *::before,
+          .jbvnl-photo-showcase *::after {
+            transition: none !important;
+            animation: none !important;
+          }
+        }
+      </style>
+
+
+
+
+
+
+
+      <!-- ============ NEED HELP ================= -->
       <section class="digital-services">
 
         <div class="digital-line"></div>
@@ -20876,60 +20841,60 @@ OjE4KzAwOjAwishxnAAAACh0RVh0ZGF0ZTp0aW1lc3RhbXAAMjAyNi0wOC0wM1QwNzoxNToxOCsw
   </script>
 
 
- <!-- ========= Photo Gallery ======== -->
+  <!-- ========= Photo Gallery ======== -->
 
-<script>
-(function ($) {
-    'use strict';
+  <script>
+    (function ($) {
+      'use strict';
 
-    $(function () {
+      $(function () {
 
         var $gallery = $('.jbv-photo-owl');
 
         if (!$gallery.length) {
-            return;
+          return;
         }
 
         if (typeof $.fn.owlCarousel !== 'function') {
-            console.error('JBVNL Gallery: Owl Carousel did not load.');
-            return;
+          console.error('JBVNL Gallery: Owl Carousel did not load.');
+          return;
         }
 
         if ($gallery.hasClass('owl-loaded')) {
-            return;
+          return;
         }
 
         $gallery.owlCarousel({
-            items: 1,
-            loop: true,
-            margin: 0,
-            nav: false,
-            dots: true,
-            dotsContainer: '.jbv-owl-dots',
-            autoplay: true,
-            autoplayTimeout: 4500,
-            autoplaySpeed: 850,
-            smartSpeed: 850,
-            autoplayHoverPause: true,
-            mouseDrag: true,
-            touchDrag: true,
-            pullDrag: true,
-            autoHeight: false,
-            responsiveRefreshRate: 100
+          items: 1,
+          loop: true,
+          margin: 0,
+          nav: false,
+          dots: true,
+          dotsContainer: '.jbv-owl-dots',
+          autoplay: true,
+          autoplayTimeout: 4500,
+          autoplaySpeed: 850,
+          smartSpeed: 850,
+          autoplayHoverPause: true,
+          mouseDrag: true,
+          touchDrag: true,
+          pullDrag: true,
+          autoHeight: false,
+          responsiveRefreshRate: 100
         });
 
         $('.jbv-owl-prev').on('click', function () {
-            $gallery.trigger('prev.owl.carousel', [850]);
+          $gallery.trigger('prev.owl.carousel', [850]);
         });
 
         $('.jbv-owl-next').on('click', function () {
-            $gallery.trigger('next.owl.carousel', [850]);
+          $gallery.trigger('next.owl.carousel', [850]);
         });
 
-    });
+      });
 
-})(jQuery);
-</script>
+    })(jQuery);
+  </script>
 
 
   <!-- {{-- Counter Animation (JavaScript) --}} -->
@@ -21184,6 +21149,58 @@ OjE4KzAwOjAwishxnAAAACh0RVh0ZGF0ZTp0aW1lc3RhbXAAMjAyNi0wOC0wM1QwNzoxNToxOCsw
 
     });
   </script>
+
+
+
+  </script>
+
+
+  <!-- =================================================
+                     WHAT'S NEW
+                ================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const list = document.querySelector('.jbx-news-list');
+
+      if (!list) return;
+
+      let scrollSpeed = 0.6;
+      let isPaused = false;
+      let animationFrame;
+
+      function autoScroll() {
+        if (!isPaused) {
+          list.scrollTop += scrollSpeed;
+
+          // List ke end par pahunchne ke baad phir top par
+          if (list.scrollTop + list.clientHeight >= list.scrollHeight - 1) {
+            list.scrollTop = 0;
+          }
+        }
+
+        animationFrame = requestAnimationFrame(autoScroll);
+      }
+
+      list.addEventListener('mouseenter', () => {
+        isPaused = true;
+      });
+
+      list.addEventListener('mouseleave', () => {
+        isPaused = false;
+      });
+
+      list.addEventListener('touchstart', () => {
+        isPaused = true;
+      }, { passive: true });
+
+      list.addEventListener('touchend', () => {
+        isPaused = false;
+      }, { passive: true });
+
+      autoScroll();
+    });
+  </script>
+
 
 </body>
 
