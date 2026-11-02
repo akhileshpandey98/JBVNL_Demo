@@ -28,905 +28,1090 @@
   <!-- =========================================
      JBVNL FIXED LEFT SIDEBAR
 ========================================= -->
+<style>
+    /* =========================================================
+   JBVNL WEBSITE - SIDEBAR + SMART STICKY HEADER
+   Clean CSS | Duplicate Rules Removed
+========================================================= */
 
-  <style>
-    /* =========================================
-   JBVNL FIXED LEFT SIDEBAR
-========================================= */
+    /* ---------------------------------------------------------
+   01. ROOT VARIABLES
+--------------------------------------------------------- */
 
     :root {
-      --jbvnl-blue: #064fae;
-      --jbvnl-dark: #063b82;
-      --jbvnl-deep: #032f6b;
-      --jbvnl-light: #087ff5;
-      --jbvnl-cyan: #35b9ff;
-      --jbvnl-white: #ffffff;
-      --jbvnl-border: rgba(255, 255, 255, .13);
+        --jbvnl-blue: #064fae;
+        --jbvnl-dark: #063b82;
+        --jbvnl-deep: #032f6b;
+        --jbvnl-light: #087ff5;
+        --jbvnl-cyan: #35b9ff;
+        --jbvnl-white: #ffffff;
+        --jbvnl-border: rgba(255, 255, 255, .13);
+
+        --jbvnl-sidebar-width: 285px;
+        --jbvnl-header-speed: .35s;
     }
 
-
-    /* -----------------------------------------
-   SIDEBAR
------------------------------------------ */
+    /* ---------------------------------------------------------
+   02. LEFT SIDEBAR
+--------------------------------------------------------- */
 
     .jbvnl-sidebar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 285px;
-      height: 100vh;
-      height: 100dvh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: var(--jbvnl-sidebar-width);
+        height: 100vh;
+        height: 100dvh;
 
-      background:
-        radial-gradient(circle at 20% 10%,
-          rgba(42, 166, 255, .18),
-          transparent 30%),
-        linear-gradient(180deg,
-          #064f9f 0%,
-          #043e82 48%,
-          #032f69 100%);
+        display: flex;
+        flex-direction: column;
 
-      color: #fff;
-      z-index: 99999;
+        color: #fff;
 
-      display: flex;
-      flex-direction: column;
+        background:
+            radial-gradient(circle at 20% 10%, rgba(42, 166, 255, .18), transparent 30%),
+            linear-gradient(180deg, #064f9f 0%, #043e82 48%, #032f69 100%);
 
-      box-shadow:
-        8px 0 35px rgba(0, 55, 120, .16);
+        box-shadow: 8px 0 35px rgba(0, 55, 120, .16);
 
-      overflow: hidden;
+        overflow: hidden;
+        z-index: 99999;
+
+        transition: transform .30s ease, width .30s ease, box-shadow .30s ease;
     }
 
-
-    /* -----------------------------------------
-   SIDEBAR HEADER
------------------------------------------ */
+    /* ---------------------------------------------------------
+   03. SIDEBAR HEADER
+--------------------------------------------------------- */
 
     .jbvnl-sidebar-head {
-      min-height: 90px;
-      padding: 18px 18px 16px;
+        min-height: 90px;
+        padding: 18px;
 
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-      border-bottom: 1px solid var(--jbvnl-border);
+        border-bottom: 1px solid var(--jbvnl-border);
     }
 
-
     .jbvnl-side-logo {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      color: #fff;
-      text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 11px;
+
+        color: #fff;
+        text-decoration: none;
     }
 
     .jbvnl-logo-circle {
-      width: 70px;
-      height: 70px;
-      flex: 0 0 70px;
-      border-radius: 50%;
-      overflow: hidden;
-      background: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid rgba(255, 255, 255, .35);
+        width: 70px;
+        height: 70px;
+        flex: 0 0 70px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;
+        border-radius: 50%;
+        background: #fff;
+        border: 1px solid rgba(255, 255, 255, .35);
     }
 
     .jbvnl-logo-circle img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: contain;
-      padding: 2px;
+        width: 100%;
+        height: 100%;
+        padding: 2px;
+
+        display: block;
+        object-fit: contain;
     }
 
     .jbvnl-logo-circle i {
-      color: #fff;
-      font-size: 21px;
+        color: #fff;
+        font-size: 21px;
     }
-
 
     .jbvnl-logo-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.1;
+        display: flex;
+        flex-direction: column;
+        line-height: 1.1;
     }
-
 
     .jbvnl-logo-text strong {
-      font-size: 24px;
-      font-weight: 800;
-      letter-spacing: .4px;
+        font-size: 24px;
+        font-weight: 800;
+        letter-spacing: .4px;
     }
-
 
     .jbvnl-logo-text span {
-      margin-top: 4px;
-
-      font-size: 10px;
-      line-height: 1.3;
-
-      color: rgba(255, 255, 255, .82);
+        margin-top: 4px;
+        font-size: 10px;
+        line-height: 1.3;
+        color: rgba(255, 255, 255, .82);
     }
 
-
-    /* -----------------------------------------
-   CLOSE BUTTON
------------------------------------------ */
+    /* ---------------------------------------------------------
+   04. SIDEBAR CLOSE BUTTON
+--------------------------------------------------------- */
 
     .jbvnl-sidebar-close {
-      width: 34px;
-      height: 34px;
+        width: 34px;
+        height: 34px;
+        flex: 0 0 34px;
 
-      border: 0;
-      border-radius: 9px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-      background: transparent;
-      color: #fff;
+        border: 1px solid rgba(255, 255, 255, .25);
+        border-radius: 9px;
 
-      cursor: pointer;
+        background: transparent;
+        color: #fff;
 
-      display: none;
-      align-items: center;
-      justify-content: center;
+        cursor: pointer;
+        font-size: 19px;
 
-      font-size: 19px;
-
-      transition: .25s ease;
+        transition: background .25s ease;
     }
-
 
     .jbvnl-sidebar-close:hover {
-      background: rgba(255, 255, 255, .12);
+        background: rgba(255, 255, 255, .12);
     }
 
-
-    /* -----------------------------------------
-   NAVIGATION
------------------------------------------ */
+    /* ---------------------------------------------------------
+   05. SIDEBAR NAVIGATION SCROLL
+--------------------------------------------------------- */
 
     .jbvnl-side-nav {
-      flex: 1;
+        flex: 1 1 auto;
+        min-height: 0;
 
-      padding: 13px 10px;
+        padding: 13px 10px;
 
-      overflow-y: auto;
-      overflow-x: hidden;
+        overflow-y: auto;
+        overflow-x: hidden;
 
-      scrollbar-width: thin;
-      scrollbar-color: rgba(255, 255, 255, .25) transparent;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255, 255, 255, .25) transparent;
     }
-
 
     .jbvnl-side-nav::-webkit-scrollbar {
-      width: 5px;
+        width: 5px;
     }
-
 
     .jbvnl-side-nav::-webkit-scrollbar-track {
-      background: transparent;
+        background: transparent;
     }
-
 
     .jbvnl-side-nav::-webkit-scrollbar-thumb {
-      background: rgba(255, 255, 255, .25);
-      border-radius: 20px;
+        background: rgba(255, 255, 255, .25);
+        border-radius: 20px;
     }
 
-
-    /* -----------------------------------------
-   NORMAL LINK
------------------------------------------ */
+    /* ---------------------------------------------------------
+   06. SIDEBAR NORMAL LINKS
+--------------------------------------------------------- */
 
     .jbvnl-side-link {
-      width: 100%;
-      min-height: 48px;
+        width: 100%;
+        min-height: 48px;
+        padding: 9px 13px;
+        margin-bottom: 2px;
 
-      padding: 9px 13px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
 
-      margin-bottom: 2px;
+        position: relative;
 
-      border: 0;
+        border: 0;
+        border-radius: 9px;
 
-      border-radius: 9px;
+        background: transparent;
+        color: rgba(255, 255, 255, .94);
 
-      background: transparent;
+        font-family: inherit;
+        text-align: left;
+        text-decoration: none;
 
-      color: rgba(255, 255, 255, .94);
+        cursor: pointer;
 
-      display: flex;
-      align-items: center;
-
-      gap: 12px;
-
-      text-decoration: none;
-
-      cursor: pointer;
-
-      font-family: inherit;
-
-      text-align: left;
-
-      position: relative;
-
-      transition:
-        background .25s ease,
-        color .25s ease,
-        transform .25s ease;
+        transition: background .25s ease, color .25s ease, transform .25s ease;
     }
-
 
     .jbvnl-side-link:hover {
-      color: #fff;
-
-      background:
-        linear-gradient(90deg,
-          rgba(255, 255, 255, .15),
-          rgba(255, 255, 255, .06));
-
-      transform: translateX(2px);
+        color: #fff;
+        background: linear-gradient(90deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, .06));
+        transform: translateX(2px);
     }
-
 
     .jbvnl-side-link.active {
-      color: #fff;
-
-      background:
-        linear-gradient(90deg,
-          #087cf0,
-          #0865cb);
-
-      box-shadow:
-        0 8px 18px rgba(0, 79, 170, .25);
+        color: #fff;
+        background: linear-gradient(90deg, #087cf0, #0865cb);
+        box-shadow: 0 8px 18px rgba(0, 79, 170, .25);
     }
 
-
-    /* -----------------------------------------
-   ICON
------------------------------------------ */
+    /* ---------------------------------------------------------
+   07. SIDEBAR ICONS AND TEXT
+--------------------------------------------------------- */
 
     .side-icon {
-      width: 30px;
-      height: 30px;
+        width: 30px;
+        height: 30px;
+        flex: 0 0 30px;
 
-      flex: 0 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-      border-radius: 8px;
+        border-radius: 8px;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+        color: #fff;
+        background: rgba(255, 255, 255, .10);
 
-      color: #fff;
-
-      font-size: 14px;
-
-      background: rgba(255, 255, 255, .10);
-
-      transition: .25s ease;
+        font-size: 14px;
+        transition: background .25s ease;
     }
-
 
     .jbvnl-side-link:hover .side-icon,
     .jbvnl-side-link.active .side-icon {
-      background: rgba(255, 255, 255, .18);
+        background: rgba(255, 255, 255, .18);
     }
-
 
     .side-text {
-      flex: 1;
-
-      font-size: 13.5px;
-      font-weight: 600;
-
-      white-space: nowrap;
+        flex: 1;
+        font-size: 13.5px;
+        font-weight: 600;
+        white-space: nowrap;
     }
 
-
-    /* -----------------------------------------
-   ARROW
------------------------------------------ */
+    /* ---------------------------------------------------------
+   08. SIDEBAR ARROW
+--------------------------------------------------------- */
 
     .side-arrow {
-      font-size: 10px;
-
-      opacity: .7;
-
-      transition:
-        transform .25s ease,
-        opacity .25s ease;
+        font-size: 10px;
+        opacity: .7;
+        transition: transform .25s ease, opacity .25s ease;
     }
-
 
     .jbvnl-sub-toggle.active .side-arrow {
-      transform: rotate(90deg);
-      opacity: 1;
+        transform: rotate(90deg);
+        opacity: 1;
     }
 
-
-    /* -----------------------------------------
-   SUBMENU
------------------------------------------ */
+    /* ---------------------------------------------------------
+   09. SIDEBAR SUBMENU
+--------------------------------------------------------- */
 
     .jbvnl-submenu {
-      display: none;
+        display: none;
 
-      margin: 0 7px 5px 42px;
+        margin: 2px 0 8px 11px;
+        padding: 7px 7px 8px;
 
-      padding: 4px 0 5px;
+        border-left: 2px solid #d7eafa;
+        border-radius: 0 8px 8px 0;
 
-      border-left: 1px solid rgba(255, 255, 255, .20);
+        background: #fbfdff;
     }
-
 
     .jbvnl-submenu.show {
-      display: block;
+        display: block;
     }
 
+    /* Submenu heading */
 
-    .jbvnl-submenu a {
-      display: flex;
-      align-items: center;
+    .jbvnl-sub-heading {
+        display: flex;
+        align-items: center;
+        gap: 7px;
 
-      gap: 9px;
+        margin: 8px 4px 5px;
+        padding: 7px 9px;
 
-      min-height: 36px;
+        border-left: 3px solid #0878e8;
+        border-radius: 5px;
 
-      padding: 7px 10px;
+        background: linear-gradient(90deg, #e5f3ff, #f7fbff);
+        color: #0b0471;
 
-      color: rgba(255, 255, 255, .78);
-
-      text-decoration: none;
-
-      font-size: 12px;
-      font-weight: 500;
-
-      border-radius: 6px;
-
-      transition: .2s ease;
+        font-size: 10px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: .35px;
     }
 
-
-    .jbvnl-submenu a i {
-      width: 15px;
-
-      text-align: center;
-
-      font-size: 11px;
+    .jbvnl-sub-heading i {
+        color: #0878e8;
+        font-size: 10px;
     }
 
+    /* Submenu links */
 
-    .jbvnl-submenu a:hover {
-      color: #fff;
+    .jbvnl-submenu>a {
+        min-height: 34px;
+        margin: 2px 0;
+        padding: 7px 9px;
 
-      background: rgba(255, 255, 255, .09);
+        display: flex;
+        align-items: center;
+        gap: 8px;
 
-      padding-left: 13px;
+        border-radius: 6px;
+
+        color: #526274;
+        text-decoration: none;
+
+        font-size: 11px;
+        font-weight: 500;
+
+        transition: background .18s ease, color .18s ease, padding .18s ease;
     }
 
+    .jbvnl-submenu>a i {
+        width: 17px;
+        min-width: 17px;
 
-    /* -----------------------------------------
-   SIDEBAR FOOTER
------------------------------------------ */
+        color: #0878e8;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .jbvnl-submenu>a:hover {
+        padding-left: 12px;
+        background: #edf7ff;
+        color: #0878e8;
+    }
+
+    .jbvnl-submenu>a:hover i {
+        color: #0b0471;
+    }
+
+    /* ---------------------------------------------------------
+   10. SIDEBAR FOOTER
+--------------------------------------------------------- */
 
     .jbvnl-sidebar-footer {
-      position: relative;
+        position: relative;
+        flex: 0 0 auto;
 
-      min-height: 118px;
+        min-height: 118px;
+        padding: 18px 20px;
 
-      padding: 18px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
 
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
+        overflow: hidden;
 
-      overflow: hidden;
+        border-top: 1px solid rgba(255, 255, 255, .10);
 
-      border-top: 1px solid rgba(255, 255, 255, .10);
-
-      background:
-        linear-gradient(180deg,
-          rgba(0, 36, 85, .05),
-          rgba(0, 22, 58, .35));
+        background: linear-gradient(180deg,
+                rgba(0, 36, 85, .05),
+                rgba(0, 22, 58, .35));
     }
 
+    .jbvnl-sidebar-footer::before,
+    .jbvnl-sidebar-footer::after {
+        content: "";
+        position: absolute;
+        left: -30px;
+        bottom: -90px;
+
+        border: 1px solid rgba(92, 193, 255, .20);
+        border-radius: 50%;
+    }
 
     .jbvnl-sidebar-footer::before {
-      content: "";
-
-      position: absolute;
-
-      width: 180px;
-      height: 180px;
-
-      left: -30px;
-      bottom: -90px;
-
-      border: 1px solid rgba(92, 193, 255, .25);
-
-      border-radius: 50%;
+        width: 180px;
+        height: 180px;
     }
-
 
     .jbvnl-sidebar-footer::after {
-      content: "";
-
-      position: absolute;
-
-      width: 220px;
-      height: 220px;
-
-      left: -50px;
-      bottom: -120px;
-
-      border: 1px solid rgba(92, 193, 255, .12);
-
-      border-radius: 50%;
+        width: 220px;
+        height: 220px;
+        left: -50px;
+        bottom: -120px;
     }
-
 
     .jbvnl-power-art {
-      position: absolute;
+        position: absolute;
+        left: 20px;
+        bottom: 8px;
 
-      left: 20px;
-      bottom: 8px;
+        display: flex;
+        align-items: flex-end;
+        gap: 14px;
 
-      display: flex;
-      align-items: flex-end;
-
-      gap: 14px;
-
-      opacity: .12;
-
-      font-size: 58px;
+        opacity: .12;
+        font-size: 58px;
     }
-
 
     .jbvnl-power-art i:nth-child(2) {
-      font-size: 78px;
+        font-size: 78px;
     }
-
 
     .jbvnl-sidebar-footer strong,
     .jbvnl-sidebar-footer span {
-      position: relative;
-      z-index: 2;
-
-      margin-left: 82px;
+        position: relative;
+        z-index: 2;
+        margin-left: 82px;
     }
-
 
     .jbvnl-sidebar-footer strong {
-      font-size: 13px;
-      font-weight: 700;
+        font-size: 13px;
+        font-weight: 700;
     }
-
 
     .jbvnl-sidebar-footer span {
-      margin-top: 2px;
-
-      font-size: 11px;
-
-      color: rgba(255, 255, 255, .72);
+        margin-top: 2px;
+        color: rgba(255, 255, 255, .72);
+        font-size: 11px;
     }
 
-
-    /* -----------------------------------------
-   PAGE CONTENT SPACE
------------------------------------------ */
+    /* ---------------------------------------------------------
+   11. MAIN PAGE CONTENT
+--------------------------------------------------------- */
 
     .jbvnl-page-content {
-      margin-left: 285px;
+        width: calc(100% - var(--jbvnl-sidebar-width));
+        min-height: 100vh;
+        margin-left: var(--jbvnl-sidebar-width);
 
-      min-height: 100vh;
+        transition: margin-left .30s ease, width .30s ease;
+    }
 
-      width: calc(100% - 285px);
+    .jbvnl-page-content>header,
+    .jbvnl-page-content .site-header {
+        margin-left: 0;
+    }
+
+    /* ---------------------------------------------------------
+   12. SMART STICKY HEADER GROUP
+   Top Strip + Main Header + Navbar + Toggle Button
+--------------------------------------------------------- */
+
+    .sticky-header-group {
+        position: fixed !important;
+        top: 0 !important;
+        left: var(--jbvnl-sidebar-width) !important;
+
+        width: calc(100% - var(--jbvnl-sidebar-width)) !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        z-index: 9000 !important;
+
+        transform: translateY(0);
+        transition: transform var(--jbvnl-header-speed) ease-in-out;
+
+        will-change: transform;
+    }
+
+    /* Scroll down: hide complete header group */
+
+    .sticky-header-group.header-hidden {
+        transform: translateY(-100%);
+    }
+
+    /* Scroll up: show complete header group */
+
+    .sticky-header-group.header-visible {
+        transform: translateY(0);
+    }
+
+    /* Header sections */
+
+    .sticky-header-group .top-strip,
+    .sticky-header-group .main-header,
+    .sticky-header-group .jbvnl-navbar {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* ---------------------------------------------------------
+   13. HEADER SPACER
+--------------------------------------------------------- */
+
+    .sticky-header-spacer {
+        display: block;
+        width: calc(100% - var(--jbvnl-sidebar-width));
+        margin-left: var(--jbvnl-sidebar-width);
+    }
+
+    /* ---------------------------------------------------------
+   14. MOBILE MENU TOGGLE BUTTON
+   Button must be inside sticky-header-group
+--------------------------------------------------------- */
+
+    .jbvnl-mobile-menu {
+        display: none;
+
+        position: absolute !important;
+        top: 133px;
+        left: 5px;
+
+        width: 44px;
+        height: 44px;
+        margin: 0;
+        padding: 0;
+
+        align-items: center;
+        justify-content: center;
+
+        border: 0;
+        border-radius: 11px;
+
+        background: linear-gradient(175deg, #0a2a5c, #0a66d8);
+        color: #fff;
+
+        box-shadow: 0 8px 22px rgba(0, 90, 190, .25);
+
+        cursor: pointer;
+        font-size: 18px;
+
+        z-index: 10001;
+    }
+
+    /* Show toggle only when sidebar is collapsed */
+
+    body.jbvnl-sidebar-collapsed .jbvnl-mobile-menu {
+        display: flex !important;
+    }
+
+    /* ---------------------------------------------------------
+   15. SIDEBAR OVERLAY
+--------------------------------------------------------- */
+
+    .jbvnl-sidebar-overlay {
+        display: none;
+
+        position: fixed;
+        inset: 0;
+
+        background: rgba(0, 25, 60, .50);
+        backdrop-filter: blur(2px);
+
+        z-index: 99998;
+    }
+
+    .jbvnl-sidebar-overlay.active {
+        display: block;
+    }
+
+    /* ---------------------------------------------------------
+   16. SIDEBAR COLLAPSED STATE
+--------------------------------------------------------- */
+
+    body.jbvnl-sidebar-collapsed .jbvnl-sidebar {
+        transform: translateX(-100%);
+        box-shadow: none;
+    }
+
+    body.jbvnl-sidebar-collapsed .jbvnl-page-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+
+    /* Header expands when sidebar closes */
+
+    body.jbvnl-sidebar-collapsed .sticky-header-group {
+        left: 0 !important;
+        width: 100% !important;
+    }
+
+    body.jbvnl-sidebar-collapsed .sticky-header-spacer {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    /* ---------------------------------------------------------
+   17. TABLET RESPONSIVE
+--------------------------------------------------------- */
+
+    @media (max-width: 1100px) and (min-width: 768px) {
+
+        :root {
+            --jbvnl-sidebar-width: 250px;
+        }
+
+        .jbvnl-logo-text strong {
+            font-size: 21px;
+        }
+
+        .side-text {
+            font-size: 13px;
+        }
+    }
+
+    /* ---------------------------------------------------------
+   18. MOBILE RESPONSIVE
+--------------------------------------------------------- */
+
+    @media (max-width: 767px) {
+
+        :root {
+            --jbvnl-sidebar-width: 0px;
+        }
+
+        /* Sidebar mobile drawer */
+
+        .jbvnl-sidebar {
+            width: 285px;
+
+            transform: translateX(-100%);
+
+            box-shadow: 12px 0 35px rgba(0, 30, 70, .28);
+        }
+
+        .jbvnl-sidebar.mobile-open {
+            transform: translateX(0);
+        }
+
+        .jbvnl-sidebar-close {
+            display: flex;
+        }
+
+        /* Page content */
+
+        .jbvnl-page-content {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        /* Header full width */
+
+        .sticky-header-group {
+            left: 0 !important;
+            width: 100% !important;
+        }
+
+        .sticky-header-spacer {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        /* Toggle button */
+
+        .jbvnl-mobile-menu {
+            top: 160px;
+            left: 15px;
+        }
+
+        /* Mobile submenu sizing */
+
+        .jbvnl-side-nav {
+            padding: 7px 8px 18px;
+        }
+
+        .jbvnl-side-link {
+            min-height: 43px;
+            padding: 8px 10px;
+            font-size: 12px;
+        }
+
+        .side-icon {
+            width: 28px;
+            height: 28px;
+            flex: 0 0 28px;
+        }
+
+        .jbvnl-submenu {
+            margin-left: 7px;
+        }
+
+        .jbvnl-sub-heading {
+            font-size: 9px;
+        }
+
+        .jbvnl-submenu>a {
+            font-size: 10.5px;
+        }
+
+        /* Prevent background scrolling when drawer opens */
+
+        body.jbvnl-menu-open {
+            overflow: hidden;
+        }
+    }
+
+    /* ---------------------------------------------------------
+   19. SMALL MOBILE
+--------------------------------------------------------- */
+
+    @media (max-width: 400px) {
+
+        .jbvnl-sidebar {
+            width: 275px;
+        }
+
+        .jbvnl-sidebar-head {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+</style>
+
+
+{{-- =====search bar css ========== --}}
+<style>
+    /* ============================================
+   JBVNL TOP STRIP SEARCH BAR
+   Premium Blue & White Theme
+============================================ */
+
+    /* Search Wrapper */
+    .search-wrapper {
+        position: relative !important;
+        overflow: visible !important;
+        z-index: 99999;
+        width: 260px;
+        max-width: 100%;
+        flex-shrink: 0;
+        font-family: "Poppins", "Inter", Arial, sans-serif;
     }
 
 
     /*
-   Agar existing header fixed/sticky hai
-   to usko bhi sidebar se bachane ke liye:
-*/
+#liveSearchForm:focus-within {
+    border-color: #76bfff;
+    box-shadow: 0 0 0 3px rgba(49, 151, 240, .13);
+} */
 
-    .jbvnl-page-content>header,
-    .jbvnl-page-content .site-header {
-      margin-left: 0;
-    }
-
-
-    /* -----------------------------------------
-   MOBILE MENU BUTTON
------------------------------------------ */
-
-    .jbvnl-mobile-menu {
-      display: none;
-
-      position: fixed;
-
-      top: 15px;
-      left: 15px;
-
-      width: 44px;
-      height: 44px;
-
-      border: 0;
-      border-radius: 11px;
-
-      background: #0879e8;
-      color: #fff;
-
-      z-index: 100001;
-
-      box-shadow:
-        0 8px 22px rgba(0, 90, 190, .25);
-
-      cursor: pointer;
-
-      font-size: 18px;
-    }
-
-
-    /* -----------------------------------------
-   OVERLAY
------------------------------------------ */
-
-    .jbvnl-sidebar-overlay {
-      display: none;
-
-      position: fixed;
-
-      inset: 0;
-
-      background: rgba(0, 25, 60, .50);
-
-      backdrop-filter: blur(2px);
-
-      z-index: 99998;
-    }
-
-
-    /* =========================================
-   TABLET
-========================================= */
-
-    @media (max-width: 1100px) {
-
-      .jbvnl-sidebar {
-        width: 250px;
-      }
-
-      .jbvnl-page-content {
-        margin-left: 250px;
-        width: calc(100% - 250px);
-      }
-
-      .jbvnl-logo-text strong {
-        font-size: 21px;
-      }
-
-      .side-text {
-        font-size: 13px;
-      }
-
-    }
-
-
-    /* =========================================
-   MOBILE
-========================================= */
-
-    @media (max-width: 767px) {
-
-      .jbvnl-sidebar {
-        width: 285px;
-
-        transform: translateX(-100%);
-
-        transition:
-          transform .35s cubic-bezier(.4, 0, .2, 1);
-
-        box-shadow:
-          12px 0 35px rgba(0, 30, 70, .28);
-      }
-
-
-      .jbvnl-sidebar.mobile-open {
-        transform: translateX(0);
-      }
-
-
-      .jbvnl-sidebar-close {
-        display: flex;
-      }
-
-
-      .jbvnl-page-content {
-        margin-left: 0;
+    /* Search Input */
+    #liveSearch {
+        display: block;
+        flex: 1;
         width: 100%;
-      }
+        min-width: 0;
+        height: 28px;
+        padding: 0 4px;
+        border: none;
+        outline: none;
+        background: transparent;
+        color: #12345a;
+        font-family: inherit;
+        font-size: 12px;
+        font-weight: 400;
+        box-shadow: none;
+    }
+
+    #liveSearch::placeholder {
+        color: #7b8da5;
+        opacity: 1;
+    }
+
+    #liveSearch:focus {
+        outline: none;
+        border: none;
+        box-shadow: none;
+    }
 
 
-      .jbvnl-mobile-menu {
+
+    #liveSearchForm button:hover,
+    #liveSearchForm .search-btn:hover {
+        background: #0755b4;
+    }
+
+    /* ============================================
+   LIVE SEARCH RESULTS DROPDOWN
+============================================ */
+
+
+    /* Dropdown: scroll only inside 50vh */
+    #searchResults {
+        position: absolute !important;
+        top: calc(100% + 7px) !important;
+        left: 0 !important;
+        right: 0 !important;
+
+        display: none;
+        height: auto !important;
+        max-height: 50vh !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+
+        box-sizing: border-box;
+        padding: 6px;
+        border: 1px solid #d8e8f8;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0 10px 28px rgba(8, 42, 88, .17);
+
+        z-index: 999999;
+        overscroll-behavior-y: contain;
+        -webkit-overflow-scrolling: touch;
+
+        scrollbar-width: auto;
+        scrollbar-color: #1685e5 #eaf3fc;
+    }
+
+    /* Visible scrollbar - Chrome / Edge */
+    #searchResults::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    #searchResults::-webkit-scrollbar-track {
+        background: #eaf3fc;
+        border-radius: 10px;
+    }
+
+    #searchResults::-webkit-scrollbar-thumb {
+        background: #1685e5;
+        border: 2px solid #eaf3fc;
+        border-radius: 10px;
+    }
+
+    #searchResults::-webkit-scrollbar-thumb:hover {
+        background: #0754ad;
+    }
+
+    /* Results must remain inside dropdown */
+    #searchResults .search-item {
+        position: relative;
+        cursor: pointer;
+    }
+
+    /* Mobile */
+    @media (max-width: 767px) {
+        #searchResults {
+            max-height: 50vh !important;
+            overflow-y: auto !important;
+        }
+    }
+
+
+
+    /* Result Section Heading */
+    .search-heading {
         display: flex;
+        align-items: center;
+        gap: 7px;
+        padding: 9px 9px 6px;
+        color: #52708e;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: .8px;
+        text-transform: uppercase;
+    }
 
+    .search-heading::before {
+        content: "";
+        width: 3px;
+        height: 12px;
+        flex-shrink: 0;
+        border-radius: 4px;
+        background: #087fe5;
+    }
+
+    /* Result Item */
+    .search-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 9px;
+        width: 100%;
+        padding: 9px;
+        margin: 0 0 3px;
+        border: 1px solid transparent;
+        border-radius: 7px;
+        background: #ffffff;
+        color: #173858;
+        text-align: left;
+        text-decoration: none !important;
+        cursor: pointer;
+        transition: background .15s ease, border-color .15s ease;
+    }
+
+    .search-item:hover,
+    .search-item:focus {
+        border-color: #d8eaff;
+        background: #f0f7ff;
+        color: #0754ad;
+        text-decoration: none !important;
+        outline: none;
+    }
+
+    /* Result Icon */
+    .search-item>i {
+        display: inline-flex;
         align-items: center;
         justify-content: center;
-      }
-
-
-      .jbvnl-sidebar-overlay.active {
-        display: block;
-      }
-
-
-      body.jbvnl-menu-open {
-        overflow: hidden;
-      }
-
-    }
-
-
-    /* =========================================
-   SMALL MOBILE
-========================================= */
-
-    @media (max-width: 400px) {
-
-      .jbvnl-sidebar {
-        width: 275px;
-      }
-
-      .jbvnl-sidebar-head {
-        padding-left: 15px;
-        padding-right: 15px;
-      }
-
-    }
-
-
-
-    /* =========================================================
-   SIDEBAR COLLAPSE - DESKTOP + MOBILE
-   ========================================================= */
-
-    /* Close button desktop par bhi visible */
-    .jbvnl-sidebar-close {
-      display: flex !important;
-      align-items: center;
-      justify-content: center;
-      flex: 0 0 34px;
-      border: 1px solid rgba(255, 255, 255, .25);
-    }
-
-
-    /* Smooth sidebar closing */
-    .jbvnl-sidebar {
-      transition:
-        transform .30s ease,
-        width .30s ease,
-        box-shadow .30s ease;
-    }
-
-
-    /* Main content smooth expand */
-    .jbvnl-page-content {
-      transition:
-        margin-left .30s ease,
-        width .30s ease;
-    }
-
-
-    /* =========================================
-   SIDEBAR CLOSED
-   ========================================= */
-
-    body.jbvnl-sidebar-collapsed .jbvnl-sidebar {
-      transform: translateX(-100%);
-      box-shadow: none;
-    }
-
-    body.jbvnl-sidebar-collapsed .jbvnl-page-content {
-      margin-left: 0 !important;
-      width: 100% !important;
-    }
-
-
-    /* Menu button show after sidebar closed */
-    body.jbvnl-sidebar-collapsed .jbvnl-mobile-menu {
-      display: flex !important;
-      align-items: center;
-      justify-content: center;
-      margin-top: 7.8%;
-      background: linear-gradient(175deg, #0a2a5c, #0a66d8);
-
-    }
-
-
-    /* Overlay hide when desktop sidebar closes */
-    body.jbvnl-sidebar-collapsed .jbvnl-sidebar-overlay {
-      display: none !important;
-    }
-
-
-    /* =========================================
-   OPEN BUTTON
-   ========================================= */
-
-    .jbvnl-mobile-menu {
-      transition:
-        opacity .25s ease,
-        transform .25s ease;
-    }
-
-    body:not(.jbvnl-sidebar-collapsed) .jbvnl-mobile-menu {
-      opacity: 0;
-      pointer-events: none;
-      transform: scale(.9);
-    }
-
-
-    /* =========================================
-   DESKTOP
-   ========================================= */
-
-    @media (min-width:768px) {
-
-      .jbvnl-sidebar-close {
-        display: flex !important;
-      }
-
-      .jbvnl-mobile-menu {
-        top: 15px;
-        left: 5px;
-      }
-
-    }
-
-
-    /* =========================================
-   MOBILE
-   ========================================= */
-
-    @media (max-width:767px) {
-
-      .jbvnl-sidebar {
-        transform: translateX(-100%);
-      }
-
-      .jbvnl-sidebar.mobile-open {
-        transform: translateX(0);
-      }
-
-      .jbvnl-page-content {
-        margin-left: 0 !important;
-        width: 100% !important;
-      }
-
-      .jbvnl-sidebar-close {
-        display: flex !important;
-      }
-
-    }
-
-
-
-
-    /* =========================================================
-   SUB MENU
-========================================================= */
-
-    .jbvnl-submenu {
-      display: none;
-      margin: 2px 0 8px 11px;
-      padding: 7px 7px 8px;
-      border-left: 2px solid #d7eafa;
-      background: #fbfdff;
-      border-radius: 0 8px 8px 0;
-    }
-
-    .jbvnl-submenu.show {
-      display: block;
-    }
-
-
-    /* HIGHLIGHTED SUB HEADING */
-    .jbvnl-sub-heading {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      margin: 8px 4px 5px;
-      padding: 7px 9px;
-      border-left: 3px solid #0878e8;
-      border-radius: 5px;
-      background: linear-gradient(90deg, #e5f3ff, #f7fbff);
-      color: #0b0471;
-      font-size: 10px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: .35px;
-    }
-
-    .jbvnl-sub-heading i {
-      color: #0878e8;
-      font-size: 10px;
-    }
-
-
-    /* SUB MENU LINKS */
-    .jbvnl-submenu>a {
-      min-height: 34px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 7px 9px;
-      margin: 2px 0;
-      border-radius: 6px;
-      color: #526274;
-      text-decoration: none;
-      font-size: 11px;
-      font-weight: 500;
-      transition: .18s ease;
-    }
-
-    .jbvnl-submenu>a i {
-      width: 17px;
-      min-width: 17px;
-      text-align: center;
-      color: #0878e8;
-      font-size: 10px;
-    }
-
-    .jbvnl-submenu>a:hover {
-      background: #edf7ff;
-      color: #0878e8;
-      padding-left: 12px;
-    }
-
-    .jbvnl-submenu>a:hover i {
-      color: #0b0471;
-    }
-
-
-    /* =========================================================
-   MOBILE
-========================================================= */
-
-    @media(max-width:768px) {
-
-      .jbvnl-side-nav {
-        padding: 7px 8px 18px;
-      }
-
-      .jbvnl-side-link {
-        min-height: 43px;
-        padding: 8px 10px;
+        flex-shrink: 0;
+        width: 29px;
+        height: 29px;
+        margin-top: 1px;
+        border-radius: 6px;
+        background: #eaf4ff;
+        color: #0875d6;
         font-size: 12px;
-      }
-
-      .side-icon {
-        width: 28px;
-        height: 28px;
-        min-width: 28px;
-      }
-
-      .jbvnl-submenu {
-        margin-left: 7px;
-      }
-
-      .jbvnl-sub-heading {
-        font-size: 9px;
-      }
-
-      .jbvnl-submenu>a {
-        font-size: 10.5px;
-      }
     }
-  </style>
+
+    .search-item>i.fa-database {
+        background: #e7f2ff;
+        color: #075ac4;
+    }
+
+    /* Result Text */
+    .search-item>div {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .search-title {
+        overflow-wrap: anywhere;
+        color: #173858;
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 1.5;
+    }
+
+    .search-item small {
+        display: block;
+        margin-top: 3px;
+        color: #7b90a8;
+        font-size: 9px;
+        line-height: 1.4;
+    }
+
+    /* Current Page Results */
+    .search-item.page-item {
+        cursor: pointer;
+    }
+
+    /* Highlight Search Match */
+    mark.search-highlight {
+        padding: 1px 3px;
+        border-radius: 3px;
+        background: yellow;
+        color: #173858;
+        font-weight: 700;
+    }
+
+    /* No Result */
+    .no-result {
+        padding: 20px 10px;
+        color: #71849b;
+        text-align: center;
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+    .no-result i {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        margin-bottom: 7px;
+        border-radius: 50%;
+        background: #edf6ff;
+        color: #0875d6;
+        font-size: 15px;
+    }
+
+    /* ============================================
+   TOP STRIP ALIGNMENT
+============================================ */
+
+    .top-strip-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 8px 15px;
+    }
+
+    .top-support,
+    .top-accessibility {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 7px;
+        min-width: 0;
+    }
+
+    /* Keep search aligned with top-strip content */
+    .top-strip .search-wrapper {
+        margin-left: auto;
+    }
+
+    /* ============================================
+   TABLET
+============================================ */
+
+    @media (max-width: 1100px) {
+        .search-wrapper {
+            width: 220px;
+        }
+
+        .top-strip-inner {
+            gap: 8px 12px;
+        }
+    }
+
+    /* ============================================
+   MOBILE
+============================================ */
+
+    @media (max-width: 767px) {
+        .top-strip-inner {
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .top-strip .search-wrapper {
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+        }
+
+        #liveSearchForm {
+            height: 36px;
+        }
+
+        #liveSearch {
+            height: 28px;
+            font-size: 12px;
+        }
+
+        #searchResults {
+            max-height: 280px;
+        }
+
+        .top-support,
+        .top-accessibility {
+            justify-content: center;
+        }
+    }
+
+    /* Small Mobile */
+    @media (max-width: 480px) {
+        .search-wrapper {
+            width: 100%;
+        }
+
+        #liveSearchForm {
+            border-radius: 6px;
+        }
+
+        #searchResults {
+            top: calc(100% + 5px);
+            border-radius: 8px;
+        }
+
+        .search-item {
+            padding: 8px;
+        }
+    }
+</style>
+
 
   <aside class="jbvnl-sidebar" id="jbvnlSidebar">
 
@@ -1759,881 +1944,856 @@
   </button>
 
 
-  <!-- =========================================
-     PAGE WRAPPER
-========================================= -->
-
-  <div class="jbvnl-page-content">
-
-    <!-- Yahan aapka existing Header + Page Content rahega -->
 
 
 
+<!--================ START: STICKY HEADER GROUP ====================-->
 
+<div class="sticky-header-group" id="stickyHeaderGroup">
 
+    <!-- Toggle Button -->
 
+    <!-- Mobile Overlay -->
+    <div class="jbvnl-sidebar-overlay" id="jbvnlSidebarOverlay"></div>
 
+    <button type="button" class="jbvnl-mobile-menu" id="jbvnlSidebarOpen">
 
-    <!--============ Title: JBVNL - jharkhand bijli vitran nigam limited ======-->
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
     <div class="top-strip">
 
-      <div class="container top-strip-inner">
+        <div class="container top-strip-inner">
 
-        <!-- =====================================================
-             FIRST LINE : CONSUMER SUPPORT
-        ====================================================== -->
+            <!-- =====================================================
+                   FIRST LINE : CONSUMER SUPPORT
+                   ====================================================== -->
 
-        <div class="top-support">
+            <div class="top-support">
 
-          <i class="fa-solid fa-headset"></i>
+                <i class="fa-solid fa-headset"></i>
 
-          <span><small>24X7 </small> Consumer Support :</span>
+                <span><small>24X7 </small> Consumer Support :</span>
 
-          <i class="fa fa-phone"></i>
+                <i class="fa fa-phone"></i>
 
-          <a href="tel:1912">
-            1912
-          </a>
+                <a href="tel:1912">
+                    1912
+                </a>
 
-          <span>/</span>
+                <span>/</span>
 
-          <a href="tel:+9118003456570">
-            1800-345-6570
-          </a>
+                <a href="tel:+9118003456570">
+                    1800-345-6570
+                </a>
 
-          <span>|</span>
+                <span>|</span>
 
-          <i class="fa fa-envelope"></i>
+                <i class="fa fa-envelope"></i>
 
-          <a href="mailto:contactus@jbvnl.co.in">
-            contactus@jbvnl.co.in
-          </a>
+                <a href="mailto:contactus@jbvnl.co.in">
+                    contactus@jbvnl.co.in
+                </a>
+
+            </div>
+
+
+            <!-- =====================================================
+                   SECOND LINE : ACCESSIBILITY
+                 ====================================================== -->
+
+            <div class="top-accessibility">
+
+                <!-- Skip To Main Content -->
+
+                <a href="#main">
+                    Skip to Main Content
+                </a>
+
+                <span>|</span>
+
+
+                <!-- Language -->
+
+                <div class="language-switch">
+
+                    <i class="fa-solid fa-language"></i>
+
+                    <select onchange="changeLanguage(this.value)">
+
+                        <option value="en">
+                            English
+                        </option>
+
+                        <option value="hi">
+                            हिन्दी
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <span>|</span>
+
+
+                <!-- Font Size -->
+
+                <a href="#" id="increaseFont">
+                    A+
+                </a>
+
+                <a href="#" id="resetFont">
+                    A
+                </a>
+
+                <a href="#" id="decreaseFont">
+                    A-
+                </a>
+
+                <span>|</span>
+
+
+                <!-- Screen Reader -->
+
+                <a href="{{ route('screen-reader') }}">
+
+                    <i class="fa fa-volume-up"></i>
+
+                    Screen Reader
+
+                </a>
+
+            </div>
 
         </div>
-
-
-        <!-- =====================================================
-             SECOND LINE : ACCESSIBILITY
-        ====================================================== -->
-
-        <div class="top-accessibility">
-
-          <!-- Skip To Main Content -->
-
-          <a href="#main">
-            Skip to Main Content
-          </a>
-
-          <span>|</span>
-
-
-          <!-- Language -->
-
-          <div class="language-switch">
-
-            <i class="fa-solid fa-language"></i>
-
-            <select onchange="changeLanguage(this.value)">
-
-              <option value="en">
-                English
-              </option>
-
-              <option value="hi">
-                हिन्दी
-              </option>
-
-            </select>
-
-          </div>
-
-          <span>|</span>
-
-
-          <!-- Font Size -->
-
-          <a href="#" id="increaseFont">
-            A+
-          </a>
-
-          <a href="#" id="resetFont">
-            A
-          </a>
-
-          <a href="#" id="decreaseFont">
-            A-
-          </a>
-
-          <span>|</span>
-
-
-          <!-- Screen Reader -->
-
-          <a href="{{ route('screen-reader') }}">
-
-            <i class="fa fa-volume-up"></i>
-
-            Screen Reader
-
-          </a>
-
-        </div>
-
-      </div>
 
     </div>
 
 
     <!-- ========================== Header Section ========================= -->
     <header class="main-header">
-      <div class="container header-inner">
+        <div class="container header-inner">
 
-        <!-- ================= LOGO ================= -->
-        <a class="brand" href="{{ route('index') }}">
-          <div class="brand-mark"></div>
-        </a>
-
-
-        <!-- ================= RIGHT SIDE ================= -->
-        <div class="header-tools">
+            <!-- ================= LOGO ================= -->
+            <a class="brand" href="{{ route('index') }}">
+                <div class="brand-mark"></div>
+            </a>
 
 
+            <!-- ================= RIGHT SIDE ================= -->
+            <div class="header-tools">
 
 
-          <!-- ================= TOP UTILITY ================= -->
-          <div class="header-utility">
 
 
-            <!-- Search -->
-            <div class="search-box">
-
-              <i class="fa-solid fa-magnifying-glass"></i>
-
-              <form id="liveSearchForm" autocomplete="off" action="{{ route('live.search') }}" method="GET">
-
-                <input type="search" id="liveSearch" name="q" placeholder="Search Services Here...">
-
-                <button type="submit">
-                  Search
-                </button>
-
-                <div id="searchResults"></div>
-
-              </form>
-
-            </div>
-
-            <!-- Language -->
-            <!-- <div class="language-switch">
-            <i class="fa fa-language"></i>
-
-            <select onchange="changeLanguage(this.value)">
-              <option value="en">English</option>
-              <option value="hi">हिन्दी</option>
-            </select>
-          </div> -->
-
-            <!-- <span>|</span> -->
-
-            <!-- Font Size -->
-            <!-- <a href="#" id="increaseFont">A+</a>
-          <a href="#" id="resetFont">A</a>
-          <a href="#" id="decreaseFont">A-</a> -->
-
-            <!-- <span>|</span> -->
-
-            <!-- Screen Reader -->
-            <!-- <a href="{{ route('screen-reader') }}">
-            <i class="fa fa-volume-up"></i>
-            Screen Reader
-          </a> -->
-
-          </div>
+                <!-- ================= TOP UTILITY ================= -->
+                <div class="header-utility">
 
 
-          <!-- ================= CONTACT BAR ================= -->
-          <div class="header-contact">
+                    <!-- Search -->
+                    <div class="search-box">
 
-            <div class="contact-right">
+                        <i class="fa-solid fa-magnifying-glass"></i>
 
-              <!-- Contact Us -->
-              <a href="{{ route('contact-us') }}" class="top-btn contact-btn">
-                <i class="fa fa-envelope-o"></i>
-                Contact Us
-              </a>
+                        <form id="liveSearchForm" autocomplete="off" action="{{ route('live.search') }}"
+                            method="GET">
+
+                            <input type="search" id="liveSearch" name="q"
+                                placeholder="Search Services Here...">
+
+                            <button type="submit">
+                                Search
+                            </button>
+
+                            <div id="searchResults"></div>
+
+                        </form>
+
+                    </div>
 
 
-              <!-- C Portal -->
-              <a href="https://cportal.jbvnl.co.in/cportal/#/user/login" target="_blank" class="top-btn cms-btn">
-                <i class="fa fa-user"></i>
-                Consumer Login
-              </a>
+                </div>
 
 
-              <!-- EMPLOYEE LOGIN -->
-              <a href="{{ route('employee.login') }}" class="contact-btn top-btn">
+                <!-- ================= CONTACT BAR ================= -->
+                <div class="header-contact">
 
-                <i class="fa-solid fa-id-badge"></i>
+                    <div class="contact-right">
 
-                <span>Employee Login</span>
+                        <!-- Contact Us -->
+                        <a href="{{ route('contact-us') }}" class="top-btn contact-btn">
+                            <i class="fa fa-envelope-o"></i>
+                            Contact Us
+                        </a>
 
-              </a>
+
+                        <!-- C Portal -->
+                        <a href="https://cportal.jbvnl.co.in/cportal/#/user/login" target="_blank"
+                            class="top-btn cms-btn">
+                            <i class="fa fa-user"></i>
+                            Consumer Login
+                        </a>
+
+
+                        <!-- EMPLOYEE LOGIN -->
+                        <a href="{{ route('employee.login') }}" class="contact-btn top-btn">
+
+                            <i class="fa-solid fa-id-badge"></i>
+
+                            <span>Employee Login</span>
+
+                        </a>
+
+                    </div>
+
+                </div>
 
             </div>
 
-          </div>
+
+            <!-- Mobile Menu -->
+            <button type="button" class="menu-toggle" id="mobileMenuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
         </div>
-
-
-        <!-- Mobile Menu -->
-        <button type="button" class="menu-toggle" id="mobileMenuToggle">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-
-      </div>
     </header>
+
 
     <!-- ================= NAVIGATION MENU ================= -->
     <nav class="jbvnl-navbar">
-      <div class="jbvnl-nav-container">
+        <div class="jbvnl-nav-container">
 
-        <ul class="jbvnl-nav-list">
+            <ul class="jbvnl-nav-list">
 
-          <!-- HOME -->
-          <li class="jbvnl-nav-item">
-            <a href="{{ route('index') }}" class="jbvnl-nav-link active">
-              <i class="fa-solid fa-house"></i>
-              <span>Home</span>
-            </a>
-          </li>
+                <!-- HOME -->
+                <li class="jbvnl-nav-item">
+                    <a href="{{ route('index') }}" class="jbvnl-nav-link active">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
 
 
-          <!-- ================= ABOUT US ================= -->
-          <li class="jbvnl-nav-item has-mega">
+                <!-- ================= ABOUT US ================= -->
+                <li class="jbvnl-nav-item has-mega">
 
-            <a href="#" class="jbvnl-nav-link mega-trigger">
-              <i class="fa-solid fa-building"></i>
-              <span>About Us</span>
-              <i class="fa-solid fa-chevron-down nav-arrow"></i>
-            </a>
+                    <a href="#" class="jbvnl-nav-link mega-trigger">
+                        <i class="fa-solid fa-building"></i>
+                        <span>About Us</span>
+                        <i class="fa-solid fa-chevron-down nav-arrow"></i>
+                    </a>
 
 
-            <div class="jbvnl-mega-menu about-mega">
+                    <div class="jbvnl-mega-menu about-mega">
 
-              <div class="mega-column mega-intro">
+                        <div class="mega-column mega-intro">
 
-                <span class="mega-kicker">
-                  ABOUT JBVNL
-                </span>
+                            <span class="mega-kicker">
+                                ABOUT JBVNL
+                            </span>
 
-                <h3>
-                  Jharkhand Bijli Vitran Nigam Limited
-                </h3>
+                            <h3>
+                                Jharkhand Bijli Vitran Nigam Limited
+                            </h3>
 
-                <p>
-                  Know more about JBVNL, its departments,
-                  leadership, organization and initiatives.
-                </p>
+                            <p>
+                                Know more about JBVNL, its departments,
+                                leadership, organization and initiatives.
+                            </p>
 
-                <a href="{{ route('compprofile') }}" class="mega-main-link">
-                  Company Profile
-                  <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                            <a href="{{ route('compprofile') }}" class="mega-main-link">
+                                Company Profile
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
 
-              </div>
+                        </div>
 
 
-              <div class="mega-column">
+                        <div class="mega-column">
 
-                <h4>
-                  <i class="fa-solid fa-building"></i>
-                  Company
-                </h4>
+                            <h4>
+                                <i class="fa-solid fa-building"></i>
+                                Company
+                            </h4>
 
-                <a href="{{ route('compprofile') }}">
-                  <i class="fa-solid fa-angle-right"></i>
-                  Company Profile
-                </a>
+                            <a href="{{ route('compprofile') }}">
+                                <i class="fa-solid fa-angle-right"></i>
+                                Company Profile
+                            </a>
 
-                <a href="{{ route('boardofdirector') }}">
-                  <i class="fa-solid fa-users"></i>
-                  Board of Directors
-                </a>
+                            <a href="{{ route('boardofdirector') }}">
+                                <i class="fa-solid fa-users"></i>
+                                Board of Directors
+                            </a>
 
-                <a href="{{ route('orgstructure') }}">
-                  <i class="fa-solid fa-sitemap"></i>
-                  Organization Chart
-                </a>
+                            <a href="{{ route('orgstructure') }}">
+                                <i class="fa-solid fa-sitemap"></i>
+                                Organization Chart
+                            </a>
 
-              </div>
+                        </div>
 
 
-              <div class="mega-column">
+                        <div class="mega-column">
 
-                <h4>
-                  <i class="fa-solid fa-sitemap"></i>
-                  Departments
-                </h4>
+                            <h4>
+                                <i class="fa-solid fa-sitemap"></i>
+                                Departments
+                            </h4>
 
-                <a href="{{ route('commercial') }}">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  Commercial
-                </a>
+                            <a href="{{ route('commercial') }}">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Commercial
+                            </a>
 
-                <a href="{{ route('revenue.department') }}">
-                  <i class="fa-solid fa-indian-rupee-sign"></i>
-                  Revenue
-                </a>
+                            <a href="{{ route('revenue.department') }}">
+                                <i class="fa-solid fa-indian-rupee-sign"></i>
+                                Revenue
+                            </a>
 
-                <a href="{{ route('projectdep') }}">
-                  <i class="fa-solid fa-diagram-project"></i>
-                  Projects
-                </a>
+                            <a href="{{ route('projectdep') }}">
+                                <i class="fa-solid fa-diagram-project"></i>
+                                Projects
+                            </a>
 
-                <a href="{{ route('finance') }}">
-                  <i class="fa-solid fa-coins"></i>
-                  Finance
-                </a>
+                            <a href="{{ route('finance') }}">
+                                <i class="fa-solid fa-coins"></i>
+                                Finance
+                            </a>
 
-                <a href="{{ route('ruralelect') }}">
-                  <i class="fa fa-bolt"></i>
-                  Electric Status
-                </a>
+                            <a href="{{ route('ruralelect') }}">
+                                <i class="fa fa-bolt"></i>
+                                Electric Status
+                            </a>
 
-                <a href="{{ route('storepurchase') }}">
-                  <i class="fa fa-shopping-bag"></i>
-                  JBVNL Store
-                </a>
+                            <a href="{{ route('storepurchase') }}">
+                                <i class="fa fa-shopping-bag"></i>
+                                JBVNL Store
+                            </a>
 
 
-              </div>
+                        </div>
 
 
-              <div class="mega-column">
+                        <div class="mega-column">
 
-                <h4>
-                  <i class="fa-solid fa-users"></i>
-                  People & Initiatives
-                </h4>
+                            <h4>
+                                <i class="fa-solid fa-users"></i>
+                                People & Initiatives
+                            </h4>
 
-                <a href="{{ route('info_techno') }}">
-                  <i class="fa fa-laptop"></i>
-                  IT
-                </a>
+                            <a href="{{ route('info_techno') }}">
+                                <i class="fa fa-laptop"></i>
+                                IT
+                            </a>
 
-                <a href="{{ route('hradmin') }}">
-                  <i class="fa-solid fa-user-group"></i>
-                  HR / Admin
-                </a>
+                            <a href="{{ route('hradmin') }}">
+                                <i class="fa-solid fa-user-group"></i>
+                                HR / Admin
+                            </a>
 
-                <a href="{{ route('oandm') }}">
-                  <i class="fa-solid fa-gears"></i>
-                  O&M
-                </a>
+                            <a href="{{ route('oandm') }}">
+                                <i class="fa-solid fa-gears"></i>
+                                O&M
+                            </a>
 
-                <a href="{{ route('initiatives') }}">
-                  <i class="fa-solid fa-lightbulb"></i>
-                  Initiatives
-                </a>
+                            <a href="{{ route('initiatives') }}">
+                                <i class="fa-solid fa-lightbulb"></i>
+                                Initiatives
+                            </a>
 
-                <a href="{{ route('achivements') }}">
-                  <i class="fa-solid fa-trophy"></i>
-                  Achievements & Milestones
-                </a>
+                            <a href="{{ route('achivements') }}">
+                                <i class="fa-solid fa-trophy"></i>
+                                Achievements & Milestones
+                            </a>
 
-              </div>
+                        </div>
 
-            </div>
+                    </div>
 
-          </li>
+                </li>
 
 
-          <!-- ================= CONSUMER CORNER ================= -->
-          <li class="jbvnl-nav-item has-mega">
+                <!-- ================= CONSUMER CORNER ================= -->
+                <li class="jbvnl-nav-item has-mega">
 
-            <a href="#" class="jbvnl-nav-link mega-trigger">
+                    <a href="#" class="jbvnl-nav-link mega-trigger">
 
-              <i class="fa-solid fa-circle-check"></i>
+                        <i class="fa-solid fa-circle-check"></i>
 
-              <span>Consumer Corner</span>
+                        <span>Consumer Corner</span>
 
-              <i class="fa-solid fa-chevron-down nav-arrow"></i>
+                        <i class="fa-solid fa-chevron-down nav-arrow"></i>
 
-            </a>
+                    </a>
 
 
-            <div class="jbvnl-mega-menu consumer-mega">
+                    <div class="jbvnl-mega-menu consumer-mega">
 
-              <div class="mega-column mega-intro">
+                        <div class="mega-column mega-intro">
 
-                <span class="mega-kicker">
-                  CONSUMER SERVICES
-                </span>
+                            <span class="mega-kicker">
+                                CONSUMER SERVICES
+                            </span>
 
-                <h3>
-                  Consumer Corner
-                </h3>
+                            <h3>
+                                Consumer Corner
+                            </h3>
 
-                <p>
-                  Access consumer services, calculators,
-                  connection services and safety information.
-                </p>
+                            <p>
+                                Access consumer services, calculators,
+                                connection services and safety information.
+                            </p>
 
-              </div>
+                        </div>
 
 
-              <div class="mega-column">
+                        <div class="mega-column">
 
-                <h4>
-                  <i class="fa-solid fa-plug"></i>
-                  New Connection
-                </h4>
+                            <h4>
+                                <i class="fa-solid fa-plug"></i>
+                                New Connection
+                            </h4>
 
-                <a href="https://suvidha.jbvnl.co.in/login.aspx" target="_blank">
-                  <i class="fa-solid fa-solar-panel"></i>
-                  Suvidha Portal
-                </a>
+                            <a href="https://suvidha.jbvnl.co.in/login.aspx" target="_blank">
+                                <i class="fa-solid fa-solar-panel"></i>
+                                Suvidha Portal
+                            </a>
 
-                <a href="https://advantage.jharkhand.gov.in/SingleWindow/users/login" target="_blank">
-                  <i class="fa-solid fa-industry"></i>
-                  New Connection LTIS / HT
-                </a>
+                            <a href="https://advantage.jharkhand.gov.in/SingleWindow/users/login" target="_blank">
+                                <i class="fa-solid fa-industry"></i>
+                                New Connection LTIS / HT
+                            </a>
 
-                <a href="{{ route('consumer.tracking') }}">
-                  <i class="fa-solid fa-list-check"></i>
-                  Consumer Services
-                </a>
+                            <a href="{{ route('consumer.tracking') }}">
+                                <i class="fa-solid fa-list-check"></i>
+                                Consumer Services
+                            </a>
 
-              </div>
+                        </div>
 
 
-              <div class="mega-column">
+                        <div class="mega-column">
 
-                <h4>
-                  <i class="fa-solid fa-calculator"></i>
-                  Calculators
-                </h4>
+                            <h4>
+                                <i class="fa-solid fa-calculator"></i>
+                                Calculators
+                            </h4>
 
-                <a href="{{ route('fixcalculator') }}">
-                  <i class="fa-solid fa-calculator"></i>
-                  Fix Calculator
-                </a>
+                            <a href="{{ route('fixcalculator') }}">
+                                <i class="fa-solid fa-calculator"></i>
+                                Fix Calculator
+                            </a>
 
-                <a href="{{ route('load-calculator') }}">
-                  <i class="fa-solid fa-bolt"></i>
-                  Load Calculator
-                </a>
+                            <a href="{{ route('load-calculator') }}">
+                                <i class="fa-solid fa-bolt"></i>
+                                Load Calculator
+                            </a>
 
-                <a href="{{ route('effective.tariff.calculator') }}">
-                  <i class="fa-solid fa-chart-line"></i>
-                  Effective Tariff Calculator
-                </a>
+                            <a href="{{ route('effective.tariff.calculator') }}">
+                                <i class="fa-solid fa-chart-line"></i>
+                                Effective Tariff Calculator
+                            </a>
 
-              </div>
+                        </div>
 
 
-              <div class="mega-column">
+                        <div class="mega-column">
 
-                <h4>
-                  <i class="fa-solid fa-shield-halved"></i>
-                  Consumer Support
-                </h4>
+                            <h4>
+                                <i class="fa-solid fa-shield-halved"></i>
+                                Consumer Support
+                            </h4>
 
-                <a href="{{ route('stips') }}">
-                  <i class="fa-solid fa-shield"></i>
-                  Safety Tips
-                </a>
+                            <a href="{{ route('stips') }}">
+                                <i class="fa-solid fa-shield"></i>
+                                Safety Tips
+                            </a>
 
-                <a href="{{ asset('front/img/Energy Conservation.pdf') }}" target="_blank">
-                  <i class="fa-solid fa-leaf"></i>
-                  Save Energy Campaign
-                </a>
+                            <a href="{{ asset('front/img/Energy Conservation.pdf') }}" target="_blank">
+                                <i class="fa-solid fa-leaf"></i>
+                                Save Energy Campaign
+                            </a>
 
-              </div>
+                        </div>
 
-            </div>
+                    </div>
 
-          </li>
+                </li>
 
 
-          <!-- FAQ -->
-          <li class="jbvnl-nav-item">
+                <!-- FAQ -->
+                <li class="jbvnl-nav-item">
 
-            <a href="{{ route('faqs') }}" class="jbvnl-nav-link">
+                    <a href="{{ route('faqs') }}" class="jbvnl-nav-link">
 
-              <i class="fa-solid fa-circle-question"></i>
+                        <i class="fa-solid fa-circle-question"></i>
 
-              <span>FAQs</span>
+                        <span>FAQs</span>
 
-            </a>
+                    </a>
 
-          </li>
+                </li>
 
 
-          <!-- TARIFF -->
-          <li class="jbvnl-nav-item">
+                <!-- TARIFF -->
+                <li class="jbvnl-nav-item">
 
-            <a href="/tariff" class="jbvnl-nav-link">
+                    <a href="/tariff" class="jbvnl-nav-link">
 
-              <i class="fa-solid fa-file-lines"></i>
+                        <i class="fa-solid fa-file-lines"></i>
 
-              <span>Tariff Orders</span>
+                        <span>Tariff Orders</span>
 
-            </a>
+                    </a>
 
-          </li>
+                </li>
 
 
-          <!-- ACTS -->
-          <li class="jbvnl-nav-item">
+                <!-- ACTS -->
+                <li class="jbvnl-nav-item">
 
-            <a href="{{ route('acts.regulations') }}" class="jbvnl-nav-link">
+                    <a href="{{ route('acts.regulations') }}" class="jbvnl-nav-link">
 
-              <i class="fa-solid fa-gavel"></i>
+                        <i class="fa-solid fa-gavel"></i>
 
-              <span>Acts & Regulations</span>
+                        <span>Acts & Regulations</span>
 
-            </a>
+                    </a>
 
-          </li>
+                </li>
 
 
-          <!-- ================= DOWNLOADS ================= -->
-          <li class="jbvnl-nav-item has-mega">
+                <!-- ================= DOWNLOADS ================= -->
+                <li class="jbvnl-nav-item has-mega">
 
-            <a href="#" class="jbvnl-nav-link mega-trigger">
+                    <a href="#" class="jbvnl-nav-link mega-trigger">
 
-              <i class="fa-solid fa-download"></i>
+                        <i class="fa-solid fa-download"></i>
 
-              <span>Downloads</span>
+                        <span>Downloads</span>
 
-              <i class="fa-solid fa-chevron-down nav-arrow"></i>
+                        <i class="fa-solid fa-chevron-down nav-arrow"></i>
 
-            </a>
+                    </a>
 
 
-            <div class="jbvnl-mega-menu downloads-mega">
+                    <div class="jbvnl-mega-menu downloads-mega">
 
-              <div class="mega-column mega-intro">
+                        <div class="mega-column mega-intro">
 
-                <span class="mega-kicker">
-                  DOWNLOAD CENTRE
-                </span>
+                            <span class="mega-kicker">
+                                DOWNLOAD CENTRE
+                            </span>
 
-                <h3>
-                  Forms & Documents
-                </h3>
+                            <h3>
+                                Forms & Documents
+                            </h3>
 
-                <p>
-                  Download consumer forms, employee forms
-                  and important JBVNL documents.
-                </p>
+                            <p>
+                                Download consumer forms, employee forms
+                                and important JBVNL documents.
+                            </p>
 
-                <a href="{{ asset('document') }}" class="mega-main-link">
+                            <a href="{{ asset('document') }}" class="mega-main-link">
 
-                  View Documents
+                                View Documents
 
-                  <i class="fa-solid fa-arrow-right"></i>
+                                <i class="fa-solid fa-arrow-right"></i>
 
-                </a>
+                            </a>
 
-              </div>
+                        </div>
 
 
-              <div class="mega-column">
+                        <div class="mega-column">
 
-                <h4>
-                  <i class="fa-solid fa-user"></i>
-                  Consumer Forms
-                </h4>
+                            <h4>
+                                <i class="fa-solid fa-user"></i>
+                                Consumer Forms
+                            </h4>
 
-                <a href="/upload/Form%20A%20-%20Power%20Supply%20Connection%20(Low%20Tension%20Domestic).pdf"
-                  target="_blank">
+                            <a href="/upload/Form%20A%20-%20Power%20Supply%20Connection%20(Low%20Tension%20Domestic).pdf"
+                                target="_blank">
 
-                  <i class="fa-solid fa-file-pdf"></i>
+                                <i class="fa-solid fa-file-pdf"></i>
 
-                  Form A - NCS
-                </a>
+                                Form A - NCS
+                            </a>
 
-                <a href="/upload/Form%20B%20-%20(LT%20Service%20(Non-Domestic)%20-%20HT%20Service%20-%20EHT%20Service).pdf"
-                  target="_blank">
+                            <a href="/upload/Form%20B%20-%20(LT%20Service%20(Non-Domestic)%20-%20HT%20Service%20-%20EHT%20Service).pdf"
+                                target="_blank">
 
-                  <i class="fa-solid fa-file-pdf"></i>
+                                <i class="fa-solid fa-file-pdf"></i>
 
-                  Form B - NCS
-                </a>
+                                Form B - NCS
+                            </a>
 
-                <a href="#">
-                  <i class="fa-solid fa-file-pdf"></i>
-                  Bill Revision Request
-                </a>
+                            <a href="#">
+                                <i class="fa-solid fa-file-pdf"></i>
+                                Bill Revision Request
+                            </a>
 
-              </div>
+                        </div>
 
 
-              <div class="mega-column">
+                        <div class="mega-column">
 
-                <h4>
-                  <i class="fa-solid fa-users"></i>
-                  Employee Forms
-                </h4>
+                            <h4>
+                                <i class="fa-solid fa-users"></i>
+                                Employee Forms
+                            </h4>
 
-                <a href="#">
-                  <i class="fa-solid fa-file-pdf"></i>
-                  LPC Form
-                </a>
+                            <a href="#">
+                                <i class="fa-solid fa-file-pdf"></i>
+                                LPC Form
+                            </a>
 
-                <a href="#">
-                  <i class="fa-solid fa-file-pdf"></i>
-                  ACR Form
-                </a>
+                            <a href="#">
+                                <i class="fa-solid fa-file-pdf"></i>
+                                ACR Form
+                            </a>
 
-                <a href="#">
-                  <i class="fa-solid fa-file-pdf"></i>
-                  Leave Form
-                </a>
+                            <a href="#">
+                                <i class="fa-solid fa-file-pdf"></i>
+                                Leave Form
+                            </a>
 
-                <a href="#">
-                  <i class="fa-solid fa-file-pdf"></i>
-                  Medical Reimbursement
-                </a>
+                            <a href="#">
+                                <i class="fa-solid fa-file-pdf"></i>
+                                Medical Reimbursement
+                            </a>
 
-              </div>
+                        </div>
 
 
-              <div class="mega-column">
+                        <div class="mega-column">
 
-                <h4>
-                  <i class="fa-solid fa-folder-open"></i>
-                  Documents
-                </h4>
+                            <h4>
+                                <i class="fa-solid fa-folder-open"></i>
+                                Documents
+                            </h4>
 
-                <a href="{{ asset('document') }}">
-                  <i class="fa-solid fa-folder"></i>
-                  Documents
-                </a>
+                            <a href="{{ asset('document') }}">
+                                <i class="fa-solid fa-folder"></i>
+                                Documents
+                            </a>
 
-                <a href="#">
-                  <i class="fa-solid fa-chart-column"></i>
-                  Annual Reports
-                </a>
+                            <a href="#">
+                                <i class="fa-solid fa-chart-column"></i>
+                                Annual Reports
+                            </a>
 
-                <a href="#">
-                  <i class="fa-solid fa-graduation-cap"></i>
-                  Training / Pathshala
-                </a>
+                            <a href="#">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                Training / Pathshala
+                            </a>
 
-              </div>
+                        </div>
 
-            </div>
+                    </div>
 
-          </li>
+                </li>
 
 
-          <!-- ================= NOTICE ================= -->
-          <li class="jbvnl-nav-item has-mega">
+                <!-- ================= NOTICE ================= -->
+                <li class="jbvnl-nav-item has-mega">
 
-            <a href="#" class="jbvnl-nav-link mega-trigger">
+                    <a href="#" class="jbvnl-nav-link mega-trigger">
 
-              <i class="fa-solid fa-bullhorn"></i>
+                        <i class="fa-solid fa-bullhorn"></i>
 
-              <span>Notice & Circular</span>
+                        <span>Notice & Circular</span>
 
-              <i class="fa-solid fa-chevron-down nav-arrow"></i>
+                        <i class="fa-solid fa-chevron-down nav-arrow"></i>
 
-            </a>
+                    </a>
 
 
-            <div class="jbvnl-mega-menu notice-mega">
+                    <div class="jbvnl-mega-menu notice-mega">
 
-              <div class="mega-column mega-intro">
+                        <div class="mega-column mega-intro">
 
-                <span class="mega-kicker">
-                  LATEST UPDATES
-                </span>
+                            <span class="mega-kicker">
+                                LATEST UPDATES
+                            </span>
 
-                <h3>
-                  Notice & Circular
-                </h3>
+                            <h3>
+                                Notice & Circular
+                            </h3>
 
-                <p>
-                  View latest official notifications,
-                  circulars and annual accounts.
-                </p>
+                            <p>
+                                View latest official notifications,
+                                circulars and annual accounts.
+                            </p>
 
-              </div>
+                        </div>
 
 
-              <div class="mega-column">
+                        <div class="mega-column">
 
-                <h4>
-                  <i class="fa-solid fa-bullhorn"></i>
-                  Notifications
-                </h4>
+                            <h4>
+                                <i class="fa-solid fa-bullhorn"></i>
+                                Notifications
+                            </h4>
 
-                <a href="{{ route('commercialNotice') }}">
-                  <i class="fa-solid fa-cart-shopping"></i>
-                  Commercial
-                </a>
+                            <a href="{{ route('commercialNotice') }}">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Commercial
+                            </a>
 
-                <a href="{{ route('administrative') }}">
-                  <i class="fa-solid fa-building-columns"></i>
-                  Administrative
-                </a>
+                            <a href="{{ route('administrative') }}">
+                                <i class="fa-solid fa-building-columns"></i>
+                                Administrative
+                            </a>
 
-                <a href="{{ route('annual-accounts') }}">
-                  <i class="fa-solid fa-file-invoice-dollar"></i>
-                  Annual Accounts
-                </a>
+                            <a href="{{ route('annual-accounts') }}">
+                                <i class="fa-solid fa-file-invoice-dollar"></i>
+                                Annual Accounts
+                            </a>
 
-              </div>
+                        </div>
 
 
-              <div class="mega-column mega-highlight">
+                        <div class="mega-column mega-highlight">
 
-                <span>
-                  OFFICIAL INFORMATION
-                </span>
+                            <span>
+                                OFFICIAL INFORMATION
+                            </span>
 
-                <strong>
-                  Stay updated with
-                  JBVNL announcements.
-                </strong>
+                            <strong>
+                                Stay updated with
+                                JBVNL announcements.
+                            </strong>
 
-                <a href="#notices">
-                  View Latest Notices
-                  <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                            <a href="#notices">
+                                View Latest Notices
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
 
-              </div>
+                        </div>
 
-            </div>
+                    </div>
 
-          </li>
+                </li>
 
 
-          <!-- ================= TENDERS ================= -->
-          <li class="jbvnl-nav-item has-mega">
+                <!-- ================= TENDERS ================= -->
+                <li class="jbvnl-nav-item has-mega">
 
-            <a href="#" class="jbvnl-nav-link mega-trigger">
+                    <a href="#" class="jbvnl-nav-link mega-trigger">
 
-              <i class="fa-solid fa-folder-open"></i>
+                        <i class="fa-solid fa-folder-open"></i>
 
-              <span>Tenders</span>
+                        <span>Tenders</span>
 
-              <i class="fa-solid fa-chevron-down nav-arrow"></i>
+                        <i class="fa-solid fa-chevron-down nav-arrow"></i>
 
-            </a>
+                    </a>
 
 
-            <div class="jbvnl-mega-menu tender-mega">
+                    <div class="jbvnl-mega-menu tender-mega">
 
-              <div class="mega-column mega-intro">
+                        <div class="mega-column mega-intro">
 
-                <span class="mega-kicker">
-                  PROCUREMENT
-                </span>
+                            <span class="mega-kicker">
+                                PROCUREMENT
+                            </span>
 
-                <h3>
-                  Tenders
-                </h3>
+                            <h3>
+                                Tenders
+                            </h3>
 
-                <p>
-                  Access e-Tender portal and JBVNL
-                  tender notifications.
-                </p>
+                            <p>
+                                Access e-Tender portal and JBVNL
+                                tender notifications.
+                            </p>
 
-              </div>
+                        </div>
 
 
-              <div class="mega-column">
+                        <div class="mega-column">
 
-                <h4>
-                  <i class="fa-solid fa-gavel"></i>
-                  Tender Services
-                </h4>
+                            <h4>
+                                <i class="fa-solid fa-gavel"></i>
+                                Tender Services
+                            </h4>
 
-                <a href="https://jharkhandtenders.gov.in/nicgep/app" target="_blank">
+                            <a href="https://jharkhandtenders.gov.in/nicgep/app" target="_blank">
 
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
 
-                  e-Tender Portal
+                                e-Tender Portal
 
-                </a>
+                            </a>
 
-                <a href="{{ route('tender') }}">
+                            <a href="{{ route('tender') }}">
 
-                  <i class="fa-solid fa-file-lines"></i>
+                                <i class="fa-solid fa-file-lines"></i>
 
-                  Tender Notification
+                                Tender Notification
 
-                </a>
+                            </a>
 
-              </div>
+                        </div>
 
 
-              <div class="mega-column mega-highlight">
+                        <div class="mega-column mega-highlight">
 
-                <span>
-                  JBVNL PROCUREMENT
-                </span>
+                            <span>
+                                JBVNL PROCUREMENT
+                            </span>
 
-                <strong>
-                  Find latest tender
-                  opportunities.
-                </strong>
+                            <strong>
+                                Find latest tender
+                                opportunities.
+                            </strong>
 
-                <a href="{{ route('tender') }}">
-                  View Tenders
-                  <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                            <a href="{{ route('tender') }}">
+                                View Tenders
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
 
-              </div>
+                        </div>
 
-            </div>
+                    </div>
 
-          </li>
+                </li>
 
 
-          <!-- CAREER -->
-          <li class="jbvnl-nav-item">
+                <!-- CAREER -->
+                <li class="jbvnl-nav-item">
 
-            <a href="{{ asset('/careers') }}" class="jbvnl-nav-link">
+                    <a href="{{ asset('/careers') }}" class="jbvnl-nav-link">
 
-              <i class="fa-solid fa-briefcase"></i>
+                        <i class="fa-solid fa-briefcase"></i>
 
-              <span>Career</span>
+                        <span>Career</span>
 
-            </a>
+                    </a>
 
-          </li>
+                </li>
 
 
-          <!-- EMPLOYEE LOGIN -->
-          <!-- <li class="jbvnl-nav-item">
+            </ul>
 
-          <a href="{{ route('employee.login') }}" class="jbvnl-nav-link employee-link">
-
-            <i class="fa-solid fa-id-badge"></i>
-
-            <span>Employee Login</span>
-
-          </a>
-
-        </li> -->
-
-        </ul>
-
-      </div>
+        </div>
     </nav>
 
 
 
+</div>
+<!-- END: STICKY HEADER GROUP -->
 
 
 
+  <!-- =========================================
+     PAGE WRAPPER
+========================================= -->
 
+  <div class="jbvnl-page-content">
 
 
     <main id="main">
@@ -21201,6 +21361,65 @@ OjE4KzAwOjAwishxnAAAACh0RVh0ZGF0ZTp0aW1lc3RhbXAAMjAyNi0wOC0wM1QwNzoxNToxOCsw
     });
   </script>
 
+
+
+    {{-- ======= stickyHeaderGroup ======= --}}
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            const headerGroup = document.getElementById("stickyHeaderGroup");
+
+            if (!headerGroup) return;
+
+            // Create spacer to prevent content jumping
+            const spacer = document.createElement("div");
+            spacer.className = "sticky-header-spacer";
+
+            headerGroup.after(spacer);
+
+            function updateHeaderHeight() {
+                spacer.style.height = headerGroup.offsetHeight + "px";
+            }
+
+            updateHeaderHeight();
+            window.addEventListener("resize", updateHeaderHeight);
+
+            let lastScroll = window.scrollY;
+            let scrollThreshold = 8;
+
+            headerGroup.classList.add("header-visible");
+
+            window.addEventListener("scroll", function() {
+
+                let currentScroll = window.scrollY;
+                let difference = currentScroll - lastScroll;
+
+                // Always show at page top
+                if (currentScroll <= 10) {
+                    headerGroup.classList.remove("header-hidden");
+                    headerGroup.classList.add("header-visible");
+                }
+
+                // Scroll Down: Hide
+                else if (difference > scrollThreshold) {
+                    headerGroup.classList.add("header-hidden");
+                    headerGroup.classList.remove("header-visible");
+                }
+
+                // Scroll Up: Show
+                else if (difference < -scrollThreshold) {
+                    headerGroup.classList.remove("header-hidden");
+                    headerGroup.classList.add("header-visible");
+                }
+
+                lastScroll = currentScroll;
+
+            }, {
+                passive: true
+            });
+
+        });
+    </script>
 
 </body>
 
